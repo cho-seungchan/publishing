@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../static/css/common/header.css" />
+        <link rel="stylesheet" href="../../static/css/feeds/reply.css" />
+        <link rel="stylesheet" href="../../static/css/common/footer.css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
+            rel="stylesheet"
+        />
+
+        <title>피드 댓글 조회 등록</title>
+    </head>
+    <body class="fontLoaded">
+        <div id="app">
+            <div class="App__AppWrapper-nc5ti6-0 idXWQn">
+                <!-- Header will be dynamically inserted here -->
+                <div id="header-placeholder"></div>
+                <script>
+                    // Load header.html and insert it in#header-placeholder
+                    fetch("../common/header.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById("header-placeholder").innerHTML = data;
+                        })
+                        .catch((error) => console.error("Error loading header:", error));
+                </script>
+
+                <div class="PageWrapper-sc-1w87j10-0 CurrentIndex__Wrapper-iqrmxf-0 dfXezx">
+                    <div class="Center__Wrapper-sc-19p29je-0 hcLOFI"><h3>댓글</h3></div>
+                    <div class="CurrentSocialFeedReplyList__Wrapper-r945qq-0 gyWKha">
+                        <div>
+                            <div class="CurrentIndex__Wrapper-lgen36-0 dSDVFj">
+                                <div class="CurrentIndex__Profile-lgen36-1 eqCOjz">
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="36"
+                                            height="36"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,q_auto/ios_image_391885_20230825111921027_79e3016429b8c2ed57ec60c14e00ba3680af64a25fa7349505f5db3a078839a2"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            class="Image__StyledImage-v97gyx-1 hPRDQO"
+                                                            width="36"
+                                                            height="36"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,q_auto/ios_image_391885_20230825111921027_79e3016429b8c2ed57ec60c14e00ba3680af64a25fa7349505f5db3a078839a2"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="CurrentIndex__Container-lgen36-2 lcexfU">
+                                    <div class="CurrentIndex__Name-lgen36-3 bRPQMl">드링킹드로잉</div>
+                                    <p class="CurrentIndex__Contents-lgen36-4 cDlmAG">
+                                        불멍하는 발바닥 따수와 보이네요ㅋㅋㅋ
+                                    </p>
+                                    <section class="ActionMenu__Section-s8lvsh-0 gzpaSl">
+                                        <p class="ActionMenu__Time-s8lvsh-1 gwAsrs">2025년 1월 22일</p>
+                                        <button class="ActionMenu__TextButton-s8lvsh-2 kosXvh">신고</button
+                                        ><button class="ActionMenu__Like-s8lvsh-3 cOmkks">
+                                            <img
+                                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='9' viewBox='0 0 10 9'%3E %3Cpath fill='none' stroke='%23C6CAD0' d='M7.456.5c-.543 0-1.052.228-1.436.637L5 2.224 3.98 1.136C3.597.728 3.087.5 2.544.5c-.543 0-1.052.228-1.435.637C.701 1.57.5 2.143.5 2.713c0 .565.198 1.132.599 1.565l4.144 3.898 3.648-3.887c.408-.435.609-1.006.609-1.576 0-.57-.201-1.142-.609-1.576C8.508.728 8 .5 7.456.5z'/%3E %3C/svg%3E"
+                                                class="ActionMenu__HeartImage-s8lvsh-4 deXuYZ"
+                                            />
+                                            <p class="ActionMenu__LikeText-s8lvsh-5 fgqaUZ">좋아요 1개</p>
+                                        </button>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="CurrentTextAreaSection__Wrapper-sc-1l5sqeb-0 EWRym">
+                        <div class="CurrentTextAreaSection__Container-sc-1l5sqeb-1 ciheDf">
+                            <div class="CurrentTextAreaSection__Profile-sc-1l5sqeb-2 bmFksE">
+                                <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                    <img
+                                        class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                        width="45"
+                                        height="45"
+                                        src="https://res.cloudinary.com/frientrip/image/fetch/ar_1:1,c_fill,f_webp,q_auto,w_64/https://k.kakaocdn.net/dn/c6sff3/btsJPDAfr4D/Jd1eYceqnVUfM5KCYmJya0/img_110x110.jpg"
+                                    />
+                                    <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block">
+                                        <div class="Ratio" style="display: block">
+                                            <div
+                                                class="Ratio-ratio"
+                                                style="height: 0px; position: relative; width: 100%; padding-top: 100%"
+                                            >
+                                                <div
+                                                    class="Ratio-content"
+                                                    style="
+                                                        height: 100%;
+                                                        left: 0px;
+                                                        position: absolute;
+                                                        top: 0px;
+                                                        width: 100%;
+                                                    "
+                                                >
+                                                    <img
+                                                        alt="profile-image"
+                                                        class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                        width="45"
+                                                        height="45"
+                                                        src="https://res.cloudinary.com/frientrip/image/fetch/ar_1:1,c_fill,f_webp,q_auto,w_64/https://k.kakaocdn.net/dn/c6sff3/btsJPDAfr4D/Jd1eYceqnVUfM5KCYmJya0/img_110x110.jpg"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="CurrentTextAreaSection__TextareaWrapper-sc-1l5sqeb-3 buraBz">
+                                <textarea
+                                    placeholder="댓글 달기..."
+                                    maxlength="500"
+                                    class="CurrentTextAreaSection__Textarea-sc-1l5sqeb-4 oflaA"
+                                    style="height: 46px"
+                                ></textarea
+                                ><button disabled="" class="CurrentTextAreaSection__SubmitButton-sc-1l5sqeb-5 FEhZA">
+                                    등록
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer will be dynamically inserted here -->
+                <div id="footer-placeholder"></div>
+                <script>
+                    // Load footer.html and insert it into #footer-placeholder
+                    fetch("../common/footer.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById("footer-placeholder").innerHTML = data;
+                        })
+                        .catch((error) => console.error("Error loading footer:", error));
+                </script>
+            </div>
+        </div>
+        <div id="modal-root"></div>
+        <div id="dnd-root"></div>
+    </body>
+
+    <script src="../../static/js/feeds/write.js"></script>
+</html>

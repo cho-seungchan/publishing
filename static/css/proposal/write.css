@@ -55,7 +55,7 @@
     border-bottom: 1px solid rgb(238, 238, 238);
 }
 .hcLOFI h3 {
-    font-size: 18px;
+    font-size: 26px;
     line-height: 26px;
     letter-spacing: -0.54px;
     color: rgb(51, 51, 51);
@@ -131,7 +131,6 @@
 .bmexYY {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 .gcqwwh {
     width: 100%;
@@ -188,146 +187,88 @@
     font-size: 14px;
 }
 
-/* modal 관련 */
-
-.jgFMVr {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 3000;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    touch-action: none;
+.SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 {
+    white-space: nowrap; /* 텍스트를 한 줄로 유지 */
+    overflow-x: auto; /* 가로 스크롤 허용 */
+    /* overflow: hidden; 넘치는 텍스트를 숨김 */
+    /* text-overflow: ellipsis; 텍스트가 잘릴 경우 ...으로 표시 */
+    height: 40px; /* 원하는 높이 */
+    line-height: 40px; /* height와 동일하게 설정 */
+    padding: 0 10px; /* 좌우 패딩 추가 */
+    font-size: 14px; /* 폰트 크기 조정 */
+    border: 1px solid #ccc; /* 테두리 추가 (선택 사항) */
+    border-radius: 4px; /* 둥근 모서리 (선택 사항) */
+    /* margin-top: 10px; 위쪽 간격 */
+    margin-bottom: 10px; /* 아래쪽 간격 */
 }
-.cyEVkt {
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    margin: 0px auto -100px;
-    padding-bottom: 100px;
-    z-index: 3001;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    animation: 0.3s ease 0s 1 normal none running gDIGGC;
-}
-.dNCiPY {
-    position: relative;
-    height: 40px;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-}
-.dNCiPY::before {
-    content: "";
-    position: absolute;
-    width: 37px;
-    height: 5px;
-    border-radius: 3px;
-    background-color: rgb(221, 221, 221);
-    top: 18px;
-    left: auto;
-    right: auto;
-}
-.kNwzQK {
-    padding: 35px 20px 0px;
-    font-size: 22px;
-    line-height: 30px;
-    color: rgb(51, 61, 75);
-    font-weight: bold;
-}
-.gKShYF {
-    display: flex;
-    flex-direction: column;
+.DurationOfTourContainer, .NumberOfPerson, .EtcOfTour{
+    display:flex;
     gap: 20px;
-    padding: 30px 20px 40px;
-    line-height: 15px;
+    align-items: baseline;
 }
-.bwbCin {
+.bmexYYinput{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 20px;
 }
-.bXAzoH {
-    font-size: 16px;
-    color: rgb(88, 88, 101);
+.date, .number, .etc, .bmexYYinput{
+    flex:1;
 }
-.cDJNKc {
-    font-size: 16px;
-    color: rgb(78, 89, 104);
-    margin: 10px 0px;
+
+/* 태그 생성 부분  ProductDetailPage__SectionContainer-sc-126q1k2-4 bDBbNi */
+.bDBbNi {
+    padding: 40px 0px;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: none;
 }
-p, label {
+.bDBbNi > article {
+    margin: 0px 0px 32px;
+}
+.gScFGo {
+    margin: 0px 0px 16px;
+    padding: 0px;
+}
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+.bZNoYF {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
     margin: 0px;
 }
-.hDGrky {
-    font-size: 14px;
-    color: rgb(142, 151, 163);
-}
-@keyframes jBcSpD {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-.eCzJv {
-    position: absolute;
-    inset: 0px;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-    animation: 0.3s ease 0s 1 normal none running jBcSpD;
-}
-.bJjaqH {
+.iXEvmI {
     display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    gap: 3px;
-    padding: 4px 8px;
-    border: 1px solid rgb(204, 204, 204);
-    border-radius: 15px;
-}
-.bJjaqH span {
-    font-size: 14px;
-    color: rgb(119, 119, 119);
-}
-.bJjaqH img {
-    width: 20px;
-    cursor: pointer;
-}
-.bmexYY-container {
-    display: flex;
-    gap: 10px;
     flex-wrap: wrap;
-    justify-content: flex-start; 
+    max-width: 287px;
+    padding: 0px;
 }
-.hGJMVS > * {
-    width: calc(25% - 7.5px);
-    height: calc(25% - 7.5px);
-    margin-right: 10px;
+.jXxsiv {
+    padding: 6px 11px;
+    color: rgb(0, 69, 24);
+    border: 1px solid rgb(155, 212, 145);
+    border-radius: 20px;
+    background-color: rgb(251, 255, 245);
 }
-.kZTsQf {
-    position: relative;
-    margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
+.iXEvmI > span {
+    margin: 0px 9px 12px 0px;
 }
-.gDuKGF {
-    min-height: 1px;
+.eMLPLA {
+    padding: 6px 11px;
+    color: rgb(78, 0, 0);
+    border: 1px solid rgb(212, 153, 145);
+    border-radius: 20px;
+    background-color: rgb(255, 249, 247);
 }
-.hVNKgp {
-    width: 100%;
-    border-radius: 5px;
+.bDBbNi > article:last-child {
+    margin: 0px;
 }
-.benIbu {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 26px;
-    height: 26px;
-    background-color: rgba(0, 0, 0, 0.7);
-    cursor: pointer;
+.eISlhn {
+    padding: 6px 11px;
+    color: rgb(102, 102, 102);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
 }
+/* 태그 생성 부분  ProductDetailPage__SectionContainer-sc-126q1k2-4 bDBbNi */
