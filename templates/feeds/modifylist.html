@@ -21,7 +21,7 @@
             <div id="header-placeholder"></div>
             <script>
                 // Load header.html and insert it in#header-placeholder
-                fetch('../common/header.html')
+                fetch('../all/header.html')
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('header-placeholder').innerHTML = data;
@@ -32,8 +32,22 @@
             <div class="CurrentIndex__Wrapper-sc-1w06nn3-0 iaElYN">
 
                 <div class="CurrentIndex__Header-sc-1w06nn3-1 ePhSoA title">
-                    <span class="CurrentIndex__Title-sc-1w06nn3-2 jGKeBY">내가 작성한 피드 목록</span>
+                    <div>
+                        <span class="CurrentIndex__Title-sc-1w06nn3-2 jGKeBY">내가 작성한 피드 목록</span>
+                        <button class="CurrentIndex__TooltipButton-sc-1w06nn3-3 eWCRmm">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3E %3Cpath fill='%23CCC' d='M8.5 0C13.194 0 17 3.806 17 8.5S13.194 17 8.5 17 0 13.194 0 8.5 3.806 0 8.5 0zm0 1.5c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm-.09 9.22c.613 0 .92.32.92.96 0 .64-.307.96-.92.96-.607 0-.91-.32-.91-.96 0-.64.303-.96.91-.96zm.15-5.95c.627 0 1.123.157 1.49.47.393.333.59.81.59 1.43 0 .313-.09.62-.27.92-.073.113-.163.24-.27.38l-.47.54c-.053.06-.1.12-.14.18-.107.133-.19.26-.25.38-.16.293-.223.597-.19.91H7.77c-.053-.367-.01-.717.13-1.05.053-.133.13-.273.23-.42.073-.113.167-.24.28-.38l.56-.68c.173-.247.26-.473.26-.68 0-.547-.283-.82-.85-.82-.38 0-.75.187-1.11.56l-.81-.74c.273-.313.58-.553.92-.72.367-.187.76-.28 1.18-.28z'/%3E %3C/svg%3E" alt="피커스 피드란?">
+                        </button>
+                    </div>
+                    
+                    <div class="FeedTypeSelectContainer__FeedTypeSelectWrapper-vw6f0f-0 eYJVVQ">
+                        <div class="FeedTypeSelectContainer__Wrapper-vw6f0f-1 efvdGf">
+                            <div class="FeedTypeSelectContainer__FeedTypeBox-vw6f0f-2 cvOXoA">최신</div>
+                            <div class="FeedTypeSelectContainer__FeedTypeBox-vw6f0f-2 hCxIri">같이해요</div>
+                            <div class="FeedTypeSelectContainer__FeedTypeBox-vw6f0f-2 hCxIri">리얼후기</div>
+                        </div>
+                    </div>
                 </div>
+
             
                 <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block;">
                     <div class="CurrentIndex__FeedListWrapper-sc-1djfvwr-0 hludvs">
@@ -391,7 +405,7 @@
             <div id="footer-placeholder"></div>        
             <script>
                 // Load footer.html and insert it into #footer-placeholder
-                fetch('../common/footer.html')
+                fetch('../all/footer.html')
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('footer-placeholder').innerHTML = data;
@@ -407,5 +421,5 @@
 
 </body>    
 
-<script src="../../static/js/feeds/modifylist.js"></script>
+<script src="../../static/js/feeds/list.js"></script>
 </html>
