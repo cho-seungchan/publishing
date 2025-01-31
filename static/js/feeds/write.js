@@ -74,8 +74,12 @@ tagInput.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
         const tagChildDiv = document.createElement("div");
         tagChildDiv.className = "SocialFeedTagsContainer__TagsItemContainer-sc-2762su-2 bJjaqH";
+<<<<<<< HEAD
         tagChildDiv.innerHTML = `<span>#${tagInput.value}</span>
                                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='nonzero' stroke='%23999' stroke-linecap='square'%3E %3Cpath d='M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172'/%3E %3C/g%3E %3C/svg%3E" alt="delete tags item">`;
+=======
+        tagChildDiv.innerHTML = `<span>#${tagInput.value}</span><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='nonzero' stroke='%23999' stroke-linecap='square'%3E %3Cpath d='M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172'/%3E %3C/g%3E %3C/svg%3E" alt="delete tags item">`;
+>>>>>>> 91271431fd7fa22e06f86c9db1706e0d79d26146
         tagParentDiv.appendChild(tagChildDiv);
         tagInput.value = "";
 

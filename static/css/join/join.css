@@ -1,0 +1,205 @@
+html {
+    box-sizing: border-box;
+    cursor: default;
+    font-family: sans-serif;
+    line-height: 1.5;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+    width: 100%;
+    font-size: 14px;
+    color: black;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+*, ::before, ::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+* {
+    outline: none;
+    font-family: inherit;
+}
+
+button, input, select, textarea {
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+    font-size: 1em;
+    margin: 0;
+}
+
+.cDxxJv {
+    display: flex
+;
+    flex-flow: column;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px;
+    min-height: 653px;
+}
+
+.itbwCK {
+    width: 100%;
+    max-width: 360px;
+    margin: 70px auto;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.bQDUOZ {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+    letter-spacing: -0.72px;
+    color: rgb(51, 51, 51);
+}
+
+p, label {
+    margin: 0px;
+}
+
+.fCOzti {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.42px;
+    color: rgb(153, 153, 153);
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+
+a, area, button, input, label, select, textarea, [tabindex] {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+button {
+    cursor: pointer;
+}
+
+.fgMqqR {
+    width: 100%;
+    height: 48px;
+    line-height: 24px;
+    padding: 0px 13px;
+    background-color: rgb(251, 232, 80);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0px;
+}
+
+.fyOiRy {
+    display: flex
+;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a, area, button, input, label, select, textarea, [tabindex] {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}   
+
+.bMLRoT {
+    width: 115px;
+    height: 48px;
+    line-height: normal;
+    padding: 0px 13px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+
+img {
+    border-style: none;
+}
+
+.hWMKcf {
+    width: 48px;
+    height: 48px;
+    line-height: normal;
+    padding: 0px 13px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.hvCDRQ {
+    width: 138px;
+    height: 48px;
+    line-height: 20px;
+    padding: 0px 13px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 10px;
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+}
+
+.lduEbR {
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.36px;
+    color: rgb(170, 170, 170);
+}
+
+.newButton {
+    background-color: rgb(232 214 77);
+}
+
+.newButtonBottom{
+    background-color: rgb(248 246 246);
+}
