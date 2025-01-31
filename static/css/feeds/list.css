@@ -74,11 +74,7 @@ html [type="button"],
     padding: 20px;
     border-bottom: 1px solid rgb(238, 238, 238);
 }
-<<<<<<< HEAD
-.ePhSoA.title{
-=======
 /* .ePhSoA.title{
->>>>>>> 91271431fd7fa22e06f86c9db1706e0d79d26146
     display: flex;
     flex-direction: column;
     -webkit-box-pack: justify;
@@ -87,11 +83,7 @@ html [type="button"],
     gap: 20px;
     padding: 20px;
     border-bottom: 1px solid rgb(238, 238, 238);
-<<<<<<< HEAD
-}
-=======
 } */
->>>>>>> 91271431fd7fa22e06f86c9db1706e0d79d26146
 .jGKeBY {
     color: rgb(51, 61, 75);
     font-weight: bold;
@@ -171,24 +163,11 @@ button {
     margin-left: -1px;
 }
 
-<<<<<<< HEAD
-.hludvs > div .button-container{
-=======
 .hludvs > div .button-container {
->>>>>>> 91271431fd7fa22e06f86c9db1706e0d79d26146
     display: flex;
     flex-direction: row;
     margin-left: auto;
     margin-right: 20px;
-<<<<<<< HEAD
-    gap:10px;
-    justify-content: center; 
-    align-items: center; 
-}
-.hludvs > div .button-container button{
-    cursor: pointer;
-    padding: 10px,20px;
-=======
     gap: 10px;
     justify-content: center;
     align-items: center;
@@ -196,7 +175,6 @@ button {
 .hludvs > div .button-container button {
     cursor: pointer;
     padding: 10px, 20px;
->>>>>>> 91271431fd7fa22e06f86c9db1706e0d79d26146
     background-color: #f8f9fa;
     color: #000000;
     border: none;
@@ -206,10 +184,6 @@ button {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 입체감 있는 그림자 */
     background-image: linear-gradient(to bottom, #ffffff, #e2e6ea); /* 그라디언트 배경 */
     transition: background-color 0.3s, box-shadow 0.3s; /* 호버 시 배경 색상 및 그림자 변경 애니메이션 */
-<<<<<<< HEAD
-
-=======
->>>>>>> 91271431fd7fa22e06f86c9db1706e0d79d26146
 }
 .hludvs > div .button-container button:hover {
     background-color: #e2e6ea; /* 호버 시 배경 색상 변경 */
@@ -790,8 +764,4 @@ label {
     background-color: rgb(17, 17, 17);
     opacity: 0.6;
 }
-<<<<<<< HEAD
 /* 플로팅 버튼 눌렀을 때 */
-=======
-/* 플로팅 버튼 눌렀을 때 */
->>>>>>> 91271431fd7fa22e06f86c9db1706e0d79d26146

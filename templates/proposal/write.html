@@ -22,11 +22,7 @@
                 <div id="header-placeholder"></div>
                 <script>
                     // Load header.html and insert it in#header-placeholder
-<<<<<<< HEAD
-                    fetch("../common/header.html")
-=======
                     fetch("../all/header.html")
->>>>>>> 91271431fd7fa22e06f86c9db1706e0d79d26146
                         .then((response) => response.text())
                         .then((data) => {
                             document.getElementById("header-placeholder").innerHTML = data;
@@ -47,61 +43,38 @@
                                 value=>
                                 <div class="DurationOfTourContainer">
                                     <input type="date" placeholder="시작일"
-<<<<<<< HEAD
-                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh date"
-                                    value=>~<input type="date" placeholder="종료일"
-                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh date"
-                                    value=>모집 마감일:: <input type="date" placeholder="모집 마감일"
-                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh date
-=======
                                     class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh
-                                    startdate" value=><span> ~ </span><input type="date" placeholder="종료일"
+                                    startdate" value=><span>~</span><input type="date" placeholder="종료일"
                                     class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh
-                                    enddate" value=> <span> 마감일 </span> <input type="date" placeholder="모집 마감일"
+                                    enddate" value=><span>마감일</span><input type="date" placeholder="모집 마감일"
                                     class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh
->>>>>>> 91271431fd7fa22e06f86c9db1706e0d79d26146
-                                    deadline" value=>
-                                </div>
-                                <div class="DetailOfDateContainer">
-                                    <textarea
-                                        placeholder="일자별 상세 일정을 적어보세요 (아래 사진첨부로 대체 가능)"
-                                        maxlength="1200"
-                                        class="Textarea__StyledTextarea-sc-1b9phu6-1 kmqQeB detail"
-                                    ></textarea>
-                                    <p class="Textarea__Count-sc-1b9phu6-2 jvAusQ">0 / 1200</p>
-                                    <textarea
-                                        placeholder="일자별 상세 일정을 적어보세요 (아래 사진첨부로 대체 가능)"
-                                        maxlength="1200"
-                                        class="Textarea__StyledTextarea-sc-1b9phu6-1 kmqQeB detail"
-                                    ></textarea>
-                                    <p class="Textarea__Count-sc-1b9phu6-2 jvAusQ">0 / 1200</p>
-                                    <textarea
-                                        placeholder="일자별 상세 일정을 적어보세요 (아래 사진첨부로 대체 가능)"
-                                        maxlength="1200"
-                                        class="Textarea__StyledTextarea-sc-1b9phu6-1 kmqQeB detail"
-                                    ></textarea>
-                                    <p class="Textarea__Count-sc-1b9phu6-2 jvAusQ">0 / 1200</p>
+                                    deadline" value=><button
+                                        type="button"
+                                        class="CurrentProfile__MoreButton-sc-1u92qay-6 FvtMb"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='17' viewBox='0 0 4 17'%3E %3Cpath fill='%23999' fill-rule='evenodd' d='M1.57 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/%3E %3C/svg%3E"
+                                            alt="더보기"
+                                        />
+                                    </button>
                                 </div>
                                 <div class="NumberOfPerson">
                                     <input placeholder="최대 모집 인원"
-                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh
-                                    number" value=> <input placeholder="최소 출발 인원"
-                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh
-                                    number" value=>
-                                </div>
-                                <div class="EtcOfTour">
-                                    <input placeholder="테마 :: 자연 탐방, 도시탐험, 역사 문화 체험, 하이킹 등"
-                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh etc
-                                    theme" value=> <input placeholder="연령대"
-                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh etc
-                                    year" value=> <input placeholder="성별"
-                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh etc
-                                    gen" value=>
+                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh max"
+                                    value=> <input placeholder="최소 출발 인원"
+                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh min"
+                                    value=><input
+                                        placeholder="비용"
+                                        class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh cost"
+                                        value=""
+                                    />
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div class="SocialRecruiteTagsContainer__SocialRecruiteTagsWrapper-sc-2762su-0 bmexYY">
+                            <div
+                                class="SocialRecruiteTagsContainer__SocialRecruiteTagsWrapper-sc-2762su-0 bmexYY second"
+                            >
                                 <div class="bmexYYinput">
                                     <input
                                         placeholder="포함 사항 (0/10)"
@@ -122,46 +95,9 @@
                                 <p class="Textarea__Count-sc-1b9phu6-2 jvAusQ">입력 후 엔터를 누르면 태그가 생성되요</p>
 
                                 <section class="ProductDetailPage__SectionContainer-sc-126q1k2-4 bDBbNi">
-                                    <article>
-                                        <header class="Article__Header-sc-1mmkltm-0 gScFGo">
-                                            <hgroup>
-                                                <h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">포함 사항</h2>
-                                            </hgroup>
-                                        </header>
-                                        <div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI">
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 jXxsiv">피커스캡틴</span>
-                                        </div>
-                                    </article>
-                                    <article>
-                                        <header class="Article__Header-sc-1mmkltm-0 gScFGo">
-                                            <hgroup>
-                                                <h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">불포함 사항</h2>
-                                            </hgroup>
-                                        </header>
-                                        <div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI">
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 eMLPLA">왕복교통비</span>
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 eMLPLA">개인경비</span>
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 eMLPLA">중/석식 비용</span>
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 eMLPLA">여행자보험</span>
-                                        </div>
-                                    </article>
-                                    <article>
-                                        <header class="Article__Header-sc-1mmkltm-0 gScFGo">
-                                            <hgroup><h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">준비물</h2></hgroup>
-                                        </header>
-                                        <div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI">
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">등산화</span>
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">등산복</span>
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">물</span>
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">행동식</span>
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">가방</span>
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">스틱</span>
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">보조배터리</span>
-                                            <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn"
-                                                >개인필요물품(선글라스/스틱/무릎보호대)</span
-                                            >
-                                        </div>
-                                    </article>
+                                    <article class="bDBbNifirst"></article>
+                                    <article class="bDBbNisecond"></article>
+                                    <article class="bDBbNithird"></article>
                                 </section>
                             </div>
                         </div>
@@ -170,11 +106,6 @@
                             <input
                                 placeholder="모이는 장소 (지도로 대체)"
                                 class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh gather"
-                                value=""
-                            />
-                            <input
-                                placeholder="비용"
-                                class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh cost"
                                 value=""
                             />
                         </div>
@@ -210,11 +141,7 @@
                 <div id="footer-placeholder"></div>
                 <script>
                     // Load footer.html and insert it into #footer-placeholder
-<<<<<<< HEAD
-                    fetch("../common/footer.html")
-=======
                     fetch("../all/footer.html")
->>>>>>> 91271431fd7fa22e06f86c9db1706e0d79d26146
                         .then((response) => response.text())
                         .then((data) => {
                             document.getElementById("footer-placeholder").innerHTML = data;
@@ -226,8 +153,5 @@
         <div id="modal-root"></div>
         <div id="dnd-root"></div>
     </body>
-<<<<<<< HEAD
-=======
     <script src="../../static/js/proposal/write.js"></script>
->>>>>>> 91271431fd7fa22e06f86c9db1706e0d79d26146
 </html>
