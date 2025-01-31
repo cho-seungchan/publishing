@@ -196,3 +196,10 @@ img {
     color: rgb(170, 170, 170);
 }
 
+.newButton {
+    background-color: rgb(232 214 77);
+}
+
+.newButtonBottom{
+    background-color: rgb(248 246 246);
+}
