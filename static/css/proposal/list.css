@@ -1147,7 +1147,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     padding: 85px 0 30px;
 }
 .relation_cos .cos_wrap .pc.js_slider ul li {
-    padding: 85px 0 24px;
+    padding: 72px 0 24px;
 }
 .relation_cos .cos_wrap ul li.on1:before {
     content: '';
@@ -1156,7 +1156,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     height: 4px;
     background: #ed4956;
     position: absolute;
-    left: -30px;
+    left: 10px;
     top: 38px;
 }
 .relation_cos .cos_wrap ul li.on:before {
@@ -1167,14 +1167,14 @@ a:link, a:visited, a:hover, a:focus, a:active {
     background: #ed4956;
     position: absolute;
     left: 10px;
-    top: 52px;
+    top: 38px;
 }
 .relation_cos ul li em {
     display: inline-block;
     position: absolute;
     left: 42%;
-    top: 25px;
-    margin-left: -40px;
+    top: 23px;
+    margin-left: -0px;
     font-weight: 700;
     font-size: 16px;
     line-height: 28px;
@@ -1184,6 +1184,9 @@ a:link, a:visited, a:hover, a:focus, a:active {
     border-radius: 100%;
     background: #fff;
     color: #767676;
+}
+.relation_cos .cos_wrap .js_slider ul {
+    padding: 0;
 }
 .relation_cos ul li.on em, .relation_cos ul li.on1 em {
     border: 2px solid #ed4956;
@@ -1197,7 +1200,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     display: block;
     width: 180px;
     height: 180px;
-    margin: 0 -29px;
+    margin: 0 10px;
     position: relative;
     border-radius: 10px;
 }
@@ -1549,4 +1552,11 @@ address, caption, cite, code, dfn, em, var {
     -o-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
     margin: 0 auto;
+}
+.slick-prev.slick-disabled, .slick-next.slick-disabled {
+    content: none; /* 가상 요소의 콘텐츠를 비활성화 */
+    display: none; /* 가상 요소를 숨기기 */
+}
+.hlWAni .slick-arrow.slick-disabled {
+    display: none !important;
 }

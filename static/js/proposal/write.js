@@ -9,15 +9,15 @@ let deadline = 0;
 firstDate.addEventListener("change", () => {
     startDate = firstDate.value;
     if (startDate <= today) {
-        alert(`시작일("${startDate})은 오늘("${today}") 이후만 가능합니다..`);
+        alert(`시작일("${startDate}")은 오늘("${today}") 이후만 가능합니다..`);
         firstDate.value = "";
         startDate = 0;
     } else if (endDate != 0 && endDate < startDate) {
-        // alert(`시작 날짜("${startDate})가 종료 날짜("${endDate}") 보다 큽니다.`);
+        // alert(`시작 날짜("${startDate}")가 종료 날짜("${endDate}") 보다 큽니다.`);
         secondDate.value = "";
         endDate = 0;
     } else if (deadline != 0 && deadline > startDate) {
-        // alert(`시작 날짜("${startDate})가 마감 날짜("${deadline}") 보다 작습니다.`);
+        // alert(`시작 날짜("${startDate}")가 마감 날짜("${deadline}") 보다 작습니다.`);
         thirdDate.value = "";
         deadline = 0;
     }
@@ -26,17 +26,17 @@ firstDate.addEventListener("change", () => {
 secondDate.addEventListener("change", () => {
     endDate = secondDate.value;
     if (endDate <= today) {
-        alert(`종료일("${endDate})은 오늘("${today}") 이후만 가능합니다.`);
+        alert(`종료일("${endDate}")은 오늘("${today}") 이후만 가능합니다.`);
         secondDate.value = "";
         endDate = 0;
     } else if (deadline != 0 && deadline > endDate) {
-        // alert(`종료 날짜("${endDate})가 마감 날짜("${deadline}") 보다 작습니다.`);
+        // alert(`종료 날짜("${endDate}")가 마감 날짜("${deadline}") 보다 작습니다.`);
         firstDate.value = "";
         thirdDate.value = "";
         startDate = 0;
         deadline = 0;
     } else if (startDate != 0 && startDate > endDate) {
-        // alert(`종료 날짜("${endDate})가 시작 날짜("${startDate}") 보다 작습니다.`);
+        // alert(`종료 날짜("${endDate}")가 시작 날짜("${startDate}") 보다 작습니다.`);
         firstDate.value = "";
         startDate = 0;
     }
@@ -45,15 +45,15 @@ secondDate.addEventListener("change", () => {
 thirdDate.addEventListener("change", () => {
     deadline = thirdDate.value;
     if (deadline < today) {
-        alert(`마감일("${deadline})은 오늘("${today}") 부터 가능합니다.`);
+        alert(`마감일("${deadline}")은 오늘("${today}") 부터 가능합니다.`);
         thirdDate.value = "";
         deadline = 0;
     } else if (startDate != 0 && startDate <= deadline) {
-        alert(`마감일("${deadline})이 시작일("${startDate}") 보다 작아야 합니다.`);
+        alert(`마감일("${deadline}")이 시작일("${startDate}") 보다 작아야 합니다.`);
         thirdDate.value = "";
         deadline = 0;
     } else if (endDate != 0 && endDate <= deadline) {
-        alert(`마감일("${deadline})이 종료일("${endDate}") 보다 작아야 합니다.`);
+        alert(`마감일("${deadline}")이 종료일("${endDate}") 보다 작아야 합니다.`);
         thirdDate.value = "";
         deadline = 0;
     }
@@ -86,7 +86,6 @@ kebabmenu.addEventListener("click", () => {
             maxlength="1200"  class="Textarea__StyledTextarea-sc-1b9phu6-1 kmqQeB detail"></textarea>
             <p class="Textarea__Count-sc-1b9phu6-2 jvAusQ">0 / 1200</p>`;
     }
-    console.log(detailOfDateContainer.outerHTML);
     numberOfPerson.parentNode.insertBefore(detailOfDateContainer, numberOfPerson);
 });
 // 케밥버튼을 눌러서  시작일 부터 종료일까지 상세 일정 입력
@@ -105,6 +104,10 @@ let thirdTagCount = 0;
 let parentDiv = ``;
 gcqwwhinclude.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
+        if (firstTagCount > 9) {
+            alert(`10개 까지만 입력 가능합니다.`);
+            return;
+        }
         if (firstTagCount === 0) {
             bDBbNifirst.innerHTML = `<header class="Article__Header-sc-1mmkltm-0 gScFGo">
                                         <hgroup>
@@ -129,6 +132,10 @@ gcqwwhinclude.addEventListener("keyup", (e) => {
 
 gcqwwhexclude.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
+        if (secondTagCount > 9) {
+            alert(`10개 까지만 입력 가능합니다.`);
+            return;
+        }
         if (secondTagCount === 0) {
             bDBbNisecond.innerHTML = `<header class="Article__Header-sc-1mmkltm-0 gScFGo">
                                         <hgroup>
@@ -153,6 +160,10 @@ gcqwwhexclude.addEventListener("keyup", (e) => {
 
 gcqwwhprepare.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
+        if (thirdTagCount > 9) {
+            alert(`10개 까지만 입력 가능합니다.`);
+            return;
+        }
         if (thirdTagCount === 0) {
             bDBbNithird.innerHTML = `<header class="Article__Header-sc-1mmkltm-0 gScFGo">
                                         <hgroup>
@@ -215,12 +226,26 @@ bDBbNithird.addEventListener("click", (e) => {
 });
 // 태그의 이미지(x)를 눌렀을 때 div 삭제 :: 동적으로 생성된 요소일 때는 부모 요소에 위임
 
+// 태그의 text들을 서버로 보낼 배열에 담는 함수
+
+function collectTexts(tagClassName) {
+    const texts = [];
+    const tagDivs = document.querySelectorAll(tagClassName);
+    tagDivs.forEach((child) => {
+        const span = child.querySelector("span");
+        if (span) {
+            texts.push(span.textContent);
+        }
+    });
+    return texts;
+}
+// 태그의 text들을 서버로 보낼 배열에 담는 함수
+
 // 서버에 올리지 않고 화면에 보이도록 처리
 const fileParentDiv = document.querySelector(".ImageList-sc-9v1mt2-0.hGJMVS");
 const fileInput = document.querySelector(".InputImageReview__Wrapper-sc-1oapt4s-0.ipbuZD input");
 
 fileInput.addEventListener("change", (e) => {
-    console.log("fileInput.addEventListener");
     const files = e.target.files;
 
     Array.from(files).forEach((file) => {
@@ -249,3 +274,32 @@ fileParentDiv.addEventListener("click", (e) => {
     }
 });
 // 선택파일의 이미지(x)를 눌렀을 때 전체 dev 삭제 :: 동적으로 생성된 요소일 때는 부모 요소에 위임
+
+// 등록 하기
+const jULzvQ = document.querySelector(".jULzvQ");
+
+jULzvQ.addEventListener("click", () => {
+    // 태그에 들어 온 텍스트 모으기 => 서버로 보내기 위해
+    let tagClassName, texts;
+    tagClassName = `.Tag__RoundTag-sxb61j-1.jXxsiv`;
+
+    texts = collectTexts(tagClassName);
+    console.log(texts.length);
+
+    tagClassName = `.Tag__RoundTag-sxb61j-1.eMLPLA`;
+
+    texts = collectTexts(tagClassName);
+    console.log(texts.length);
+
+    tagClassName = `.Tag__RoundTag-sxb61j-1.eISlhn`;
+
+    texts = collectTexts(tagClassName);
+    console.log(texts.length);
+
+    let max = parseInt(document.querySelector(".gcqwwh.max").value, 10);
+    let min = parseInt(document.querySelector(".gcqwwh.min").value, 10);
+    if (max < min) {
+        alert(`모집 인원("${max}") 이 최소 출발 인원("${min})"보다 적습니다.`);
+        return;
+    }
+});
