@@ -114,3 +114,12 @@ document.querySelector(".slick-prev").addEventListener("click", (e) => {
     document.querySelector(".slick-next").classList.remove("slick-disabled");
 });
 // 후기의 버튼 클릭시 이미지 3개식 이동 732px, 디스플레이 768px
+
+// 위로 버튼 누르면 화면 위쪽으로 천천히 이동
+document.querySelector(".gQlhwK").addEventListener("click", (e) => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+});
+// 위로 버튼 누르면 화면 위쪽으로 천천히 이동

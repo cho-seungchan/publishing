@@ -174,7 +174,7 @@ hr {
     -webkit-box-align: center;
     align-items: center;
     margin-top: 8px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.48px;
 }
@@ -186,7 +186,7 @@ hr {
     border: 1px solid rgb(221, 221, 221);
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 22px;
     letter-spacing: -0.42px;
@@ -360,7 +360,7 @@ hr {
 .eHKVGS {
     color: rgb(0, 0, 0);
     font-family: SUIT;
-    font-size: 18px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
@@ -601,4 +601,56 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     height: 100%;
     overflow-y: auto;
     margin-top: 6px;
+}
+.Coupon_Input {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    font-family: SUIT;
+    border: 2px solid rgb(221, 221, 221); /* 두께 2px, 색상 검정(#000) */
+    padding: 5px; /* 입력 필드 안쪽 여백 */
+    border-radius: 5px;
+    width: 150px
+}
+.Coupon_Input::placeholder {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    font-family: SUIT;
+}
+
+.Coupon__AmountWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.Coupon__AmountWrapper p {
+    margin: 0; /* 기본 여백 제거 */
+}
+
+.Coupon__AmountWrapper p:first-child {
+    margin-right: 20px; /* 30,000과 원 사이의 간격 조절 */
+}
+
+.Coupon_Input {
+    margin-right: 170px; /* 입력 필드와 원 사이의 간격 조절 */
+}
+
+.InnerActionButton-io567l-0 {
+    flex-shrink: 0;
+    margin-left: 75px; /* 원과 전액 버튼 사이의 간격 조절 */
+}
+.TotalPrice__TotalPriceText-sc-1e1zxsm-3 {
+    margin-left: 71px; /* '총 결제금액'과 '45,000' 사이에 간격 추가 */
+}
+.TotalPrice__TotalPriceText-sc-1e1zxsm-3 + span {
+    margin-left: 5px; /* '45,000'과 '원' 사이에 간격 추가 */
+}
+.caCrk {
+    position: absolute;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }

@@ -183,3 +183,13 @@ p, label {
 button:disabled {
     cursor: not-allowed;
 }
+.hMkcjB {
+    position: absolute;
+    right: 15px;
+    bottom: 18px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    padding: 0px;
+    color: rgb(5, 116, 230);
+}
