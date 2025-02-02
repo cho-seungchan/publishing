@@ -1,3 +1,84 @@
+// 결제 인원수  오름내림버튼
+const inputField = document.querySelector(".Counter__Value-g6dtdl-2");
+// inputField.min = "1";   inputField.max = "4";  inputField.step = "1";
+// inputField.dispatchEvent(new Event("input", { bubbles: true })); // 값 변경 후 input 이벤트 강제 발생
+let minInt = parseInt(inputField.min, 10);
+let maxInt = parseInt(inputField.max, 10);
+let oneAmount;
+let discountAmount;
+let paymentAmount;
+
+document.querySelectorAll(".hcNdoZ img").forEach((button, index) => {
+    button.addEventListener("click", (e) => {
+        if (e.target.classList.contains("kRIdGY")) {
+            // 한도 넘어 갈때 skip
+            return;
+        }
+
+        let inputValue;
+        if (index == 0) {
+            // spinner 버튼 누르기(감소)
+            inputField.stepDown(); // 하나 감소
+            inputValue = parseInt(inputField.value, 10);
+
+            if (inputValue == maxInt - 1) {
+                // 올림 버튼 막힌거 풀어주기
+                document.querySelectorAll(".hcNdoZ img")[1].classList.remove("kRIdGY");
+                document.querySelectorAll(".hcNdoZ img")[1].classList.add("gmHNud");
+
+                inputField.classList.remove("hwQqOj");
+                inputField.classList.add("fwlmcq");
+            }
+
+            if (inputValue == minInt) {
+                // 아래 한도에 도달하면 누름 버튼 불활성
+                e.target.classList.remove("gmHNud");
+                e.target.classList.add("kRIdGY");
+
+                inputField.classList.remove("fwlmcq");
+                inputField.classList.add("fnrlwk");
+            }
+        } else {
+            inputField.stepUp(); // spinner 버튼 누르기(증가)
+            inputValue = parseInt(inputField.value, 10);
+
+            if (inputValue == minInt + 1) {
+                // 내림 버튼 막힌거 풀어주기
+                document.querySelectorAll(".hcNdoZ img")[0].classList.remove("kRIdGY");
+                document.querySelectorAll(".hcNdoZ img")[0].classList.add("gmHNud");
+
+                inputField.classList.remove();
+                inputField.classList.add("fwlmcq");
+            }
+
+            if (inputValue == maxInt) {
+                e.target.classList.remove("gmHNud");
+                e.target.classList.add("kRIdGY");
+
+                inputField.classList.remove("fwlmcq");
+                inputField.classList.add("hwQqOj");
+            }
+        }
+
+        // 가격 변동 반영하기
+        oneAmount = parseInt(document.querySelector(".oneAmount").textContent.replace(/[^0-9]/g, ""), 10);
+        discountAmount = parseInt(document.querySelector(".Coupon_Input").value.replace(/,/g, ""), 10);
+        if (isNaN(discountAmount)) {
+            discountAmount = 0;
+        }
+
+        document.querySelector(".dOTuYO").textContent = NumberWithCommas(inputValue * oneAmount);
+        document.querySelector(".dxsibZ").textContent = NumberWithCommas(inputValue * oneAmount);
+        document.querySelector(".peakcourseAmount").textContent = NumberWithCommas(
+            inputValue * oneAmount - discountAmount
+        );
+        document.querySelector(".pointspan").textContent = NumberWithCommas(
+            (inputValue * oneAmount - discountAmount) / 100
+        );
+    });
+});
+// 결제 인원수 오름 내림 버튼
+
 // 할인 금액 입력시 천단위마다 , 찍히게
 const priceInput = document.querySelector(".Coupon_Input");
 
@@ -9,18 +90,19 @@ priceInput.addEventListener("input", (event) => {
 });
 
 function formatNumberWithCommas(number) {
+    // number가 문자 일 때
     return number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function NumberWithCommas(number) {
+    // number가 숫자 일 때
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-const discountAmount = parseInt(document.querySelector(".discount span").textContent.replace(/,/g, ""), 10);
-const paymentAmount = parseInt(document.querySelector(".dxsibZ").textContent.replace(/,/g, ""), 10);
-
 // 할인 금액 입력시 천단위마다 , 찍히게. 결제금액에서 차감해서 치커스금액 산출
 priceInput.addEventListener("input", (event) => {
+    discountAmount = parseInt(document.querySelector(".discount").textContent.replace(/,/g, ""), 10);
+    paymentAmount = parseInt(document.querySelector(".dxsibZ").textContent.replace(/,/g, ""), 10);
     const input = event.target;
     const value = input.value.replace(/,/g, ""); // 쉼표 제거
     if (value.length <= 10) {
@@ -36,38 +118,66 @@ priceInput.addEventListener("input", (event) => {
         intValue = 0;
     }
 
-    document.querySelector(".eHKVGS span").textContent = NumberWithCommas(paymentAmount - intValue);
+    document.querySelector(".peakcourseAmount").textContent = NumberWithCommas(paymentAmount - intValue);
+    document.querySelector(".pointspan").textContent = NumberWithCommas((paymentAmount - intValue) / 100);
 });
 // 할인 금액 입력시 천단위마다 , 찍히게. 결제금액에서 차감해서 치커스금액 산출
 
 // 전액 버튼 누르면 반영되게
 document.querySelector(".cVMMHP").addEventListener("click", (e) => {
+    discountAmount = parseInt(document.querySelector(".discount").textContent.replace(/,/g, ""), 10);
+    paymentAmount = parseInt(document.querySelector(".dxsibZ").textContent.replace(/,/g, ""), 10);
+
     document.querySelector(".Coupon_Input").value = NumberWithCommas(discountAmount);
-    document.querySelector(".eHKVGS span").textContent = NumberWithCommas(paymentAmount - discountAmount);
+    document.querySelector(".peakcourseAmount").textContent = NumberWithCommas(paymentAmount - discountAmount);
+    document.querySelector(".pointspan").textContent = NumberWithCommas((paymentAmount - discountAmount) / 100);
 });
 
 // 전액 버튼 누르면 반영되게
 
-// 신용카드 클릭시 변경사항
-// kgwffz  => bzEHmm  신용카드 선택되면 신용카드 요소의 클래스만 바뀜
-// 1차
-<div class="InputField__InputFieldsContainer-sc-1gemlf5-0 fECeZH">
-<div class="InputField__InputFields-sc-1gemlf5-1 jiQCcX">
-    <div color="#777777" class="InputField__Title-sc-1gemlf5-3 gymEUt">[필수] 카드사를 선택해주세요.</div>
-    <div class="InputField__InputFieldsArrowImageContainer-sc-1gemlf5-5 chUHpJ">
-        <img
-            src="data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M1 11L6 6L1 1' stroke='%23CCCCCC' stroke-linecap='round' stroke-linejoin='round'/%3E %3C/svg%3E"
-            alt="arrow"
-            class="InputField__ArrowImage-sc-1gemlf5-4 fOdbVR"
-        />
-    </div>
-</div>
-</div>
+// PayMethod check 카드 클릭
+const fPagJs = document.createElement("ol");
+fPagJs.className = "InputField__InputFieldsItemContainer-sc-1gemlf5-6 fPagJs";
 
-// 2차
+const payMethods = document.getElementsByName("PayMethod");
+payMethods.forEach((payMethod, index) => {
+    payMethod.addEventListener("click", (e) => {
+        if (index === 1) {
+            e.target.closest("div").classList.add("bzEHmm");
+            return;
+        }
+        // 카드사가 선택된 정보가 bzEHmm 가 남아있으면 삭제
+        if (document.querySelector(".bzEHmm")) {
+            document.querySelector(".bzEHmm").classList.remove("bzEHmm");
+        }
+        // 카드사 dropdown menu가 열려있다면 닫고, 카드 선택창에 "[필수] 카드사를 선택해주세요." 설정
+        if (document.querySelector(".fPagJs")) {
+            document.querySelector(".fPagJs").remove();
+            // 화살표 방향 변경
+            document.querySelector(".fPBoFK").classList.add("chUHpJ");
+            document.querySelector(".fPBoFK").classList.remove("fPBoFK");
+        }
+        document.querySelector(".gymEUt").textContent = "[필수] 카드사를 선택해주세요.";
+    });
+});
+// PayMethod check 카드 클릭
 
-<ol class="InputField__InputFieldsItemContainer-sc-1gemlf5-6 fPagJs">
-<li class="InputField__InputFieldsItem-sc-1gemlf5-7 dEzUvK">기업 비씨</li>
+// 카드사 리스트 클릭
+document.querySelector(".jiQCcX").addEventListener("click", (e) => {
+    // 신용카드를 선택하지 않았을 때, 카드사 선택도 불가능하도록 설정
+    if (!document.querySelector(".bzEHmm")) {
+        return;
+    }
+    if (document.querySelector(".fPagJs")) {
+        //dropdown 메뉴가 존재하면 메뉴 삭제. 화살표 방향 변경
+        // 화살표 방향 변경
+        document.querySelector(".fPBoFK").classList.add("chUHpJ");
+        document.querySelector(".fPBoFK").classList.remove("fPBoFK");
+        // 카드사 dropdown menu 삭제
+        document.querySelector(".fPagJs").remove();
+        return;
+    }
+    fPagJs.innerHTML = `<li class="InputField__InputFieldsItem-sc-1gemlf5-7 dEzUvK">기업 비씨</li>
 <li class="InputField__InputFieldsItem-sc-1gemlf5-7 dEzUvK">광주은행</li>
 <li class="InputField__InputFieldsItem-sc-1gemlf5-7 dEzUvK">롯데카드</li>
 <li class="InputField__InputFieldsItem-sc-1gemlf5-7 dEzUvK">KDB산업은행</li>
@@ -89,10 +199,29 @@ document.querySelector(".cVMMHP").addEventListener("click", (e) => {
 <li class="InputField__InputFieldsItem-sc-1gemlf5-7 dEzUvK">현대카드</li>
 <li class="InputField__InputFieldsItem-sc-1gemlf5-7 dEzUvK">KB국민카드</li>
 <li class="InputField__InputFieldsItem-sc-1gemlf5-7 dEzUvK">NH농협카드</li>
-<li class="InputField__InputFieldsItem-sc-1gemlf5-7 dEzUvK">SH수협은행</li>
-</ol>
+<li class="InputField__InputFieldsItem-sc-1gemlf5-7 dEzUvK">SH수협은행</li>`;
 
-// 신용카드 클릭시 변경사항
+    // dropdown menu 생성
+    document.querySelector(".fECeZH").appendChild(fPagJs);
+    // 화살표 방향 변경
+    document.querySelector(".chUHpJ").classList.add("fPBoFK");
+    document.querySelector(".chUHpJ").classList.remove("chUHpJ");
+
+    // 카드사 리스트에서 카드사 선택시
+    document.querySelectorAll(".dEzUvK").forEach((company) => {
+        company.addEventListener("click", (e) => {
+            // 카드사 선택창에 카드사 이름 설정
+            document.querySelector(".gymEUt").textContent = e.target.textContent;
+            // 화살표 방향 변경
+            document.querySelector(".fPBoFK").classList.add("chUHpJ");
+            document.querySelector(".fPBoFK").classList.remove("fPBoFK");
+            // 카드사 dropdown menu 삭제
+            document.querySelector(".bzEHmm .fECeZH").removeChild(fPagJs);
+        });
+    });
+});
+
+// 카드사 리스트 클릭
 
 // 약관 모달 창 띄우기
 const kDrVuI = document.createElement("div");
