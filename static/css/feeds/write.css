@@ -118,7 +118,10 @@
     resize: none;
     background-color: rgb(237, 239, 242);
     border-radius: 5px;
-    color: rgb(78, 89, 104);
+    /* color: rgb(78, 89, 104); */
+    color: rgb(0, 0, 0); 
+    font-weight: bold; 
+    font-family: Arial, sans-serif; 
 }
 .jvAusQ {
     margin-top: 2px;
@@ -134,7 +137,10 @@
 }
 .gcqwwh {
     width: 100%;
-    color: rgb(153, 153, 153);
+    /* color: rgb(153, 153, 153); */
+    color: rgb(0, 0, 0); 
+    font-weight: bold; 
+    font-family: Arial, sans-serif; 
 }
 .kutLeL {
     border-bottom: 0px;

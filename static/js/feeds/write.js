@@ -72,14 +72,18 @@ const tagParentDiv = document.querySelector(".bmexYY-container");
 const tagInput = document.querySelector(".SocialFeedTagsContainer__SocialFeedTagsWrapper-sc-2762su-0.bmexYY input");
 tagInput.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
+        if (tagCount > 9) {
+            alert(`10개 까지만 입력 가능합니다.`);
+            return;
+        }
         const tagChildDiv = document.createElement("div");
         tagChildDiv.className = "SocialFeedTagsContainer__TagsItemContainer-sc-2762su-2 bJjaqH";
-        tagChildDiv.innerHTML = `<span>#${tagInput.value}</span><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='nonzero' stroke='%23999' stroke-linecap='square'%3E %3Cpath d='M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172'/%3E %3C/g%3E %3C/svg%3E" alt="delete tags item">`;
+        tagChildDiv.innerHTML = `<span>#${tagInput.value}</span>
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='nonzero' stroke='%23999' stroke-linecap='square'%3E %3Cpath d='M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172'/%3E %3C/g%3E %3C/svg%3E" alt="delete tags item">`;
         tagParentDiv.appendChild(tagChildDiv);
         tagInput.value = "";
 
         tagCount += 1;
-        console.log("tagCount 증가 " + tagCount);
         tagInput.placeholder = `태그를 입력 후 엔터를 누르면 태그가 생성돼요! (${tagCount}/10)`;
     }
 });
@@ -91,7 +95,6 @@ tagParentDiv.addEventListener("click", (e) => {
         e.target.closest(".SocialFeedTagsContainer__TagsItemContainer-sc-2762su-2").remove();
 
         tagCount -= 1;
-        console.log("tagCount 감소 " + tagCount);
         tagInput.placeholder = `태그를 입력 후 엔터를 누르면 태그가 생성돼요! (${tagCount}/10)`;
     }
 });
@@ -109,7 +112,6 @@ function collectTexts() {
     });
     return texts;
 }
-const texts = collectTexts();
 // 태그의 text들을 서버로 보낼 배열에 담는 함수
 
 // 서버에 올리지 않고 화면에 보이도록 처리
@@ -117,7 +119,6 @@ const fileParentDiv = document.querySelector(".ImageList-sc-9v1mt2-0.hGJMVS");
 const fileInput = document.querySelector(".InputImageReview__Wrapper-sc-1oapt4s-0.ipbuZD input");
 
 fileInput.addEventListener("change", (e) => {
-    console.log("fileInput.addEventListener");
     const files = e.target.files;
 
     Array.from(files).forEach((file) => {
@@ -146,3 +147,10 @@ fileParentDiv.addEventListener("click", (e) => {
     }
 });
 // 선택파일의 이미지(x)를 눌렀을 때 전체 dev 삭제 :: 동적으로 생성된 요소일 때는 부모 요소에 위임
+
+const jULzvQ = document.querySelector(".jULzvQ");
+
+jULzvQ.addEventListener("click", () => {
+    const texts = collectTexts();
+    console.log(texts.length);
+});
