@@ -253,30 +253,31 @@
                             <div class="db_cont_detail">
                                 <div id="replyGo">
                                     <div class="replyWrap"><!-- login 추가시 로그인 후 form -->
-                                        <h3 class="tit_reply">질의/응답</h3>
+                                        <h3 class="tit_reply">질의/응답<span>9</span></h3>
                                         <div class="write">
-                                            <div class="form">
-                                                <form name="tform" id="tform">
-                                                    <label class="blind" for="comment">로그인 후 궁금한 점을 남겨주세요.</label>
-                                                    <span class="writeForm"><textarea name="" rows="" id="comment" placeholder="로그인 후 궁금한 점을 남겨주세요." cols="" onkeydown="commentresize(this);" readonly="readonly"></textarea></span>
-                                                    <div class="fileRegbtn_wrap">
-                                                        <span class="fileRegbtn">
-                                                            <input type="file" id="fileUp" name="fileUp" multiple="" onchange="fileChange(this)" disabled="disabled">
-                                                            <label for="fileUp" class="btn_fileUp">파일찾기</label>
-                                                            <a href="javascript:" class="btn_apply ContentComment">로그인</a>
-                                                        </span>
-                                                    </div>
-                                                </form>
-                                            </div>
+                                                <div class="form">
+                                                    <form name="tform" id="tform">
+                                                        <label class="blind" for="comment">로그인 후 질문을 남겨주세요.</label>
+                                                        <span class="writeForm" style="height: 80px;"><textarea name="" rows="" id="comment" placeholder="로그인 후 질문을 남겨주세요." cols="" onkeydown="commentresize(this);" readonly="readonly" style="height: 80px;"></textarea></span>
+                                                        <div class="fileRegbtn_wrap">
+                                                            <span class="fileRegbtn">
+                                                                <input type="file" id="fileUp" name="fileUp" multiple="" onchange="fileChange(this)" disabled="disabled">
+                                                                <label for="fileUp" class="btn_fileUp">파일찾기</label>
+                                                                <a href="javascript:" class="btn_apply ContentComment">로그인</a>
+                                                            </span>
+                                                        </div>
+                                                    </form>
+                                                </div>
                                         </div>
+                                        
                                         <!-- 발도장 탭 -->
                                         <div class="reply_tab" style="display: none;">
                                             <button type="button" class="all" title="선택됨">전체</button>
-                                            <button type="button">방문자후기</button>
+                                            <button type="button">방문자 질문</button>
                                         </div>
                                         <!-- 발도장 탭 -->
                                         <div class="wrap_reply">
-                                            <p class="reply_none" style="display: none;">등록된 댓글이 없습니다.</p>
+                                            <p class="reply_none" style="display: none;">등록된 질문이 없습니다.</p>
                                         </div>
                                         <div class="wrap_reply">
                                             <div class="list_reply">
@@ -331,8 +332,9 @@
                                                         </div>
                                                     </li>
                                                 </ul>
+                                                
                                                 <div class="btn_center" id="commentMore" style=>
-                                                    <a href="javascript:" class="btn_more">댓글 더보기</a>
+                                                    <a href="javascript:" class="btn_more">질문 더보기</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -377,4 +379,6 @@
         </div>    
     </div>
 </body>
+
+<script src="../../static/js/proposal/read.js"></script>
 </html>
