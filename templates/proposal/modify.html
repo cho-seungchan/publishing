@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../static/css/common/header.css" />
+        <link rel="stylesheet" href="../../static/css/proposal/write.css" />
+        <link rel="stylesheet" href="../../static/css/common/footer.css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
+            rel="stylesheet"
+        />
+
+        <title>여행 계획 수정</title>
+    </head>
+    <body class="fontLoaded">
+        <div id="app">
+            <div class="App__AppWrapper-nc5ti6-0 idXWQn">
+                <!-- Header will be dynamically inserted here -->
+                <div id="header-placeholder"></div>
+                <script>
+                    // Load header.html and insert it in#header-placeholder
+                    fetch("../all/header.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById("header-placeholder").innerHTML = data;
+                        })
+                        .catch((error) => console.error("Error loading header:", error));
+                </script>
+
+                <div class="PageWrapper-sc-1w87j10-0 bScXKt">
+                    <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block">
+                        <div class="Center__Wrapper-sc-19p29je-0 hcLOFI">
+                            <h3>여행 계획 수정</h3>
+                        </div>
+                        <!-- <div class="WriteRecruitePage__Divider-bnh5u-2 hgZork"></div> -->
+                        <div>
+                            <div class="SocialRecruiteTagsContainer__SocialRecruiteTagsWrapper-sc-2762su-0 bmexYY">
+                                <input placeholder="여행명"
+                                class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh name"
+                                value=>
+                                <div class="DurationOfTourContainer">
+                                    <input type="date" placeholder="시작일"
+                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh
+                                    startdate" value=><span>~</span><input type="date" placeholder="종료일"
+                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh
+                                    enddate" value=><span>마감일</span><input type="date" placeholder="모집 마감일"
+                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh
+                                    deadline" value=><button
+                                        type="button"
+                                        class="CurrentProfile__MoreButton-sc-1u92qay-6 FvtMb"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='17' viewBox='0 0 4 17'%3E %3Cpath fill='%23999' fill-rule='evenodd' d='M1.57 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/%3E %3C/svg%3E"
+                                            alt="더보기"
+                                        />
+                                    </button>
+                                </div>
+                                <div class="NumberOfPerson">
+                                    <input placeholder="모집 인원"
+                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh max"
+                                    value=> <input placeholder="최소 출발 인원"
+                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh min"
+                                    value=><input
+                                        placeholder="비용"
+                                        class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh cost"
+                                        value=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div
+                                class="SocialRecruiteTagsContainer__SocialRecruiteTagsWrapper-sc-2762su-0 bmexYY second"
+                            >
+                                <div class="bmexYYinput">
+                                    <input
+                                        placeholder="포함 사항 (0/10)"
+                                        class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh include"
+                                        value=""
+                                    />
+                                    <input
+                                        placeholder="불포함 사항 (0/10)"
+                                        class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh exclude"
+                                        value=""
+                                    />
+                                    <input
+                                        placeholder="준비물 (0/10)"
+                                        class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh prepare"
+                                        value=""
+                                    />
+                                </div>
+                                <p class="Textarea__Count-sc-1b9phu6-2 jvAusQ">입력 후 엔터를 누르면 태그가 생성되요</p>
+
+                                <section class="ProductDetailPage__SectionContainer-sc-126q1k2-4 bDBbNi">
+                                    <article class="bDBbNifirst"></article>
+                                    <article class="bDBbNisecond"></article>
+                                    <article class="bDBbNithird"></article>
+                                </section>
+                            </div>
+                        </div>
+
+                        <div class="GatheringPlace">
+                            <input
+                                placeholder="모이는 장소 (지도로 대체)"
+                                class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh gather"
+                                value=""
+                            />
+                        </div>
+
+                        <div class="WriteRecruitePage__Divider-bnh5u-2 hgZork"></div>
+                        <div class="Textarea__Wrapper-sc-1b9phu6-0 iFxPyq">
+                            <textarea
+                                placeholder="이 모임의 매력 포인트, 이벤트, 기타 유의 사항, 전하고 싶은 마음 등을 적어보세요"
+                                maxlength="1200"
+                                class="Textarea__StyledTextarea-sc-1b9phu6-1 kmqQeB"
+                            ></textarea>
+                            <p class="Textarea__Count-sc-1b9phu6-2 jvAusQ">0 / 1200 (추천 글자수: 30자 이내)</p>
+                        </div>
+                        <div class="WriteRecruitePage__Divider-bnh5u-2 hgZork"></div>
+
+                        <div class="WriteRecruitePage__Divider-bnh5u-2 hgZork" style="margin-bottom: 20px"></div>
+                        <div class="ImageUploadSection__Wrapper-sc-12o1z5n-0 kutLeL">
+                            <div>
+                                <label class="InputImageReview__Wrapper-sc-1oapt4s-0 ipbuZD">
+                                    <input type="file" accept=".jpg, .jpeg, .png" multiple="" />
+                                    <span> 사진 첨부하기</span>
+                                </label>
+                                <div class="ImageList-sc-9v1mt2-0 hGJMVS"></div>
+                            </div>
+                        </div>
+                        <div class="Footer__ButtonWrapper-sc-1kxogbb-0 jULzvQ">
+                            <button width="290px" color="white" class="Button-bqxlp0-0 jwcODp">수정하기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer will be dynamically inserted here -->
+                <div id="footer-placeholder"></div>
+                <script>
+                    // Load footer.html and insert it into #footer-placeholder
+                    fetch("../all/footer.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById("footer-placeholder").innerHTML = data;
+                        })
+                        .catch((error) => console.error("Error loading footer:", error));
+                </script>
+            </div>
+        </div>
+        <div id="modal-root"></div>
+        <div id="dnd-root"></div>
+    </body>
+    <script src="../../static/js/proposal/write.js"></script>
+</html>

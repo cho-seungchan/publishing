@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../static/css/common/header.css" />
+        <link rel="stylesheet" href="../../static/css/proposal/list.css" />
+        <link rel="stylesheet" href="../../static/css/common/footer.css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
+            rel="stylesheet"
+        />
+
+        <title>나의 계획 목록</title>
+    </head>
+    <body class="fontLoaded">
+        <div id="app">
+            <div class="App__AppWrapper-nc5ti6-0 idXWQn">
+                <!-- Header will be dynamically inserted here -->
+                <div id="header-placeholder"></div>
+                <script>
+                    // Load header.html and insert it in#header-placeholder
+                    fetch("../all/header.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById("header-placeholder").innerHTML = data;
+                        })
+                        .catch((error) => console.error("Error loading header:", error));
+                </script>
+
+                <div class="ProductDetailPage__Wrapper-sc-126q1k2-0 CijWU">
+                    <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block">
+                        <div class="ProductDetailPage__ContentWrapper-sc-126q1k2-1 eNYAxQ">
+                            <div class="ProductDetailPage__ProductDetailContainer-sc-126q1k2-2 jAFMyC">
+                                <div class="titleType1">
+                                    <div class="tit">
+                                        <h2>나의 여행 계획 목록</h2>
+                                    </div>
+                                </div>
+                                <div class="PageWrapper-sc-1w87j10-0 bScXKt">
+                                    <h1 class="H1-sc-1jinm0d-0 MagazineListPage__PageTitle-hh1ck3-0 ecnmXp">
+                                        신중하게....
+                                    </h1>
+                                    <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block">
+                                        <div>
+                                            <div class="MagazineListPage__MagazineWrapper-hh1ck3-2 jZtIEr">
+                                                <a
+                                                    class="MagazineListPage__Magazine-hh1ck3-3 hHOLgL"
+                                                    href="/magazines/20157317"
+                                                    ><div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                                        <img
+                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                            width="160"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(13)_d1a9b6efdfcb34b9d97243819cefc83f4f656f479bdc1686ba582b3c4368848c"
+                                                        />
+                                                        <div
+                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                            style="opacity: 1; display: block"
+                                                        >
+                                                            <div class="Ratio" style="display: block">
+                                                                <div
+                                                                    class="Ratio-ratio"
+                                                                    style="
+                                                                        height: 0px;
+                                                                        position: relative;
+                                                                        width: 100%;
+                                                                        padding-top: 120%;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="Ratio-content"
+                                                                        style="
+                                                                            height: 100%;
+                                                                            left: 0px;
+                                                                            position: absolute;
+                                                                            top: 0px;
+                                                                            width: 100%;
+                                                                        "
+                                                                    >
+                                                                        <img
+                                                                            alt="매거진 커버 이미지"
+                                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                            width="160"
+                                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(13)_d1a9b6efdfcb34b9d97243819cefc83f4f656f479bdc1686ba582b3c4368848c"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="MagazineListPage__Title-hh1ck3-4 kBOcSr">
+                                                            <span>지리산에서 자바?</span><br />
+                                                            <span>일정 : 1월 27일 ~ 1월 31일</span><br />
+                                                            <span>비용 : 50,000원</span><br />
+                                                            <span>참가 : 3/10(참여/목표)</span><br />
+                                                        </div>
+                                                        <div class="MagazineListPage__CatchPhrase-hh1ck3-5 dfnTnv">
+                                                            캡틴 : 조승찬
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <div class="button-container">
+                                                    <button>수정</button>
+                                                    <button>삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="MagazineListPage__MagazineWrapper-hh1ck3-2 jZtIEr">
+                                                <a
+                                                    class="MagazineListPage__Magazine-hh1ck3-3 hHOLgL"
+                                                    href="/magazines/20157321"
+                                                    ><div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                                        <img
+                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                            width="160"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(20)_eeb68e8b1f69d060dea6f4b920deacc598075295c11009039b9e57b0af4f8a14"
+                                                        />
+                                                        <div
+                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                            style="opacity: 1; display: block"
+                                                        >
+                                                            <div class="Ratio" style="display: block">
+                                                                <div
+                                                                    class="Ratio-ratio"
+                                                                    style="
+                                                                        height: 0px;
+                                                                        position: relative;
+                                                                        width: 100%;
+                                                                        padding-top: 120%;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="Ratio-content"
+                                                                        style="
+                                                                            height: 100%;
+                                                                            left: 0px;
+                                                                            position: absolute;
+                                                                            top: 0px;
+                                                                            width: 100%;
+                                                                        "
+                                                                    >
+                                                                        <img
+                                                                            alt="매거진 커버 이미지"
+                                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                            width="160"
+                                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(20)_eeb68e8b1f69d060dea6f4b920deacc598075295c11009039b9e57b0af4f8a14"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="MagazineListPage__Title-hh1ck3-4 kBOcSr">
+                                                            <span>지리산 그 까이꺼</span><br />
+                                                            <span>일정 : 2월 1일 ~ 2월 5일</span><br />
+                                                            <span>비용 : 40,000원</span><br />
+                                                            <span>참가 : 5/10(참여/목표)</span><br />
+                                                        </div>
+                                                        <div class="MagazineListPage__CatchPhrase-hh1ck3-5 dfnTnv">
+                                                            캡틴 : 조승찬
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <div class="button-container">
+                                                    <button>수정</button>
+                                                    <button>삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="MagazineListPage__MagazineWrapper-hh1ck3-2 jZtIEr">
+                                                <a
+                                                    class="MagazineListPage__Magazine-hh1ck3-3 hHOLgL"
+                                                    href="/magazines/20157320"
+                                                    ><div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                                        <img
+                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                            width="160"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(19)_1d249c591e8c041dc50865d852edb706ee3b2eb508c8d7a5e9b961acc1138652"
+                                                        />
+                                                        <div
+                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                            style="opacity: 1; display: block"
+                                                        >
+                                                            <div class="Ratio" style="display: block">
+                                                                <div
+                                                                    class="Ratio-ratio"
+                                                                    style="
+                                                                        height: 0px;
+                                                                        position: relative;
+                                                                        width: 100%;
+                                                                        padding-top: 120%;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="Ratio-content"
+                                                                        style="
+                                                                            height: 100%;
+                                                                            left: 0px;
+                                                                            position: absolute;
+                                                                            top: 0px;
+                                                                            width: 100%;
+                                                                        "
+                                                                    >
+                                                                        <img
+                                                                            alt="매거진 커버 이미지"
+                                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                            width="160"
+                                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(19)_1d249c591e8c041dc50865d852edb706ee3b2eb508c8d7a5e9b961acc1138652"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="MagazineListPage__Title-hh1ck3-4 kBOcSr">
+                                                            <span>여자들만의 산행</span><br />
+                                                            <span>일정 : 2월 10일 ~ 2월 14일</span><br />
+                                                            <span>비용 : 45,000원</span><br />
+                                                            <span>참가 : 6/10(참여/목표)</span><br />
+                                                        </div>
+                                                        <div class="MagazineListPage__CatchPhrase-hh1ck3-5 dfnTnv">
+                                                            캡틴 : 조승찬
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <div class="button-container">
+                                                    <button>수정</button>
+                                                    <button>삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="MagazineListPage__MagazineWrapper-hh1ck3-2 jZtIEr">
+                                                <a
+                                                    class="MagazineListPage__Magazine-hh1ck3-3 hHOLgL"
+                                                    href="/magazines/20157319"
+                                                    ><div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                                        <img
+                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                            width="160"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(17)_5d32a8e29b20d1a7a5bcd354ac668ecdf7cf3f12c6b959f3eac4f5c3dbd6832e"
+                                                        />
+                                                        <div
+                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                            style="opacity: 1; display: block"
+                                                        >
+                                                            <div class="Ratio" style="display: block">
+                                                                <div
+                                                                    class="Ratio-ratio"
+                                                                    style="
+                                                                        height: 0px;
+                                                                        position: relative;
+                                                                        width: 100%;
+                                                                        padding-top: 120%;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="Ratio-content"
+                                                                        style="
+                                                                            height: 100%;
+                                                                            left: 0px;
+                                                                            position: absolute;
+                                                                            top: 0px;
+                                                                            width: 100%;
+                                                                        "
+                                                                    >
+                                                                        <img
+                                                                            alt="매거진 커버 이미지"
+                                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                            width="160"
+                                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(17)_5d32a8e29b20d1a7a5bcd354ac668ecdf7cf3f12c6b959f3eac4f5c3dbd6832e"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="MagazineListPage__Title-hh1ck3-4 kBOcSr">
+                                                            <span>더 나이들면 못 가</span><br />
+                                                            <span>일정 : 2월 16일 ~ 2월 18일</span><br />
+                                                            <span>비용 : 50,000원</span><br />
+                                                            <span>참가 : 5/10(참여/목표)</span><br />
+                                                        </div>
+                                                        <div class="MagazineListPage__CatchPhrase-hh1ck3-5 dfnTnv">
+                                                            캡틴 : 조승찬
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                                <div class="button-container">
+                                                    <button>수정</button>
+                                                    <button>삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer will be dynamically inserted here -->
+                <div id="footer-placeholder"></div>
+                <script>
+                    // Load footer.html and insert it into #footer-placeholder
+                    fetch("../all/footer.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById("footer-placeholder").innerHTML = data;
+                        })
+                        .catch((error) => console.error("Error loading footer:", error));
+                </script>
+            </div>
+        </div>
+
+        <div id="modal-root">
+            <div>
+                <div class="FloatingButton__Wrapper-sc-1c26egb-0 fDkXaB">
+                    <div class="FloatingButton__LayoutWrapper-sc-1c26egb-1 avAvm">
+                        <button class="ScrollTop__Icon-sc-1k98yfb-0 gQlhwK">
+                            <img
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E %3Cpath stroke='%23CCC' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M18.75 14.25L12 7.5l-6.75 6.75'/%3E %3C/svg%3E"
+                                alt="scroll-top-icon"
+                            />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dnd-root"></div>
+    </body>
+</html>

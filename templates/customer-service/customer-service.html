@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../static/css/common/header.css" />
+        <link
+            rel="stylesheet"
+            href="../../static/css/customer-service/customer-service.css"
+        />
+        <link rel="stylesheet" href="../../static/css/common/footer.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700"
+            rel="stylesheet"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin=""
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
+            rel="stylesheet"
+        />
+
+        <title>고객 센터 - Pick+Course</title>
+    </head>
+    <body class="fontLoaded">
+        <div id="app">
+            <div class="App__AppWrapper-nc5ti6-0 idXWQn">
+                <!-- Header will be dynamically inserted here -->
+                <div id="header-placeholder"></div>
+                <script>
+                    // Load header.html and insert it in#header-placeholder
+                    fetch("../common/header.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById(
+                                "header-placeholder"
+                            ).innerHTML = data;
+                        })
+                        .catch((error) =>
+                            console.error("Error loading header:", error)
+                        );
+                </script>
+
+                <div class="HelpPage__Wrapper-sc-1624coo-0 bjZuQZ">
+                    <section>
+                        <div class="PageWrapper-sc-1w87j10-0 bScXKt">
+                            <h1
+                                font-size="24px"
+                                class="Left__LeftPageTitle-sc-12djr3w-0 cZvMcY"
+                            >
+                                자주 묻는 질문
+                            </h1>
+                            <form
+                                class="SearchBarFAQ__Wrapper-sc-15f023t-0 vlWra"
+                            >
+                                <img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg fill='none' fill-rule='nonzero'%3E %3Cpath d='M0 0h24v24H0z'/%3E %3Ccircle cx='11' cy='11' r='6' stroke='%23000' stroke-width='2'/%3E %3Cpath stroke='%23000' stroke-width='2' d='M15 15l4.95 4.95'/%3E %3C/g%3E %3C/svg%3E"
+                                    width="24px"
+                                    height="24px"
+                                    class="SearchBarFAQ__IconSearch-sc-15f023t-1 ecqnaY"
+                                /><input
+                                    type="text"
+                                    placeholder="키워드를 입력하세요"
+                                    value=""
+                                />
+                            </form>
+                            <div
+                                class="TabLabels__Wrapper-sc-1i2f4oa-0 spans cxqTPR"
+                            >
+                                <span class="showall1 djWtyM active">전체</span
+                                ><span class="showguide1 eCnPke">이용안내</span
+                                ><span class="showuserinfo1 eCnPke"
+                                    >회원정보</span
+                                ><span class="showpay1 eCnPke">결제/환불</span
+                                ><span class="showcoupon1 eCnPke"
+                                    >쿠폰/에너지</span
+                                ><span class="showhost1 eCnPke">호스트신청</span
+                                ><span class="showetc1 eCnPke">기타</span>
+                            </div>
+                            <!-- 전체, 이용안내 시작 -->
+                            <ul class="showall0 showguide0 jaTQXA">
+                                <li>
+                                    <div class="showall2 showguide2 ldvBHS">
+                                        픽커스(Pick+Course)란?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showall2 showguide2 ldvBHS">
+                                        로그인 없이 진행 예정인 픽커스 보는 방법
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showall2 showguide2 ldvBHS">
+                                        픽커스에 회원가입 하는 방법
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showall2 showguide2 ldvBHS">
+                                        픽커스 신청 방법
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showall2 showguide2 ldvBHS">
+                                        픽커스는 누가 진행하나요?
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- 전체, 이용안내 끝 / 회원정보 시작 -->
+                            <ul class="showuserinfo0 hidden jaTQXA">
+                                <li>
+                                    <div class="showuserinfo2 ldvBHS">
+                                        비밀번호를 잊어버렸는데 어떻게 찾나요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showuserinfo2 ldvBHS">
+                                        계정이 두 개일 경우 통합도 되나요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showuserinfo2 ldvBHS">
+                                        회원 정보는 어떻게 변경하나요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showuserinfo2 ldvBHS">
+                                        회원 탈퇴는 어떻게 하나요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showuserinfo2 ldvBHS">
+                                        '이미 인증된 번호'라고 뜨는데 어떻게
+                                        해야 하나요?
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- 회원정보 끝 / 결제,환불 시작 -->
+                            <ul class="showpay0 hidden jaTQXA">
+                                <li>
+                                    <div class="showpay2 ldvBHS">
+                                        픽커스 결제는 어떻게 하나요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showpay2 ldvBHS">
+                                        한 사람이 여러 명 것을 신청할 수 있나요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showpay2 ldvBHS">
+                                        현장에서 결제할 수 있나요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showpay2 ldvBHS">
+                                        무이자 할부 가능한가요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showpay2 ldvBHS">
+                                        환불 규정이 어떻게 되나요?
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- 결제,환불 끝 / 쿠폰,에너지 시작 -->
+                            <ul class="showcoupon0 hidden jaTQXA">
+                                <li>
+                                    <div class="showcoupon2 ldvBHS">
+                                        쿠폰을 받았는데 어떻게 사용하나요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showcoupon2 ldvBHS">
+                                        에너지가 무엇인가요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showcoupon2 ldvBHS">
+                                        에너지는 어디서 확인할 수 있나요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showcoupon2 ldvBHS">
+                                        에너지를 픽커스페이지에서 구매할 수
+                                        있나요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showcoupon2 ldvBHS">
+                                        신청한 픽커스을 취소하면 에너지도 다시
+                                        들어오나요?
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- 쿠폰, 에너지 끝 / 호스트신청 시작 -->
+                            <ul class="showhost0 hidden jaTQXA">
+                                <li>
+                                    <div class="showhost2 ldvBHS">
+                                        호스트가 무엇인가요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showhost2 ldvBHS">
+                                        호스트는 어떻게 신청하나요?
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="showhost2 ldvBHS">
+                                        사업자 등록증이나 자격증이 있어야만
+                                        호스트가 될 수 있나요?
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- 호스트신청 끝 / 기타 시작 -->
+                            <ul class="showetc0 hidden jaTQXA">
+                                <li>
+                                    <div class="showetc2 ldvBHS">
+                                        픽커스 인재채용은 어떻게 진행되나요?
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- 기타 끝 -->
+                            <!-- footer 버튼 숨기기 -->
+                            <!-- <footer
+                                class="Wrapper__PaginationWrapper-fk4uv4-0 uNgOX"
+                            >
+                                <div
+                                    class="PaginationButtonGroup__PrevButtonWrapper-x0iffd-0 gIsDDT"
+                                >
+                                    <button
+                                        width="40px"
+                                        height="40px"
+                                        font-size="18px"
+                                        disabled=""
+                                        class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 iItkLq"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='%23FFF' fill-opacity='0' fill-rule='nonzero' d='M0 0h40v40H0z'/%3E %3Cpath stroke='%23DDD' stroke-width='1.5' d='M16 16l4 4-4 4M21 16l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="PaginationButtonGroup__Icon-x0iffd-2 jVxRns"
+                                        /></button
+                                    ><button
+                                        width="40px"
+                                        height="40px"
+                                        font-size="18px"
+                                        disabled=""
+                                        class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 iItkLq"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='none' d='M0 0h40v40H0z'/%3E %3Cpath stroke='%23DDD' stroke-width='1.5' d='M18 16l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="PaginationButtonGroup__Icon-x0iffd-2 jVxRns"
+                                        />
+                                    </button>
+                                </div>
+                                <button
+                                    width="40px"
+                                    height="40px"
+                                    color="#3397ff"
+                                    font-size="18px"
+                                    font-weight="bold"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 RPlDq"
+                                >
+                                    1</button
+                                ><button
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 laOFLe"
+                                >
+                                    2</button
+                                ><button
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 laOFLe"
+                                >
+                                    3</button
+                                ><button
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 laOFLe"
+                                >
+                                    4</button
+                                ><button
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 laOFLe"
+                                >
+                                    5</button
+                                ><button
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 laOFLe"
+                                >
+                                    6</button
+                                ><button
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 laOFLe"
+                                >
+                                    7</button
+                                ><button
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 laOFLe"
+                                >
+                                    8</button
+                                ><button
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 laOFLe"
+                                >
+                                    9</button
+                                ><button
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 laOFLe"
+                                >
+                                    10
+                                </button>
+                                <div
+                                    class="PaginationButtonGroup__NextButtonWrapper-x0iffd-1 eNIHag"
+                                >
+                                    <button
+                                        width="40px"
+                                        height="40px"
+                                        font-size="18px"
+                                        class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 garfld"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath d='M18 0H0v18h18z'/%3E %3Cpath stroke='%23000' stroke-width='1.5' d='M7 5l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="PaginationButtonGroup__Icon-x0iffd-2 dQqQMu"
+                                        /></button
+                                    ><button
+                                        width="40px"
+                                        height="40px"
+                                        font-size="18px"
+                                        class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 garfld"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Crect width='40' height='40' fill='%23FFF' fill-opacity='0' fill-rule='nonzero' rx='20'/%3E %3Cg stroke='%23000' stroke-width='1.5'%3E %3Cpath d='M16 16l4 4-4 4M21 16l4 4-4 4'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"
+                                            class="PaginationButtonGroup__Icon-x0iffd-2 dQqQMu"
+                                        />
+                                    </button>
+                                </div>
+                            </footer> -->
+                            <hr
+                                size="40"
+                                type="Line"
+                                class="Border-sc-1bzcz1p-0 cOSlxV"
+                            />
+                            <!-- footer 버튼 숨기기 끝 -->
+                        </div>
+                    </section>
+                    <section>
+                        <div class="PageWrapper-sc-1w87j10-0 bScXKt">
+                            <div
+                                class="HelpPage__QuestionArea-sc-1624coo-3 gSgESD"
+                            >
+                                찾는 질문이 없으신가요?<button
+                                    class="Secondary__Button-l8jybe-0 jlqpgo"
+                                >
+                                    고객센터 문의
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Footer will be dynamically inserted here -->
+                <div id="footer-placeholder"></div>
+                <script>
+                    // Load footer.html and insert it into #footer-placeholder
+                    fetch("../common/footer.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById(
+                                "footer-placeholder"
+                            ).innerHTML = data;
+                        })
+                        .catch((error) =>
+                            console.error("Error loading footer:", error)
+                        );
+                </script>
+            </div>
+        </div>
+        <div id="modal-root"></div>
+        <div id="dnd-root"></div>
+    </body>
+    <script src="../../static/js/customer-service/customer-service.js"></script>
+</html>

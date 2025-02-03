@@ -1,0 +1,340 @@
+.bScXKt {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+.koasSX {
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out;
+    display: none;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 1px;
+}
+.bdKwai {
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding: 30px 0px;
+}
+.cWpPOd {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 0px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+.lPYvt {
+    font-weight: normal;
+}
+.dYjXLj {
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+    text-align: right;
+}
+button {
+    cursor: pointer;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+    appearance: button;
+}
+.jWZssw {
+    padding: 0px;
+    color: rgb(155, 155, 155);
+    font-size: 14px;
+    font-weight: 500;
+}
+.idotft {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.jWZssw > div:first-child {
+    margin-right: 6px;
+}
+.jTHKhF {
+    display: flex;
+    flex-flow: row;
+}
+.jTHKhF > img {
+    margin-right: 1px;
+}
+.hBZPtu {
+    margin-left: 14px;
+}
+.ylWSP {
+    padding: 0px;
+}
+.gPxoog {
+    padding: 30px 0px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+.cCFsGh {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.gARvBK {
+    flex: 0 0 auto;
+    margin-right: 14px;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+.gDuKGF {
+    min-height: 1px;
+}
+.bUFcfh {
+    display: none !important;
+}
+.VUNpu {
+    display: initial;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.dkvMyh {
+    margin-right: auto;
+}
+.cCFsGh > div:last-child {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+}
+.RFTCR {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 10px;
+}
+.llgSwy {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.jTHKhF {
+    display: flex;
+    flex-flow: row;
+}
+.fbQFTO {
+    margin-left: 6px;
+    line-height: 10px;
+    color: rgb(155, 155, 155);
+    font-size: 10px;
+}
+.bICa-dX {
+    color: rgb(155, 155, 155);
+    display: inline-block;
+}
+.bICa-dX > div {
+    margin-bottom: 10px;
+    line-height: 10px;
+    font-size: 10px;
+}
+.kIUsm {
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+    font-size: 12px;
+    line-height: 22px;
+}
+.kSUxhl {
+    height: 24px;
+    text-align: right;
+}
+.ga-DZxP {
+    width: auto;
+    height: auto;
+    line-height: 10px;
+    padding: 0px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(85, 85, 85);
+    font-size: 10px;
+}
+.ga-DZxP > * {
+    vertical-align: bottom;
+}
+.ga-DZxP > * {
+    vertical-align: bottom;
+}
+.icalCl {
+    margin-left: 2px;
+}
+.dbtIvu {
+    display: flex;
+    margin-top: 22px;
+    overflow: auto;
+}
+.dbtIvu > * {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.dbtIvu > :last-child {
+    margin-right: 0px;
+}
+.hYzUdW {
+    margin-top: 22px;
+}
+
+.kkZZyy {
+    width: 100%;
+    line-height: 22px;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgb(249, 249, 249);
+    font-size: 12px;
+}
+.hYzUdW > div {
+    margin-bottom: 10px;
+}
+.hYzUdW > div:last-child {
+    margin-bottom: 0px;
+}
+.hhuYUe {
+    display: flex;
+    margin-bottom: 20px;
+}
+.ikExHj {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    margin-right: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+.fatXLR {
+    margin-bottom: 10px;
+    height: 12px;
+    line-height: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.gyINxJ {
+    line-height: 10px;
+    font-size: 10px;
+    color: rgb(155, 155, 155);
+}
+.bRwRGE {
+    white-space: pre-wrap;
+}
+html, body {
+    width: 100%;
+    font-size: 14px;
+    color: black;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+body {
+    font-family: SUIT, "UI Frip", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.iItkLq {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: not-allowed;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+}
+button:disabled {
+    cursor: not-allowed;
+}
+.jVxRns {
+    transform: rotate(180deg);
+}
+.RPlDq {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    color: rgb(51, 151, 255);
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+}
+.eNIHag {
+    display: flex;
+    margin-left: 10px;
+}
+.hBVRcD {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 30px 0px;
+    background-color: white;
+}
+.gIsDDT {
+    display: flex;
+    margin-right: 10px;
+}
+
+.ldipRM {
+    min-width: 110px;
+    position: absolute;
+    border-radius: 5px;
+    border: 1px solid rgb(153, 153, 153);
+    padding: 20px;
+    top: 30px;
+    right: 0px;
+    background-color: white;
+    text-align: left;
+}
+.idBToY {
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 0px;
+    white-space: nowrap;
+    display: block;
+}
+.idBToY:first-child {
+    margin-top: 0px;
+}
+.hSyPxW {
+    font-weight: normal;
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 0px;
+    white-space: nowrap;
+    display: block;
+}

@@ -1,0 +1,830 @@
+
+.jhWWcp {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 36px 20px 0px;
+    min-height: 1px;
+}
+.jhWWcp.jhWWcp {
+    max-width: 768px;
+}
+.koasSX {
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out;
+    display: none;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 1px;
+}
+p, label {
+    margin: 0px;
+}
+.jcPaBR {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+    letter-spacing: -0.6px;
+    color: rgb(51, 51, 51);
+}
+.dPxKvy {
+    padding-top: 16px;
+    display: flex;
+}
+.gdVoXK {
+    display: flex;
+}
+.dPxKvy > div:first-child {
+    height: fit-content;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+.iawfls {
+    min-width: 112px;
+    height: 112px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.gdVoXK > div {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.gdVoXK > div:last-child {
+    margin-left: 16px;
+}
+.iFaFrj {
+    color: rgb(153, 153, 153);
+    letter-spacing: -0.36px;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.htnJlC {
+    max-width: 350px;
+    color: rgb(51, 51, 51);
+    letter-spacing: -0.48px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 6px;
+}
+.fRPdLs {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.gLgDKQ {
+    color: rgb(51, 51, 51);
+    letter-spacing: -0.42px;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 6px;
+}
+.LevHf {
+    color: rgb(119, 119, 119);
+    letter-spacing: -0.36px;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 4px;
+    margin-right: 8px;
+}
+.gylYhP {
+    flex-basis: 232px;
+    padding-left: 20px;
+    margin-left: 20px;
+    border-left: 1px solid rgb(244, 244, 244);
+}
+.gVXCTF {
+    color: rgb(0, 0, 0);
+    font-family: SUIT;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.18px;
+}
+.fIEivx {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+.fIEivx:last-child {
+    padding-bottom: 0px;
+    border-bottom: initial;
+}
+.fIEivx > p {
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+    color: rgb(119, 119, 119);
+}
+.fIEivx > p:last-child {
+    margin-bottom: 0px;
+}
+hr {
+    height: 0;
+    overflow: visible;
+}
+.cbobBO {
+    height: 8px;
+    background-color: rgb(244, 244, 244);
+    border: none;
+    width: 100%;
+    margin: 24px 0px 32px;
+}
+.kgwffz {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: -0.48px;
+    color: rgb(51, 51, 51);
+    padding: 16px 0px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+}
+[type="checkbox"], [type="radio"] {
+    padding: 0;
+}
+.kgwffz > input {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-top: 4px;
+}
+.kgwffz > img {
+    margin-left: 4px;
+    margin-right: 8px;
+}
+.aEATY {
+    padding: 20px 0px;
+}
+.gkYnOY {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+}
+.cRGbZm {
+    color: rgb(170, 170, 170);
+}
+.cVMMHP {
+    padding: 9px 17px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+    color: rgb(51, 51, 51);
+    white-space: nowrap;
+}
+.bqjyoQ {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(238, 238, 238);
+    margin: 16px 0px;
+    border: none;
+}
+.kqaKJZ {
+    color: rgb(0, 0, 0);
+    font-family: SUIT;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.18px;
+}
+.jwxfnd {
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: rgb(196, 196, 196);
+    margin: 0px 12px;
+}
+.kqaKJZ > strong {
+    color: rgb(122, 41, 250);
+    margin-left: 6px;
+}
+.cOazEg {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+    color: rgb(170, 170, 170);
+    margin-top: 16px;
+}
+.jSoSLO {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 48px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 3px;
+    border: 1px solid rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
+    padding: 0px 14px;
+}
+.cOazEg > div {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+.jSoSLO input {
+    width: calc(100% - 22px);
+}
+.jSoSLO span {
+    position: absolute;
+    left: 14px;
+    bottom: 11px;
+}
+
+.cOazEg > button {
+    margin-left: 16px;
+}
+.cVMMHP:disabled {
+    border: 1px solid rgb(244, 244, 244);
+    cursor: not-allowed;
+    color: rgb(170, 170, 170);
+    background-color: rgb(244, 244, 244);
+}
+.jlVJmu {
+    background-color: rgb(244, 244, 244);
+    border-radius: 5px;
+    padding: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.36px;
+    color: rgb(153, 153, 153);
+    word-break: keep-all;
+}
+.jlVJmu > * {
+    max-width: 335px;
+}
+.jlVJmu > p {
+    margin-bottom: 4px;
+}
+.jlVJmu > p:last-child {
+    margin-bottom: initial;
+}
+.dGKlOY {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.kzHnkm {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.kzHnkm span {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(51, 51, 51);
+}
+.fOPSYX {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.edoSDL {
+    width: 24px;
+    height: 24px;
+    appearance: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
+}
+.kxPfxs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.kxPfxs p {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(51, 51, 51);
+}
+.kxPfxs span {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(170, 170, 170);
+}
+.jmdpIX {
+    padding-bottom: 24px;
+}
+.jjsTId {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+    letter-spacing: -0.6px;
+    color: rgb(51, 51, 51);
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.dxsibZ {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+    letter-spacing: -0.72px;
+    color: rgb(122, 41, 250);
+    /* position: absolute; */
+    right: 328px
+}
+.eHKVGS {
+    color: rgb(0, 0, 0);
+    font-family: SUIT;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.18px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 16px;
+    margin-top: 30px;
+}
+.kuAjAK {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 24px;
+    padding-top: 24px;
+    width: 100%;
+}
+.bquTis {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+.bquTis span {
+    color: var(--Grayscale-Gray-800, #333);
+    font-family: SUIT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+}
+.pointspan {
+    margin-right: -80px; /* 원하는 간격으로 설정 */
+}
+.dfwePM {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 16px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgb(244, 244, 244);
+    color: var(--Grayscale-Gray-500, #999);
+    font-family: SUIT;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.36px;
+}
+.Euspf {
+    padding: 16px 20px;
+    background-color: rgb(250, 250, 250);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.36px;
+    color: rgb(153, 153, 153);
+}
+.Euspf > p {
+    margin-bottom: 16px;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+    appearance: button;
+}
+.Euspf > p > button {
+    font-weight: 500;
+    padding: 0px;
+    margin-left: 20px;
+}
+.Euspf > p:last-child {
+    margin-bottom: initial;
+}
+.gIksGz {
+    margin: 40px 0px 45px;
+}
+.jrLWAx {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    font-family: SUIT;
+}
+.gKXxFE {
+    display: block;
+    margin-top: 6px;
+    color: rgb(153, 153, 153);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    font-family: SUIT;
+}
+.jBsXFm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 6px;
+    margin: 16px 0px 0px;
+    padding: 0px;
+    list-style: none;
+}
+.sTDkW {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: SUIT;
+    color: rgb(51, 51, 51);
+    background-color: rgb(244, 244, 244);
+}
+.gnXaoH {
+    color: rgb(153, 153, 153);
+    letter-spacing: -0.36px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    height: 22px;
+    margin-top: 17px;
+}
+.hKLTZV {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 17px 0px 24px;
+    min-height: 1px;
+}
+.hKLTZV.hKLTZV {
+    max-width: 768px;
+}
+.BUemN {
+    width: 100%;
+    height: 56px;
+    line-height: 24px;
+    padding: 16px;
+    background-color: rgb(122, 41, 250);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    margin: 0px;
+}
+
+/* modal 부분 */
+.kDrVuI {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3000;
+    min-height: 1px;
+}
+.eIWpHd {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+.jvildj {
+    position: relative;
+    -webkit-box-flex: 0;
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    z-index: 2;
+    max-height: 80vh;
+    border-radius: 10px;
+    min-width: 295px;
+    margin: 0px 20px;
+}
+.OrBMw {
+    padding: 24px 20px 16px;
+    letter-spacing: -0.54px;
+    line-height: 1.44;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+}
+.ebDrPW {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0px;
+}
+.jFvWc {
+    overflow: hidden auto;
+}
+.kidZWl {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    min-height: 0px;
+    height: 100%;
+    padding: 24px 20px 72px;
+}
+.eUIolH {
+    max-width: 335px;
+}
+.gVXCTF {
+    color: rgb(0, 0, 0);
+    font-family: SUIT;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.18px;
+}
+.GrLfY {
+    color: rgb(119, 119, 119);
+    letter-spacing: -0.42px;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: pre-line;
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 6px;
+}
+.Coupon_Input {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    font-family: SUIT;
+    border: 2px solid rgb(221, 221, 221); /* 두께 2px, 색상 검정(#000) */
+    padding: 5px; /* 입력 필드 안쪽 여백 */
+    border-radius: 5px;
+    width: 150px;
+    margin-right: 110px; 
+}
+.Coupon_Input::placeholder {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    font-family: SUIT;
+}
+
+.Coupon__AmountWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.Coupon__AmountWrapper p {
+    margin: 0; /* 기본 여백 제거 */
+}
+
+.Coupon__AmountWrapper p:first-child {
+    margin-right: 20px; /* 30,000과 원 사이의 간격 조절 */
+}
+
+.InnerActionButton-io567l-0 {
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+.TotalPrice__TotalPriceText-sc-1e1zxsm-3 {
+    margin-left: 71px; /* '총 결제금액'과 '45,000' 사이에 간격 추가 */
+}
+.TotalPrice__TotalPriceText-sc-1e1zxsm-3 + span {
+    margin-left: 5px; /* '45,000'과 '원' 사이에 간격 추가 */
+}
+.caCrk {
+    position: absolute;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.fECeZH {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+.jiQCcX {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    margin: 0px 0px 8px;
+    padding: 14px 21px 12px 14px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 3px;
+    background-color: rgb(250, 250, 250);
+}
+.gymEUt {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(119, 119, 119);
+}
+.chUHpJ {
+    width: 7px;
+    height: 24px;
+    opacity: 1;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: opacity 0.2s, transform 0.5s;
+}
+.fOdbVR {
+    width: 100%;
+    height: 100%;
+    transform: rotate(90deg);
+}
+.fPagJs {
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    z-index: 99999;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    list-style-type: none;
+    outline: rgb(238, 238, 238) solid;
+}
+.dEzUvK {
+    width: 100%;
+    height: 40px;
+    padding: 13px 14px;
+    cursor: pointer;
+}
+.fPBoFK {
+    width: 7px;
+    height: 24px;
+    opacity: 1;
+    cursor: pointer;
+    transform: rotate(180deg);
+    transition: opacity 0.2s, transform 0.5s;
+}
+.TotalPrice__SaveTextContainer-sc-1e1zxsm-7 {
+    position: relative; /* 부모 요소를 기준으로 위치 설정 */
+}
+
+.discount{
+    /* position: absolute; */
+    margin-left: 20px;
+    display: inline-block;
+}
+.discountWrapper {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 30%; 
+}
+
+/* 결제 인원 증가 */
+.grJdOY {
+    display: flex;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.hcNdoZ {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 32px;
+    color: black;
+}
+.kRIdGY {
+    -webkit-box-flex: 0;
+    flex: 0 0 18px;
+    cursor: not-allowed;
+}
+.fnrlwk {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    width: 36px;
+    height: 100%;
+    line-height: 12px;
+    font-size: 12px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    border-left: 1px solid rgb(221, 221, 221);
+    border-image: initial;
+    border-right: none;
+    border-radius: 0px;
+}
+.gmHNud {
+    -webkit-box-flex: 0;
+    flex: 0 0 18px;
+    cursor: pointer;
+}
+.dOTuYO {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-right:245px;
+}
+/* Chrome, Safari에서 스피너 숨기기 */
+.Counter__Value-g6dtdl-2::-webkit-outer-spin-button,
+.Counter__Value-g6dtdl-2::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+    margin: 0;
+}
+.hwQqOj {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    width: 36px;
+    height: 100%;
+    line-height: 12px;
+    font-size: 12px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    border-image: initial;
+    border-left: none;
+    border-radius: 0px;
+}
+.fwlmcq {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    width: 36px;
+    height: 100%;
+    line-height: 12px;
+    font-size: 12px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    border-image: initial;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+}

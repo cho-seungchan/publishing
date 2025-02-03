@@ -21,7 +21,7 @@
         rel="stylesheet"
     />
 
-    <title>모집공고 상세조회 및 참가등록</title>
+    <title>여행 계획 상세 조회</title>
 </head>
 <body class="fontLoaded" style= >
     <div id="app">
@@ -31,7 +31,7 @@
             <div id="header-placeholder"></div>
             <script>
                 // Load header.html and insert it in#header-placeholder
-                fetch("../common/header.html")
+                fetch("../all/header.html")
                     .then((response) => response.text())
                     .then((data) => {
                         document.getElementById(
@@ -48,8 +48,17 @@
                     <div class="ProductDetailPage__ContentWrapper-sc-126q1k2-1 eNYAxQ">
                         <div class="ProductDetailPage__ProductDetailContainer-sc-126q1k2-2 jAFMyC">
 
+                            <div class="Center__Wrapper-sc-19p29je-0 hcLOFI">
+                                <h3> 달달한 남원 여행 </h3>
+                            </div>
+
+                            <div class="RepresentativePictureOfTour">
+                                <p><img src="../../static/images/main/namwon.jpg" alt=""></p>
+                                <p><img src="https://res.cloudinary.com/frientrip/image/upload/c_limit,dpr_3.0,f_auto,q_auto:best,w_500/%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8C%E1%85%A5%E1%86%BC_kkki5t.jpg" class="fr-fic fr-dib" style="width: 1195px;"></p>
+                            </div>
+
                             <section class="ProductDetailPage__SectionContainer-sc-126q1k2-4 bremOa bremOa1">
-                                <div>
+                                <!-- <div> -->
                                     <article>
                                         <header class="Article__Header-sc-1mmkltm-0 fCwkht">
                                             <hgroup>
@@ -69,12 +78,54 @@
                                         </header>
                                         <dl class="InfoSection__InfoContainer-yf02u4-0 dbbJUL">
                                             <div><dt>기간</dt><dd>2월1일 ~ 2월 14일</dd></div>
-                                            <div><dt>연령</dt><dd>20세 이상 권장</dd></div>
+                                            <div><dt>모집 마감일</dt><dd>2월1일 ~ 2월 14일</dd></div>
+                                            <div><dt>최대 모집 인원</dt><dd>100명</dd></div>
+                                            <div><dt>최소 출발 인원</dt><dd>50명</dd></div>
+                                            <div><dt>테마</dt><dd>역사탐방, 맛집탐방</dd></div>
+                                            <div><dt>연령대</dt><dd>제한없음</dd></div>
+                                            <div><dt>성별</dt><dd>제한없음</dd></div>
                                             <div><dt>비용</dt><dd>50,000</dd></div>
                                         </dl>
                                     </article>
-                                </div>
-                                <p><img src="https://res.cloudinary.com/frientrip/image/upload/c_limit,dpr_3.0,f_auto,q_auto:best,w_500/%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8C%E1%85%A5%E1%86%BC_kkki5t.jpg" class="fr-fic fr-dib" style="width: 1195px;"></p>
+                                <!-- </div> -->
+                            </section>
+
+                            <section class="ProductDetailPage__SectionContainer-sc-126q1k2-4 bDBbNi">
+                                <article>
+                                    <header class="Article__Header-sc-1mmkltm-0 gScFGo">
+                                        <hgroup>
+                                            <h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">포함 사항</h2>
+                                        </hgroup>
+                                    </header>
+                                    <div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI">
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 jXxsiv">피커스캡틴</span>
+                                    </div>
+                                </article>
+                                <article>
+                                    <header class="Article__Header-sc-1mmkltm-0 gScFGo">
+                                        <hgroup><h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">불포함 사항</h2></hgroup>
+                                    </header>
+                                    <div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI">
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eMLPLA">왕복교통비</span>
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eMLPLA">개인경비</span>
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eMLPLA">중/석식 비용</span>
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eMLPLA">여행자보험</span>
+                                    </div>
+                                </article>
+                                <article>
+                                    <header class="Article__Header-sc-1mmkltm-0 gScFGo">
+                                        <hgroup><h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">준비물</h2></hgroup>
+                                    </header><div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI">
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">등산화</span>
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">등산복</span>
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">물</span>
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">행동식</span>
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">가방</span>
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">스틱</span>
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">보조배터리</span>
+                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">개인필요물품(선글라스/스틱/무릎보호대)</span>
+                                    </div>
+                                </article>
                             </section>
 
                             <section class="ProductDetailPage__SectionContainer-sc-126q1k2-4 bremOa">
@@ -199,43 +250,95 @@
                                 </article>
                             </section>
 
-                            <section class="ProductDetailPage__SectionContainer-sc-126q1k2-4 bDBbNi">
-                                <article>
-                                    <header class="Article__Header-sc-1mmkltm-0 gScFGo">
-                                        <hgroup>
-                                            <h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">포함 사항</h2>
-                                        </hgroup>
-                                    </header>
-                                    <div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI">
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 jXxsiv">피커스캡틴</span>
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 jXxsiv">왕복교통비</span>
+                            <div class="db_cont_detail">
+                                <div id="replyGo">
+                                    <div class="replyWrap"><!-- login 추가시 로그인 후 form -->
+                                        <h3 class="tit_reply">질의/응답</h3>
+                                        <div class="write">
+                                            <div class="form">
+                                                <form name="tform" id="tform">
+                                                    <label class="blind" for="comment">로그인 후 궁금한 점을 남겨주세요.</label>
+                                                    <span class="writeForm"><textarea name="" rows="" id="comment" placeholder="로그인 후 궁금한 점을 남겨주세요." cols="" onkeydown="commentresize(this);" readonly="readonly"></textarea></span>
+                                                    <div class="fileRegbtn_wrap">
+                                                        <span class="fileRegbtn">
+                                                            <input type="file" id="fileUp" name="fileUp" multiple="" onchange="fileChange(this)" disabled="disabled">
+                                                            <label for="fileUp" class="btn_fileUp">파일찾기</label>
+                                                            <a href="javascript:" class="btn_apply ContentComment">로그인</a>
+                                                        </span>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- 발도장 탭 -->
+                                        <div class="reply_tab" style="display: none;">
+                                            <button type="button" class="all" title="선택됨">전체</button>
+                                            <button type="button">방문자후기</button>
+                                        </div>
+                                        <!-- 발도장 탭 -->
+                                        <div class="wrap_reply">
+                                            <p class="reply_none" style="display: none;">등록된 댓글이 없습니다.</p>
+                                        </div>
+                                        <div class="wrap_reply">
+                                            <div class="list_reply">
+                                                <ul>
+                                                    <li id="25b753aa-b601-4ce1-baed-ec474e50fa6b">
+                                                        <div class="profile">
+                                                            <div class="photo" icid="25b753aa-b601-4ce1-baed-ec474e50fa6b" style="background-image:url(https://ssl.pstatic.net/static/pwe/address/img_profile.png)"></div>
+                                                            <span class="ico">
+                                                                <img src="https://korean.visitkorea.or.kr/resources/images/sub/ico_naver.png" alt="네이버">
+                                                            </span>
+                                                        </div>
+                                                        <div class="txt_reply">	
+                                                            <p>올레길을 걷다보면 자동으로 힐링이 되는 기분 너무 좋아요</p>
+                                                            <div class="date">	
+                                                                <em class="name">g*****4</em>
+                                                                <span>2025. 1. 7.</span>
+                                                            </div>
+                                                        </div>
+                                                        <span class="replyBtn active">
+                                                            <!-- <button type="button" class="btn1" title="">
+                                                                <em class="blind">좋아요</em>
+                                                                <span>0</span>
+                                                            </button> -->
+                                                            <button type="button" class="btn2">
+                                                                <em class="blind">댓글</em>
+                                                                <!-- <span>0</span> -->
+                                                            </button>
+                                                        </span>
+                                                        <!-- <span class="btn_report">
+                                                            <button type="button" onclick="OpenReportPopup('25b753aa-b601-4ce1-baed-ec474e50fa6b');">신고하기</button>
+                                                        </span> -->
+                                                        <div class="replyBox" style="display: none;">	
+                                                            <ul>	
+                                                                <li class="inputcomment">
+                                                                    <div class="mLine">	
+                                                                        <div class="replyForm">	
+                                                                            <form name="form">	
+                                                                                <label class="blind" for="replyForm">답글을 입력하세요.</label>		
+                                                                                <textarea class="comment" id="replyForm" rows="" placeholder="로그인 후 소중한 답글을 남겨주세요." cols="" readonly="readonly"></textarea>		
+                                                                                <div class="btn">
+                                                                                    <span class="fileRegbtn">
+                                                                                        <input type="file" class="fileUp" id="fileUp25b753aa-b601-4ce1-baed-ec474e50fa6b" name="fileUp25b753aa-b601-4ce1-baed-ec474e50fa6b" onchange="fileChange(this)" disabled="disabled">
+                                                                                        <label for="fileUp25b753aa-b601-4ce1-baed-ec474e50fa6b" class="btn_fileUp">파일찾기</label>		
+                                                                                    </span>	
+                                                                                    <a href="javascript:;" class="btn_apply ContentComment">로그인</a>
+                                                                                </div>
+                                                                            </form>	
+                                                                        </div>	
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="btn_center" id="commentMore" style=>
+                                                    <a href="javascript:" class="btn_more">댓글 더보기</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </article>
-                                <article>
-                                    <header class="Article__Header-sc-1mmkltm-0 gScFGo">
-                                        <hgroup><h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">불포함 사항</h2></hgroup>
-                                    </header>
-                                    <div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI">
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eMLPLA">개인경비</span>
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eMLPLA">중/석식 비용</span>
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eMLPLA">여행자보험</span>
-                                    </div>
-                                </article>
-                                <article>
-                                    <header class="Article__Header-sc-1mmkltm-0 gScFGo">
-                                        <hgroup><h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">준비물</h2></hgroup>
-                                    </header><div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI">
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">등산화</span>
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">등산복</span>
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">물</span>
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">행동식</span>
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">가방</span>
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">스틱</span>
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">보조배터리</span>
-                                        <span type="Round" class="Tag__RoundTag-sxb61j-1 eISlhn">개인필요물품(선글라스/스틱/무릎보호대)</span>
-                                    </div>
-                                </article>
-                            </section>
+                                </div>
+                            </div>
 
                         </div>
 
@@ -259,7 +362,7 @@
             <div id="footer-placeholder"></div>
             <script>
                 // Load footer.html and insert it into #footer-placeholder
-                fetch("../common/footer.html")
+                fetch("../all/footer.html")
                     .then((response) => response.text())
                     .then((data) => {
                         document.getElementById(
