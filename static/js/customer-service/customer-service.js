@@ -12,7 +12,7 @@ document.querySelectorAll(".ldvBHS").forEach((div) => {
             newDiv.classList.add("FAQEntity__Content-cpxlp5-1", "fFhAfW");
 
             newDiv.innerHTML = `
-                <p>세상 모든 경험의 시작, 픽커스(Pick+Course)는 여행지 추천천 플랫폼입니다.</p>
+                <p>세상 모든 경험의 시작, 픽커스(Pick+Course)는 여행지 추천 플랫폼입니다.</p>
                 <p><br /></p>
                 <p>누구나 원하는 지역으로의 여행을 쉽고 당연하게 즐길 수 있도록,&nbsp;</p>
                 <p>호스트와 크루를 연결하고 여행뿐만 아닌 주변 엑티비티 등산, 윈드서핑, 클라이밍 등&nbsp;</p>
