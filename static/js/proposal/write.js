@@ -83,10 +83,19 @@ kebabmenu.addEventListener("click", () => {
     for (let i = 0; i < days; i++) {
         detailOfDateContainer.innerHTML += ` <p>${i + 1}일차 계획서</p>
             <textarea data-index=${i} placeholder="상세 일정을 적어보세요 (아래 사진첨부로 대체 가능)"
-            maxlength="1200"  class="Textarea__StyledTextarea-sc-1b9phu6-1 kmqQeB detail"></textarea>
-            <p class="Textarea__Count-sc-1b9phu6-2 jvAusQ">0 / 1200</p>`;
+            maxlength="1200"  class="Textarea__StyledTextarea-sc-1b9phu6-1 kmqQeBdetail"></textarea>
+            <p class="Textarea__Count-sc-1b9phu6-2 jvAusQdetail">0 / 1200</p>`;
     }
     numberOfPerson.parentNode.insertBefore(detailOfDateContainer, numberOfPerson);
+
+    // textarea에 글자 입력시 입력된 글자 수 보여주기
+    document.querySelector(".DetailOfDateContainer").addEventListener("input", (e) => {
+        if (e.target.classList.contains("kmqQeBdetail")) {
+            console.log(e.target.nextElementSibling.textContent + " " + e.target.value.length);
+            e.target.nextElementSibling.textContent = `${e.target.value.length} / 1200 (추천 글자수: 30자 이내)`;
+        }
+    });
+    // textarea에 글자 입력시 입력된 글자 수 보여주기
 });
 // 케밥버튼을 눌러서  시작일 부터 종료일까지 상세 일정 입력
 
@@ -240,6 +249,14 @@ function collectTexts(tagClassName) {
     return texts;
 }
 // 태그의 text들을 서버로 보낼 배열에 담는 함수
+
+// textarea에 글자 입력시 입력된 글자 수 보여주기
+document.querySelector(".kmqQeB").addEventListener("input", (e) => {
+    e.target.closest(".iFxPyq").querySelector(".jvAusQ").textContent = `${
+        document.querySelector(".kmqQeB").value.length
+    } / 1200 (추천 글자수: 30자 이내)`;
+});
+// textarea에 글자 입력시 입력된 글자 수 보여주기
 
 // 서버에 올리지 않고 화면에 보이도록 처리
 const fileParentDiv = document.querySelector(".ImageList-sc-9v1mt2-0.hGJMVS");

@@ -66,6 +66,14 @@ togetherFeed.addEventListener("click", () => {
 });
 // 일반피드 같이해요  버튼을 눌렀을 때 양쪽의 바탕색과 글자색이 반대로 바뀌도록 함
 
+// textarea에 글자 입력시 입력된 글자 수 보여주기
+document.querySelector(".kmqQeB").addEventListener("input", (e) => {
+    e.target.closest(".iFxPyq").querySelector(".jvAusQ").textContent = `${
+        document.querySelector(".kmqQeB").value.length
+    } / 1200 (추천 글자수: 30자 이내)`;
+});
+// textarea에 글자 입력시 입력된 글자 수 보여주기
+
 // 엔터키를 눌렀을 때 태그 생성
 let tagCount = 0;
 const tagParentDiv = document.querySelector(".bmexYY-container");
