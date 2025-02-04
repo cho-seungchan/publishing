@@ -91,7 +91,6 @@ kebabmenu.addEventListener("click", () => {
     // textarea에 글자 입력시 입력된 글자 수 보여주기
     document.querySelector(".DetailOfDateContainer").addEventListener("input", (e) => {
         if (e.target.classList.contains("kmqQeBdetail")) {
-            console.log(e.target.nextElementSibling.textContent + " " + e.target.value.length);
             e.target.nextElementSibling.textContent = `${e.target.value.length} / 1200 (추천 글자수: 30자 이내)`;
         }
     });
@@ -291,6 +290,48 @@ fileParentDiv.addEventListener("click", (e) => {
     }
 });
 // 선택파일의 이미지(x)를 눌렀을 때 전체 dev 삭제 :: 동적으로 생성된 요소일 때는 부모 요소에 위임
+
+// 모이는 장소 :: 카카오맵 처리하기
+// 외부 스크립트 추가. 지도 맵 동적 생성
+document.querySelector(".gcqwwh.gather").addEventListener("keyup", (e) => {
+    if (e.key == "Enter") {
+        if (document.querySelector("#map")) {
+            document.querySelector("#map").remove();
+            document.querySelector(".gcqwwh.gather1").remove();
+        }
+
+        let geocoder = new kakao.maps.services.Geocoder();
+        geocoder.addressSearch(document.querySelector(".gcqwwh.gather").value, (result, status) => {
+            if (status === kakao.maps.services.Status.OK) {
+                const mapDiv = document.createElement("div");
+                mapDiv.id = "map";
+                document.querySelector(".GatheringPlace").appendChild(mapDiv);
+                const mapInput = document.createElement("input");
+                mapInput.className = "SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh gather1";
+                mapInput.placeholder = "참가자들이 이해하기 쉽게 설명해주세요";
+                document.querySelector(".GatheringPlace").appendChild(mapInput);
+
+                let coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                let mapContainer = document.getElementById("map"), // 지도를 표시할 div
+                    mapOption = {
+                        center: coords,
+                        level: 3, // 지도의 확대 레벨
+                    };
+                // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+                let map = new kakao.maps.Map(mapContainer, mapOption);
+                // 결과값으로 받은 위치를 마커로 표시합니다
+                let marker = new kakao.maps.Marker({
+                    map: map,
+                    position: coords,
+                });
+                // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                map.setCenter(coords);
+            }
+        });
+    }
+});
+
+// 모이는 장소 :: 카카오맵 처리하기
 
 // 등록 하기
 const jULzvQ = document.querySelector(".jULzvQ");
