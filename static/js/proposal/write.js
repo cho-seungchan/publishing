@@ -295,8 +295,8 @@ fileParentDiv.addEventListener("click", (e) => {
 // 외부 스크립트 추가. 지도 맵 동적 생성
 document.querySelector(".gcqwwh.gather").addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
-        if (document.querySelector("#map")) {
-            document.querySelector("#map").remove();
+        if (document.querySelector("#mapContainer")) {
+            document.querySelector("#mapContainer").remove();
             document.querySelector(".gcqwwh.gather1").remove();
         }
 
@@ -304,12 +304,40 @@ document.querySelector(".gcqwwh.gather").addEventListener("keyup", (e) => {
         geocoder.addressSearch(document.querySelector(".gcqwwh.gather").value, (result, status) => {
             if (status === kakao.maps.services.Status.OK) {
                 const mapDiv = document.createElement("div");
-                mapDiv.id = "map";
+                mapDiv.id = "mapContainer";
+                mapDiv.innerHTML = `<div id="map"></div>
+                <div id="fullMap">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E %3Cpath stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M17 3h4v4M15 9l6-6M7 21H3v-4M9 15l-6 6M4 11V6c0-1.105.895-2 2-2h5M20 13v5c0 1.105-.895 2-2 2h-6'/%3E %3C/svg%3E" alt="map fullscreen">
+                </div>`;
+                // const mapDiv = document.createElement("div");
+                // mapDiv.id = "map";
                 document.querySelector(".GatheringPlace").appendChild(mapDiv);
+
                 const mapInput = document.createElement("input");
                 mapInput.className = "SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh gather1";
                 mapInput.placeholder = "참가자들이 이해하기 쉽게 설명해주세요";
                 document.querySelector(".GatheringPlace").appendChild(mapInput);
+
+                document.querySelector("#fullMap").addEventListener("click", (e) => {
+                    if (mapContainer.style.position === "fixed") {
+                        mapContainer.style.position = "relative";
+                        mapContainer.style.width = "100%";
+                        mapContainer.style.height = "25vh";
+                        mapContainer.style.zIndex = "";
+                        document.querySelector("#fullMap").style.position = "absolute";
+                    } else {
+                        mapContainer.style.position = "fixed";
+                        mapContainer.style.top = "0";
+                        mapContainer.style.left = "0";
+                        mapContainer.style.width = "100%";
+                        mapContainer.style.height = "100vh";
+                        mapContainer.style.zIndex = "1000"; // 맵이 다른 요소 위에 오도록 설정
+                        document.querySelector("#fullMap").style.position = "fixed";
+                    }
+                    map.relayout();
+                    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                    map.setCenter(coords);
+                });
 
                 let coords = new kakao.maps.LatLng(result[0].y, result[0].x);
                 let mapContainer = document.getElementById("map"), // 지도를 표시할 div
