@@ -556,3 +556,27 @@ hr {
     line-height: 15px;
     font-size: 14px;
 }
+
+.heartWrap {
+    position: absolute;
+    right: 15px;
+    bottom: 60px;
+}
+
+.heartButton {
+    width: 24px;
+    height: 24px;
+    line-height: normal;
+    padding: 0px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.heartButton>img{
+    filter: drop-shadow(rgba(0, 0, 0, 0.4) 1px 1px 3px);
+
+}
