@@ -493,6 +493,7 @@ textarea {
     cursor: pointer;
     text-indent: -9999px;
     font-size: 0;
+    vertical-align: middle;
 }
 .db_cont_detail .write .form .fileRegbtn label {
     width: 54px;
@@ -736,13 +737,13 @@ var {
 .replyWrap .replyBox {
     display: none;
     background: #f7f7f7;
-    width: 940px;
-    margin: 30px 0 -21px -10px;
+    width: 720px;
+    margin: 30px 0 -21px 0px;
     border-top: 1px solid #ddd;
 }
 .replyWrap .replyBox > ul > li {
-    padding: 30px 0 30px 35px;
-    margin: 0 50px;
+    padding: 10px 0 10px 10px;
+    margin: 0 -20px;
     border-top: 1px solid #ddd;
     position: relative;
 }
@@ -765,9 +766,9 @@ var {
     clear: both;
 }
 .replyWrap .replyBox textarea {
-    width: 100%;
+    width: 95%;
     padding: 20px;
-    height: 95px;
+    height: 75px;
     border: 1px solid #e7e7e7;
     box-sizing: border-box;
     color: #666;
@@ -775,8 +776,10 @@ var {
 }
 .replyWrap .replyBox .btn {
     text-align: right;
-    padding-top: 8px;
+    padding-top: 25px;
     overflow: hidden;
+    margin-right: 40px;
+    margin-top: -20px;
 }
 .db_cont_detail .wrap_reply .fileRegbtn {
     margin-left: 0;
@@ -814,7 +817,7 @@ ul {
 }
 
 /* 댓글 부분 */
-.replyWrap.login #comment {
+.replyWrap.login .comment {
     background-color: #ffffff; /* 배경색을 연한 회색으로 설정 */
     color: #000000; /* 글자색을 검은색으로 설정 */
 }
