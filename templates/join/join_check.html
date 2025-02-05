@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../static/css/common/header.css" />
+        <link rel="stylesheet" href="../../static/css/common/footer.css" />
+        <link rel="stylesheet" href="../../static/css/join/join_check.css" />
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/common/header.css"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/common/footer.css"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700"
+                    rel="stylesheet"
+                />
+                <link
+                    rel="preconnect"
+                    href="https://fonts.gstatic.com"
+                    crossorigin=""
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
+                    rel="stylesheet"
+                />
+
+                <title>회원가입-본인인증</title>
+            </head>
+            <body class="fontLoaded">
+                <div id="app">
+                    <div class="App__AppWrapper-nc5ti6-0 idXWQn">
+                        <!-- Header will be dynamically inserted here -->
+                        <div id="header-placeholder"></div>
+                        <script>
+                            // Load header.html and insert it in#header-placeholder
+                            fetch("../all/header.html")
+                                .then((response) => response.text())
+                                .then((data) => {
+                                    document.getElementById(
+                                        "header-placeholder"
+                                    ).innerHTML = data;
+                                })
+                                .catch((error) =>
+                                    console.error(
+                                        "Error loading header:",
+                                        error
+                                    )
+                                );
+                        </script>
+                        <div
+                            class="PageWrapper-sc-1w87j10-0 RegisterPage__StyledPageWrapper-vqq9hl-0 ghbiEC"
+                        >
+                            <div class="RegisterPage__Wrapper-vqq9hl-1 bvPUqU">
+                                <div
+                                    class="Center__Wrapper-sc-19p29je-0 gVBJBr"
+                                >
+                                    <h3>회원가입</h3>
+                                </div>
+                                <form
+                                    class="Form__RegisterPageForm-sc-1l5lis6-0 fLECcs"
+                                >
+                                    <div>
+                                        <!--중복검사에 실패했을때 errorInput클래스 추가 -->
+                                        <input
+                                            type="text"
+                                            name="nickname"
+                                            placeholder="닉네임"
+                                            class="Form__Input-sc-1quypp7-1 iRBMai"
+                                        />
+                                        <!-- 닉네임 중복검사에 실패했을때 나올 메세지 -->
+                                        <!-- <p class="errorMessage">이미 사용중인 닉네임 입니다.</p> -->
+                                    </div>
+                                    <div
+                                        class="Certification__InputWithButtonWrapper-x9bojy-0 gIqJFQ"
+                                    >
+                                        <div>
+                                            <!--휴대폰 번호 검사사에 실패했을때 input 태그에 errorInput클래스 추가 -->
+                                            <input
+                                                type="tel"
+                                                name="mobileNumber"
+                                                placeholder="휴대폰 번호 ( - 없이 입력)"
+                                                class="Form__Input-sc-1quypp7-1 iRBMai"
+                                            />
+                                            <!-- 휴대폰 번호 검사에 실패했을때 나올 메세지 -->
+                                            <!-- <p class="errorMessage">올바른 휴대폰 번호 형식이 아닙니다.</p> -->
+                                        </div>
+                                        <!-- 휴대폰 번호 검사에 성공시 button태그에 buttonBlack 클래스 추가 후 gsRKCU클래스 삭제  -->
+                                        <button
+                                            type="button"
+                                            width="136px"
+                                            height="50px"
+                                            color="#aaa"
+                                            font-size="14px"
+                                            class="Button-bqxlp0-0 gsRKCU"
+                                        >
+                                            인증번호 전송
+                                        </button>
+                                        <!-- 인증번호 전송 버튼을 누르게 되면 경고창으로 "인증번호가 발송되었습니다." 문구를 출력한다 -->
+                                    </div>
+                                    <div
+                                        class="Certification__InputWithButtonWrapper-x9bojy-0 cMRMEQ"
+                                    >
+                                        <div>
+                                            <div>
+                                                <input
+                                                    type="number"
+                                                    name="verificationCode"
+                                                    placeholder="인증번호"
+                                                    pattern="[0-9]*"
+                                                    class="Form__Input-sc-1quypp7-1 iRBMai"
+                                                />
+                                                <!-- 인증번호의 입력값이 검사식에 맞지 않을때 나올 메세지 -->
+                                                <!-- <p class="errorMessage">올바른 인증번호 형식이 아닙니다.</p> -->
+                                                <!-- 인증번호의 입력값이 발송한 인증번호와 다를때 나올 메세지 -->
+                                                <!-- <p class = "errorMessage">인증번호를 다시 입력해주세요</p> -->
+                                            </div>
+                                            <!-- 핸드폰번호 입력후 인증번호 전송 버튼을 누르게되면 나올 메세지 -->
+                                            <!-- p태그로 최초5분이 주어지고 시간이 1초씩 줄어든다 ex) "남은시간 : 1분 43초" -->
+                                            <!-- timeMessage 클래스 사용 -->
+                                        </div>
+                                        <!-- 인증번호 검사 성공시 button태그에 buttonBlue 클래스를 추가해주고 jquNPr 클래스 삭제 -->
+                                        <button
+                                            type="button"
+                                            width="106px"
+                                            height="50px"
+                                            color="#b5c5d6"
+                                            font-size="14px"
+                                            class="Button-bqxlp0-0 jquNPr"
+                                        >
+                                            인증하기
+                                        </button>
+                                    </div>
+                                    <!-- 인증번호버튼을 누르고 발송한 SMS에 인증번호와 일치하다면 -->
+                                    <!-- button태그에 lastButtonChange 클래스를 추가하고 chSrfn클래스를 삭제한다 -->
+                                    <button
+                                        type="button"
+                                        width="100%"
+                                        height="56px"
+                                        color="#f4f4f4"
+                                        font-size="16px"
+                                        class="Button-bqxlp0-0 SubmitButton__RegisterPageSubmitButton-np91gr-0 chSrfn"
+                                    >
+                                        가입하기
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Footer will be dynamically inserted here -->
+                        <div id="footer-placeholder"></div>
+                        <script>
+                            // Load footer.html and insert it into #footer-placeholder
+                            fetch("../all/footer.html")
+                                .then((response) => response.text())
+                                .then((data) => {
+                                    document.getElementById(
+                                        "footer-placeholder"
+                                    ).innerHTML = data;
+                                })
+                                .catch((error) =>
+                                    console.error(
+                                        "Error loading footer:",
+                                        error
+                                    )
+                                );
+                        </script>
+                    </div>
+                </div>
+                <div id="modal-root"></div>
+                <div id="dnd-root"></div>
+            </body>
+            <script src="../../static/js/join/join_check.js"></script>
+        </html>
+    </head>
+</html>
