@@ -137,7 +137,7 @@
     flex-direction: column;
 }
 .gcqwwh {
-    width: 100%;
+    width: 90%;
     /* color: rgb(153, 153, 153); */
     color: rgb(0, 0, 0);
     font-weight: bold;
@@ -390,3 +390,57 @@ h2 {
 .hidden {
     display: none;
 }
+.volunteerBtn{
+    width: 83px;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    top: 1.4777px;
+    position: relative;
+}
+.gcqwwh1 {
+    
+    /* color: rgb(153, 153, 153); */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+.addPathBtn {
+    width: 83px;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    top: 1.4777px;
+    position: relative;
+}
+.deletePathBtn {
+    width: 83px;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    top: 1.4777px;
+    position: relative;
+}
+
+
