@@ -1,9 +1,6 @@
 const showAll = document.querySelector(".showAll");
 const showNotice = document.querySelector(".showNotice");
 const showEvent = document.querySelector(".showEvent");
-const spanAll = document.querySelector(".spanAll");
-const spanNotice = document.querySelector(".spanNotice");
-const spanEvent = document.querySelector(".spanEvent");
 const showUl = document.querySelectorAll(".ulWrap>ul");
 const spans = document.querySelectorAll(".cxqTPR>span");
 
@@ -16,11 +13,21 @@ spans.forEach((span) => {
             }
             e.target.classList.add("changeBlue");
             e.target.classList.remove("changeBlack");
-            console.log(e.target.textContent);
-            console.log(showUl.length);
-            // for(let i = 0 ; i < showUl.length ; i ++) {
-            //     if(e.target.textContent == "")
-            // }
+            if (e.target.textContent === "전체") {
+                showAll.classList.remove("hiddenList");
+                showNotice.classList.add("hiddenList");
+                showEvent.classList.add("hiddenList");
+            }
+            if (e.target.textContent === "공지") {
+                showNotice.classList.remove("hiddenList");
+                showAll.classList.add("hiddenList");
+                showEvent.classList.add("hiddenList");
+            }
+            if (e.target.textContent === "이벤트") {
+                showEvent.classList.remove("hiddenList");
+                showAll.classList.add("hiddenList");
+                showNotice.classList.add("hiddenList");
+            }
         });
     });
 });

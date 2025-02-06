@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../static/css/common/header.css" />
+        <link rel="stylesheet" href="../../static/css/common/footer.css" />
+        <link rel="stylesheet" href="../../static/css/myPage/myMain.css" />
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/common/header.css"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/common/footer.css"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700"
+                    rel="stylesheet"
+                />
+                <link
+                    rel="preconnect"
+                    href="https://fonts.gstatic.com"
+                    crossorigin=""
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
+                    rel="stylesheet"
+                />
+
+                <title>피드 입력</title>
+            </head>
+            <body class="fontLoaded">
+                <div id="app">
+                    <div class="App__AppWrapper-nc5ti6-0 idXWQn">
+                        <!-- Header will be dynamically inserted here -->
+                        <div id="header-placeholder"></div>
+                        <script>
+                            // Load header.html and insert it in#header-placeholder
+                            fetch("../all/header.html")
+                                .then((response) => response.text())
+                                .then((data) => {
+                                    document.getElementById(
+                                        "header-placeholder"
+                                    ).innerHTML = data;
+                                })
+                                .catch((error) =>
+                                    console.error(
+                                        "Error loading header:",
+                                        error
+                                    )
+                                );
+                        </script>
+                        <div class="PageWrapper-sc-1w87j10-0 bScXKt">
+                            <div class="mainWrap">
+                                <div class="sideWrap">
+                                    <div class="listWrap">
+                                        <span>마이 페이지</span>
+                                        <ul>
+                                            <li>- 내 정보 수정</li>
+                                            <li>- 결제 내역</li>
+                                        </ul>
+                                        <span> 내 목록 </span>
+                                        <ul>
+                                            <li>- 찜한 목록</li>
+                                            <li>- 내가 진행한 코스 목록</li>
+                                            <li>- 후기 작성</li>
+                                            <li>- 작성한 후기 목록</li>
+                                            <li>- 신청자 목록</li>
+                                        </ul>
+                                        <span>피드</span>
+                                        <ul>
+                                            <li>- 내가 작성한 피드</li>
+                                            <li>- 내 댓글 목록</li>
+                                        </ul>
+                                        <span>쪽지함</span>
+                                        <ul>
+                                            <li>- 쪽지 목록</li>
+                                            <li>- 쪽지 쓰기</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="infoWrap">
+                                    <div
+                                        class="MyPage__UserInfoWrapper-sc-8hrgc7-0 bukpPo"
+                                    >
+                                        <a
+                                            class="UserInfo__Wrapper-bt0psx-0 jgHvjG"
+                                            href="/my/profile"
+                                            ><img
+                                                src="https://res.cloudinary.com/frientrip/image/fetch/c_fill,f_auto,g_center,q_auto/https://k.kakaocdn.net/dn/bXaPH0/btsK2yqBvZ8/GszNkcMupnQJ2FhKuMeRQK/img_110x110.jpg"
+                                                class="UserInfo__Image-bt0psx-1 ijgGxL"
+                                            />
+                                            <div
+                                                class="UserInfo__TextWrapper-bt0psx-2 dPypOl"
+                                            >
+                                                <div
+                                                    class="UserInfo__Nickname-bt0psx-3 hewsYu"
+                                                >
+                                                    박정근
+                                                </div>
+                                                <div
+                                                    class="UserInfo__Account-bt0psx-4 hOMBPU"
+                                                >
+                                                    카카오톡 계정
+                                                </div>
+                                            </div></a
+                                        >
+                                    </div>
+                                    <hr class="MyPage__Hr-sc-8hrgc7-4 cLsnpe" />
+                                    <div class="hoWpsw">
+                                        <header>내 뱃지</header>
+                                        <div class="imgContainer">
+                                            <ul>
+                                                <li
+                                                    class="list_badge complete_badge"
+                                                >
+                                                    <img
+                                                        src="../../static/images/myPage/1054988_running_person_walking_icon.png"
+                                                        alt="코스"
+                                                    />
+                                                    <span class="first_comment"
+                                                        >코스완주</span
+                                                    >
+                                                    <span class="second_comment"
+                                                        >1회</span
+                                                    >
+                                                </li>
+                                                <li
+                                                    class="list_badge none_complete_badge"
+                                                >
+                                                    <img
+                                                        src="../../static/images/myPage/9853856_angel_emoji_smiley_emoticon_icon.png"
+                                                        alt="봉사"
+                                                    />
+                                                    <span class="first_comment"
+                                                        >봉사코스 완주</span
+                                                    >
+                                                    <!-- 아래 횟수는 완료한 횟수에 따라 추가된다 -->
+                                                    <!-- 최초 0회일때는 나오지 않고 1회부터 카운팅되며 올라간다 -->
+                                                    <!-- 횟수가 올라가며 나올때는 second_comment 클래스를 삽입한다. -->
+                                                    <span
+                                                        class="second_comment noneCount"
+                                                        >0회</span
+                                                    >
+                                                </li>
+                                                <li
+                                                    class="list_badge none_complete_badge"
+                                                >
+                                                    <img
+                                                        src="../../static/images/myPage/4830806_heart_love_smiley_icon.png"
+                                                        alt="피드"
+                                                    />
+                                                    <span class="first_comment"
+                                                        >피드</span
+                                                    >
+                                                    <span
+                                                        class="second_comment noneCount"
+                                                        >0회</span
+                                                    >
+                                                </li>
+                                                <li
+                                                    class="list_badge none_complete_badge"
+                                                >
+                                                    <img
+                                                        src="../../static/images/myPage/8725663_comment_alt_heart_icon.png"
+                                                        alt="댓글"
+                                                    />
+                                                    <span class="first_comment"
+                                                        >댓글</span
+                                                    >
+                                                    <span
+                                                        class="second_comment noneCount"
+                                                        >0회</span
+                                                    >
+                                                </li>
+                                                <li class="list_badge"></li>
+                                                <li class="list_badge"></li>
+                                                <li class="list_badge"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <hr class="MyPage__Hr-sc-8hrgc7-4 cLsnpe" />
+                                    <div
+                                        class="MyPage__UserPropertyContainer-sc-8hrgc7-1 dduMk"
+                                    >
+                                        <a href="/my/reviews"
+                                            ><div
+                                                class="UserProperty__Title-xpx7mx-0 fbNqgy"
+                                            >
+                                                후기
+                                            </div>
+                                            <div
+                                                class="UserProperty__Value-xpx7mx-1 yiVA-d"
+                                            >
+                                                0
+                                            </div></a
+                                        ><a href="/my/feeds"
+                                            ><div
+                                                class="UserProperty__Title-xpx7mx-0 fbNqgy"
+                                            >
+                                                피드
+                                            </div>
+                                            <div
+                                                class="UserProperty__Value-xpx7mx-1 yiVA-d"
+                                            >
+                                                0
+                                            </div></a
+                                        >
+                                    </div>
+                                    <hr class="MyPage__Hr-sc-8hrgc7-4 cLsnpe" />
+                                    <div
+                                        class="MyPage__DomainWrapper-sc-8hrgc7-3 hoWpsw"
+                                    >
+                                        <header class="courceHeader">
+                                            최근 코스
+                                        </header>
+                                        <span class="courceName">C 코스</span>
+                                        <a href="/my/purchases">
+                                            <div
+                                                class="TableBase-sc-2cq8bo-0 cEHhVW courceContainer"
+                                            >
+                                                <div
+                                                    class="TableRow__ContentWrapper-j0fs67-0 jfwBqf courceWarp"
+                                                >
+                                                    <div class="imgWrap">
+                                                        <img
+                                                            src="../../static/images/main/namwon.jpg"
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                </div></div
+                                        ></a>
+                                    </div>
+                                    <hr
+                                        size="32"
+                                        type="Line"
+                                        class="Border-sc-1bzcz1p-0 hvJfpy"
+                                    />
+                                    <div
+                                        class="MyPage__DomainWrapper-sc-8hrgc7-3 hoWpsw"
+                                    >
+                                        <header>최근 피드</header>
+                                        <div class="feedContainer">
+                                            <a href="">
+                                                <div class="feedWrap">
+                                                    <img
+                                                        class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_5:6,c_scale,f_webp,q_auto,w_360/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(20)_eeb68e8b1f69d060dea6f4b920deacc598075295c11009039b9e57b0af4f8a14"
+                                                    /></div
+                                            ></a>
+                                            <a href="">
+                                                <div class="feedWrap rightFeed">
+                                                    <img
+                                                        class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_5:6,c_scale,f_webp,q_auto,w_360/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(19)_1d249c591e8c041dc50865d852edb706ee3b2eb508c8d7a5e9b961acc1138652"
+                                                    /></div
+                                            ></a>
+                                        </div>
+                                    </div>
+                                    <hr
+                                        size="32"
+                                        type="Line"
+                                        class="Border-sc-1bzcz1p-0 hvJfpy"
+                                    />
+                                    <div
+                                        class="MyPage__DomainWrapper-sc-8hrgc7-3 hoWpsw"
+                                    >
+                                        <header>제휴 및 호스트</header>
+                                        <a
+                                            href="https://team.frip.co.kr"
+                                            target="_blank"
+                                            ><div
+                                                class="TableBase-sc-2cq8bo-0 cEHhVW"
+                                            >
+                                                <div
+                                                    class="TableRow__ContentWrapper-j0fs67-0 jfwBqf"
+                                                >
+                                                    <div
+                                                        class="TableRow__Title-j0fs67-1 Scnkv"
+                                                    >
+                                                        호스트 지원
+                                                    </div>
+                                                    <div></div>
+                                                </div></div></a
+                                        ><a
+                                            href="https://www.notion.so/frip/4a01fc99589f4f21a4a34289f3903fcc"
+                                            target="_blank"
+                                            ><div
+                                                class="TableBase-sc-2cq8bo-0 cEHhVW"
+                                            >
+                                                <div
+                                                    class="TableRow__ContentWrapper-j0fs67-0 jfwBqf"
+                                                >
+                                                    <div
+                                                        class="TableRow__Title-j0fs67-1 Scnkv"
+                                                    >
+                                                        제휴 및 제안
+                                                    </div>
+                                                    <div></div>
+                                                </div></div
+                                        ></a>
+                                    </div>
+                                    <hr
+                                        size="32"
+                                        type="Line"
+                                        class="Border-sc-1bzcz1p-0 hvJfpy"
+                                    />
+                                    <div
+                                        class="MyPage__DomainWrapper-sc-8hrgc7-3 hoWpsw"
+                                    >
+                                        <header>설정</header>
+                                        <a href="/my/setting"
+                                            ><div
+                                                class="TableBase-sc-2cq8bo-0 cEHhVW"
+                                            >
+                                                <div
+                                                    class="TableRow__ContentWrapper-j0fs67-0 jfwBqf"
+                                                >
+                                                    <div
+                                                        class="TableRow__Title-j0fs67-1 Scnkv"
+                                                    >
+                                                        설정
+                                                    </div>
+                                                    <div></div>
+                                                </div></div></a
+                                        ><a href="/static-info"
+                                            ><div
+                                                class="TableBase-sc-2cq8bo-0 cEHhVW"
+                                            >
+                                                <div
+                                                    class="TableRow__ContentWrapper-j0fs67-0 jfwBqf"
+                                                >
+                                                    <div
+                                                        class="TableRow__Title-j0fs67-1 Scnkv"
+                                                    >
+                                                        약관 및 정책
+                                                    </div>
+                                                    <div></div>
+                                                </div></div
+                                        ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer will be dynamically inserted here -->
+                        <div id="footer-placeholder"></div>
+                        <script>
+                            // Load footer.html and insert it into #footer-placeholder
+                            fetch("../all/footer.html")
+                                .then((response) => response.text())
+                                .then((data) => {
+                                    document.getElementById(
+                                        "footer-placeholder"
+                                    ).innerHTML = data;
+                                })
+                                .catch((error) =>
+                                    console.error(
+                                        "Error loading footer:",
+                                        error
+                                    )
+                                );
+                        </script>
+                    </div>
+                </div>
+                <div id="modal-root"></div>
+                <div id="dnd-root"></div>
+            </body>
+            <script src="../../static/js/myPage/myMain.js"></script>
+        </html>
+    </head>
+</html>
