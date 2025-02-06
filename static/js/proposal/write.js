@@ -9,7 +9,9 @@ let deadline = 0;
 firstDate.addEventListener("change", () => {
     startDate = firstDate.value;
     if (startDate <= today) {
-        alert(`시작일("${startDate}")은 오늘("${today}") 이후만 가능합니다..`);
+        // alert(`시작일("${startDate}")은 오늘("${today}") 이후만 가능합니다.`);
+        let message = `시작일(${startDate})은 오늘(${today}) 이후만 가능합니다.`;
+        showAlertModal(message);
         firstDate.value = "";
         startDate = 0;
     } else if (endDate != 0 && endDate < startDate) {
@@ -26,7 +28,9 @@ firstDate.addEventListener("change", () => {
 secondDate.addEventListener("change", () => {
     endDate = secondDate.value;
     if (endDate <= today) {
-        alert(`종료일("${endDate}")은 오늘("${today}") 이후만 가능합니다.`);
+        // alert(`종료일("${endDate}")은 오늘("${today}") 이후만 가능합니다.`);
+        let message = `종료일(${endDate})은 오늘(${today}) 이후만 가능합니다.`;
+        showAlertModal(message);
         secondDate.value = "";
         endDate = 0;
     } else if (deadline != 0 && deadline > endDate) {
@@ -45,15 +49,21 @@ secondDate.addEventListener("change", () => {
 thirdDate.addEventListener("change", () => {
     deadline = thirdDate.value;
     if (deadline < today) {
-        alert(`마감일("${deadline}")은 오늘("${today}") 부터 가능합니다.`);
+        // alert(`마감일("${deadline}")은 오늘("${today}") 부터 가능합니다.`);
+        let message = `마감일(${deadline})은 오늘(${today}) 부터 가능합니다.`;
+        showAlertModal(message);
         thirdDate.value = "";
         deadline = 0;
     } else if (startDate != 0 && startDate <= deadline) {
-        alert(`마감일("${deadline}")이 시작일("${startDate}") 보다 작아야 합니다.`);
+        // alert(`마감일("${deadline}")이 시작일("${startDate}") 보다 작아야 합니다.`);
+        let message = `마감일(${deadline})이 시작일(${startDate}) 보다 작아야 합니다.`;
+        showAlertModal(message);
         thirdDate.value = "";
         deadline = 0;
     } else if (endDate != 0 && endDate <= deadline) {
-        alert(`마감일("${deadline}")이 종료일("${endDate}") 보다 작아야 합니다.`);
+        // alert(`마감일("${deadline}")이 종료일("${endDate}") 보다 작아야 합니다.`);
+        let message = `마감일(${deadline})이 종료일(${endDate}) 보다 작아야 합니다.`;
+        showAlertModal(message);
         thirdDate.value = "";
         deadline = 0;
     }
@@ -72,7 +82,9 @@ kebabmenu.addEventListener("click", () => {
     }
 
     if (startDate == 0 || endDate == 0 || deadline == 0) {
-        alert(`날짜를 모두 입력하세요`);
+        // alert(`날짜를 모두 입력하세요`);
+        let message = `날짜를 모두 입력하세요`;
+        showAlertModal(message);
         return;
     }
 
@@ -113,7 +125,9 @@ let parentDiv = ``;
 gcqwwhinclude.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
         if (firstTagCount > 9) {
-            alert(`10개 까지만 입력 가능합니다.`);
+            // alert(`10개 까지만 입력 가능합니다.`);
+            let message = `10개 까지만 입력 가능합니다.`;
+            showAlertModal(message);
             return;
         }
         if (firstTagCount === 0) {
@@ -141,7 +155,9 @@ gcqwwhinclude.addEventListener("keyup", (e) => {
 gcqwwhexclude.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
         if (secondTagCount > 9) {
-            alert(`10개 까지만 입력 가능합니다.`);
+            // alert(`10개 까지만 입력 가능합니다.`);
+            let message = `10개 까지만 입력 가능합니다.`;
+            showAlertModal(message);
             return;
         }
         if (secondTagCount === 0) {
@@ -169,7 +185,9 @@ gcqwwhexclude.addEventListener("keyup", (e) => {
 gcqwwhprepare.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
         if (thirdTagCount > 9) {
-            alert(`10개 까지만 입력 가능합니다.`);
+            // alert(`10개 까지만 입력 가능합니다.`);
+            let message = `10개 까지만 입력 가능합니다.`;
+            showAlertModal(message);
             return;
         }
         if (thirdTagCount === 0) {
@@ -323,7 +341,7 @@ document.querySelector(".gcqwwh.gather").addEventListener("keyup", (e) => {
                         mapContainer.style.position = "relative";
                         mapContainer.style.width = "100%";
                         mapContainer.style.height = "25vh";
-                        mapContainer.style.zIndex = "";
+                        mapContainer.style.zIndex = ""; // 맵이 다른 요소 위에 오도록 설정한거 해제
                         document.querySelector("#fullMap").style.position = "absolute";
                     } else {
                         mapContainer.style.position = "fixed";
@@ -385,7 +403,33 @@ jULzvQ.addEventListener("click", () => {
     let max = parseInt(document.querySelector(".gcqwwh.max").value, 10);
     let min = parseInt(document.querySelector(".gcqwwh.min").value, 10);
     if (max < min) {
-        alert(`모집 인원("${max}") 이 최소 출발 인원("${min})"보다 적습니다.`);
+        // alert(`모집 인원("${max}") 이 최소 출발 인원("${min})"보다 적습니다.`);
+        let message = `모집 인원(${max} 명) 이 최소 출발 인원(${min} 명)보다 적습니다.`;
+        showAlertModal(message);
         return;
     }
 });
+
+// 모달 열기 함수
+function showAlertModal(message) {
+    // 모달 요소
+    var modal = document.getElementById("alertModal");
+    // 모달 닫기 요소
+    var closeBtn = document.getElementsByClassName("close")[0];
+
+    modal.querySelector("p").textContent = message;
+
+    modal.style.display = "block";
+
+    // 닫기 버튼 클릭 시 모달 닫기
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // 모달 외부 클릭 시 모달 닫기
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+}
