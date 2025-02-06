@@ -168,62 +168,45 @@ document.querySelectorAll(".enp_mobon_cart").forEach((JJim) => {
 // 지도 보여주기
 var mapContainer = document.getElementById("map"), // 지도를 표시할 div
     mapOption = {
-        center: new kakao.maps.LatLng(35.437759, 127.531965), // 지도의 중심좌표
-        level: 3, // 지도의 확대 레벨
+        center: new kakao.maps.LatLng(35.409476, 127.396059), // 지도의 중심좌표
+        level: 9, // 지도의 확대 레벨
     };
-
+let initialCenter = new kakao.maps.LatLng(35.409476, 127.396059);
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 let tourSpots = [
     { name: "허브마을 채마루", address: "남원시 원천로 37" },
     { name: "광한루원", address: "남원시 요천로 1447" },
-    { name: "김병종미술관", address: "남원시 함파우길 65-1" },
+    { name: "김병종미술관", address: "남원시 함파우길 65-14" },
     { name: "지리산 허브밸리", address: "남원시 바래봉길 24" },
     { name: "구서도역", address: "남원시 서도길 32" },
     { name: "혼불문학관", address: "남원시 노봉안길52" },
 ];
 
 let positions = [];
-let remains = tourSpots.length;
 let geocoder = new kakao.maps.services.Geocoder();
+let remains = tourSpots.length;
 tourSpots.forEach((spot) => {
     geocoder.addressSearch(spot.address, (result, status) => {
         if (status === kakao.maps.services.Status.OK) {
             positions.push({
                 content: "<div>" + spot.name + "</div>",
-                latlng: new kakao.maps.LatLng(result[0].y, result[0].x),
+                latlng: new kakao.maps.LatLng(
+                    Math.floor(result[0].y * 1000000) / 1000000,
+                    Math.floor(result[0].x * 1000000) / 1000000
+                ),
             });
         }
         remains--;
-        if (remains == 0) {
+        if (remains < 1) {
             createMarkers();
         }
     });
 });
 
-// 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
-// var positions = [
-//     {
-//         content: "<div>카카오</div>",
-//         latlng: new kakao.maps.LatLng(33.450705, 126.570677),
-//     },
-//     {
-//         content: "<div>생태연못</div>",
-//         latlng: new kakao.maps.LatLng(33.450936, 126.569477),
-//     },
-//     {
-//         content: "<div>텃밭</div>",
-//         latlng: new kakao.maps.LatLng(33.450879, 126.56994),
-//     },
-//     {
-//         content: "<div>근린공원</div>",
-//         latlng: new kakao.maps.LatLng(33.451393, 126.570738),
-//     },
-// ];
-
 function createMarkers() {
     positions.forEach((position) => {
-        console.log(position.content, position.latlng);
+        console.log(position.content + " " + position.latlng);
     });
 
     for (var i = 0; i < positions.length; i++) {
@@ -232,11 +215,13 @@ function createMarkers() {
             map: map, // 마커를 표시할 지도
             position: positions[i].latlng, // 마커의 위치
         });
+        console.log(marker.getPosition().toString());
 
         // 마커에 표시할 인포윈도우를 생성합니다
         var infowindow = new kakao.maps.InfoWindow({
             content: positions[i].content, // 인포윈도우에 표시할 내용
         });
+        console.log(infowindow.getContent());
 
         // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
         // 이벤트 리스너로는 클로저를 만들어 등록합니다
@@ -259,7 +244,6 @@ function makeOutListener(infowindow) {
         infowindow.close();
     };
 }
-
 // 지도 보여주기
 
 // 화면 확장 축소
@@ -267,9 +251,12 @@ document.querySelector("#fullMap").addEventListener("click", (e) => {
     if (mapContainer.style.position === "fixed") {
         mapContainer.style.position = "relative";
         mapContainer.style.width = "100%";
-        mapContainer.style.height = "25vh";
-        mapContainer.style.zIndex = "";
+        mapContainer.style.height = "40vh";
+        mapContainer.style.zIndex = ""; // 맵이 다른 요소 위에 오도록 설정한거 해제
         document.querySelector("#fullMap").style.position = "absolute";
+        // 지도의 중심을 새로운 좌표로 설정
+        map.relayout();
+        map.setCenter(initialCenter);
     } else {
         mapContainer.style.position = "fixed";
         mapContainer.style.top = "0";
@@ -278,9 +265,9 @@ document.querySelector("#fullMap").addEventListener("click", (e) => {
         mapContainer.style.height = "100vh";
         mapContainer.style.zIndex = "1000"; // 맵이 다른 요소 위에 오도록 설정
         document.querySelector("#fullMap").style.position = "fixed";
+        // 지도의 중심을 새로운 좌표로 설정
+        map.relayout();
+        map.setCenter(initialCenter);
     }
-    map.relayout();
-    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-    // map.setCenter(coords);
 });
 // 화면 확장 축소
