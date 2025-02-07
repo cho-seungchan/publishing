@@ -1,0 +1,192 @@
+*, ::before, ::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+* {
+    outline: none;
+    font-family: inherit;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+
+.cLqaPy {
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+
+.bScXKt {
+    display: flex
+;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+
+.fFriVo {
+    display: flex
+;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 50px 0px 20px;
+    font-size: 24px;
+    line-height: 24px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+
+button, input, select, textarea {
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+    font-size: 1em;
+    margin: 0;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+
+a, area, button, input, label, select, textarea, [tabindex] {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+button {
+    cursor: pointer;
+}
+
+.jMUPmW {
+    color: rgb(0, 117, 239);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.khzDiS {
+    margin: 24px 0px 0px;
+}
+
+.iOgbWN {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin: 0px 0px 16px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+
+img {
+    border-style: none;
+}
+
+.gFQPgt {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.elHCaO {
+    position: absolute;
+    bottom: 0px;
+    right: -3px;
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 100%;
+}
+
+.epcUtq {
+    width: 18px;
+    height: 16px;
+}
+
+.fSxFPc {
+    display: none;
+}
+
+.dVaxhg > div {
+    margin: 0px 0px 16px;
+}
+
+p, label {
+    margin: 0px;
+}
+
+.fPrGda {
+    display: block;
+    margin-bottom: 6px;
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.03em;
+    text-align: left;
+}
+
+.gldLBs {
+    position: relative;
+}
+
+.gGztpV {
+    width: 100%;
+    border: 1px solid rgb(238, 238, 238);
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 14px 14px 12px;
+    background: rgb(250, 250, 250);
+    color: rgb(17, 17, 17);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.03em;
+    text-align: left;
+}
+
+input:disabled {
+    -webkit-text-fill-color: currentcolor;
+    opacity: 1;
+}
+
+.gGztpV:disabled {
+    background: rgb(238, 238, 238);
+    color: rgb(170, 170, 170);
+}
+
+.fJJorn {
+    color: rgb(51, 51, 51);
+    font-size: 24px;
+    line-height: 24px;
+}
