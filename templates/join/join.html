@@ -6,16 +6,41 @@
         <link rel="stylesheet" href="../../static/css/common/header.css" />
         <link rel="stylesheet" href="../../static/css/common/footer.css" />
         <link rel="stylesheet" href="../../static/css/join/join.css" />
+        <link
+            rel="shortcut icon"
+            href="../../static/images/common/favicon1.ico"
+            type="image/x-icon"
+        />
+
         <!DOCTYPE html>
         <html lang="en">
             <head>
                 <meta charset="UTF-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <link rel="stylesheet" href="../../static/css/common/header.css" />
-                <link rel="stylesheet" href="../../static/css/feeds/write.css" />
-                <link rel="stylesheet" href="../../static/css/common/footer.css" />
-                <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700" rel="stylesheet" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/common/header.css"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/feeds/write.css"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/common/footer.css"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700"
+                    rel="stylesheet"
+                />
+                <link
+                    rel="preconnect"
+                    href="https://fonts.gstatic.com"
+                    crossorigin=""
+                />
                 <link
                     href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
                     rel="stylesheet"
@@ -33,15 +58,31 @@
                             fetch("../all/header.html")
                                 .then((response) => response.text())
                                 .then((data) => {
-                                    document.getElementById("header-placeholder").innerHTML = data;
+                                    document.getElementById(
+                                        "header-placeholder"
+                                    ).innerHTML = data;
                                 })
-                                .catch((error) => console.error("Error loading header:", error));
+                                .catch((error) =>
+                                    console.error(
+                                        "Error loading header:",
+                                        error
+                                    )
+                                );
                         </script>
-                        <div class="PageWrapper-sc-1w87j10-0 IntroPage__Wrapper-sc-2ms2nt-0 cDxxJv">
-                            <div class="IntroPage__RegisterHomeWrapper-sc-2ms2nt-1 itbwCK">
-                                <h2 class="IntroPage__Title-sc-2ms2nt-2 bQDUOZ">반가워요!</h2>
-                                <p class="IntroPage__Description-sc-2ms2nt-3 fCOzti">
-                                    가입하면 바로 쓸 수 있는 웰컴 쿠폰을 드려요!<br />오늘부터 #프립하자
+                        <div
+                            class="PageWrapper-sc-1w87j10-0 IntroPage__Wrapper-sc-2ms2nt-0 cDxxJv"
+                        >
+                            <div
+                                class="IntroPage__RegisterHomeWrapper-sc-2ms2nt-1 itbwCK"
+                            >
+                                <h2 class="IntroPage__Title-sc-2ms2nt-2 bQDUOZ">
+                                    반가워요!
+                                </h2>
+                                <p
+                                    class="IntroPage__Description-sc-2ms2nt-3 fCOzti"
+                                >
+                                    가입하면 바로 쓸 수 있는 웰컴 쿠폰을
+                                    드려요!<br />오늘부터 #프립하자
                                 </p>
                                 <button
                                     width="100%"
@@ -53,7 +94,9 @@
                                 >
                                     카카오톡으로 시작
                                 </button>
-                                <div class="IntroPage__SubButtonWrapper-sc-2ms2nt-4 fyOiRy">
+                                <div
+                                    class="IntroPage__SubButtonWrapper-sc-2ms2nt-4 fyOiRy"
+                                >
                                     <a href="/register?redirectPath=%2F"
                                         ><button
                                             width="48px"
@@ -90,9 +133,16 @@
                             fetch("../all/footer.html")
                                 .then((response) => response.text())
                                 .then((data) => {
-                                    document.getElementById("footer-placeholder").innerHTML = data;
+                                    document.getElementById(
+                                        "footer-placeholder"
+                                    ).innerHTML = data;
                                 })
-                                .catch((error) => console.error("Error loading footer:", error));
+                                .catch((error) =>
+                                    console.error(
+                                        "Error loading footer:",
+                                        error
+                                    )
+                                );
                         </script>
                     </div>
                 </div>

@@ -6,6 +6,11 @@
         <link rel="stylesheet" href="../../static/css/common/header.css" />
         <link rel="stylesheet" href="../../static/css/common/footer.css" />
         <link rel="stylesheet" href="../../static/css/myPage/myMain.css" />
+        <link
+            rel="shortcut icon"
+            href="../../static/images/common/favicon1.ico"
+            type="image/x-icon"
+        />
         <!DOCTYPE html>
         <html lang="en">
             <head>
@@ -36,7 +41,7 @@
                     rel="stylesheet"
                 />
 
-                <title>피드 입력</title>
+                <title>마이페이지</title>
             </head>
             <body class="fontLoaded">
                 <div id="app">
@@ -67,6 +72,7 @@
                                         <ul>
                                             <li>- 내 정보 수정</li>
                                             <li>- 결제 내역</li>
+                                            <li>- 회원 탈퇴</li>
                                         </ul>
                                         <span> 내 목록 </span>
                                         <ul>
@@ -134,6 +140,7 @@
                                                         >1회</span
                                                     >
                                                 </li>
+                                                <!-- 완료 횟수가 올라가면 none_complete_badge 클래스를 삭제한다 -->
                                                 <li
                                                     class="list_badge none_complete_badge"
                                                 >
@@ -142,11 +149,11 @@
                                                         alt="봉사"
                                                     />
                                                     <span class="first_comment"
-                                                        >봉사코스 완주</span
+                                                        >봉사코스</span
                                                     >
                                                     <!-- 아래 횟수는 완료한 횟수에 따라 추가된다 -->
                                                     <!-- 최초 0회일때는 나오지 않고 1회부터 카운팅되며 올라간다 -->
-                                                    <!-- 횟수가 올라가며 나올때는 second_comment 클래스를 삽입한다. -->
+                                                    <!-- 횟수가 올라가며 나올때는 noneCount 클래스를 삭제한다. -->
                                                     <span
                                                         class="second_comment noneCount"
                                                         >0회</span
@@ -265,88 +272,6 @@
                                                     /></div
                                             ></a>
                                         </div>
-                                    </div>
-                                    <hr
-                                        size="32"
-                                        type="Line"
-                                        class="Border-sc-1bzcz1p-0 hvJfpy"
-                                    />
-                                    <div
-                                        class="MyPage__DomainWrapper-sc-8hrgc7-3 hoWpsw"
-                                    >
-                                        <header>제휴 및 호스트</header>
-                                        <a
-                                            href="https://team.frip.co.kr"
-                                            target="_blank"
-                                            ><div
-                                                class="TableBase-sc-2cq8bo-0 cEHhVW"
-                                            >
-                                                <div
-                                                    class="TableRow__ContentWrapper-j0fs67-0 jfwBqf"
-                                                >
-                                                    <div
-                                                        class="TableRow__Title-j0fs67-1 Scnkv"
-                                                    >
-                                                        호스트 지원
-                                                    </div>
-                                                    <div></div>
-                                                </div></div></a
-                                        ><a
-                                            href="https://www.notion.so/frip/4a01fc99589f4f21a4a34289f3903fcc"
-                                            target="_blank"
-                                            ><div
-                                                class="TableBase-sc-2cq8bo-0 cEHhVW"
-                                            >
-                                                <div
-                                                    class="TableRow__ContentWrapper-j0fs67-0 jfwBqf"
-                                                >
-                                                    <div
-                                                        class="TableRow__Title-j0fs67-1 Scnkv"
-                                                    >
-                                                        제휴 및 제안
-                                                    </div>
-                                                    <div></div>
-                                                </div></div
-                                        ></a>
-                                    </div>
-                                    <hr
-                                        size="32"
-                                        type="Line"
-                                        class="Border-sc-1bzcz1p-0 hvJfpy"
-                                    />
-                                    <div
-                                        class="MyPage__DomainWrapper-sc-8hrgc7-3 hoWpsw"
-                                    >
-                                        <header>설정</header>
-                                        <a href="/my/setting"
-                                            ><div
-                                                class="TableBase-sc-2cq8bo-0 cEHhVW"
-                                            >
-                                                <div
-                                                    class="TableRow__ContentWrapper-j0fs67-0 jfwBqf"
-                                                >
-                                                    <div
-                                                        class="TableRow__Title-j0fs67-1 Scnkv"
-                                                    >
-                                                        설정
-                                                    </div>
-                                                    <div></div>
-                                                </div></div></a
-                                        ><a href="/static-info"
-                                            ><div
-                                                class="TableBase-sc-2cq8bo-0 cEHhVW"
-                                            >
-                                                <div
-                                                    class="TableRow__ContentWrapper-j0fs67-0 jfwBqf"
-                                                >
-                                                    <div
-                                                        class="TableRow__Title-j0fs67-1 Scnkv"
-                                                    >
-                                                        약관 및 정책
-                                                    </div>
-                                                    <div></div>
-                                                </div></div
-                                        ></a>
                                     </div>
                                 </div>
                             </div>
