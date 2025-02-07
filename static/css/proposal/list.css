@@ -1669,4 +1669,8 @@ var {
     line-height: 24px;
     margin: 10px 0px 0px 0px;
 }
-/* 맴 관련 */
+/* 맵 관련 */
+
+#tabCont a {
+    cursor: default;
+}
