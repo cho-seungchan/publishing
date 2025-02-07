@@ -175,14 +175,15 @@ let initialCenter = new kakao.maps.LatLng(35.409476, 127.396059);
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 let tourSpots = [
-    { name: "허브마을 채마루", address: "남원시 원천로 37" },
-    { name: "광한루원", address: "남원시 요천로 1447" },
-    { name: "김병종미술관", address: "남원시 함파우길 65-14" },
-    { name: "지리산 허브밸리", address: "남원시 바래봉길 24" },
-    { name: "구서도역", address: "남원시 서도길 32" },
-    { name: "혼불문학관", address: "남원시 노봉안길52" },
+    { name: "1. 허브마을 채마루", address: "남원시 원천로 37" },
+    { name: "2. 광한루원", address: "남원시 요천로 1447" },
+    { name: "3. 김병종미술관", address: "남원시 함파우길 65-14" },
+    { name: "4. 지리산 허브밸리", address: "남원시 바래봉길 24" },
+    { name: "5. 구서도역", address: "남원시 서도길 32" },
+    { name: "6. 혼불문학관", address: "남원시 노봉안길52" },
 ];
 
+const static_positions = {};
 let positions = [];
 let geocoder = new kakao.maps.services.Geocoder();
 let remains = tourSpots.length;
@@ -197,37 +198,58 @@ tourSpots.forEach((spot) => {
                 ),
             });
         }
+        // console.log(positions);
         remains--;
         if (remains < 1) {
             createMarkers();
+            // position의 순서가 원래 입력된 순서가 아니기 때문에 원래
+            positions.forEach((e) => {
+                console.log(e.latlng);
+                for (let i = 0; i < tourSpots.length; i++) {
+                    if (e.content.substring(5, e.content.length - 6) == tourSpots[i].name) {
+                        tourSpots[i].latlng = e.latlng;
+                    }
+                }
+            });
+            drawLine();
         }
     });
 });
 
 function createMarkers() {
-    positions.forEach((position) => {
-        console.log(position.content + " " + position.latlng);
-    });
-
     for (var i = 0; i < positions.length; i++) {
-        // 마커를 생성합니다
-        var marker = new kakao.maps.Marker({
-            map: map, // 마커를 표시할 지도
-            position: positions[i].latlng, // 마커의 위치
-        });
-        console.log(marker.getPosition().toString());
+        // 마커의 정보가 항상 나타나게
+        var iwContent = `<div style="padding:5px;">${positions[i].content}</div>`, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+            iwPosition = positions[i].latlng, //인포윈도우 표시 위치입니다
+            iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
 
-        // 마커에 표시할 인포윈도우를 생성합니다
+        // 인포윈도우를 생성하고 지도에 표시합니다
         var infowindow = new kakao.maps.InfoWindow({
-            content: positions[i].content, // 인포윈도우에 표시할 내용
+            map: map, // 인포윈도우가 표시될 지도
+            position: iwPosition,
+            content: iwContent,
+            removable: iwRemoveable,
         });
-        console.log(infowindow.getContent());
 
-        // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
-        // 이벤트 리스너로는 클로저를 만들어 등록합니다
-        // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-        kakao.maps.event.addListener(marker, "mouseover", makeOverListener(map, marker, infowindow));
-        kakao.maps.event.addListener(marker, "mouseout", makeOutListener(infowindow));
+        // // 마우스가 위치하면 나타났다가, 마우스가 없어지면 없어짐.
+        // // 마커를 생성합니다
+        // var marker = new kakao.maps.Marker({
+        //     map: map, // 마커를 표시할 지도
+        //     position: positions[i].latlng, // 마커의 위치
+        // });
+        // console.log(marker.getPosition().toString());
+
+        // // 마커에 표시할 인포윈도우를 생성합니다
+        // var infowindow = new kakao.maps.InfoWindow({
+        //     content: positions[i].content, // 인포윈도우에 표시할 내용
+        // });
+        // // console.log(infowindow.getContent());
+
+        // // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+        // // 이벤트 리스너로는 클로저를 만들어 등록합니다
+        // // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+        // kakao.maps.event.addListener(marker, "mouseover", makeOverListener(map, marker, infowindow));
+        // kakao.maps.event.addListener(marker, "mouseout", makeOutListener(infowindow));
     }
 }
 
@@ -245,6 +267,22 @@ function makeOutListener(infowindow) {
     };
 }
 // 지도 보여주기
+
+// 선을 그릴 위치 배열
+function drawLine() {
+    console.log(tourSpots);
+    var linePath = tourSpots.map((position) => position.latlng);
+
+    // 지도에 선을 생성하고 표시
+    var polyline = new kakao.maps.Polyline({
+        map: map, // 선을 표시할 지도 객체
+        path: linePath, // 선을 구성하는 좌표 배열
+        strokeWeight: 3, // 선의 두께
+        strokeColor: "#FF0000", // 선의 색상
+        strokeOpacity: 0.8, // 선의 투명도
+        strokeStyle: "solid", // 선의 스타일
+    });
+}
 
 // 화면 확장 축소
 document.querySelector("#fullMap").addEventListener("click", (e) => {

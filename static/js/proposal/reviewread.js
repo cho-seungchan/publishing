@@ -30,7 +30,6 @@ document.querySelector(".dYjXLj button").addEventListener("click", (e) => {
 // dropdown menu 클릭시 처리
 
 // 화면 클릭시 전체화면 모달 화면으로 전환
-
 const leftButton = document.createElement("button");
 leftButton.type = "button";
 leftButton.className = "arrow_b9bbag-o_O-arrow__direction__left_shhpn5-o_O-arrow__size__medium_9f7hgo";
@@ -73,6 +72,7 @@ rightButton.innerHTML = `<span
                                             d="M298.3,256L298.3,256L298.3,256L131.1,81.9c-4.2-4.3-4.1-11.4,0.2-15.8l29.9-30.6c4.3-4.4,11.3-4.5,15.5-0.2l204.2,212.7 c2.2,2.2,3.2,5.2,3,8.1c0.1,3-0.9,5.9-3,8.1L176.7,476.8c-4.2,4.3-11.2,4.2-15.5-0.2L131.3,446c-4.3-4.4-4.4-11.5-0.2-15.8 L298.3,256z"
                                         ></path></svg
                                 ></span>`;
+const lightboxBackdrop = document.querySelector("#lightboxBackdrop > div");
 
 document.querySelectorAll(".gDuKGF").forEach((imgContainer) => {
     imgContainer.addEventListener("click", (e) => {
@@ -91,27 +91,45 @@ document.querySelectorAll(".gDuKGF").forEach((imgContainer) => {
         // 해당 img src 설정
         document.querySelector(".figure_10ki57k img").src = imgArray[currentIndex];
         document.querySelector("#modal-root").style.display = "";
+        // 현재 화면 위치/총 화면 수
+        document.querySelector(".footerCount_lkhc9u").textContent = `${currentIndex + 1}/${imgCount}`;
 
         // 버튼 생성
         createButton(currentIndex, imgCount);
 
-        // 버튼 클릭 이벤트
-        const leftButton = document.querySelector(
-            ".arrow_b9bbag-o_O-arrow__direction__left_shhpn5-o_O-arrow__size__medium_9f7hgo"
-        );
-        const rightButton = document.querySelector(
-            ".arrow_b9bbag-o_O-arrow__direction__right_174p6a9-o_O-arrow__size__medium_9f7hgo"
-        );
+        // 이벤트 위임
+        lightboxBackdrop.addEventListener("click", (event) => {
+            if (
+                event.target.matches(
+                    ".arrow_b9bbag-o_O-arrow__direction__left_shhpn5-o_O-arrow__size__medium_9f7hgo > span > svg"
+                )
+            ) {
+                moveLeft();
+            } else if (
+                event.target.matches(
+                    ".arrow_b9bbag-o_O-arrow__direction__right_174p6a9-o_O-arrow__size__medium_9f7hgo > span > svg"
+                )
+            ) {
+                moveRight();
+            }
 
-        leftButton.addEventListener("click", () => {
-            currentIndex--;
-            document.querySelector(".figure_10ki57k img").src = imgArray[currentIndex];
-            createButton(currentIndex, imgCount);
-        });
-        rightButton.addEventListener("click", () => {
-            currentIndex++;
-            document.querySelector(".figure_10ki57k img").src = imgArray[currentIndex];
-            createButton(currentIndex, imgCount);
+            function moveLeft() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    document.querySelector(".figure_10ki57k img").src = imgArray[currentIndex];
+                    document.querySelector(".footerCount_lkhc9u").textContent = `${currentIndex + 1}/${imgCount}`;
+                    createButton(currentIndex, imgCount);
+                }
+            }
+
+            function moveRight() {
+                if (currentIndex < imgCount - 1) {
+                    currentIndex++;
+                    document.querySelector(".figure_10ki57k img").src = imgArray[currentIndex];
+                    document.querySelector(".footerCount_lkhc9u").textContent = `${currentIndex + 1}/${imgCount}`;
+                    createButton(currentIndex, imgCount);
+                }
+            }
         });
     });
 });
@@ -145,6 +163,7 @@ function createButton(currentIndex, imgCount) {
         }
     }
 }
+
 // 모달 X 버튼 클릭시 동작
 document.querySelector(".close_1x3s325").addEventListener("click", () => {
     if (document.querySelector("#modal-root").style.display == "none") {

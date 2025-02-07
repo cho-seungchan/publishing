@@ -342,10 +342,8 @@ button:disabled {
     white-space: nowrap;
     display: block;
 }
-/* #modal-root,
-#modal-root > div {
-    display: none;
-} */
+
+/* 이미지 모달 관련 부분 */
 .container_9tizg4 {
     -webkit-align-items: center;
     -moz-box-sizing: border-box;
