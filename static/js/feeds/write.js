@@ -81,7 +81,8 @@ const tagInput = document.querySelector(".SocialFeedTagsContainer__SocialFeedTag
 tagInput.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
         if (tagCount > 9) {
-            alert(`10개 까지만 입력 가능합니다.`);
+            //alert(`10개 까지만 입력 가능합니다.`);
+            showAlertModal(`10개 까지만 입력 가능합니다.`);
             return;
         }
         const tagChildDiv = document.createElement("div");
@@ -162,3 +163,27 @@ jULzvQ.addEventListener("click", () => {
     const texts = collectTexts();
     console.log(texts.length);
 });
+
+// 모달 열기 함수
+function showAlertModal(message) {
+    // 모달 요소
+    var modal = document.getElementById("alertModal");
+    // 모달 닫기 요소
+    var closeBtn = document.getElementsByClassName("close")[0];
+
+    modal.querySelector("p").textContent = message;
+
+    modal.style.display = "block";
+
+    // 닫기 버튼 클릭 시 모달 닫기
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // 모달 외부 클릭 시 모달 닫기
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+}

@@ -74,12 +74,12 @@
     border-bottom: 1px solid rgb(238, 238, 238);
 }
 .hcLOFI h3 {
-    font-size: 26px;
+    font-size: 32px;
     line-height: 26px;
-    letter-spacing: -0.54px;
+    letter-spacing: -0.54px; 
     color: rgb(51, 51, 51);
     text-align: center;
-    font-weight: bold;
+    font-weight: 900;
     margin: 20px;
 }
 
@@ -121,12 +121,16 @@
     padding: 0px;
 }
 .bZNoYF {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 24px;
     margin: 0px;
 }
+.iXEvmI, .eMLPLA, .eISlhn{
+    font-size: 18px;
+}
 .dbbJUL {
+    font-size: 18px;
     margin: 0px;
     padding: 0px;
 }
@@ -138,7 +142,7 @@
     margin: 0px;
 }
 .dbbJUL > div > dt {
-    width: 120px;
+    width: 50%;
     color: rgb(153, 153, 153);
 }
 .dbbJUL > div > dd {
@@ -149,10 +153,11 @@
     padding: 0px;
 }
 .bsIhrt {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 24px;
     margin: 0px 0px 8px;
+    color: rgb(55, 55, 55);
 }
 .ketEfH {
     margin: 0px;
@@ -252,7 +257,7 @@
 .iXEvmI {
     display: flex;
     flex-wrap: wrap;
-    max-width: 287px;
+    width: 100%;
     padding: 0px;
 }
 .jXxsiv {
@@ -364,9 +369,10 @@ html [type="button"],
     float: none;
     padding: 4px 0px 12px 0;
     margin: 40px 0 0;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
     background: none;
+    color: rgb(55, 55, 55);
 }
 .replyWrap .write {
     position: relative;
@@ -871,11 +877,11 @@ ul {
 
 /* 찜관련 부분 */
 
-/* 맴 관련 */
+/* 맵 관련 */
 #mapContainer {
     position: relative;
     width: 100%;
-    height: 25vh; /* 뷰포트 높이의 50%로 설정 */
+    height: 30vh; /* 뷰포트 높이의 50%로 설정 */
 }
 #map {
     border-radius: 5px;
@@ -906,3 +912,350 @@ ul {
     margin: 10px 0px 0px 0px;
 }
 /* 맴 관련 */
+
+/* 모달 플로팅 버튼 */
+.fDkXaB {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+.avAvm {
+    position: relative;
+    max-width: 768px;
+    width: 100%;
+    margin: 0px auto;
+}
+.gQlhwK {
+    position: absolute;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    border-radius: 20px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 8px 0px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    bottom: 116px;
+}
+.gQlhwK img {
+    width: 24px;
+}
+
+/* 후기 관련 */
+
+.cGKzvC {
+    padding: 0px;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: none;
+}
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+.kaipwt {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    border: 0px;
+}
+.gcyqjw {
+    padding: 57px 0px 24px;
+}
+.bFmUOr {
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+    margin-top: 8px;
+}
+.gdIWGV {
+    padding-top: 24px;
+    border-top: 1px solid rgb(244, 244, 244);
+    border-bottom: 1px solid rgb(244, 244, 244);
+    background-color: rgb(250, 250, 250);
+    overflow: hidden;
+}
+.cOxrJ {
+    margin-bottom: 12px;
+    padding: 0px 18px;
+}
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev {
+    left: -25px;
+}
+.gENQzC {
+    z-index: 1;
+    width: 52px !important;
+    height: 52px !important;
+    transform: rotate(180deg) translate(0px, 50%) !important;
+}
+.hlWAni .slick-arrow {
+    top: 25%;
+}
+.slick-prev.slick-disabled, .slick-next.slick-disabled {
+    content: none;
+    display: none;
+}
+.hlWAni .slick-arrow.slick-prev {
+    left: -18px;
+}
+.hlWAni .slick-arrow.slick-disabled {
+    display: none !important;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-slider .slick-track, .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.hlWAni .slick-list {
+    overflow: visible;
+}
+
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hlWAni .slick-track {
+    margin-left: inherit;
+    margin-right: inherit;
+}
+
+*, ::before, ::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+::before, ::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+.slick-track:before, .slick-track:after {
+    display: table;
+    content: "";
+}
+.slick-track:after {
+    clear: both;
+}
+
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-next {
+    right: -25px;
+}
+.eGlkoV {
+    width: 52px !important;
+    height: 52px !important;
+}
+.hlWAni .slick-arrow {
+    top: 25%;
+}
+.hlWAni .slick-arrow.slick-next {
+    right: -18px;
+}
+.dzAqdb {
+    padding-top: 20px;
+}
+.PIawM {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(0, 117, 239);
+    height: 56px;
+    border-top: 1px solid rgb(244, 244, 244);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+}
+.PIawM img {
+    width: 12px;
+    margin-left: 2px;
+}
+.slick-slide {
+    display: none;
+    float: left;
+    min-height: 1px;
+    height: 100%;
+}
+.slick-initialized .slick-slide {
+    display: block;
+}
+.ihDCaS {
+    margin: 0px 6px 12px;
+    width: 232px;
+}
+.eSCFvY {
+    border-radius: 3px;
+    overflow: hidden;
+    min-height: 232px;
+    background-color: rgb(250, 250, 250);
+    margin-bottom: 18px;
+    width: 232px;
+}
+.gDuKGF {
+    min-height: 1px;
+}
+.bUFcfh {
+    display: none !important;
+}
+.slick-slide img {
+    display: block;
+}
+.ggRfTm {
+    width: 100%;
+}
+.gvMYvX {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.hbfRVr {
+    width: 40px;
+    height: 40px;
+}
+.bzFlWa {
+    width: 100%;
+    border-radius: 20px;
+}
+.fsJcFt {
+    margin-left: 9px;
+}
+.biuXID {
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+.jtBQUX {
+    color: rgb(170, 170, 170);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.36px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+p, label {
+    margin: 0px;
+}
+.gsjveC {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: rgb(51, 51, 51);
+    letter-spacing: -0.42px;
+    margin-bottom: 22px;
+    word-break: break-all;
+    font-size: 14px;
+    line-height: 22px;
+    height: 66px;
+}
+.slick-prev:before, .slick-next:before {
+    font-family: "slick";
+    font-size: 20px;
+    line-height: 1;
+    opacity: 0.75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-next:before {
+    content: "→";
+}
+.hPRDSh {
+    display: initial;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
