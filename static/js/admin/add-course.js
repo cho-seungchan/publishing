@@ -302,3 +302,12 @@ fileParentDiv.addEventListener("click", (e) => {
     }
 });
 // 선택파일의 이미지(x)를 눌렀을 때 전체 dev 삭제 :: 동적으로 생성된 요소일 때는 부모 요소에 위임
+
+document.querySelector(".volunteerBtn").addEventListener("click", function () {
+    document
+        .querySelector(".DurationOfTourContainer")
+        .classList.toggle("hidden");
+    document
+        .querySelector(".DurationOfTourContainer1")
+        .classList.toggle("hidden");
+});

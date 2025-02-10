@@ -51,8 +51,8 @@
     align-items: center;
     height: 65px;
     position: relative;
-    /* border-bottom: 1px solid rgb(238, 238, 238); */
-    top: -35px;
+    top: -5px;
+    left: -6%;
 }
 .hcLOFI h3 {
     font-size: 40px;
@@ -180,7 +180,7 @@
     -webkit-box-align: center;
     align-items: center;
     flex-direction: column;
-    padding: 50px 0px 50px;
+    padding: 50px 0px 65px;
 }
 .jwcODp {
     width: 290px;

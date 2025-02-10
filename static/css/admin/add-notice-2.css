@@ -135,15 +135,15 @@ a, button {
     padding: 4px;
 }
 video, img {
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
 }
 iframe, img, video {
-    vertical-align: top;
+    vertical-align: middle;
 }
-img, picture, video, canvas {
+/* img, picture, video, canvas {
     max-width: 100%;
-}
+} */
 .AnnouncementButton_badge__MDIyN {
     position: absolute;
     top: 0;
@@ -472,18 +472,21 @@ a {
         position: relative;
         flex: 1;
         box-shadow: -2px 0px 0px -1px #0000000f;
-        overflow-x: auto;
+        overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        width: 100vw;
     }
 }
 .FundingPage_container__NDhmM {
     display: flex;
+    width: 100vw;
 }
 @media screen and (min-width: 1096px) {
     .FundingPage_container__NDhmM .FundingPage_box__OGY3N {
         height: calc(100vh - 72px);
-        overflow: hidden;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 }
 .FundingPage_container__NDhmM .FundingPage_box__OGY3N {
@@ -498,9 +501,9 @@ article, aside, figcaption, figure, footer, header, main, nav, section {
 }
 @media screen and (min-width: 1096px) {
     .FundingPage_container__NDhmM .FundingPage_presentation__MzAzN {
-        padding: 0px 64px;
+        /* padding: 40px 64px; */
         position: relative;
-        /* left: 80px; */
+        left: 50px;
     }
 }
 @media screen and (min-width: 1096px) {
@@ -709,7 +712,7 @@ address, em, var {
 }
 @media screen and (min-width: 1096px) {
     .Funding_submitButtonWrapper__OGRkZ .Funding_button__ZmQwY {
-        margin: 32px 0;
+        /* margin: 32px 0; */
         width: 320px;
         height: 48px;
     }
@@ -756,6 +759,7 @@ address, em, var {
 @media screen and (min-width: 1096px) {
     .AppLayout_container__YWFhM .AppLayout_main__NDI4Y .AppLayout_expandNavButton__NTEwM.AppLayout_expand__MmRhM {
         left: 260px;
+        position: fixed;
     }
 }
 @media screen and (min-width: 1096px) {
@@ -815,7 +819,8 @@ address, em, var {
     transform: translateX(0); 
 }
 .AppLayout_contents__YmI3N.active {
-    transform: translateX(-13%); 
+    transform: translateX(-15%); 
+
 }
 .AppLayout_expandNavButton__NTEwM {
     transition: transform 0.3s ease-in-out;
@@ -823,5 +828,8 @@ address, em, var {
     transform: translateX(0);
 }
 .AppLayout_expandNavButton__NTEwM.active {
-    transform: translateX(-552%) rotate(180deg);
+    transform: translateX(-637%) rotate(180deg);
+    position: fixed;
 }
+
+
