@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../static/css/common/header.css" />
+        <link rel="stylesheet" href="../../static/css/proposal/list.css" />
+        <link rel="stylesheet" href="../../static/css/common/footer.css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
+            rel="stylesheet"
+        />
+
+        <title>추천 여행 상세 조회</title>
+    </head>
+    <body class="fontLoaded">
+        <div id="app">
+            <div class="App__AppWrapper-nc5ti6-0 idXWQn">
+                <!-- Header will be dynamically inserted here -->
+                <div id="header-placeholder"></div>
+                <script>
+                    // Load header.html and insert it in#header-placeholder
+                    fetch("../all/header.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById("header-placeholder").innerHTML = data;
+                        })
+                        .catch((error) => console.error("Error loading header:", error));
+                </script>
+
+                <div class="ProductDetailPage__Wrapper-sc-126q1k2-0 CijWU">
+                    <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block">
+                        <div class="ProductDetailPage__ContentWrapper-sc-126q1k2-1 eNYAxQ">
+                            <div class="ProductDetailPage__ProductDetailContainer-sc-126q1k2-2 jAFMyC">
+                                <!-- 구석 구석  -->
+                                <div class="titleType1">
+                                    <div>
+                                        <div class="tit">
+                                            <h2><em class="tit_cos">C코스</em>달(月)달(月)한 남원여행</h2>
+                                        </div>
+                                        <div class="area_address">
+                                            <span class="address">전북특별자치도 남원시</span>
+                                            <span id="dist">코스 총거리 : 57.5km</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- 찜 버튼 -->
+                                    <button
+                                        class="Button-bqxlp0-0 ButtonWish__StyledButton-sc-7k8l60-0 eZGjgL enp_mobon_cart"
+                                        width="32px"
+                                        height="32px"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cg clip-path='url(%23clip0_2519_490)'%3E %3Cmask id='mask0_2519_490' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='0' y='0' width='32' height='32'%3E %3Cpath d='M32 0H0V32H32V0Z' fill='white'/%3E %3C/mask%3E %3Cg mask='url(%23mask0_2519_490)'%3E %3Cmask id='mask1_2519_490' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='0' y='0' width='32' height='32'%3E %3Cpath d='M32 0H0V32H32V0Z' fill='white'/%3E %3C/mask%3E %3Cg mask='url(%23mask1_2519_490)'%3E %3Cpath d='M28 12C28 16.1889 24.9781 19.7916 22.063 22.3047C20.2579 23.8469 18.2982 25.1986 16.2154 26.3381C16.2027 26.3441 16.1898 26.3505 16.1774 26.357C16.1226 26.3861 16.0613 26.4013 15.999 26.4015C15.9401 26.4015 15.882 26.3881 15.8293 26.362L15.8094 26.3511L15.784 26.3378C15.1694 26.0033 14.5659 25.649 13.9743 25.2754C12.5586 24.3847 11.2086 23.3914 9.93704 22.3049C7.02334 19.7914 4.00003 16.1887 4 12C4.00014 10.6766 4.41054 9.38568 5.17469 8.30517C5.93885 7.22466 7.01918 6.4076 8.26696 5.96651C9.51472 5.52542 10.8685 5.482 12.142 5.84222C13.4155 6.20245 14.546 6.94859 15.3778 7.97794C15.5297 8.16589 15.7584 8.2751 16 8.2751C16.2416 8.2751 16.4704 8.16589 16.6222 7.97794C17.4541 6.94859 18.5845 6.20245 19.8579 5.84222C21.1315 5.482 22.4853 5.52542 23.7331 5.96651C24.9808 6.4076 26.0611 7.22466 26.8253 8.30517C27.5894 9.38568 27.9998 10.6766 28 12Z' stroke='%23333333' stroke-width='1.5' stroke-linejoin='round'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3Cdefs%3E %3CclipPath id='clip0_2519_490'%3E %3Crect width='32' height='32' fill='white'/%3E %3C/clipPath%3E %3C/defs%3E %3C/svg%3E"
+                                            alt="찜하기"
+                                        />
+                                        <span class="SaveActionButton__Count-sc-18l2t54-1 hxJYoP">236</span>
+                                    </button>
+                                </div>
+                                <div class="course_detail">
+                                    <div class="schedule_info">
+                                        <ul class="schedule">
+                                            <li>
+                                                <span class="img"
+                                                    ><img
+                                                        src="https://korean.visitkorea.or.kr/resources/images/sub/icon_cos_schedule1.gif"
+                                                        alt=""
+                                                /></span>
+                                                <em>일정</em>
+                                                <strong>당일여행</strong>
+                                            </li>
+                                            <li>
+                                                <span class="img"
+                                                    ><img
+                                                        src="https://korean.visitkorea.or.kr/resources/images/sub/icon_cos_theme4.gif"
+                                                        alt=""
+                                                /></span>
+                                                <em>테마</em>
+                                                <strong>힐링코스</strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- 내용더보기 -->
+                                    <div class="wrap_contView">
+                                        <div class="area_txtView top" style="padding-bottom: 0px">
+                                            <div class="inr_wrap" style="overflow: visible; height: auto">
+                                                <div class="inr">
+                                                    <p>
+                                                        이번 여행은 사랑1번지 남원시에서의 ''치유와 힐링'' 여행이다.
+                                                        맵고 달고 짠 우리의 일상 음식이 아닌 허브요리로 시작하 이번
+                                                        코스는 관광지 내내 아름다움과 향기로움을 머금고 있다. 남원 곳곳
+                                                        낭만이 가득한 명소를 체험하고 자전거 여행을 통해 감성을 더하는
+                                                        이름부터 ''달(月)달(月)한'' 남원여행을 즐겨보자!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="cont_more" style="display: none">
+                                                <button type="button" class="btn_more" title="내용더보기">
+                                                    <span>더보기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //내용더보기 -->
+
+                                    <!-- 지도 -->
+                                    <div id="mapContainer">
+                                        <div id="map"></div>
+                                        <div id="fullMap">
+                                            <img
+                                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E %3Cpath stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M17 3h4v4M15 9l6-6M7 21H3v-4M9 15l-6 6M4 11V6c0-1.105.895-2 2-2h5M20 13v5c0 1.105-.895 2-2 2h-6'/%3E %3C/svg%3E"
+                                                alt="map fullscreen"
+                                            />
+                                        </div>
+                                    </div>
+                                    <!-- //지도 -->
+
+                                    <!-- 연관 코스 -->
+                                    <div class="relation_cos">
+                                        <div class="cos_wrap">
+                                            <!-- pc -->
+                                            <div class="pc js_slider">
+                                                <div
+                                                    class="swiper-container swiper-container-initialized swiper-container-horizontal"
+                                                >
+                                                    <ul class="swiper-wrapper cosList">
+                                                        <li class="swiper-slide on1 swiper-slide-active">
+                                                            <em>1<span>코스</span></em>
+                                                            <a href="#cosTab01" title="선택됨">
+                                                                <span
+                                                                    class="img"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=f1b0db67-1c9f-468d-be33-b3e95d27b66b)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                ></span>
+                                                                <div class="tit">
+                                                                    <span>남원 허브마을 채마루</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="swiper-slide swiper-slide-next">
+                                                            <em>2<span>코스</span></em>
+                                                            <a href="#cosTab02">
+                                                                <span
+                                                                    class="img"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=088d8325-ae9c-4d85-99e2-3d899c4e6cd2)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                ></span>
+                                                                <div class="tit">
+                                                                    <span>광한루원</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="swiper-slide">
+                                                            <em>3<span>코스</span></em>
+                                                            <a href="#cosTab03">
+                                                                <span
+                                                                    class="img"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=1633e409-076a-4fe0-b33e-284564922d1c)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                ></span>
+                                                                <div class="tit">
+                                                                    <span>남원시립김병종미술관</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="swiper-slide">
+                                                            <em>4<span>코스</span></em>
+                                                            <a href="#cosTab04">
+                                                                <span
+                                                                    class="img"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=a107e859-e999-40ba-8d66-5cdbd3892d0b)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                ></span>
+                                                                <div class="tit">
+                                                                    <span>지리산 허브밸리</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="swiper-slide">
+                                                            <em>5<span>코스</span></em>
+                                                            <a href="#cosTab05">
+                                                                <span
+                                                                    class="img"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=2d53640a-965d-44df-a7cb-0a2e08e7ed24)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                ></span>
+                                                                <div class="tit">
+                                                                    <span>구 서도역</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="swiper-slide">
+                                                            <em>6<span>코스</span></em>
+                                                            <a href="#cosTab06">
+                                                                <span
+                                                                    class="img"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=03cdbb9a-6aa6-41db-bd4c-77c452a32ff4)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                ></span>
+                                                                <div class="tit">
+                                                                    <span>혼불문학관</span>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- Add Arrows -->
+                                                    <div
+                                                        class="swiper-button-prev swiper-button-disabled"
+                                                        tabindex="0"
+                                                        role="button"
+                                                        aria-label="Previous slide"
+                                                        aria-disabled="true"
+                                                    >
+                                                        이전
+                                                    </div>
+                                                    <div
+                                                        class="swiper-button-next"
+                                                        tabindex="0"
+                                                        role="button"
+                                                        aria-label="Next slide"
+                                                        aria-disabled="false"
+                                                    >
+                                                        다음
+                                                    </div>
+                                                    <span
+                                                        class="swiper-notification"
+                                                        aria-live="assertive"
+                                                        aria-atomic="true"
+                                                    ></span>
+                                                </div>
+                                            </div>
+                                            <!-- //pc -->
+                                        </div>
+
+                                        <!-- tab cont -->
+                                        <div id="tabCont">
+                                            <div class="cos_cont active" id="cosTab01">
+                                                <div class="detail_box">
+                                                    <div class="title">
+                                                        <div class="tit_wrap">
+                                                            <em>1</em>
+                                                            <strong
+                                                                ><a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=9f1f8414-9948-4d0a-9a57-2e7d815f3002"
+                                                                    >남원 허브마을 채마루</a
+                                                                ></strong
+                                                            >
+                                                        </div>
+                                                        <span>전북특별자치도 남원시 원천로 37</span>
+                                                    </div>
+                                                    <div class="info_area pc">
+                                                        <div class="wrap">
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=9f1f8414-9948-4d0a-9a57-2e7d815f3002"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=f1b0db67-1c9f-468d-be33-b3e95d27b66b)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >남원 허브마을 채마루 1</a
+                                                                >
+                                                            </div>
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=9f1f8414-9948-4d0a-9a57-2e7d815f3002"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=0eecfd5c-fac2-4313-88b4-164298bc14f1)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >남원 허브마을 채마루 2</a
+                                                                >
+                                                            </div>
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=9f1f8414-9948-4d0a-9a57-2e7d815f3002"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=3a668c1c-51d8-4051-a896-11398a6591a3)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >남원 허브마을 채마루 3</a
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="recommend" id="9f1f8414-9948-4d0a-9a57-2e7d815f3002">
+                                                        <div class="pc">
+                                                            <div class="wrap">
+                                                                <strong>남원 허브마을 채마루</strong>
+                                                                <em>인근 여행지</em>
+                                                                <ul class="tag_list">
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=193fb7ab-52ba-4b8d-b1cf-ac7716bfd6d8"
+                                                                            >선원사(남원)</a
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=95ba22a0-b1f6-4b62-b724-8dc30f1e087c"
+                                                                            >덕음암(남원)</a
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=d0241dac-f827-4074-b4b2-d168aefd3221"
+                                                                            >원각사 전망대</a
+                                                                        >
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cos_cont" id="cosTab02">
+                                                <div class="detail_box">
+                                                    <div class="title">
+                                                        <div class="tit_wrap">
+                                                            <em>2</em>
+                                                            <strong
+                                                                ><a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=27ed68b5-c921-40d0-a8de-960d9a6b8939"
+                                                                    >광한루원</a
+                                                                ></strong
+                                                            >
+                                                        </div>
+                                                        <span>전북특별자치도 남원시 요천로 1447</span>
+                                                    </div>
+                                                    <div class="info_area pc">
+                                                        <div class="wrap">
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=27ed68b5-c921-40d0-a8de-960d9a6b8939"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=088d8325-ae9c-4d85-99e2-3d899c4e6cd2)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >광한루원 1</a
+                                                                >
+                                                            </div>
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=27ed68b5-c921-40d0-a8de-960d9a6b8939"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=4a6c7669-c58c-4423-8634-dcc3e7eba6b7)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >광한루원 2</a
+                                                                >
+                                                            </div>
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=27ed68b5-c921-40d0-a8de-960d9a6b8939"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=0025f459-7957-4fa0-b0da-02dc86f62e15)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >광한루원 3</a
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="recommend" id="27ed68b5-c921-40d0-a8de-960d9a6b8939">
+                                                        <div class="pc">
+                                                            <div class="wrap">
+                                                                <strong>광한루원</strong>
+                                                                <em>인근 여행지</em>
+                                                                <ul class="tag_list">
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=675c3b72-12f6-4b00-8388-e01585fe9e6e"
+                                                                            >춘향사당</a
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=68c96cca-535d-4937-b0a1-6c3df1b0beee"
+                                                                            >광한루</a
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=9584a469-d455-4994-9a1a-2e16af2869c1"
+                                                                            >남원 화인당</a
+                                                                        >
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cos_cont" id="cosTab03">
+                                                <div class="detail_box">
+                                                    <div class="title">
+                                                        <div class="tit_wrap">
+                                                            <em>3</em>
+                                                            <strong
+                                                                ><a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=1ce00ea6-9174-4bd5-97f7-19309e20a124"
+                                                                    >남원시립김병종미술관</a
+                                                                ></strong
+                                                            >
+                                                        </div>
+                                                        <span>전북특별자치도 남원시 함파우길 65-14</span>
+                                                    </div>
+                                                    <div class="info_area pc">
+                                                        <div class="wrap">
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=1ce00ea6-9174-4bd5-97f7-19309e20a124"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=1633e409-076a-4fe0-b33e-284564922d1c)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >남원시립김병종미술관 0</a
+                                                                >
+                                                            </div>
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=1ce00ea6-9174-4bd5-97f7-19309e20a124"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=5124abd1-f635-442d-a8b6-11145e2f13ca)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >남원시립김병종미술관 1</a
+                                                                >
+                                                            </div>
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=1ce00ea6-9174-4bd5-97f7-19309e20a124"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=d4ffc71e-b405-4a9f-b578-5d9a6f404f93)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >남원시립김병종미술관 2</a
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="recommend" id="1ce00ea6-9174-4bd5-97f7-19309e20a124">
+                                                        <div class="pc">
+                                                            <div class="wrap">
+                                                                <strong>남원시립김병종미술관</strong>
+                                                                <em>인근 여행지</em>
+                                                                <ul class="tag_list">
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=8c360d84-62d2-4407-abdc-ca34fc2ff42a"
+                                                                            >남원항공우주천문대</a
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=83a10d41-bbed-4889-b978-230729ca339d"
+                                                                            >국립민속국악원</a
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=cb1e5bb6-122f-4408-8229-7cccbcfd89a9"
+                                                                            >남원관광단지</a
+                                                                        >
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cos_cont" id="cosTab04">
+                                                <div class="detail_box">
+                                                    <div class="title">
+                                                        <div class="tit_wrap">
+                                                            <em>4</em>
+                                                            <strong
+                                                                ><a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=cead8924-09b4-435b-bea9-655bb31d071e"
+                                                                    >지리산 허브밸리</a
+                                                                ></strong
+                                                            >
+                                                        </div>
+                                                        <span>전북특별자치도 남원시 운봉읍 바래봉길 214</span>
+                                                    </div>
+                                                    <div class="info_area pc">
+                                                        <div class="wrap">
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=cead8924-09b4-435b-bea9-655bb31d071e"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=a107e859-e999-40ba-8d66-5cdbd3892d0b)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >지리산 허브밸리 0</a
+                                                                >
+                                                            </div>
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=cead8924-09b4-435b-bea9-655bb31d071e"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=dd183af6-f9dc-47b7-bb46-3a45e320d433)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >지리산 허브밸리 1</a
+                                                                >
+                                                            </div>
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=cead8924-09b4-435b-bea9-655bb31d071e"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=807f4965-100f-4b61-b3e9-8f0d228692ce)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >지리산 허브밸리 2</a
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="recommend" id="cead8924-09b4-435b-bea9-655bb31d071e">
+                                                        <div class="pc">
+                                                            <div class="wrap">
+                                                                <strong>지리산 허브밸리</strong>
+                                                                <em>인근 여행지</em>
+                                                                <ul class="tag_list">
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=a5ec3747-534a-43e1-86a5-9af3dd55f3ae"
+                                                                            >춘향허브마을</a
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=cb43ef7a-2711-4d6d-bc0a-306bd02b4eb2"
+                                                                            >운봉장 / 운봉공설시장 (1, 6일)</a
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=b28e12db-6ee2-4dec-a440-55d42e0c1e48"
+                                                                            >서림공원</a
+                                                                        >
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cos_cont" id="cosTab05">
+                                                <div class="detail_box">
+                                                    <div class="title">
+                                                        <div class="tit_wrap">
+                                                            <em>5</em>
+                                                            <strong
+                                                                ><a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=83777dae-dd9b-4168-a719-41253f7fdcf0"
+                                                                    >구 서도역</a
+                                                                ></strong
+                                                            >
+                                                        </div>
+                                                        <span>전북특별자치도 남원시 사매면 서도길 32</span>
+                                                    </div>
+                                                    <div class="info_area pc">
+                                                        <div class="wrap">
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=83777dae-dd9b-4168-a719-41253f7fdcf0"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=2d53640a-965d-44df-a7cb-0a2e08e7ed24)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >구 서도역 0</a
+                                                                >
+                                                            </div>
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=83777dae-dd9b-4168-a719-41253f7fdcf0"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=2479b851-77bf-4e17-98e6-9fbda17860d6)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >구 서도역 1</a
+                                                                >
+                                                            </div>
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=83777dae-dd9b-4168-a719-41253f7fdcf0"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=2564bcd8-6647-4998-a463-fd215368a766)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >구 서도역 2</a
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="recommend" id="83777dae-dd9b-4168-a719-41253f7fdcf0">
+                                                        <div class="pc">
+                                                            <div class="wrap">
+                                                                <strong>구 서도역</strong>
+                                                                <em>인근 여행지</em>
+                                                                <ul class="tag_list">
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=f881092d-65d7-4a8f-9b37-1e2a722dff84"
+                                                                            >오리정</a
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=1c824e4b-a0d1-48db-8616-c6d5845ddcc8"
+                                                                            >매계서원</a
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=2051b569-1796-40fe-b29c-7b5925ea6e19"
+                                                                            >호암서원</a
+                                                                        >
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cos_cont" id="cosTab06">
+                                                <div class="detail_box">
+                                                    <div class="title">
+                                                        <div class="tit_wrap">
+                                                            <em>6</em>
+                                                            <strong
+                                                                ><a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=6f149f80-c5d4-4f99-93f2-22ea23a7e959"
+                                                                    >혼불문학관</a
+                                                                ></strong
+                                                            >
+                                                        </div>
+                                                        <span>전북특별자치도 남원시 사매면 노봉안길 52</span>
+                                                    </div>
+                                                    <div class="info_area pc">
+                                                        <div class="wrap">
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=6f149f80-c5d4-4f99-93f2-22ea23a7e959"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=03cdbb9a-6aa6-41db-bd4c-77c452a32ff4)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >혼불문학관 0</a
+                                                                >
+                                                            </div>
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=6f149f80-c5d4-4f99-93f2-22ea23a7e959"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=0c015ddc-cf8a-4e26-8971-f651849cd109)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >혼불문학관 1</a
+                                                                >
+                                                            </div>
+                                                            <div>
+                                                                <a
+                                                                    href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=6f149f80-c5d4-4f99-93f2-22ea23a7e959"
+                                                                    style="
+                                                                        background: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=6a48ca82-8c9c-430a-997e-8cc37445f582)
+                                                                            50% 50% / cover no-repeat;
+                                                                    "
+                                                                    >혼불문학관 2</a
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="recommend" id="6f149f80-c5d4-4f99-93f2-22ea23a7e959">
+                                                        <div class="pc">
+                                                            <div class="wrap">
+                                                                <strong>혼불문학관</strong>
+                                                                <em>인근 여행지</em>
+                                                                <ul class="tag_list">
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=f881092d-65d7-4a8f-9b37-1e2a722dff84"
+                                                                            >오리정</a
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=1c824e4b-a0d1-48db-8616-c6d5845ddcc8"
+                                                                            >매계서원</a
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <a
+                                                                            href="https://korean.visitkorea.or.kr/detail/detail_view.do?cotid=f58022cd-2a48-4237-a169-d921e69b99c5"
+                                                                            >남원 신계리 마애여래좌상</a
+                                                                        >
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //tab cont -->
+                                    </div>
+                                    <!-- //연관 코스 -->
+                                </div>
+                                <!-- 구석 구석 -->
+                                <section class="ProductDetailPage__SectionContainer-sc-126q1k2-4 cGKzvC">
+                                    <article>
+                                        <h2 class="ReviewSection__HiddenText-h5kv09-3 kaipwt">후기</h2>
+                                        <div class="ReviewSummary__Wrapper-sc-1m36i2z-0 gcyqjw">
+                                            <span class="ReviewSummary__Comment-sc-1m36i2z-4 bFmUOr"
+                                                >경험을 공유하세요</span
+                                            >
+                                        </div>
+
+                                        <div class="ReviewSection__ReviewSectionWrapper-h5kv09-0 gdIWGV">
+                                            <div class="CoverReviewCardList__Wrapper-knh3pe-0 cOxrJ">
+                                                <div
+                                                    class="slick-slider CoverReviewSlider__StyledSlider-sc-1ty45po-2 hlWAni slick-initialized"
+                                                    dir="ltr"
+                                                >
+                                                    <img
+                                                        data-role="none"
+                                                        class="CoverReviewSlider__PrevArrow-sc-1ty45po-0 gENQzC slick-arrow slick-prev slick-disabled"
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJwAAACcCAMAAAC9ZjJ/AAAATlBMVEVHcEwHBwf///8bGxsHBwcEBAQFBQUvLy8TExMLCwv8/Pz+/v75+fn////h4eGmpqbz8/Pw8PDp6ena2tr///8zMzOamprm5uZOTk7Dw8N+4gpoAAAAE3RSTlMADAECCRQPAQMGxuCm8EskeWMm5yESOgAACY9JREFUeNrtnNlu3DgQRakqircoqbUYcjL5/x+dB65aut1aewYIYSQG7Ngnt1gLi4tSf8ff8f8bUAoAlAIYBAX8N7CIFAgAQRFAIAUABMS/P0UWfn/XDk1T1fVjHMdxrKuq6fu2IwUQPoAHBQYpgNq+qcfVUTd9qwCA1Z2ARACI0fXVY3w5Hs3wBYDuAnSTjND11fjWqIYv+Dl4BxoR2uYxvj+aFlBXuwcUQCC01bhxVAMU4UL1yIUKHupxx6gHJqiLYiD5wLBdtYjXMoEusK6zCPHXbrRxHMfmi5nU2bYFAwBx/xgPjUfPTACfiEcEBfBB2bxtv5jOzBsg52dHZUvigQjnRGU32bhrxpNG0zEDp9AREZ1k0sy07KqGw7KxIuavehwvoDsKp4hYDY/x1PEYmBkA037xWCkCMw/j6WNgZgIRDmQFBWK6gM3R7Tets+g1uh2mYxd51UVsjo6hSNGO0KvAzPz1uAru8bVfOwL47BiyjCi8I965PM/cXcg2jlXHLpdhqzeAWVQzXjoaER/vNptUuB8vHr2wM+0W3QjMLNc5Q+YUxJvW3nBBRKQeLx+VCDO/X6O4LsMdRnWGdXS0ZcLdYVRnWPEB5c0VIDGLSDPeMpxh+a11DxQTmIXb8abRiggD4HdsCmaWW7whSued4sd5R0xgERnG28bATrqfnMItZm4VbhxrEZ8p8Ho1o7xRbxTOzzr+sU3LpJhZxFZ3wlX2Delcumdh2eiqv//8PkW6l8o5OBa7Lcb9+v7+/nWoOvHSvbKrq+FE5GvTj/7z/X2Q7tFZL90rNmIRkY1rml/fh+l6a1mY+XkBAJcaxG50Bw93hK6yVpiZngdiAE65r40/+p/jdJ1YEeanky7EX2u3Brnfx+l6Kz7F4kmL0FUj1m6uR47TVdanCbXaPkGwqrXbC7nDdA9rQ/7HqnLsYpzdUywdpms9nVpL/+SWDWKt3VWeH6Vzk054vZkNwMPtK4EP0jXWWhFx28krUc77qt25djhGV1sr9kmG9ctosdZ2ez3uGF1nrXUusZCOnD+I3ecPJ9C1EQ6rvnrAH47TDW7SMbCIdBR9VR9ZSx+gcx7BwosuNlT0VXtovbqfrtHRrkurBjh9rELfTVdFuHn2JwByCtxuutrNuWXNSQrkldP66KJwJ12t46SbZrCwIrTWWn14MbWP7qG1tdbBYZ66wpQ7Dpfo/mz5V1onuy5amU64E5RLdP9sg9PernN3TVb9HJwN/jqdc0j54ZNm1avZNVUkWhePzzjEWGjrM9jErqlAt/qDocS568Ku3llFToDbG4Qr7ZSbb0z4/o3zh4+lryIpl28S+/a5p/tU4i+8dMKcbzeB8jnXfIRt7DO43Ky+ty/Waq2L4SNsY18Ej5iZlVMk0cWnyvQAN0v9obsv1mpdfGqBU+SxBHM45w9FUX+CrS6KQtuV1O83RgLcZxbVRZHFEqgV5bTWRfGZdkRgs8KcL8DS0stqXRSfaeQUeZxTiznnQ0lhPtECMwlOJnAUY4nWWhdFdTvb2Dg4vVz1+yrdulBSmP52tnEoCh3i3HTp6s5phHqu2Brpfp/RsC4KX2wudtXj+kY76bbZ9c8JrX5TZDEYT0umYrNdT9gkGYwLcxIaiGvNOe3gusd25Q5tfnVeOb8bMdkqoaicM6u5e2POTCIJYa0fLEG6u7c0p3DTZkmIJXHSmXs3g43JM+vs9JAvhW2Iwsa0d8INEU4WS4jQyGFJypk7DyAYY1KYW9mKmHtE2d4qXBbmmOfd9HnqNzfOunrBtuxs+n3gYNf7pGuNCc66vjcXGnQfkK5xbEUsl5hXtr7SytVJ191zRK0zeSDhua/ONg2thzP3HO4rJ1Nu/YxE6oLZYNfyBsPWpZnCES+vX2EC5+muN+yjM5Mgx+sbrqEwyVyiLPtbjDoJJKtHS9b8tSyvPsRclsEdPBx47QRiBpekM1117YSbCse+c/jsPM7MJcorD6fXXWmMMSYubZ4fe0EeTBLdhVcOuky4WASvH3oJyuVVnSnL8rIziG1ge9JeWs2vMpXuKrqhTN5g7YsInBr+vJTuGjrPluDEN0no+Q20yay7kG4oyzTjEtvzs4fw65wkXaBrz76U1paZcDY2l8DPL4KBMc1hYdqdHFHqr1w3bbNC7vnBSBDl0mWGPZWu6jLdcqu+vrRBxMRx43Wq3YlXSHObTtheXj0kWky7AFeWZ12+dT8t99R0iAk/3NT34UR81ZnRnWFaZ9Jl+HWu+vqyC5BOquWGPUm8XLa5UfmN22nx6LxrnEwte3DmBdnKVbY37pMCYKa4TJzBlWW727ZVW67p5utfBt6Bi9JFutyyZbnzeYY2/v9MVovY7DTkG1eEQP7aQepOzOjKodqtmkdLbPHIwXvXlwDFqXhapSvbLXPv0SS0zKZWuyAiWy6SxgPDYq2s+axzjXflq/quXLJldZIvlN68lQYAPFtRLOnKsht+elLlMSXL0fL5xltukQJh1z94RdRuileWbf8MsG76dvq9xsx1c43Mba9JEGgmXSbeHK8su7bvm6pyTvyo66pphrZbfFuOFsuksCWy6Q6pv+Ca4b2ge2eYNTa3FNx65TvccM3qp1hB7cJLaFleEGEwqc1PXLi3NuAzRSZesUM8Y5JueuYLu66jk2vtMDPbiWmL8JuOWNRay+xruJ1X5VXus8kvIt87YDODukNymS/sfLeEEKu7OZ5nM6Y0pfkRLGebuAJD7X4uh5JbhJasXaj3RMAMLIXdvESSfQ8MLDIZzbTzdBmel9CUXswcLEOzeYn05mXgl3Qck8VPfBPUnCyy+eWCBDY69tQL4G9cebosrgS+Z4AmfD1DiwHEpYWDb+S4g+ExHkuIA16/CFgYU8xN6biKTLTEhrMeLYP3iwCYPGPKtxha55rlshHTWa9acaxSOFdPT/gipHYfeoLmyWK35sTXyuDuSzBL7hnWWu0+ng0b04FNfsBnv0MHUgSE1wcyz5gqOAGbcXk2cg8mnv7IW1ZIZUX8ZEygJJ9oIsxwTkqns8UqKpt8MwVXh1PN9/D5socZCYqyWiVMcLGZhBNU8arl0ePCp1Xhhy+lEqCIjWEmfS4pU7F7+pXUlYNASHEvFQWz4WcmszD8PAPUDQ+Bwr80G/l4olL4RMJXvdqK1C0D7klP8svbyOjCoFOLgwcQTnoIb4N5VbCvMzGx/wMc0HChc76jIHtCpVyX3j2timBJ95yp+uybwu5lVIK3t38udONS+TpE9ywqwZ2Kuj5o/B1/x0XjX7gS9i3p6KuqAAAAAElFTkSuQmCC"
+                                                        style="display: block"
+                                                    />
+                                                    <div class="slick-list">
+                                                        <div
+                                                            class="slick-track"
+                                                            style="
+                                                                width: 1464px;
+                                                                opacity: 1;
+                                                                transform: translate3d(0px, 0px, 0px);
+                                                            "
+                                                        >
+                                                            <div
+                                                                data-index="0"
+                                                                class="slick-slide slick-active slick-current"
+                                                                tabindex="-1"
+                                                                aria-hidden="false"
+                                                                style="outline: none; width: 244px"
+                                                            >
+                                                                <div>
+                                                                    <div
+                                                                        class="CoverReviewCard__Wrapper-sc-1kgiguh-0 ihDCaS"
+                                                                    >
+                                                                        <div
+                                                                            class="CoverReviewCard__ImageSection-sc-1kgiguh-1 eSCFvY"
+                                                                        >
+                                                                            <a href="/products/174811/reviews"
+                                                                                ><div
+                                                                                    class="Image__Wrapper-v97gyx-0 gDuKGF"
+                                                                                >
+                                                                                    <img
+                                                                                        class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                                                        width="220"
+                                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_220/ios_image_361595_20240319142625344_e557add402e7b50d41c0671231290d61c6b96c056ad35ea2e811be500bcebb48"
+                                                                                    />
+                                                                                    <div
+                                                                                        class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                                                        style="
+                                                                                            opacity: 1;
+                                                                                            display: block;
+                                                                                        "
+                                                                                    >
+                                                                                        <div
+                                                                                            class="Ratio"
+                                                                                            style="display: block"
+                                                                                        >
+                                                                                            <div
+                                                                                                class="Ratio-ratio"
+                                                                                                style="
+                                                                                                    height: 0px;
+                                                                                                    position: relative;
+                                                                                                    width: 100%;
+                                                                                                    padding-top: 100%;
+                                                                                                "
+                                                                                            >
+                                                                                                <div
+                                                                                                    class="Ratio-content"
+                                                                                                    style="
+                                                                                                        height: 100%;
+                                                                                                        left: 0px;
+                                                                                                        position: absolute;
+                                                                                                        top: 0px;
+                                                                                                        width: 100%;
+                                                                                                    "
+                                                                                                >
+                                                                                                    <img
+                                                                                                        alt="review-thumbnail"
+                                                                                                        class="Image__StyledImage-v97gyx-1 VUNpA"
+                                                                                                        width="220"
+                                                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_220/ios_image_361595_20240319142625344_e557add402e7b50d41c0671231290d61c6b96c056ad35ea2e811be500bcebb48"
+                                                                                                    />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div></div
+                                                                            ></a>
+                                                                        </div>
+                                                                        <div
+                                                                            class="CoverReviewCard__InfoSection-sc-1kgiguh-2 ggRfTm"
+                                                                        >
+                                                                            <div
+                                                                                class="CoverReviewCard__UserProfileSection-sc-1kgiguh-3 gvMYvX"
+                                                                            >
+                                                                                <div
+                                                                                    class="CoverReviewCard__ProfileImage-sc-1kgiguh-4 hbfRVr"
+                                                                                >
+                                                                                    <div
+                                                                                        class="Image__Wrapper-v97gyx-0 gDuKGF"
+                                                                                    >
+                                                                                        <div
+                                                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                                                            style="
+                                                                                                opacity: 1;
+                                                                                                display: block;
+                                                                                            "
+                                                                                        >
+                                                                                            <div
+                                                                                                class="Ratio"
+                                                                                                style="display: block"
+                                                                                            >
+                                                                                                <div
+                                                                                                    class="Ratio-ratio"
+                                                                                                    style="
+                                                                                                        height: 0px;
+                                                                                                        position: relative;
+                                                                                                        width: 100%;
+                                                                                                        padding-top: 100%;
+                                                                                                    "
+                                                                                                >
+                                                                                                    <div
+                                                                                                        class="Ratio-content"
+                                                                                                        style="
+                                                                                                            height: 100%;
+                                                                                                            left: 0px;
+                                                                                                            position: absolute;
+                                                                                                            top: 0px;
+                                                                                                            width: 100%;
+                                                                                                        "
+                                                                                                    >
+                                                                                                        <img
+                                                                                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAABZCAMAAABi1XidAAAAUVBMVEVHcEzz9Pby9Pb2+/vy8/f09/jq6/L////y9Pfz9ffy9ffz9Pfy8/fz9Pby9Pfy9Pby9Pfz9Pfy8/art8To6++wusi5ws7g5Orw8fTEzNbS1+C1FdKWAAAAEnRSTlMA5bIa8jsuC1GOZLnZzJ7Kt9TwOxZLAAADVklEQVRYw8VZ25arMAhNrdZqb1MgQPL/H3oe6kzb0ZBUJ+vwahfFLWxg41ze9t04NJfzroV2d740w9jt3Xbrj8Md5nYfjv02t1+Qtq/Vzg/XFmxrr4cVfrsGSqzpPo33BKV2+iTufoBPbCjG+7iDz2x3rBFwedj7G6yxW7Z4uhbWWZtJkqPCWlMT7BG22FjLseH6CFstAUinmz3r4mfct7Dd2oXk62/wF3abl8wAf2PD33+9xFfssyREEhk5CmXpqf8EC43B48N8iPoBHgf7t5ER0XMIgT0icrR//toKrA6iGhB9kEekKsEjBjPs00uNmAAzYnhFlwIim3A/66WxHXv59RbibddNCco6dzy51gKkr1ZSLDgGAPFofcbrlMsGYRAmPEREA4+2z5ZfSL41Y8gWopFy5FESjwQ9ZRKvt0okGbIqm0j3WTDCqmcPOAYz5ST5UMzEG5xzdxNmMjxbQN+d24OZc7TuIcDe5AyywjJfCKCzZgzd4nk0OX+L58HiuU0xN+5SKeaLO1eK+ex2lWLeubZSzK2DSpUCVsyg3uQNr2bMO7sJxhUMO+F8Nkcj5ORDm5/hbOYzSBpLQgMpALiYswZoutsFGwxoMrNiTOUd2WMBwJDZp1JBay5kGO2ZDkCWB46YQRmgM3vKA8+FIUm82V4fPcXqgxMes+mQOIcF3AtWH5oNnsRmc/3p3dndRzzyKyDCy1PkbN7oocC1fy4n0Rc4ht45576yP2NEZFEAUGFEo+R/tLyyVVA9MiJyiIERPdsk9zKL9rmFmxBJwrS1BckR83N+tmb+F76kGEKIlOHWt5k/tw3OPMVsNh9Kdqs5K2mWjZqyfXBh2YmZvOuKdtiFBU3VrpVTyd6tcXGpJH6tHWvvXiIPVZXIy4uwEiNyFFXNaSe/9A2VwOw9YjI0jR4RvWf+3vUT+sZ7IUaetAyOlFQQKPKkefDbvx/TOhIxog9RRMhMW1USkRj8m5YwpLUvYvSBAMrUO/2lSixoX996HZWw70JmUlKvmzRGDfl+sdh3giY1xsdXlGxTTrV4Seuizo3WUGTDHZDVlIlpXciPCXA0xfgsQaapNnOgOKwCAwDC4b/dJireUyregGrerSre2mreB2veNGveYWvejjfdu/8BI2K8ok7u95kAAAAASUVORK5CYII="
+                                                                                                            alt="user-361595-profile"
+                                                                                                            class="Image__DefaultImage-v97gyx-3 bzFlWa"
+                                                                                                        />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="CoverReviewCard__UserInfo-sc-1kgiguh-5 fsJcFt"
+                                                                                >
+                                                                                    <span
+                                                                                        class="CoverReviewCard__UserName-sc-1kgiguh-6 biuXID"
+                                                                                        >임수정</span
+                                                                                    >
+                                                                                </div>
+                                                                            </div>
+                                                                            <p
+                                                                                class="CoverReviewCard__ProductTitle-sc-1kgiguh-7 jtBQUX"
+                                                                            ></p>
+                                                                            <span
+                                                                                class="SpanLineClamp-my36n9-0 CoverReviewCard__ReviewContent-sc-1kgiguh-8 gsjveC"
+                                                                                >올라갈 때 너무 힘들었지만 눈앞에 펼쳐진
+                                                                                겨울산으로 모두 보상받는
+                                                                                기분이었습니다!!</span
+                                                                            >
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                data-index="1"
+                                                                class="slick-slide slick-active"
+                                                                tabindex="-1"
+                                                                aria-hidden="false"
+                                                                style="outline: none; width: 244px"
+                                                            >
+                                                                <div>
+                                                                    <div
+                                                                        class="CoverReviewCard__Wrapper-sc-1kgiguh-0 ihDCaS"
+                                                                    >
+                                                                        <div
+                                                                            class="CoverReviewCard__ImageSection-sc-1kgiguh-1 eSCFvY"
+                                                                        >
+                                                                            <a href="/products/174811/reviews"
+                                                                                ><div
+                                                                                    class="Image__Wrapper-v97gyx-0 gDuKGF"
+                                                                                >
+                                                                                    <img
+                                                                                        class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                                                        width="220"
+                                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_220/ios_image_1088299_20240201140048394_8286ca0d2769c3653f241727805b038b90bef7b12e1be8bb66541da24e348ca9"
+                                                                                    />
+                                                                                    <div
+                                                                                        class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                                                        style="
+                                                                                            opacity: 1;
+                                                                                            display: block;
+                                                                                        "
+                                                                                    >
+                                                                                        <div
+                                                                                            class="Ratio"
+                                                                                            style="display: block"
+                                                                                        >
+                                                                                            <div
+                                                                                                class="Ratio-ratio"
+                                                                                                style="
+                                                                                                    height: 0px;
+                                                                                                    position: relative;
+                                                                                                    width: 100%;
+                                                                                                    padding-top: 100%;
+                                                                                                "
+                                                                                            >
+                                                                                                <div
+                                                                                                    class="Ratio-content"
+                                                                                                    style="
+                                                                                                        height: 100%;
+                                                                                                        left: 0px;
+                                                                                                        position: absolute;
+                                                                                                        top: 0px;
+                                                                                                        width: 100%;
+                                                                                                    "
+                                                                                                >
+                                                                                                    <img
+                                                                                                        alt="review-thumbnail"
+                                                                                                        class="Image__StyledImage-v97gyx-1 VUNpA"
+                                                                                                        width="220"
+                                                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_220/ios_image_1088299_20240201140048394_8286ca0d2769c3653f241727805b038b90bef7b12e1be8bb66541da24e348ca9"
+                                                                                                    />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div></div
+                                                                            ></a>
+                                                                        </div>
+                                                                        <div
+                                                                            class="CoverReviewCard__InfoSection-sc-1kgiguh-2 ggRfTm"
+                                                                        >
+                                                                            <div
+                                                                                class="CoverReviewCard__UserProfileSection-sc-1kgiguh-3 gvMYvX"
+                                                                            >
+                                                                                <div
+                                                                                    class="CoverReviewCard__ProfileImage-sc-1kgiguh-4 hbfRVr"
+                                                                                >
+                                                                                    <div
+                                                                                        class="Image__Wrapper-v97gyx-0 gDuKGF"
+                                                                                    >
+                                                                                        <img
+                                                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                                                            width="40"
+                                                                                            height="40"
+                                                                                            src="https://res.cloudinary.com/frientrip/image/fetch/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_40/https://k.kakaocdn.net/dn/caSTDV/btqJzO2UICx/5Bujjg38OzPNAkSOuRC43k/img_110x110.jpg"
+                                                                                        />
+                                                                                        <div
+                                                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                                                            style="
+                                                                                                opacity: 1;
+                                                                                                display: block;
+                                                                                            "
+                                                                                        >
+                                                                                            <div
+                                                                                                class="Ratio"
+                                                                                                style="display: block"
+                                                                                            >
+                                                                                                <div
+                                                                                                    class="Ratio-ratio"
+                                                                                                    style="
+                                                                                                        height: 0px;
+                                                                                                        position: relative;
+                                                                                                        width: 100%;
+                                                                                                        padding-top: 100%;
+                                                                                                    "
+                                                                                                >
+                                                                                                    <div
+                                                                                                        class="Ratio-content"
+                                                                                                        style="
+                                                                                                            height: 100%;
+                                                                                                            left: 0px;
+                                                                                                            position: absolute;
+                                                                                                            top: 0px;
+                                                                                                            width: 100%;
+                                                                                                        "
+                                                                                                    >
+                                                                                                        <img
+                                                                                                            alt="user-1088299-profile"
+                                                                                                            class="Image__StyledImage-v97gyx-1 hPRDSh"
+                                                                                                            width="40"
+                                                                                                            height="40"
+                                                                                                            src="https://res.cloudinary.com/frientrip/image/fetch/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_40/https://k.kakaocdn.net/dn/caSTDV/btqJzO2UICx/5Bujjg38OzPNAkSOuRC43k/img_110x110.jpg"
+                                                                                                        />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="CoverReviewCard__UserInfo-sc-1kgiguh-5 fsJcFt"
+                                                                                >
+                                                                                    <span
+                                                                                        class="CoverReviewCard__UserName-sc-1kgiguh-6 biuXID"
+                                                                                        >멧</span
+                                                                                    >
+                                                                                </div>
+                                                                            </div>
+                                                                            <p
+                                                                                class="CoverReviewCard__ProductTitle-sc-1kgiguh-7 jtBQUX"
+                                                                            ></p>
+                                                                            <span
+                                                                                class="SpanLineClamp-my36n9-0 CoverReviewCard__ReviewContent-sc-1kgiguh-8 gsjveC"
+                                                                                >재밌어요 캡틴님 두분 친절하시고 잘
+                                                                                챙겨주셔서 감사합니다</span
+                                                                            >
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                data-index="2"
+                                                                class="slick-slide slick-active"
+                                                                tabindex="-1"
+                                                                aria-hidden="false"
+                                                                style="outline: none; width: 244px"
+                                                            >
+                                                                <div>
+                                                                    <div
+                                                                        class="CoverReviewCard__Wrapper-sc-1kgiguh-0 ihDCaS"
+                                                                    >
+                                                                        <div
+                                                                            class="CoverReviewCard__ImageSection-sc-1kgiguh-1 eSCFvY"
+                                                                        >
+                                                                            <a href="/products/174811/reviews"
+                                                                                ><div
+                                                                                    class="Image__Wrapper-v97gyx-0 gDuKGF"
+                                                                                >
+                                                                                    <img
+                                                                                        class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                                                        width="220"
+                                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_220/ios_image_904349_20240129203338593_f3567d96274cc66d2a77c707d253b3b4df320cf293292d65e42d9005874ab02b"
+                                                                                    />
+                                                                                    <div
+                                                                                        class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                                                        style="
+                                                                                            opacity: 1;
+                                                                                            display: block;
+                                                                                        "
+                                                                                    >
+                                                                                        <div
+                                                                                            class="Ratio"
+                                                                                            style="display: block"
+                                                                                        >
+                                                                                            <div
+                                                                                                class="Ratio-ratio"
+                                                                                                style="
+                                                                                                    height: 0px;
+                                                                                                    position: relative;
+                                                                                                    width: 100%;
+                                                                                                    padding-top: 100%;
+                                                                                                "
+                                                                                            >
+                                                                                                <div
+                                                                                                    class="Ratio-content"
+                                                                                                    style="
+                                                                                                        height: 100%;
+                                                                                                        left: 0px;
+                                                                                                        position: absolute;
+                                                                                                        top: 0px;
+                                                                                                        width: 100%;
+                                                                                                    "
+                                                                                                >
+                                                                                                    <img
+                                                                                                        alt="review-thumbnail"
+                                                                                                        class="Image__StyledImage-v97gyx-1 VUNpA"
+                                                                                                        width="220"
+                                                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_220/ios_image_904349_20240129203338593_f3567d96274cc66d2a77c707d253b3b4df320cf293292d65e42d9005874ab02b"
+                                                                                                    />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div></div
+                                                                            ></a>
+                                                                        </div>
+                                                                        <div
+                                                                            class="CoverReviewCard__InfoSection-sc-1kgiguh-2 ggRfTm"
+                                                                        >
+                                                                            <div
+                                                                                class="CoverReviewCard__UserProfileSection-sc-1kgiguh-3 gvMYvX"
+                                                                            >
+                                                                                <div
+                                                                                    class="CoverReviewCard__ProfileImage-sc-1kgiguh-4 hbfRVr"
+                                                                                >
+                                                                                    <div
+                                                                                        class="Image__Wrapper-v97gyx-0 gDuKGF"
+                                                                                    >
+                                                                                        <img
+                                                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                                                            width="40"
+                                                                                            height="40"
+                                                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_40/ios_image_904349_20240128100811826_cb9c0aa6b0508281e05f18017336a977550948e0c837ee7d2a9e7d05eb1a4896"
+                                                                                        />
+                                                                                        <div
+                                                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                                                            style="
+                                                                                                opacity: 1;
+                                                                                                display: block;
+                                                                                            "
+                                                                                        >
+                                                                                            <div
+                                                                                                class="Ratio"
+                                                                                                style="display: block"
+                                                                                            >
+                                                                                                <div
+                                                                                                    class="Ratio-ratio"
+                                                                                                    style="
+                                                                                                        height: 0px;
+                                                                                                        position: relative;
+                                                                                                        width: 100%;
+                                                                                                        padding-top: 100%;
+                                                                                                    "
+                                                                                                >
+                                                                                                    <div
+                                                                                                        class="Ratio-content"
+                                                                                                        style="
+                                                                                                            height: 100%;
+                                                                                                            left: 0px;
+                                                                                                            position: absolute;
+                                                                                                            top: 0px;
+                                                                                                            width: 100%;
+                                                                                                        "
+                                                                                                    >
+                                                                                                        <img
+                                                                                                            alt="user-904349-profile"
+                                                                                                            class="Image__StyledImage-v97gyx-1 hPRDSh"
+                                                                                                            width="40"
+                                                                                                            height="40"
+                                                                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_40/ios_image_904349_20240128100811826_cb9c0aa6b0508281e05f18017336a977550948e0c837ee7d2a9e7d05eb1a4896"
+                                                                                                        />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="CoverReviewCard__UserInfo-sc-1kgiguh-5 fsJcFt"
+                                                                                >
+                                                                                    <span
+                                                                                        class="CoverReviewCard__UserName-sc-1kgiguh-6 biuXID"
+                                                                                        >HWANGGO</span
+                                                                                    >
+                                                                                </div>
+                                                                            </div>
+                                                                            <p
+                                                                                class="CoverReviewCard__ProductTitle-sc-1kgiguh-7 jtBQUX"
+                                                                            ></p>
+                                                                            <span
+                                                                                class="SpanLineClamp-my36n9-0 CoverReviewCard__ReviewContent-sc-1kgiguh-8 gsjveC"
+                                                                                >오랜만에 눈구경 실컷하고 왔습니다!!
+                                                                                멋지네요!!👍🏼👍🏼🏔️🏔️</span
+                                                                            >
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                data-index="3"
+                                                                class="slick-slide"
+                                                                tabindex="-1"
+                                                                aria-hidden="true"
+                                                                style="outline: none; width: 244px"
+                                                            >
+                                                                <div>
+                                                                    <div
+                                                                        class="CoverReviewCard__Wrapper-sc-1kgiguh-0 ihDCaS"
+                                                                    >
+                                                                        <div
+                                                                            class="CoverReviewCard__ImageSection-sc-1kgiguh-1 eSCFvY"
+                                                                        >
+                                                                            <a href="/products/174811/reviews"
+                                                                                ><div
+                                                                                    class="Image__Wrapper-v97gyx-0 gDuKGF"
+                                                                                >
+                                                                                    <img
+                                                                                        class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                                                        width="220"
+                                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_220/ios_image_1225608_20240129124517577_e90a932cd75de70b8b525317b11a13ed82861bf89cf96f1755b6caf48927787f"
+                                                                                    />
+                                                                                    <div
+                                                                                        class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                                                        style="
+                                                                                            opacity: 1;
+                                                                                            display: block;
+                                                                                        "
+                                                                                    >
+                                                                                        <div
+                                                                                            class="Ratio"
+                                                                                            style="display: block"
+                                                                                        >
+                                                                                            <div
+                                                                                                class="Ratio-ratio"
+                                                                                                style="
+                                                                                                    height: 0px;
+                                                                                                    position: relative;
+                                                                                                    width: 100%;
+                                                                                                    padding-top: 100%;
+                                                                                                "
+                                                                                            >
+                                                                                                <div
+                                                                                                    class="Ratio-content"
+                                                                                                    style="
+                                                                                                        height: 100%;
+                                                                                                        left: 0px;
+                                                                                                        position: absolute;
+                                                                                                        top: 0px;
+                                                                                                        width: 100%;
+                                                                                                    "
+                                                                                                >
+                                                                                                    <img
+                                                                                                        alt="review-thumbnail"
+                                                                                                        class="Image__StyledImage-v97gyx-1 VUNpA"
+                                                                                                        width="220"
+                                                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_220/ios_image_1225608_20240129124517577_e90a932cd75de70b8b525317b11a13ed82861bf89cf96f1755b6caf48927787f"
+                                                                                                    />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div></div
+                                                                            ></a>
+                                                                        </div>
+                                                                        <div
+                                                                            class="CoverReviewCard__InfoSection-sc-1kgiguh-2 ggRfTm"
+                                                                        >
+                                                                            <div
+                                                                                class="CoverReviewCard__UserProfileSection-sc-1kgiguh-3 gvMYvX"
+                                                                            >
+                                                                                <div
+                                                                                    class="CoverReviewCard__ProfileImage-sc-1kgiguh-4 hbfRVr"
+                                                                                >
+                                                                                    <div
+                                                                                        class="Image__Wrapper-v97gyx-0 gDuKGF"
+                                                                                    >
+                                                                                        <img
+                                                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                                                            width="40"
+                                                                                            height="40"
+                                                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_40/ios_image_1225608_20240123220905839_7cfcde66e6a1e88f1f49ba22c0a45411904b0341e18951e7d65498e04808b4dd"
+                                                                                        />
+                                                                                        <div
+                                                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                                                            style="
+                                                                                                opacity: 1;
+                                                                                                display: block;
+                                                                                            "
+                                                                                        >
+                                                                                            <div
+                                                                                                class="Ratio"
+                                                                                                style="display: block"
+                                                                                            >
+                                                                                                <div
+                                                                                                    class="Ratio-ratio"
+                                                                                                    style="
+                                                                                                        height: 0px;
+                                                                                                        position: relative;
+                                                                                                        width: 100%;
+                                                                                                        padding-top: 100%;
+                                                                                                    "
+                                                                                                >
+                                                                                                    <div
+                                                                                                        class="Ratio-content"
+                                                                                                        style="
+                                                                                                            height: 100%;
+                                                                                                            left: 0px;
+                                                                                                            position: absolute;
+                                                                                                            top: 0px;
+                                                                                                            width: 100%;
+                                                                                                        "
+                                                                                                    >
+                                                                                                        <img
+                                                                                                            alt="user-1225608-profile"
+                                                                                                            class="Image__StyledImage-v97gyx-1 hPRDSh"
+                                                                                                            width="40"
+                                                                                                            height="40"
+                                                                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_40/ios_image_1225608_20240123220905839_7cfcde66e6a1e88f1f49ba22c0a45411904b0341e18951e7d65498e04808b4dd"
+                                                                                                        />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="CoverReviewCard__UserInfo-sc-1kgiguh-5 fsJcFt"
+                                                                                >
+                                                                                    <span
+                                                                                        class="CoverReviewCard__UserName-sc-1kgiguh-6 biuXID"
+                                                                                        >Minoh</span
+                                                                                    >
+                                                                                </div>
+                                                                            </div>
+                                                                            <p
+                                                                                class="CoverReviewCard__ProductTitle-sc-1kgiguh-7 jtBQUX"
+                                                                            ></p>
+                                                                            <span
+                                                                                class="SpanLineClamp-my36n9-0 CoverReviewCard__ReviewContent-sc-1kgiguh-8 gsjveC"
+                                                                                >흰 눈 듬뿍 머금은 나무들이 기억나네요.
+                                                                                무거워 어깨쳐진 모습에도 하얀 햇살을
+                                                                                한없이 비추어내며 손님들을 맞이하던.
+                                                                                포근한 일정과 매너있는 일행들과,
+                                                                                만세하는 동행과, 열정의 두분 캡틴께
+                                                                                감사해요.</span
+                                                                            >
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                data-index="4"
+                                                                class="slick-slide"
+                                                                tabindex="-1"
+                                                                aria-hidden="true"
+                                                                style="outline: none; width: 244px"
+                                                            >
+                                                                <div>
+                                                                    <div
+                                                                        class="CoverReviewCard__Wrapper-sc-1kgiguh-0 ihDCaS"
+                                                                    >
+                                                                        <div
+                                                                            class="CoverReviewCard__ImageSection-sc-1kgiguh-1 eSCFvY"
+                                                                        >
+                                                                            <a href="/products/174811/reviews"
+                                                                                ><div
+                                                                                    class="Image__Wrapper-v97gyx-0 gDuKGF"
+                                                                                >
+                                                                                    <img
+                                                                                        class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                                                        width="220"
+                                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_220/ios_image_336666_20240129095559321_266e5c9aabdb1afa2fffc0ac74a6e331048372e90d9e2c932054aaeb8ffc1d13"
+                                                                                    />
+                                                                                    <div
+                                                                                        class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                                                        style="
+                                                                                            opacity: 1;
+                                                                                            display: block;
+                                                                                        "
+                                                                                    >
+                                                                                        <div
+                                                                                            class="Ratio"
+                                                                                            style="display: block"
+                                                                                        >
+                                                                                            <div
+                                                                                                class="Ratio-ratio"
+                                                                                                style="
+                                                                                                    height: 0px;
+                                                                                                    position: relative;
+                                                                                                    width: 100%;
+                                                                                                    padding-top: 100%;
+                                                                                                "
+                                                                                            >
+                                                                                                <div
+                                                                                                    class="Ratio-content"
+                                                                                                    style="
+                                                                                                        height: 100%;
+                                                                                                        left: 0px;
+                                                                                                        position: absolute;
+                                                                                                        top: 0px;
+                                                                                                        width: 100%;
+                                                                                                    "
+                                                                                                >
+                                                                                                    <img
+                                                                                                        alt="review-thumbnail"
+                                                                                                        class="Image__StyledImage-v97gyx-1 VUNpA"
+                                                                                                        width="220"
+                                                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_220/ios_image_336666_20240129095559321_266e5c9aabdb1afa2fffc0ac74a6e331048372e90d9e2c932054aaeb8ffc1d13"
+                                                                                                    />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div></div
+                                                                            ></a>
+                                                                        </div>
+                                                                        <div
+                                                                            class="CoverReviewCard__InfoSection-sc-1kgiguh-2 ggRfTm"
+                                                                        >
+                                                                            <div
+                                                                                class="CoverReviewCard__UserProfileSection-sc-1kgiguh-3 gvMYvX"
+                                                                            >
+                                                                                <div
+                                                                                    class="CoverReviewCard__ProfileImage-sc-1kgiguh-4 hbfRVr"
+                                                                                >
+                                                                                    <div
+                                                                                        class="Image__Wrapper-v97gyx-0 gDuKGF"
+                                                                                    >
+                                                                                        <img
+                                                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                                                            width="40"
+                                                                                            height="40"
+                                                                                            src="https://res.cloudinary.com/frientrip/image/fetch/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_40/http://k.kakaocdn.net/dn/cm3XqZ/btqhtGZy7c7/3MP2zypODtohLlOfaFpFd0/profile_110x110c.jpg"
+                                                                                        />
+                                                                                        <div
+                                                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                                                            style="
+                                                                                                opacity: 1;
+                                                                                                display: block;
+                                                                                            "
+                                                                                        >
+                                                                                            <div
+                                                                                                class="Ratio"
+                                                                                                style="display: block"
+                                                                                            >
+                                                                                                <div
+                                                                                                    class="Ratio-ratio"
+                                                                                                    style="
+                                                                                                        height: 0px;
+                                                                                                        position: relative;
+                                                                                                        width: 100%;
+                                                                                                        padding-top: 100%;
+                                                                                                    "
+                                                                                                >
+                                                                                                    <div
+                                                                                                        class="Ratio-content"
+                                                                                                        style="
+                                                                                                            height: 100%;
+                                                                                                            left: 0px;
+                                                                                                            position: absolute;
+                                                                                                            top: 0px;
+                                                                                                            width: 100%;
+                                                                                                        "
+                                                                                                    >
+                                                                                                        <img
+                                                                                                            alt="user-336666-profile"
+                                                                                                            class="Image__StyledImage-v97gyx-1 hPRDSh"
+                                                                                                            width="40"
+                                                                                                            height="40"
+                                                                                                            src="https://res.cloudinary.com/frientrip/image/fetch/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_40/http://k.kakaocdn.net/dn/cm3XqZ/btqhtGZy7c7/3MP2zypODtohLlOfaFpFd0/profile_110x110c.jpg"
+                                                                                                        />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="CoverReviewCard__UserInfo-sc-1kgiguh-5 fsJcFt"
+                                                                                >
+                                                                                    <span
+                                                                                        class="CoverReviewCard__UserName-sc-1kgiguh-6 biuXID"
+                                                                                        >박정화</span
+                                                                                    >
+                                                                                </div>
+                                                                            </div>
+                                                                            <p
+                                                                                class="CoverReviewCard__ProductTitle-sc-1kgiguh-7 jtBQUX"
+                                                                            ></p>
+                                                                            <span
+                                                                                class="SpanLineClamp-my36n9-0 CoverReviewCard__ReviewContent-sc-1kgiguh-8 gsjveC"
+                                                                                >피커스 산행은 늘 만족하며 즐겁게
+                                                                                다녀옵니다! 대장님(?)분들도 너무 잘
+                                                                                챙겨주셔서 안전히 잘 다녀왔습니다
+                                                                                :)</span
+                                                                            >
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                data-index="5"
+                                                                class="slick-slide"
+                                                                tabindex="-1"
+                                                                aria-hidden="true"
+                                                                style="outline: none; width: 244px"
+                                                            >
+                                                                <div>
+                                                                    <div
+                                                                        class="CoverReviewCard__Wrapper-sc-1kgiguh-0 ihDCaS"
+                                                                    >
+                                                                        <div
+                                                                            class="CoverReviewCard__ImageSection-sc-1kgiguh-1 eSCFvY"
+                                                                        >
+                                                                            <a href="/products/174811/reviews"
+                                                                                ><div
+                                                                                    class="Image__Wrapper-v97gyx-0 gDuKGF"
+                                                                                >
+                                                                                    <img
+                                                                                        class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                                                        width="220"
+                                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_220/ios_image_377530_20240129094504024_875069a3143525d3e24bf3decd44ea0cd3bebd661064247dd56a64dc3dba7133"
+                                                                                    />
+                                                                                    <div
+                                                                                        class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                                                        style="
+                                                                                            opacity: 1;
+                                                                                            display: block;
+                                                                                        "
+                                                                                    >
+                                                                                        <div
+                                                                                            class="Ratio"
+                                                                                            style="display: block"
+                                                                                        >
+                                                                                            <div
+                                                                                                class="Ratio-ratio"
+                                                                                                style="
+                                                                                                    height: 0px;
+                                                                                                    position: relative;
+                                                                                                    width: 100%;
+                                                                                                    padding-top: 100%;
+                                                                                                "
+                                                                                            >
+                                                                                                <div
+                                                                                                    class="Ratio-content"
+                                                                                                    style="
+                                                                                                        height: 100%;
+                                                                                                        left: 0px;
+                                                                                                        position: absolute;
+                                                                                                        top: 0px;
+                                                                                                        width: 100%;
+                                                                                                    "
+                                                                                                >
+                                                                                                    <img
+                                                                                                        alt="review-thumbnail"
+                                                                                                        class="Image__StyledImage-v97gyx-1 VUNpA"
+                                                                                                        width="220"
+                                                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_220/ios_image_377530_20240129094504024_875069a3143525d3e24bf3decd44ea0cd3bebd661064247dd56a64dc3dba7133"
+                                                                                                    />
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div></div
+                                                                            ></a>
+                                                                        </div>
+                                                                        <div
+                                                                            class="CoverReviewCard__InfoSection-sc-1kgiguh-2 ggRfTm"
+                                                                        >
+                                                                            <div
+                                                                                class="CoverReviewCard__UserProfileSection-sc-1kgiguh-3 gvMYvX"
+                                                                            >
+                                                                                <div
+                                                                                    class="CoverReviewCard__ProfileImage-sc-1kgiguh-4 hbfRVr"
+                                                                                >
+                                                                                    <div
+                                                                                        class="Image__Wrapper-v97gyx-0 gDuKGF"
+                                                                                    >
+                                                                                        <img
+                                                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                                                            width="40"
+                                                                                            height="40"
+                                                                                            src="https://res.cloudinary.com/frientrip/image/fetch/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_40/http://k.kakaocdn.net/dn/oddDM/btqjTh95qXO/vaI5aLqdvWnXlhLdkyDJK1/profile_110x110c.jpg"
+                                                                                        />
+                                                                                        <div
+                                                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                                                            style="
+                                                                                                opacity: 1;
+                                                                                                display: block;
+                                                                                            "
+                                                                                        >
+                                                                                            <div
+                                                                                                class="Ratio"
+                                                                                                style="display: block"
+                                                                                            >
+                                                                                                <div
+                                                                                                    class="Ratio-ratio"
+                                                                                                    style="
+                                                                                                        height: 0px;
+                                                                                                        position: relative;
+                                                                                                        width: 100%;
+                                                                                                        padding-top: 100%;
+                                                                                                    "
+                                                                                                >
+                                                                                                    <div
+                                                                                                        class="Ratio-content"
+                                                                                                        style="
+                                                                                                            height: 100%;
+                                                                                                            left: 0px;
+                                                                                                            position: absolute;
+                                                                                                            top: 0px;
+                                                                                                            width: 100%;
+                                                                                                        "
+                                                                                                    >
+                                                                                                        <img
+                                                                                                            alt="user-377530-profile"
+                                                                                                            class="Image__StyledImage-v97gyx-1 hPRDSh"
+                                                                                                            width="40"
+                                                                                                            height="40"
+                                                                                                            src="https://res.cloudinary.com/frientrip/image/fetch/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_40/http://k.kakaocdn.net/dn/oddDM/btqjTh95qXO/vaI5aLqdvWnXlhLdkyDJK1/profile_110x110c.jpg"
+                                                                                                        />
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="CoverReviewCard__UserInfo-sc-1kgiguh-5 fsJcFt"
+                                                                                >
+                                                                                    <span
+                                                                                        class="CoverReviewCard__UserName-sc-1kgiguh-6 biuXID"
+                                                                                        >soylatte</span
+                                                                                    >
+                                                                                </div>
+                                                                            </div>
+                                                                            <p
+                                                                                class="CoverReviewCard__ProductTitle-sc-1kgiguh-7 jtBQUX"
+                                                                            ></p>
+                                                                            <span
+                                                                                class="SpanLineClamp-my36n9-0 CoverReviewCard__ReviewContent-sc-1kgiguh-8 gsjveC"
+                                                                                >등산로가 잘 닦여있어 설산이어도 오르기
+                                                                                편했습니다. 등산 난이도는 낮은데 설경은
+                                                                                너무나 멋지고 상고대도 많이 감상할 수
+                                                                                있어서 가성비(?) 갑이었던 코스였어요
+                                                                                캡틴님이 혼자 온 분들도 잘 챙겨주시고,
+                                                                                사진도 예쁘게 찍어주셔서 산행 동안 좋은
+                                                                                추억 남길 수 있었습니다! 등산 시간을
+                                                                                여유롭게 확보해서 단체 산행이지만
+                                                                                중간중간 사진도 찍고 충분히 즐기며
+                                                                                산행할 수 있었어요👍</span
+                                                                            >
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <img
+                                                        data-role="none"
+                                                        class="CoverReviewSlider__NextArrow-sc-1ty45po-1 eGlkoV slick-arrow slick-next"
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJwAAACcCAMAAAC9ZjJ/AAAATlBMVEVHcEwHBwf///8bGxsHBwcEBAQFBQUvLy8TExMLCwv8/Pz+/v75+fn////h4eGmpqbz8/Pw8PDp6ena2tr///8zMzOamprm5uZOTk7Dw8N+4gpoAAAAE3RSTlMADAECCRQPAQMGxuCm8EskeWMm5yESOgAACY9JREFUeNrtnNlu3DgQRakqircoqbUYcjL5/x+dB65aut1aewYIYSQG7Ngnt1gLi4tSf8ff8f8bUAoAlAIYBAX8N7CIFAgAQRFAIAUABMS/P0UWfn/XDk1T1fVjHMdxrKuq6fu2IwUQPoAHBQYpgNq+qcfVUTd9qwCA1Z2ARACI0fXVY3w5Hs3wBYDuAnSTjND11fjWqIYv+Dl4BxoR2uYxvj+aFlBXuwcUQCC01bhxVAMU4UL1yIUKHupxx6gHJqiLYiD5wLBdtYjXMoEusK6zCPHXbrRxHMfmi5nU2bYFAwBx/xgPjUfPTACfiEcEBfBB2bxtv5jOzBsg52dHZUvigQjnRGU32bhrxpNG0zEDp9AREZ1k0sy07KqGw7KxIuavehwvoDsKp4hYDY/x1PEYmBkA037xWCkCMw/j6WNgZgIRDmQFBWK6gM3R7Tets+g1uh2mYxd51UVsjo6hSNGO0KvAzPz1uAru8bVfOwL47BiyjCi8I965PM/cXcg2jlXHLpdhqzeAWVQzXjoaER/vNptUuB8vHr2wM+0W3QjMLNc5Q+YUxJvW3nBBRKQeLx+VCDO/X6O4LsMdRnWGdXS0ZcLdYVRnWPEB5c0VIDGLSDPeMpxh+a11DxQTmIXb8abRiggD4HdsCmaWW7whSued4sd5R0xgERnG28bATrqfnMItZm4VbhxrEZ8p8Ho1o7xRbxTOzzr+sU3LpJhZxFZ3wlX2Delcumdh2eiqv//8PkW6l8o5OBa7Lcb9+v7+/nWoOvHSvbKrq+FE5GvTj/7z/X2Q7tFZL90rNmIRkY1rml/fh+l6a1mY+XkBAJcaxG50Bw93hK6yVpiZngdiAE65r40/+p/jdJ1YEeanky7EX2u3Brnfx+l6Kz7F4kmL0FUj1m6uR47TVdanCbXaPkGwqrXbC7nDdA9rQ/7HqnLsYpzdUywdpms9nVpL/+SWDWKt3VWeH6Vzk054vZkNwMPtK4EP0jXWWhFx28krUc77qt25djhGV1sr9kmG9ctosdZ2ez3uGF1nrXUusZCOnD+I3ecPJ9C1EQ6rvnrAH47TDW7SMbCIdBR9VR9ZSx+gcx7BwosuNlT0VXtovbqfrtHRrkurBjh9rELfTVdFuHn2JwByCtxuutrNuWXNSQrkldP66KJwJ12t46SbZrCwIrTWWn14MbWP7qG1tdbBYZ66wpQ7Dpfo/mz5V1onuy5amU64E5RLdP9sg9PernN3TVb9HJwN/jqdc0j54ZNm1avZNVUkWhePzzjEWGjrM9jErqlAt/qDocS568Ku3llFToDbG4Qr7ZSbb0z4/o3zh4+lryIpl28S+/a5p/tU4i+8dMKcbzeB8jnXfIRt7DO43Ky+ty/Waq2L4SNsY18Ej5iZlVMk0cWnyvQAN0v9obsv1mpdfGqBU+SxBHM45w9FUX+CrS6KQtuV1O83RgLcZxbVRZHFEqgV5bTWRfGZdkRgs8KcL8DS0stqXRSfaeQUeZxTiznnQ0lhPtECMwlOJnAUY4nWWhdFdTvb2Dg4vVz1+yrdulBSmP52tnEoCh3i3HTp6s5phHqu2Brpfp/RsC4KX2wudtXj+kY76bbZ9c8JrX5TZDEYT0umYrNdT9gkGYwLcxIaiGvNOe3gusd25Q5tfnVeOb8bMdkqoaicM6u5e2POTCIJYa0fLEG6u7c0p3DTZkmIJXHSmXs3g43JM+vs9JAvhW2Iwsa0d8INEU4WS4jQyGFJypk7DyAYY1KYW9mKmHtE2d4qXBbmmOfd9HnqNzfOunrBtuxs+n3gYNf7pGuNCc66vjcXGnQfkK5xbEUsl5hXtr7SytVJ191zRK0zeSDhua/ONg2thzP3HO4rJ1Nu/YxE6oLZYNfyBsPWpZnCES+vX2EC5+muN+yjM5Mgx+sbrqEwyVyiLPtbjDoJJKtHS9b8tSyvPsRclsEdPBx47QRiBpekM1117YSbCse+c/jsPM7MJcorD6fXXWmMMSYubZ4fe0EeTBLdhVcOuky4WASvH3oJyuVVnSnL8rIziG1ge9JeWs2vMpXuKrqhTN5g7YsInBr+vJTuGjrPluDEN0no+Q20yay7kG4oyzTjEtvzs4fw65wkXaBrz76U1paZcDY2l8DPL4KBMc1hYdqdHFHqr1w3bbNC7vnBSBDl0mWGPZWu6jLdcqu+vrRBxMRx43Wq3YlXSHObTtheXj0kWky7AFeWZ12+dT8t99R0iAk/3NT34UR81ZnRnWFaZ9Jl+HWu+vqyC5BOquWGPUm8XLa5UfmN22nx6LxrnEwte3DmBdnKVbY37pMCYKa4TJzBlWW727ZVW67p5utfBt6Bi9JFutyyZbnzeYY2/v9MVovY7DTkG1eEQP7aQepOzOjKodqtmkdLbPHIwXvXlwDFqXhapSvbLXPv0SS0zKZWuyAiWy6SxgPDYq2s+axzjXflq/quXLJldZIvlN68lQYAPFtRLOnKsht+elLlMSXL0fL5xltukQJh1z94RdRuileWbf8MsG76dvq9xsx1c43Mba9JEGgmXSbeHK8su7bvm6pyTvyo66pphrZbfFuOFsuksCWy6Q6pv+Ca4b2ge2eYNTa3FNx65TvccM3qp1hB7cJLaFleEGEwqc1PXLi3NuAzRSZesUM8Y5JueuYLu66jk2vtMDPbiWmL8JuOWNRay+xruJ1X5VXus8kvIt87YDODukNymS/sfLeEEKu7OZ5nM6Y0pfkRLGebuAJD7X4uh5JbhJasXaj3RMAMLIXdvESSfQ8MLDIZzbTzdBmel9CUXswcLEOzeYn05mXgl3Qck8VPfBPUnCyy+eWCBDY69tQL4G9cebosrgS+Z4AmfD1DiwHEpYWDb+S4g+ExHkuIA16/CFgYU8xN6biKTLTEhrMeLYP3iwCYPGPKtxha55rlshHTWa9acaxSOFdPT/gipHYfeoLmyWK35sTXyuDuSzBL7hnWWu0+ng0b04FNfsBnv0MHUgSE1wcyz5gqOAGbcXk2cg8mnv7IW1ZIZUX8ZEygJJ9oIsxwTkqns8UqKpt8MwVXh1PN9/D5socZCYqyWiVMcLGZhBNU8arl0ePCp1Xhhy+lEqCIjWEmfS4pU7F7+pXUlYNASHEvFQWz4WcmszD8PAPUDQ+Bwr80G/l4olL4RMJXvdqK1C0D7klP8svbyOjCoFOLgwcQTnoIb4N5VbCvMzGx/wMc0HChc76jIHtCpVyX3j2timBJ95yp+uybwu5lVIK3t38udONS+TpE9ywqwZ2Kuj5o/B1/x0XjX7gS9i3p6KuqAAAAAElFTkSuQmCC"
+                                                        style="display: block"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="ReviewSection__LinkWrapper-h5kv09-1 dzAqdb">
+                                                <a
+                                                    class="ReviewSection__StyledLink-h5kv09-2 PIawM"
+                                                    href="/products/174811/reviews"
+                                                    >6개 후기 더보기<img
+                                                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' viewBox='0 0 12 12'%3E %3Cpath fill='%230075EF' fill-rule='evenodd' d='M3.97 1.72c.293-.293.767-.293 1.06 0L9.31 6l-4.28 4.28c-.293.293-.767.293-1.06 0-.293-.293-.293-.767 0-1.06L7.19 6 3.97 2.78c-.293-.293-.293-.767 0-1.06z' clip-rule='evenodd'/%3E %3C/svg%3E"
+                                                        alt="arrow-blue"
+                                                /></a>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </section>
+                                <div class="PageWrapper-sc-1w87j10-0 bScXKt">
+                                    <h1 class="H1-sc-1jinm0d-0 MagazineListPage__PageTitle-hh1ck3-0 ecnmXp">
+                                        합류할 여행을 찾아 보세요
+                                    </h1>
+                                    <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block">
+                                        <div>
+                                            <div class="MagazineListPage__MagazineWrapper-hh1ck3-2 jZtIEr">
+                                                <a
+                                                    class="MagazineListPage__Magazine-hh1ck3-3 hHOLgL"
+                                                    href="/magazines/20157317"
+                                                    ><div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                                        <img
+                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                            width="160"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(13)_d1a9b6efdfcb34b9d97243819cefc83f4f656f479bdc1686ba582b3c4368848c"
+                                                        />
+                                                        <div
+                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                            style="opacity: 1; display: block"
+                                                        >
+                                                            <div class="Ratio" style="display: block">
+                                                                <div
+                                                                    class="Ratio-ratio"
+                                                                    style="
+                                                                        height: 0px;
+                                                                        position: relative;
+                                                                        width: 100%;
+                                                                        padding-top: 120%;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="Ratio-content"
+                                                                        style="
+                                                                            height: 100%;
+                                                                            left: 0px;
+                                                                            position: absolute;
+                                                                            top: 0px;
+                                                                            width: 100%;
+                                                                        "
+                                                                    >
+                                                                        <img
+                                                                            alt="매거진 커버 이미지"
+                                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                            width="160"
+                                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(13)_d1a9b6efdfcb34b9d97243819cefc83f4f656f479bdc1686ba582b3c4368848c"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="MagazineListPage__Title-hh1ck3-4 kBOcSr">
+                                                            <span>지리산에서 자바?</span><br />
+                                                            <span>일정 : 1월 27일 ~ 1월 31일</span><br />
+                                                            <span>비용 : 50,000원</span><br />
+                                                            <span>참가 : 3/10(참여/목표)</span><br />
+                                                        </div>
+                                                        <div class="MagazineListPage__CatchPhrase-hh1ck3-5 dfnTnv">
+                                                            캡틴 : 한동석
+                                                        </div>
+                                                    </div></a
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="MagazineListPage__MagazineWrapper-hh1ck3-2 jZtIEr">
+                                                <a
+                                                    class="MagazineListPage__Magazine-hh1ck3-3 hHOLgL"
+                                                    href="/magazines/20157321"
+                                                    ><div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                                        <img
+                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                            width="160"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(20)_eeb68e8b1f69d060dea6f4b920deacc598075295c11009039b9e57b0af4f8a14"
+                                                        />
+                                                        <div
+                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                            style="opacity: 1; display: block"
+                                                        >
+                                                            <div class="Ratio" style="display: block">
+                                                                <div
+                                                                    class="Ratio-ratio"
+                                                                    style="
+                                                                        height: 0px;
+                                                                        position: relative;
+                                                                        width: 100%;
+                                                                        padding-top: 120%;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="Ratio-content"
+                                                                        style="
+                                                                            height: 100%;
+                                                                            left: 0px;
+                                                                            position: absolute;
+                                                                            top: 0px;
+                                                                            width: 100%;
+                                                                        "
+                                                                    >
+                                                                        <img
+                                                                            alt="매거진 커버 이미지"
+                                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                            width="160"
+                                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(20)_eeb68e8b1f69d060dea6f4b920deacc598075295c11009039b9e57b0af4f8a14"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="MagazineListPage__Title-hh1ck3-4 kBOcSr">
+                                                            <span>지리산 그 까이꺼</span><br />
+                                                            <span>일정 : 2월 1일 ~ 2월 5일</span><br />
+                                                            <span>비용 : 40,000원</span><br />
+                                                            <span>참가 : 5/10(참여/목표)</span><br />
+                                                        </div>
+                                                        <div class="MagazineListPage__CatchPhrase-hh1ck3-5 dfnTnv">
+                                                            캡틴 : 정도영
+                                                        </div>
+                                                    </div></a
+                                                >
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="MagazineListPage__MagazineWrapper-hh1ck3-2 jZtIEr">
+                                                <a
+                                                    class="MagazineListPage__Magazine-hh1ck3-3 hHOLgL"
+                                                    href="/magazines/20157320"
+                                                    ><div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                                        <img
+                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                            width="160"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(19)_1d249c591e8c041dc50865d852edb706ee3b2eb508c8d7a5e9b961acc1138652"
+                                                        />
+                                                        <div
+                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                            style="opacity: 1; display: block"
+                                                        >
+                                                            <div class="Ratio" style="display: block">
+                                                                <div
+                                                                    class="Ratio-ratio"
+                                                                    style="
+                                                                        height: 0px;
+                                                                        position: relative;
+                                                                        width: 100%;
+                                                                        padding-top: 120%;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="Ratio-content"
+                                                                        style="
+                                                                            height: 100%;
+                                                                            left: 0px;
+                                                                            position: absolute;
+                                                                            top: 0px;
+                                                                            width: 100%;
+                                                                        "
+                                                                    >
+                                                                        <img
+                                                                            alt="매거진 커버 이미지"
+                                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                            width="160"
+                                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(19)_1d249c591e8c041dc50865d852edb706ee3b2eb508c8d7a5e9b961acc1138652"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="MagazineListPage__Title-hh1ck3-4 kBOcSr">
+                                                            <span>여자들만의 산행</span><br />
+                                                            <span>일정 : 2월 10일 ~ 2월 14일</span><br />
+                                                            <span>비용 : 45,000원</span><br />
+                                                            <span>참가 : 6/10(참여/목표)</span><br />
+                                                        </div>
+                                                        <div class="MagazineListPage__CatchPhrase-hh1ck3-5 dfnTnv">
+                                                            캡틴 : 박정근
+                                                        </div>
+                                                    </div></a
+                                                >
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="MagazineListPage__MagazineWrapper-hh1ck3-2 jZtIEr">
+                                                <a
+                                                    class="MagazineListPage__Magazine-hh1ck3-3 hHOLgL"
+                                                    href="/magazines/20157319"
+                                                    ><div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                                        <img
+                                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                            width="160"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(17)_5d32a8e29b20d1a7a5bcd354ac668ecdf7cf3f12c6b959f3eac4f5c3dbd6832e"
+                                                        />
+                                                        <div
+                                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                            style="opacity: 1; display: block"
+                                                        >
+                                                            <div class="Ratio" style="display: block">
+                                                                <div
+                                                                    class="Ratio-ratio"
+                                                                    style="
+                                                                        height: 0px;
+                                                                        position: relative;
+                                                                        width: 100%;
+                                                                        padding-top: 120%;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="Ratio-content"
+                                                                        style="
+                                                                            height: 100%;
+                                                                            left: 0px;
+                                                                            position: absolute;
+                                                                            top: 0px;
+                                                                            width: 100%;
+                                                                        "
+                                                                    >
+                                                                        <img
+                                                                            alt="매거진 커버 이미지"
+                                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                            width="160"
+                                                                            src="https://res.cloudinary.com/frientrip/image/upload/c_fill,f_auto,g_center,h_240,q_auto,w_200/thm_%EC%9D%B4%EB%B2%88%EC%A3%BC%EB%A7%90%EB%AD%90%ED%95%98%EC%A7%80%20(17)_5d32a8e29b20d1a7a5bcd354ac668ecdf7cf3f12c6b959f3eac4f5c3dbd6832e"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="MagazineListPage__Title-hh1ck3-4 kBOcSr">
+                                                            <span>더 나이들면 못 가</span><br />
+                                                            <span>일정 : 2월 16일 ~ 2월 18일</span><br />
+                                                            <span>비용 : 50,000원</span><br />
+                                                            <span>참가 : 5/10(참여/목표)</span><br />
+                                                        </div>
+                                                        <div class="MagazineListPage__CatchPhrase-hh1ck3-5 dfnTnv">
+                                                            캡틴 : 조승찬
+                                                        </div>
+                                                    </div></a
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <button
+                                        width="100%"
+                                        height="60px"
+                                        color="black"
+                                        font-size="15px"
+                                        class="Button-bqxlp0-0 MagazineListPage__MoreButton-hh1ck3-6 bkfRHv"
+                                    >
+                                        더 보기
+                                    </button> -->
+                                </div>
+                                <div class="Wrapper__FloatingActionBarWrapper-aopuoy-0 ifNxJR">
+                                    <div class="FloatingActionBar__FloatingButtonWrapper-a3gyda-0 dIeHJQ">
+                                        <button
+                                            class="Button-bqxlp0-0 BUemN Button__StyledSubmitButton-sc-1dkzbac-0 eIJDxV"
+                                            width="100%"
+                                            height="56px"
+                                            color="white"
+                                            font-size="16px"
+                                        >
+                                            <div class="DefaultButton__ActionLabel-sc-4mlqfg-0 eaCxDu">
+                                                여행 계획 수립하기
+                                            </div>
+                                        </button>
+
+                                        <!-- 찜 버튼 -->
+                                        <button
+                                            class="Button-bqxlp0-0 ButtonWish__StyledButton-sc-7k8l60-0 eZGjgL enp_mobon_cart"
+                                            width="32px"
+                                            height="32px"
+                                        >
+                                            <img
+                                                src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cg clip-path='url(%23clip0_2519_490)'%3E %3Cmask id='mask0_2519_490' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='0' y='0' width='32' height='32'%3E %3Cpath d='M32 0H0V32H32V0Z' fill='white'/%3E %3C/mask%3E %3Cg mask='url(%23mask0_2519_490)'%3E %3Cmask id='mask1_2519_490' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='0' y='0' width='32' height='32'%3E %3Cpath d='M32 0H0V32H32V0Z' fill='white'/%3E %3C/mask%3E %3Cg mask='url(%23mask1_2519_490)'%3E %3Cpath d='M28 12C28 16.1889 24.9781 19.7916 22.063 22.3047C20.2579 23.8469 18.2982 25.1986 16.2154 26.3381C16.2027 26.3441 16.1898 26.3505 16.1774 26.357C16.1226 26.3861 16.0613 26.4013 15.999 26.4015C15.9401 26.4015 15.882 26.3881 15.8293 26.362L15.8094 26.3511L15.784 26.3378C15.1694 26.0033 14.5659 25.649 13.9743 25.2754C12.5586 24.3847 11.2086 23.3914 9.93704 22.3049C7.02334 19.7914 4.00003 16.1887 4 12C4.00014 10.6766 4.41054 9.38568 5.17469 8.30517C5.93885 7.22466 7.01918 6.4076 8.26696 5.96651C9.51472 5.52542 10.8685 5.482 12.142 5.84222C13.4155 6.20245 14.546 6.94859 15.3778 7.97794C15.5297 8.16589 15.7584 8.2751 16 8.2751C16.2416 8.2751 16.4704 8.16589 16.6222 7.97794C17.4541 6.94859 18.5845 6.20245 19.8579 5.84222C21.1315 5.482 22.4853 5.52542 23.7331 5.96651C24.9808 6.4076 26.0611 7.22466 26.8253 8.30517C27.5894 9.38568 27.9998 10.6766 28 12Z' stroke='%23333333' stroke-width='1.5' stroke-linejoin='round'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3Cdefs%3E %3CclipPath id='clip0_2519_490'%3E %3Crect width='32' height='32' fill='white'/%3E %3C/clipPath%3E %3C/defs%3E %3C/svg%3E"
+                                                alt="찜하기"
+                                            />
+                                            <span class="SaveActionButton__Count-sc-18l2t54-1 hxJYoP">236</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer will be dynamically inserted here -->
+                <div id="footer-placeholder"></div>
+                <script>
+                    // Load footer.html and insert it into #footer-placeholder
+                    fetch("../all/footer.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById("footer-placeholder").innerHTML = data;
+                        })
+                        .catch((error) => console.error("Error loading footer:", error));
+                </script>
+            </div>
+        </div>
+
+        <div id="modal-root">
+            <div>
+                <div class="FloatingButton__Wrapper-sc-1c26egb-0 fDkXaB">
+                    <div class="FloatingButton__LayoutWrapper-sc-1c26egb-1 avAvm">
+                        <button class="ScrollTop__Icon-sc-1k98yfb-0 gQlhwK">
+                            <img
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E %3Cpath stroke='%23CCC' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M18.75 14.25L12 7.5l-6.75 6.75'/%3E %3C/svg%3E"
+                                alt="scroll-top-icon"
+                            />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dnd-root"></div>
+    </body>
+
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=dca5cc5ce3946cf9a7295748f1aa7d12&libraries=services"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../static/js/proposal/list.js"></script>
+</html>

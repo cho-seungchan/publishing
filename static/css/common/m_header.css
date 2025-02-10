@@ -279,3 +279,24 @@ input {
     padding: 0px 20px;
     min-height: 1px;
 }
+
+@media (max-width: 600px) { /* browser에서 412까지 안가므로 임시로 */
+    .fWxgMt {
+        max-width: 412px;
+    }
+    .uogLa {
+        max-width: 412px;
+        margin-left: 7px;
+    }
+    .dtUwHg {
+        margin: 17px 0px 17px 0px;
+        width: 110px;
+        height: 30px;
+    }
+    .LAoZM {
+        padding: 0px 5px;
+    }
+    .kiAeGP {
+        width: 170px;
+    }
+}

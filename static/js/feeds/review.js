@@ -13,7 +13,8 @@ const tagInput = document.querySelector(".SocialFeedTagsContainer__SocialFeedTag
 tagInput.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
         if (tagCount > 9) {
-            alert(`10개 까지만 입력 가능합니다.`);
+            //alert(`10개 까지만 입력 가능합니다.`);
+            showAlertModal(`10개 까지만 입력 가능합니다.`);
             return;
         }
         const tagChildDiv = document.createElement("div");
@@ -96,13 +97,19 @@ jULzvQ.addEventListener("click", () => {
 });
 
 // 별 클릭 처리
+const oneStar = "false";
 const stars = document.querySelectorAll(".jTHKhF img");
-console.log(stars.length);
 stars.forEach((star, index) => {
-    console.log("here 111 ");
     star.addEventListener("click", () => {
-        console.log("here 222 ");
-        for (let i = 0; i == index; i++) {
+        if (index == 0) {
+            // 첫 번째 별만 파란색인데(흰색이 4개), 다시 눌리면 취소
+            if (Array.from(stars).filter((img) => img.src.includes("mask0")).length == 4) {
+                stars[0].src =
+                    "data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%23DDDDDD'/%3E %3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='14'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/mask%3E %3Cg mask='url(%23mask0)'%3E %3C/g%3E %3C/svg%3E";
+                return;
+            }
+        }
+        for (let i = 0; i < index + 1; i++) {
             stars[i].src =
                 "data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E";
         }
@@ -112,3 +119,27 @@ stars.forEach((star, index) => {
         }
     });
 });
+
+// 모달 열기 함수
+function showAlertModal(message) {
+    // 모달 요소
+    var modal = document.getElementById("alertModal");
+    // 모달 닫기 요소
+    var closeBtn = document.getElementsByClassName("close")[0];
+
+    modal.querySelector("p").textContent = message;
+
+    modal.style.display = "block";
+
+    // 닫기 버튼 클릭 시 모달 닫기
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // 모달 외부 클릭 시 모달 닫기
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+}

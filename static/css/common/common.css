@@ -1,0 +1,40 @@
+#mobile{
+    background-color: white;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+#web{
+    background-color: white;
+    min-height: 100%;
+    min-width: 100%;
+}
+#web {
+    display: block;
+}
+
+#mobile {
+    display: none;
+}
+
+@media (max-width: 600px) { /* browser에서 412까지 안가므로 임시로 */
+    #mobile{
+        display : block;
+    }
+    #web{
+        display : none;
+    }
+
+  .container {
+    width: 100%; /* 화면 너비에 맞춤 */
+  }
+}
+
+@media (min-width: 600px) {
+    #web {
+        display: block; /* 413px 이상에서 표시 */
+    }
+    #mobile {
+        display: none; /* 413px 이상에서 숨김 */
+    }
+}
