@@ -77,9 +77,9 @@ button:not(:disabled) {
 }
 @media screen and (min-width: 1096px) {
     .StudioLogo_logo__MTE4Z {
-        background-image: url(https://static.wadiz.kr/studio/funding/assets/wadiz-studio-logo-C9hH23Ro.svg);
+        background-image: url(../../images/common/mainpagelogo.png);
         width: 190px;
-        height: 21px;
+        height: 26px;
     }
 }
 .StudioLogo_logo__MTE4Z {
@@ -87,10 +87,10 @@ button:not(:disabled) {
     margin-right: 8px;
     margin-bottom: 4px;
     outline: 0;
-    background-image: url(https://static.wadiz.kr/studio/funding/assets/wadiz-studio-logo-mobile-DFLLdFkU.svg);
+    background-image: url(../../images/common/mainpagelogo.png);
     background-size: cover;
     width: 190px;
-    height: 20px;
+    height: 26px;
     z-index: 25;
 }
 button {
@@ -712,7 +712,7 @@ address, em, var {
 }
 @media screen and (min-width: 1096px) {
     .Funding_submitButtonWrapper__OGRkZ .Funding_button__ZmQwY {
-        margin: 32px 0;
+        margin: 0 0 32px 0;
         width: 320px;
         height: 48px;
     }

@@ -115,7 +115,7 @@
     line-height: 22px;
     letter-spacing: -0.35px;
     width: 100%;
-    min-height: 150px;
+    min-height: 330px;
     padding: 15px;
     resize: none;
     background-color: rgb(237, 239, 242);
@@ -138,7 +138,7 @@
     flex-direction: column;
 }
 .gcqwwh {
-    width: 90%;
+    width: 100%;
     /* color: rgb(153, 153, 153); */
     color: rgb(0, 0, 0);
     font-weight: bold;
@@ -180,9 +180,9 @@
     -webkit-box-align: center;
     align-items: center;
     flex-direction: column;
-    padding: 50px 0px 50px;
+    padding: 30px 0px 0px;
 }
-.jwcODp {
+.addNoticeBtn {
     width: 290px;
     height: 50px;
     line-height: normal;

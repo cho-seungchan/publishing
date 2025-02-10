@@ -13,12 +13,3 @@ menuBtn.addEventListener("click", function () {
 menuBtn.addEventListener("click", function () {
     menuBtn.classList.toggle("active");
 });
-
-document.querySelector(".volunteerBtn").addEventListener("click", function () {
-    document
-        .querySelector(".DurationOfTourContainer")
-        .classList.toggle("hidden");
-    document
-        .querySelector(".DurationOfTourContainer1")
-        .classList.toggle("hidden");
-});

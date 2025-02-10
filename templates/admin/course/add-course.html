@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>픽커스 관리자 추천 코스 추가</title>
         <style>
             @font-face {
                 font-family: "pickers";
@@ -11,6 +11,11 @@
                     format("ttf");
             }
         </style>
+        <link
+            rel="shortcut icon"
+            href="../../../static/images/common/favicon1.ico"
+            type="image/x-icon"
+        />
         <link
             rel="stylesheet"
             href="../../../static/css/admin/add-course.css"
@@ -34,18 +39,11 @@
                                 type="button"
                                 aria-label="로고 버튼"
                             ></button>
-                            <div class="StudioLogo_type__NDU5N">
-                                펀딩·프리오더
-                            </div>
                         </div>
                         <div class="StudioStatus_stateBox__ZmEwN">
                             <span
                                 class="Badge_container__M2E2N Badge_visible__NjUyZ"
-                                ><span
-                                    class="Badge_badge__YWQ1N Badge_label__MzI2N Badge_md__YTgxN Badge_secondary__YTMzZ Badge_tertiary__ZmE3N"
-                                    >작성 중</span
-                                ></span
-                            >
+                            ></span>
                         </div>
                     </div>
                     <div
@@ -194,7 +192,7 @@
                                                         d="M7.57523 2.40002C6.94799 2.40002 6.3419 2.62677 5.86868 3.03847L2.29286 6.14943C1.72528 6.64323 1.39941 7.35867 1.39941 8.11099V19C1.39941 20.436 2.56347 21.6 3.99941 21.6H19.9994C21.4354 21.6 22.5994 20.436 22.5994 19V8.01974C22.5994 7.33688 22.3308 6.68144 21.8515 6.195L18.8764 3.17528C18.3878 2.67929 17.7206 2.40002 17.0243 2.40002H7.57523ZM6.65632 3.9438C6.91113 3.72212 7.23749 3.60002 7.57523 3.60002H17.0243C17.3992 3.60002 17.7585 3.7504 18.0216 4.01747L20.8615 6.89999H3.2584L6.65632 3.9438ZM2.59946 8.09999C2.59943 8.10366 2.59941 8.10732 2.59941 8.11099V19C2.59941 19.7732 3.22622 20.4 3.99941 20.4H19.9994C20.7726 20.4 21.3994 19.7732 21.3994 19V8.09999H2.59946Z"
                                                         fill="#212529"
                                                     ></path></svg
-                                                >공지 & 코스</span
+                                                >공지</span
                                             ></a
                                         >
                                         <div
@@ -204,10 +202,59 @@
                                                 class="MenuItems_submenu__YTg3N"
                                                 href="/studio/reward/337882/funding/plan"
                                                 >공지 사항</a
-                                            ><a
+                                            >
+                                        </div>
+                                        <a
+                                            aria-current="page"
+                                            class="MenuItems_menu__NTNmZ MenuItems_hasSubmenu__NGQxM MenuItems_active__ZDlmN"
+                                            href="/studio/reward/337882/funding"
+                                            ><span
+                                                class="MenuItems_label__YjUxM"
+                                                ><svg
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M9.40039 12C9.40039 11.6686 9.66902 11.4 10.0004 11.4H14.0004C14.3318 11.4 14.6004 11.6686 14.6004 12C14.6004 12.3313 14.3318 12.6 14.0004 12.6H10.0004C9.66902 12.6 9.40039 12.3313 9.40039 12Z"
+                                                        fill="#212529"
+                                                    ></path>
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M7.57523 2.40002C6.94799 2.40002 6.3419 2.62677 5.86868 3.03847L2.29286 6.14943C1.72528 6.64323 1.39941 7.35867 1.39941 8.11099V19C1.39941 20.436 2.56347 21.6 3.99941 21.6H19.9994C21.4354 21.6 22.5994 20.436 22.5994 19V8.01974C22.5994 7.33688 22.3308 6.68144 21.8515 6.195L18.8764 3.17528C18.3878 2.67929 17.7206 2.40002 17.0243 2.40002H7.57523ZM6.65632 3.9438C6.91113 3.72212 7.23749 3.60002 7.57523 3.60002H17.0243C17.3992 3.60002 17.7585 3.7504 18.0216 4.01747L20.8615 6.89999H3.2584L6.65632 3.9438ZM2.59946 8.09999C2.59943 8.10366 2.59941 8.10732 2.59941 8.11099V19C2.59941 19.7732 3.22622 20.4 3.99941 20.4H19.9994C20.7726 20.4 21.3994 19.7732 21.3994 19V8.09999H2.59946Z"
+                                                        fill="#212529"
+                                                    ></path></svg
+                                                >코스</span
+                                            ></a
+                                        >
+                                        <div
+                                            class="MenuItems_submenuContainer__ZDZlO MenuItems_show__ZmI3M Menulist2"
+                                        >
+                                            <a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href="/studio/reward/337882/funding/plan"
+                                                >A 코스</a
+                                            >
+                                            <a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href="/studio/reward/337882/funding/plan"
+                                                >B 코스</a
+                                            >
+                                            <a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href="/studio/reward/337882/funding/plan"
+                                                >C 코스</a
+                                            >
+                                            <a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href="/studio/reward/337882/funding/plan"
+                                                >D 코스</a
+                                            >
+                                            <a
                                                 class="MenuItems_submenu__YTg3N"
                                                 href="/studio/reward/337882/funding/screening"
-                                                >코스 목록</a
+                                                >봉사 코스</a
                                             >
                                         </div>
                                         <a
@@ -350,6 +397,7 @@
                                                                         placeholder="총 거리"
                                                                         class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh max"
                                                                         value=""
+                                                                        readonly
                                                                     />
                                                                     <input
                                                                         placeholder="일정"
@@ -581,10 +629,10 @@
             </div>
         </div>
     </body>
-    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=dca5cc5ce3946cf9a7295748f1aa7d12&libraries=services"></script>
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=44cd4db2e4673dc5f65a029d5a647839&libraries=services"></script>
     <script
         type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=dca5cc5ce3946cf9a7295748f1aa7d12&libraries=services"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=44cd4db2e4673dc5f65a029d5a647839&libraries=services"
     ></script>
 
     <script src="../../../static/js/admin/admin.js"></script>
