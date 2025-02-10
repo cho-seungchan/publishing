@@ -91,7 +91,8 @@
 .gzpaSl {
     display: flex;
 }
-p, label {
+p,
+label {
     margin: 0px;
 }
 .gzpaSl * {
@@ -191,11 +192,6 @@ button:disabled {
     line-height: 20px;
     letter-spacing: -0.5px;
     padding: 0px;
-<<<<<<< HEAD
     /* color: rgb(5, 116, 230); */
     color: RED;
 }
-=======
-    color: rgb(5, 116, 230);
-}
->>>>>>> f28520301a397d1dd33aebefcea49c2e32bea5a6
