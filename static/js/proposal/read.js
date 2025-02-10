@@ -241,7 +241,7 @@ geocoder.addressSearch("올림픽로 19-2", (result, status) => {
             if (mapContainer.style.position === "fixed") {
                 mapContainer.style.position = "relative";
                 mapContainer.style.width = "100%";
-                mapContainer.style.height = "25vh";
+                mapContainer.style.height = "30vh";
                 mapContainer.style.zIndex = "";
                 document.querySelector("#fullMap").style.position = "absolute";
             } else {
@@ -261,3 +261,47 @@ geocoder.addressSearch("올림픽로 19-2", (result, status) => {
     }
 });
 // 모이는 장소 :: 카카오맵 처리하기
+
+// 위로 버튼 누르면 화면 위쪽으로 천천히 이동
+document.querySelector(".gQlhwK").addEventListener("click", (e) => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+});
+// 위로 버튼 누르면 화면 위쪽으로 천천히 이동
+
+// 후기의 버튼 클릭시 이미지 3개식 이동 732px, 디스플레이 768px
+
+let leftReviewEnd = 0; // 화면 왼쪽 끝
+let rightReviewEnd = 976;
+let maxReviewRightEnd = document.querySelectorAll(".slick-slide").length * 244;
+
+document.querySelector(".slick-next").addEventListener("click", (e) => {
+    rightReviewEnd += 732;
+    leftReviewEnd += 732;
+    if (rightReviewEnd > maxReviewRightEnd) {
+        // maxRightEnd 보다 오른쪽으로 못 가도록 막음
+        leftReviewEnd -= rightReviewEnd - maxReviewRightEnd;
+        rightReviewEnd = maxReviewRightEnd;
+
+        document.querySelector(".slick-next").classList.add("slick-disabled");
+    }
+    document.querySelector(".slick-track").style.transform = `translate3d(${768 - rightReviewEnd}px, 0, 0)`;
+    document.querySelector(".slick-prev").classList.remove("slick-disabled");
+});
+
+document.querySelector(".slick-prev").addEventListener("click", (e) => {
+    leftReviewEnd -= 732;
+    rightReviewEnd -= 732;
+    if (leftReviewEnd < 0) {
+        // 0 보다 오른쪽으로 못 가도록 막음
+        rightReviewEnd -= leftReviewEnd;
+        leftReviewEnd = 0;
+
+        document.querySelector(".slick-prev").classList.add("slick-disabled");
+    }
+    document.querySelector(".slick-track").style.transform = `translate3d(${leftReviewEnd}px, 0, 0)`;
+    document.querySelector(".slick-next").classList.remove("slick-disabled");
+});
+// 후기의 버튼 클릭시 이미지 3개식 이동 732px, 디스플레이 768px

@@ -266,7 +266,11 @@
 }
 p,
 label {
+<<<<<<< HEAD
+    margin: 15px;
+=======
     margin: 0px;
+>>>>>>> f28520301a397d1dd33aebefcea49c2e32bea5a6
 }
 .hDGrky {
     font-size: 14px;
@@ -337,3 +341,47 @@ label {
     background-color: rgba(0, 0, 0, 0.7);
     cursor: pointer;
 }
+<<<<<<< HEAD
+
+
+/* 모달 스타일 */
+.modal {
+    display: none; /* 숨기기 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* background-color: rgb(0, 0, 0); */
+    background-color: rgb(0, 0, 0, 0.4);
+}
+
+/* modal 관련 */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* modal 관련 */
+=======
+>>>>>>> f28520301a397d1dd33aebefcea49c2e32bea5a6

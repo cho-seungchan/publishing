@@ -1637,17 +1637,17 @@ var {
 /* 찜관련 부분 */
 
 /* 맴 관련 */
-#mapContainer {
+#mapContainer1, #mapContainer2 {
     position: relative;
     width: 100%;
-    height: 40vh; /* 뷰포트 높이의 50%로 설정 */
+    height: 30vh; /* 뷰포트 높이의 50%로 설정 */
 }
-#map {
+#map1, #map2{
     border-radius: 5px;
     overflow: hidden;
     height: 100%;
 }
-#fullMap {
+#fullMap1, #fullMap2 {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -1663,8 +1663,7 @@ var {
     cursor: pointer;
     z-index: 1000;
 }
-
-#mapMessage {
+#mapMessage1, #mapMessage2{
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -1727,4 +1726,541 @@ var {
 }
 .distanceInfo:after {
     content: none;
+}
+
+/* 후기 밑 부분 관련 */
+.bremOa1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.bremOa1 article {
+    flex: 1;
+    border: 2px solid #ccc;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.dbbJUL {
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+.dbbJUL > div {
+    display: flex;
+    margin: 0px 0px 10px;
+}
+.dbbJUL > div > dt {
+    width: 50%;
+    color: rgb(153, 153, 153);
+}
+.dbbJUL > div:last-child {
+    margin: 0px;
+}
+.dbbJUL > div > dd {
+    margin: 0px;
+}
+.bDBbNi {
+    padding: 20px 0px;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: none;
+}
+.bDBbNi > article {
+    margin: 0px 0px 32px;
+}
+.gScFGo {
+    margin: 0px 0px 16px;
+    padding: 0px;
+}
+.iXEvmI, .eMLPLA, .eISlhn {
+    font-size: 18px;
+}
+.iXEvmI {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px;
+}
+.jXxsiv {
+    padding: 6px 11px;
+    color: rgb(0, 69, 24);
+    border: 1px solid rgb(155, 212, 145);
+    border-radius: 20px;
+    background-color: rgb(251, 255, 245);
+}
+.iXEvmI > span {
+    margin: 0px 9px 12px 0px;
+}
+.eMLPLA {
+    padding: 6px 11px;
+    color: rgb(78, 0, 0);
+    border: 1px solid rgb(212, 153, 145);
+    border-radius: 20px;
+    background-color: rgb(255, 249, 247);
+}
+.eISlhn {
+    padding: 6px 11px;
+    color: rgb(102, 102, 102);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+.bsIhrt {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0px 0px 8px;
+    color: rgb(55, 55, 55);
+}
+
+.tit_reply {
+    display: block !important;
+    margin-top: 50px;
+    padding: 15px 0px 15px 50px;
+    font-size: 16px;
+    color: #000;
+    background: #f7f7f7 url(https://korean.visitkorea.or.kr/resources/images/sub/ico_reply.png) 20px 50% no-repeat;
+}
+.replyWrap .tit_reply {
+    padding: 20px 0px 20px 50px;
+    font-weight: 700;
+    font-size: 20px;
+    float: left;
+    margin-top: 0;
+    letter-spacing: -1px;
+}
+.db_cont_detail .replyWrap .tit_reply {
+    float: none;
+    padding: 4px 0px 12px 0;
+    margin: 40px 0 0;
+    font-size: 24px;
+    font-weight: 700;
+    background: none;
+    color: rgb(55, 55, 55);
+}
+/* 댓글 부분 */
+.replyWrap.login .comment {
+    background-color: #ffffff; /* 배경색을 연한 회색으로 설정 */
+    color: #000000; /* 글자색을 검은색으로 설정 */
+}
+.tit_reply span {
+    color: #0a97cd;
+    padding-left: 5px;
+}
+.replyWrap .write {
+    position: relative;
+    margin-top: 30px;
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+}
+.db_cont_detail .replyWrap .write {
+    margin: 0;
+    padding: 14px 0;
+}
+.replyWrap .write .form {
+    float: right;
+    margin: 14px 20px 0 0;
+}
+.db_cont_detail .replyWrap .write .form {
+    float: none;
+    margin: 0 20px;
+}
+p, label {
+    margin: 0px;
+}
+caption, .blind, .hidden, .ir {
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    text-indent: -9999px;
+}
+.db_cont_detail .writeForm {
+    display: block;
+    height: 80px;
+    position: relative;
+}
+
+body, input, textarea, button, select, table {
+    font: 14px / 1.4 NotoSansKR, NotoSansJP, "돋움", Dotum, AppleGothic, Sans-serif;
+    color: #666;
+    -webkit-text-size-adjust: none;
+}
+textarea {
+    color: #535455;
+    padding: 5px;
+    border: 1px solid #bbb;
+    line-height: 1.167;
+    resize: none;
+}
+.replyWrap .write .form textarea {
+    float: left;
+    font-size: 16px;
+    padding: 0 5px;
+    width: 610px;
+    box-sizing: border-box;
+    height: 80px;
+    line-height: 20px;
+    border: 1px solid #e5e5e5;
+    word-break: keep-all;
+}
+.db_cont_detail .replyWrap .write .form textarea {
+    width: 100%;
+    float: none;
+    padding: 15px 20px 15px 20px;
+    max-height: 80px;
+}
+.db_cont_detail .fileRegbtn_wrap {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0 0;
+}
+
+.replyWrap .fileRegbtn {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.db_cont_detail .write .form .fileRegbtn {
+    margin: 0;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.replyWrap .fileRegbtn input[type="file"] {
+    position: absolute;
+    width: 54px;
+    height: 40px;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+    border: none;
+}
+.fileRegbtn input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.db_cont_detail .write .form .fileRegbtn input[type="file"] {
+    width: 54px;
+    height: 40px;
+}
+.replyWrap .fileRegbtn label {
+    display: inline-block;
+    width: 54px;
+    height: 40px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_reply_file.gif) 0 0 / 100% 100% no-repeat;
+    cursor: pointer;
+    text-indent: -9999px;
+    font-size: 0;
+    vertical-align: middle;
+}
+.db_cont_detail .write .form .fileRegbtn label {
+    width: 54px;
+    height: 40px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_reply_file01.gif) 0 0 / 100% 100% no-repeat;
+}
+.replyWrap .btn_apply {
+    position: relative;
+    display: inline-block;
+    background: #13294b;
+    color: #fff;
+    font-size: 15px;
+    width: 73px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+*, ::before, ::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+::before, ::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+.replyWrap .write:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.db_cont_detail .fileRegbtn_wrap::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.replyWrap .reply_tab {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0 0;
+}
+.replyWrap .reply_tab button {
+    padding: 0 10px;
+    margin-left: 5px;
+    font-weight: 300;
+    font-size: 15px;
+    height: 26px;
+    border: 1px solid #666;
+    color: #666;
+    border-radius: 50px;
+}
+.replyWrap .reply_tab button.all {
+    background: #666;
+    color: #fff;
+    font-weight: 400;
+}
+.wrap_reply {
+    position: relative;
+    min-height: 280px;
+}
+.replyWrap .wrap_reply {
+    min-height: auto;
+}
+.wrap_reply .reply_none {
+    width: 640px;
+    padding-top: 128px;
+    font-weight: 400;
+    color: #767676;
+    font-size: 24px;
+    text-align: center;
+}
+.replyWrap .wrap_reply .reply_none {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    padding-top: 0;
+    height: 96px;
+    line-height: 96px;
+    border-bottom: 1px solid #ddd;
+}
+.wrap_reply .list_reply {
+    width: 60%;
+}
+.replyWrap .wrap_reply .list_reply {
+    width: 100%;
+}
+.btn_center {
+    text-align: center;
+}
+.wrap_reply .btn_more {
+    display: inline-block;
+    margin-top: 20px;
+    width: 150px;
+    padding: 10px 10px;
+    border: 1px solid #bababa;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+}
+.db_cont_detail .wrap_reply .btn_more {
+    border: 0;
+    margin-top: 5px;
+}
+.wrap_reply .btn_more:after {
+    content: "+";
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    font-weight: 700;
+    background: none;
+    margin: 0 0 0 5px;
+    color: #333;
+}
+.wrap_reply .list_reply > ul > li {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px;
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+.wrap_reply .list_reply .profile {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+.wrap_reply .list_reply .profile .photo {
+    width: 50px;
+    height: 50px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/ico_profile.png) 0 0 no-repeat;
+    border-radius: 100%;
+    text-indent: -9999px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wrap_reply .list_reply .profile .ico {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 101;
+    width: 16px;
+    height: 16px;
+}
+.wrap_reply .list_reply .profile .ico img {
+    width: 100%;
+    height: 100%;
+}
+.wrap_reply .list_reply .txt_reply {
+    float: left;
+    width: 486px;
+    padding-left: 20px;
+}
+.replyWrap .wrap_reply .list_reply .txt_reply {
+    width: 830px;
+}
+.wrap_reply .list_reply .txt_reply p {
+    padding-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+    word-break: break-all;
+    padding-right: 23px;
+}
+.wrap_reply .list_reply .txt_reply .date {
+    color: #333;
+    font-size: 14px;
+}
+.wrap_reply .list_reply .txt_reply .name {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 20px;
+    font-weight: 300;
+    padding-right: 10px;
+    margin-right: 7px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/line_tit.png) 100% 6px no-repeat;
+    color: #333;
+}
+.wrap_reply .list_reply .txt_reply span {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 20px;
+    color: #707070;
+    font-weight: 300;
+}
+.replyWrap .replyBtn {
+    display: block;
+    clear: both;
+    padding: 17px 0 0 630px;
+}
+.replyWrap .replyBtn button {
+    width: 69px;
+    height: 28px;
+    line-height: 26px;
+    border: 1px solid #e5e5e5;
+    color: #0a97cd;
+    font-size: 15px;
+    text-align: center;
+    background: #fff;
+}
+.replyWrap .replyBtn button:before {
+    content: "";
+    display: inline-block;
+    vertical-align: -2px;
+}
+.replyWrap .replyBtn button.btn2:before {
+    width: 18px;
+    height: 16px;
+    vertical-align: -4px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_reply_02.png) no-repeat;
+}
+.replyWrap .replyBox {
+    display: none;
+    background: #f7f7f7;
+    width: 720px;
+    margin: 20px 0 -21px 0px;
+    border-top: 1px solid #ddd;
+    height: 150px;
+}
+.replyWrap .replyBox textarea {
+    width: 95%;
+    padding: 20px;
+    height: 75px;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    color: #666;
+    font-size: 16px;
+}
+.replyWrap .replyBox .btn {
+    text-align: right;
+    padding-top: 25px;
+    overflow: hidden;
+    margin-right: 40px;
+    margin-top: -20px;
+}
+.replyForm{
+    margin-top: 2%;
+}
+.db_cont_detail .wrap_reply .fileRegbtn {
+    margin-left: 0;
+}
+.db_cont_detail .wrap_reply .fileRegbtn label {
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_reply_file02.gif) 0 0 / 100% 100% no-repeat;
+}
+.wrap_reply .list_reply > ul > li:after {
+    content: ".";
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+
+
+@media (max-width: 600px) {  /* browser에서 412까지 안가므로 임시로 */
+    .jAFMyC {
+        padding: 0px 5px 20px;
+    }
+    .schedule_info {
+        padding: 5px 5px 5px;
+    }
+    .list_reply > ul {
+        padding-inline-start:5px;
+    }
+    .replyWrap .wrap_reply .list_reply .txt_reply {
+        width: 100%;
+    }
+    .replyWrap .replyBtn {
+        padding: 17px 0 0 80%;
+    }
+    .replyWrap .replyBox {
+        width: 100%;
+    }
+    .replyWrap .replyBox .btn {
+        margin-right: 15px;
+    }
+    .inputcomment{
+        margin: 0px;
+    }
+    .replyWrap .replyBox textarea {
+        width: 95%;
+    }
+    .replyBox > ul{
+        margin-left: -5%;
+    }
+    .gQlhwK {
+        right: 5%;
+    }
+    .dIeHJQ {
+        max-width: 412px;
+    }
+    .BUemN {
+        width: 50%;
+        margin-left: 22%;
+    }
+    .course_detail .cos_cont {
+        padding: 0 5px 0px;
+    }
+    .schedule{
+        margin-left:-5%;
+    }
 }
