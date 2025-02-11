@@ -1,0 +1,133 @@
+.NoticePage__NoticeListWrapper {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mainUserListDiv, .userListDiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mainUserListDiv {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.userListDiv {
+    background-color: #fff;
+}
+
+.idDiv, .accountDiv, .nameDiv, .phoneDiv, .emailDiv {
+    flex: 1;
+    text-align: center;
+}
+
+.checkboxall {
+    flex: 0.2;
+}
+.usersCheckbox{
+    flex: 0.2;
+}
+
+
+.SearchForm {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 30%;
+    height: 38px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    background-color: rgb(244, 244, 244);
+    border: none;
+}
+
+.SearchImg {
+        margin-right: 5px;
+        user-select: none;
+}
+
+.SearchInput {
+    width: 100%;
+    color: rgb(51, 51, 51);
+    height: 24px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.topsearchandbtn {
+    display: flex;           /* 가로 정렬 */
+    align-items: center;     /* 세로 중앙 정렬 */
+    gap: 10px;
+}
+
+.restorationBtn{
+    width: 83px;
+    white-space: nowrap;
+    overflow-x: auto;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+    left: 93.5%;
+    top: 15px;
+}
+
+.userListDiv {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.inputRow {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 0px solid #ccc;
+    margin-top: 10px;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.inputRow input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 17%;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 62px;
+}
+
+.saveBtn1 {
+    background-color: #28a745;
+    color: white;
+}
+
+.cancelBtn {
+    background-color: #dc3545;
+    color: white;
+}
