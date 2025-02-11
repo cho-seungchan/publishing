@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../static/css/common/header.css" />
+        <link rel="stylesheet" href="../../static/css/common/footer.css" />
+        <link rel="stylesheet" href="../../static/css/myPage/userQuit.css" />
+        <link
+            rel="shortcut icon"
+            href="../../static/images/common/favicon1.ico"
+            type="image/x-icon"
+        />
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/common/header.css"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/common/footer.css"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700"
+                    rel="stylesheet"
+                />
+                <link
+                    rel="preconnect"
+                    href="https://fonts.gstatic.com"
+                    crossorigin=""
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
+                    rel="stylesheet"
+                />
+
+                <title>회원탈퇴</title>
+            </head>
+            <body class="fontLoaded">
+                <div id="app">
+                    <div class="App__AppWrapper-nc5ti6-0 idXWQn">
+                        <!-- Header will be dynamically inserted here -->
+                        <div id="header-placeholder"></div>
+                        <script>
+                            // Load header.html and insert it in#header-placeholder
+                            fetch("../all/header.html")
+                                .then((response) => response.text())
+                                .then((data) => {
+                                    document.getElementById(
+                                        "header-placeholder"
+                                    ).innerHTML = data;
+                                })
+                                .catch((error) =>
+                                    console.error(
+                                        "Error loading header:",
+                                        error
+                                    )
+                                );
+                        </script>
+                        <div class="formWrap">
+                            <form class="css-zs70mi">
+                                <fieldset>
+                                    <legend class="css-ab001d">
+                                        <h1
+                                            data-testid="Typography"
+                                            color="#000000"
+                                            class="css-32bob6"
+                                        >
+                                            회원 탈퇴 시 주의사항
+                                        </h1>
+                                    </legend>
+                                    <ul class="css-18aoahz">
+                                        <li>
+                                            <p
+                                                data-testid="Typography"
+                                                color="#171719"
+                                                class="css-1qlp7s7"
+                                            >
+                                                탈퇴하기 전에
+                                            </p>
+                                            <p
+                                                data-testid="Typography"
+                                                color="#171719"
+                                                class="css-1cadzwq"
+                                            >
+                                                · 탈퇴 시 '픽커스 통합 로그인'를
+                                                통해 등록한 서비스의
+                                                <strong
+                                                    >모든 정보가 영구적으로
+                                                    삭제되며, 복구가
+                                                    불가능합니다.</strong
+                                                >
+                                            </p>
+                                            <p
+                                                data-testid="Typography"
+                                                color="#171719"
+                                                class="css-1cadzwq"
+                                            >
+                                                · 탈퇴 시 '픽커스 통합 로그인'을
+                                                통해 진행된
+                                                <strong
+                                                    >모든 지원과 면접 제안이
+                                                    자동 취소되며, 합격 보상금
+                                                    지급 대상에서도
+                                                    제외됩니다.</strong
+                                                >
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p
+                                                data-testid="Typography"
+                                                color="#171719"
+                                                class="css-1qlp7s7"
+                                            >
+                                                미리 백업하기
+                                            </p>
+                                            <p
+                                                data-testid="Typography"
+                                                color="#171719"
+                                                class="css-1cadzwq"
+                                            >
+                                                · '픽커스 통합 로그인'으로
+                                                등록한
+                                                <strong
+                                                    >서비스의 정보 백업은 탈퇴
+                                                    이전에 진행</strong
+                                                >해 주세요.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p
+                                                data-testid="Typography"
+                                                color="#171719"
+                                                class="css-1qlp7s7"
+                                            >
+                                                미리 관리하기
+                                            </p>
+                                            <p
+                                                data-testid="Typography"
+                                                color="#171719"
+                                                class="css-1cadzwq"
+                                            >
+                                                · 서비스 이용 중 '픽커스 통합
+                                                로그인' 계정에 귀속되지 않는
+                                                정보는 삭제되지 않으며, 탈퇴 시
+                                                수정이나 삭제가 불가능합니다.
+                                                <strong
+                                                    >'픽커스 통합 로그인' 계정에
+                                                    귀속되지 않은 정보의 경우
+                                                    회원 탈퇴 이전에 수정 또는
+                                                    삭제해 주세요.</strong
+                                                >
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <hr class="css-6cy68w" />
+                                    <div class="css-4ipaya">
+                                        <h2
+                                            data-testid="Typography"
+                                            color="#000000"
+                                            class="css-1nhn4wl"
+                                        >
+                                            탈퇴하려는 계정
+                                        </h2>
+                                        <div class="css-1a6geu">
+                                            <div class="css-ivxv03">
+                                                <img
+                                                    width="32"
+                                                    height="32"
+                                                    src="https://static.wanted.co.kr/oneid-user/2HwCfD84QqownWCzTz33WG/e705df56b7075dfe92dee361aec876d1c3a2803d49dd03dc38a9e03a37147bec"
+                                                />
+                                            </div>
+                                            <p
+                                                data-testid="Typography"
+                                                color="#171719"
+                                                class="css-r2b3v7"
+                                            >
+                                                lon1685@naver.com
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="css-8b25be">
+                                        <h2
+                                            data-testid="Typography"
+                                            color="#000000"
+                                            class="css-1nhn4wl"
+                                        >
+                                            삭제되는 정보
+                                        </h2>
+                                        <ul class="css-1y4dcmt">
+                                            <li class="css-ppq60p">
+                                                <span
+                                                    style="
+                                                        box-sizing: border-box;
+                                                        display: inline-block;
+                                                        overflow: hidden;
+                                                        width: initial;
+                                                        height: initial;
+                                                        background: none;
+                                                        opacity: 1;
+                                                        border: 0px;
+                                                        margin: 0px;
+                                                        padding: 0px;
+                                                        position: relative;
+                                                        max-width: 100%;
+                                                    "
+                                                    ><span
+                                                        style="
+                                                            box-sizing: border-box;
+                                                            display: block;
+                                                            width: initial;
+                                                            height: initial;
+                                                            background: none;
+                                                            opacity: 1;
+                                                            border: 0px;
+                                                            margin: 0px;
+                                                            padding: 0px;
+                                                            max-width: 100%;
+                                                        "
+                                                        ><img
+                                                            alt=""
+                                                            aria-hidden="true"
+                                                            src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2740%27%20height=%2740%27/%3e"
+                                                            style="
+                                                                display: block;
+                                                                max-width: 100%;
+                                                                width: initial;
+                                                                height: initial;
+                                                                background: none;
+                                                                opacity: 1;
+                                                                border: 0px;
+                                                                margin: 0px;
+                                                                padding: 0px;
+                                                            " /></span
+                                                    ><img
+                                                        src="../../static/images/common/favicon1.ico"
+                                                        decoding="async"
+                                                        data-nimg="intrinsic"
+                                                        style="
+                                                            position: absolute;
+                                                            inset: 0px;
+                                                            box-sizing: border-box;
+                                                            padding: 0px;
+                                                            border: none;
+                                                            margin: auto;
+                                                            display: block;
+                                                            width: 0px;
+                                                            height: 0px;
+                                                            min-width: 100%;
+                                                            max-width: 100%;
+                                                            min-height: 100%;
+                                                            max-height: 100%;
+                                                        "
+                                                /></span>
+                                                <div class="css-uscu4s">
+                                                    <p
+                                                        data-testid="Typography"
+                                                        color="#000000"
+                                                        class="css-1nosfqs"
+                                                    >
+                                                        PickCourse
+                                                    </p>
+                                                    <div>
+                                                        <p
+                                                            data-testid="Typography"
+                                                            color="#171719"
+                                                            class="css-1xfrnn9"
+                                                        >
+                                                            · 활동 데이터
+                                                        </p>
+                                                        <p
+                                                            data-testid="Typography"
+                                                            color="#171719"
+                                                            class="css-1xfrnn9"
+                                                        >
+                                                            · 미지급된 채용
+                                                            보상금 및 포인트
+                                                            데이터
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <hr class="css-6cy68w" />
+                                    <div class="css-1wx07im">
+                                        <div class="css-hfmse5">
+                                            <div
+                                                class="css-1axjas8 addDiv"
+                                            ></div>
+                                            <input
+                                                type="checkbox"
+                                                name="no_refund_agree"
+                                                data-testid="TermsOption_checkbox_no_refund_agree "
+                                                class="css-31p8kg inputCheckbox"
+                                            />
+                                            <div class="css-1smbjja">
+                                                <p
+                                                    data-testid="Typography"
+                                                    color="rgba(55, 56, 60, 0.61)"
+                                                    class="css-12qszhy"
+                                                >
+                                                    회원 탈퇴 이후 미결된 금액을
+                                                    받을 수 없음을 이해했으며
+                                                    동의합니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="css-hfmse5">
+                                            <div
+                                                class="css-1axjas8 addDiv"
+                                            ></div>
+                                            <input
+                                                type="checkbox"
+                                                name="delete_userinfo_agree"
+                                                data-testid="TermsOption_checkbox_delete_userinfo_agree "
+                                                class="css-31p8kg inputCheckbox"
+                                            />
+                                            <div class="css-1smbjja">
+                                                <p
+                                                    data-testid="Typography"
+                                                    color="rgba(55, 56, 60, 0.61)"
+                                                    class="css-12qszhy"
+                                                >
+                                                    회원 탈퇴를 진행하여 '픽커스
+                                                    통합 로그인' 계정에 귀속된
+                                                    모든 정보를 삭제하는 데
+                                                    동의합니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-9as5im">
+                                        <button
+                                            type="button"
+                                            data-testid="Button"
+                                            data-attribute-id="accountSetting__leave__button"
+                                            class="css-14q7s2s quitButton"
+                                            disabled=""
+                                        >
+                                            <span
+                                                data-testid="Typography"
+                                                color="#000000"
+                                                class="css-kfktv3"
+                                                >회원 탈퇴</span
+                                            >
+                                        </button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- Footer will be dynamically inserted here -->
+                        <div id="footer-placeholder"></div>
+                        <script>
+                            // Load footer.html and insert it into #footer-placeholder
+                            fetch("../all/footer.html")
+                                .then((response) => response.text())
+                                .then((data) => {
+                                    document.getElementById(
+                                        "footer-placeholder"
+                                    ).innerHTML = data;
+                                })
+                                .catch((error) =>
+                                    console.error(
+                                        "Error loading footer:",
+                                        error
+                                    )
+                                );
+                        </script>
+                    </div>
+                </div>
+                <div id="modal-root"></div>
+                <div id="dnd-root"></div>
+            </body>
+            <script src="../../static/js/myPage/userQuit.js"></script>
+        </html>
+    </head>
+</html>

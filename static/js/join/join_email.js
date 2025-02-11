@@ -13,36 +13,37 @@ const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const passwordRegex =
     /^(?=.*[A-Za-z].*)(?=.*\d.*|.*[\W_].*)[A-Za-z\d\W_]{10,}$/;
 
-inputAll.forEach((input) => {
-    input.addEventListener("focus", (e) => {
-        e.target.style.border = "1px solid blue";
-    });
-    input.addEventListener("blur", (e) => {
-        if (
-            (e.target === inputEmail && emailRegex.test(inputEmail.value)) ||
-            (e.target === inputPassword &&
-                passwordRegex.test(inputPassword.value)) ||
-            (e.target === inputCheck &&
-                inputCheck.value === inputPassword.value)
-        ) {
-            e.target.style.border = "1px solid rgb(238, 238, 238)";
-        } else {
-            e.target.style.border = "1px solid rgb(222, 28, 34)";
-        }
-    });
-});
+// inputAll.forEach((input) => {
+//     input.addEventListener("focus", (e) => {
+//         e.target.style.border = "1px solid blue";
+//     });
+//     input.addEventListener("blur", (e) => {
+//         if (
+//             (e.target === inputEmail && emailRegex.test(inputEmail.value)) ||
+//             (e.target === inputPassword &&
+//                 passwordRegex.test(inputPassword.value)) ||
+//             (e.target === inputCheck &&
+//                 inputCheck.value === inputPassword.value)
+//         ) {
+//             e.target.style.border = "1px solid rgb(238, 238, 238)";
+//         } else {
+//             e.target.style.border = "1px solid rgb(222, 28, 34)";
+//         }
+//     });
+// });
 
 inputEmail.addEventListener("keyup", () => {
-    if (!emailRegex.test(inputEmail.value)) {
-        inputEmail.style.border = "1px solid rgb(222, 28, 34)";
+    if (!emailRegex.test(inputEmail.value) && inputEmail.value !== "") {
+        inputEmail.classList.add("errorInput");
+        inputEmail.classList.remove("iRBMai");
         p.innerText = "올바른 이메일 형식이 아닙니다.";
         if (!div.firstElementChild.contains(p)) {
             div.firstElementChild.appendChild(p);
         }
         return;
     }
-    inputEmail.style.border = "1px solid rgb(238, 238, 238)";
-    console.log("들어옴" + emailRegex.test(inputEmail.value));
+    inputEmail.classList.add("iRBMai");
+    inputEmail.classList.remove("errorInput");
 
     if (div.firstElementChild.contains(p)) {
         div.firstElementChild.removeChild(p);
@@ -50,27 +51,34 @@ inputEmail.addEventListener("keyup", () => {
 });
 
 inputPassword.addEventListener("keyup", () => {
-    if (!passwordRegex.test(inputPassword.value)) {
-        inputPassword.style.border = "1px solid rgb(222, 28, 34)";
+    if (
+        !passwordRegex.test(inputPassword.value) &&
+        inputPassword.value !== ""
+    ) {
+        inputPassword.classList.add("errorInput");
+        inputPassword.classList.remove("iRBMai");
         passwordText.classList.add("bViOzS");
         passwordText.classList.remove("cIOZzg");
         return;
     }
-    inputPassword.style.border = "1px solid rgb(238, 238, 238)";
+    inputPassword.classList.add("iRBMai");
+    inputPassword.classList.remove("errorInput");
 
     passwordText.classList.add("cIOZzg");
     passwordText.classList.remove("bViOzS");
 });
 
 inputCheck.addEventListener("keyup", () => {
-    if (inputCheck.value !== inputPassword.value) {
-        inputCheck.style.border = "1px solid rgb(222, 28, 34)";
+    if (inputCheck.value !== inputPassword.value && inputCheck.value !== "") {
+        inputCheck.classList.add("errorInput");
+        inputCheck.classList.remove("iRBMai");
         p.innerText = "먼저 입력하신 비밀번호와 일치하지 않습니다.";
         if (!div.children[2].contains(p)) {
             div.children[2].appendChild(p);
         }
     } else {
-        inputCheck.style.border = "1px solid rgb(238, 238, 238)";
+        inputCheck.classList.add("iRBMai");
+        inputCheck.classList.remove("errorInput");
         if (div.children[2].contains(p)) {
             div.children[2].removeChild(p);
         }
