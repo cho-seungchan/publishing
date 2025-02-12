@@ -1,0 +1,2266 @@
+html {
+    scroll-behavior: smooth;
+}
+.idXWQn {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+.hKZUBk {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 88px;
+    padding: 48px 0px 16px;
+    background-color: rgb(2, 74, 149);
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    z-index: 4000;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: top 100ms linear;
+}
+.CijWU {
+    width: 100%;
+    max-width: 828px;
+    min-height: 1px;
+    margin: 0px auto;
+    padding-bottom: 100px;
+    position: relative;
+}
+.koasSX {
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out;
+    display: none;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 1px;
+}
+.eNYAxQ {
+    position: relative;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1 1 100%;
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+}
+.jAFMyC {
+    display: flex;
+    flex-flow: column;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0px;
+    padding: 0px 30px 30px;
+}
+.fZHPAt {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    max-width: 768px;
+    padding-bottom: 24px;
+}
+.cTEgEx {
+    position: relative;
+    min-height: 1px;
+    text-align: center;
+}
+.fZHPAt > * {
+    width: 100%;
+    max-width: 768px;
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.cOsMnB {
+    visibility: hidden;
+}
+.cOsMnB.slick-initialized {
+    visibility: visible;
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev {
+    left: -25px;
+}
+.hPYdgj {
+    z-index: 1;
+    width: 50px !important;
+    height: 50px !important;
+    transform: rotate(180deg) translate(0px, 50%) !important;
+}
+.cOsMnB .slick-arrow.slick-prev {
+    left: 10px;
+}
+::before,
+::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+.slick-prev:before,
+.slick-next:before {
+    font-family: "slick";
+    font-size: 20px;
+    line-height: 1;
+    opacity: 0.75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-prev:before {
+    content: "←";
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.cOsMnB .slick-list {
+    border-radius: 5px 5px 5px 5px;
+}
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: "";
+}
+.slick-slide {
+    display: none;
+    float: left;
+    min-height: 1px;
+    height: 100%;
+}
+.slick-initialized .slick-slide {
+    display: block;
+}
+.gDuKGF {
+    min-height: 1px;
+}
+.bUFcfh {
+    display: none !important;
+}
+.VUNpz {
+    display: initial;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slick-slide img {
+    display: block;
+}
+.slick-track:after {
+    clear: both;
+}
+.slick-next {
+    right: -25px;
+}
+.gEcnJA {
+    width: 50px !important;
+    height: 50px !important;
+}
+.cOsMnB .slick-arrow.slick-next {
+    right: 10px;
+}
+.slick-next:before {
+    content: "→";
+}
+.dkRreb {
+    width: 100%;
+    position: absolute;
+    bottom: 16px;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+.gsAVau {
+    padding: 6px 9px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+}
+
+/* class="ProductDetailPage__SectionContainer-sc-126q1k2-4 cGKzvC" */
+.cGKzvC {
+    padding: 0px;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: none;
+}
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+.kaipwt {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    border: 0px;
+}
+.gcyqjw {
+    padding: 57px 0px 24px;
+}
+.ehidDS {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.jTHKhF {
+    display: flex;
+    flex-flow: row;
+}
+.jTHKhF > img {
+    margin-right: 1px;
+}
+.iiUeZl {
+    margin: 0px 0px 0px 8px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.iiUeZl::after {
+    content: "•";
+    width: 3px;
+    height: 3px;
+    padding: 0px 6px;
+    color: rgb(119, 119, 119);
+}
+.hNquXY {
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+}
+.bFmUOr {
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+    margin-top: 8px;
+}
+.gdIWGV {
+    padding-top: 24px;
+    border-top: 1px solid rgb(244, 244, 244);
+    border-bottom: 1px solid rgb(244, 244, 244);
+    background-color: rgb(250, 250, 250);
+    overflow: hidden;
+}
+.cOxrJ {
+    margin-bottom: 12px;
+    padding: 0px 18px;
+}
+
+.gENQzC {
+    z-index: 1;
+    width: 52px !important;
+    height: 52px !important;
+    transform: rotate(180deg) translate(0px, 50%) !important;
+}
+.hlWAni .slick-arrow {
+    top: 25%;
+}
+.hlWAni .slick-arrow.slick-prev {
+    left: -18px;
+}
+.hlWAni .slick-list {
+    overflow: visible;
+}
+.hlWAni .slick-track {
+    margin-left: inherit;
+    margin-right: inherit;
+}
+.ihDCaS {
+    margin: 0px 6px 12px;
+    width: 232px;
+}
+.eSCFvY {
+    border-radius: 3px;
+    overflow: hidden;
+    min-height: 232px;
+    background-color: rgb(250, 250, 250);
+    margin-bottom: 18px;
+    width: 232px;
+}
+.ggRfTm {
+    width: 100%;
+}
+.gvMYvX {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.hbfRVr {
+    width: 40px;
+    height: 40px;
+}
+.bzFlWa {
+    width: 100%;
+    border-radius: 20px;
+}
+.fsJcFt {
+    margin-left: 9px;
+}
+.biuXID {
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+p,
+label {
+    margin: 0px;
+}
+.jtBQUX {
+    color: rgb(170, 170, 170);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.36px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+.gsjveC {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: rgb(51, 51, 51);
+    letter-spacing: -0.42px;
+    margin-bottom: 22px;
+    word-break: break-all;
+    font-size: 14px;
+    line-height: 22px;
+    height: 66px;
+}
+.ccPzhh {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 36px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+    color: rgb(51, 51, 51);
+    border: 1px solid rgb(221, 221, 221);
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    appearance: button;
+}
+.ccPzhh img {
+    width: 15px;
+    margin-right: 6px;
+}
+.slick-track:after {
+    clear: both;
+}
+.hPRDSh {
+    display: initial;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.eGlkoV {
+    width: 52px !important;
+    height: 52px !important;
+}
+.hlWAni .slick-arrow.slick-next {
+    right: -18px;
+}
+.dzAqdb {
+    padding-top: 20px;
+}
+.PIawM {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(0, 117, 239);
+    height: 56px;
+    border-top: 1px solid rgb(244, 244, 244);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+}
+.PIawM img {
+    width: 12px;
+    margin-left: 2px;
+}
+
+/* class="ProductDetailPage__SectionWrapper-sc-126q1k2-3 jLKVwS" */
+.jLKVwS {
+    min-height: 1px;
+}
+.bremOa {
+    padding: 40px 0px;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: none;
+}
+.blaApX {
+    margin: 0px 0px 40px;
+    padding: 0px;
+}
+.bZNoYF {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0px;
+}
+.eZMXrt {
+    width: 100%;
+    margin: 0px 0px 82px;
+}
+.eZMXrt {
+    width: 100%;
+    margin: 0px 0px 82px;
+}
+.eZMXrt div {
+    width: 100% !important;
+}
+.eZMXrt > .product-description {
+    width: 100%;
+    height: auto;
+}
+.eZMXrt img {
+    max-width: 100%;
+}
+
+/* class="ProductDetailPage__SectionContainer-sc-126q1k2-4 bremOa" */
+.fCwkht {
+    margin: 0px 0px 24px;
+    padding: 0px;
+}
+.gCpKQG {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0px 0px 16px;
+}
+.bmSoBw {
+    height: auto;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 5px;
+}
+.ievPao > div {
+    margin: 0px 0px 68px;
+}
+.ievPao > div:last-child {
+    margin: 0px 0px 20px;
+}
+.hEbaiV {
+    position: relative;
+    height: 300px;
+}
+/* 지도 나오는 부분 */
+.eGersR {
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100%;
+}
+.bLwypY {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.eVNhBF {
+    height: auto;
+    padding: 0px 14px;
+}
+.yzzVW {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 14px 0px;
+}
+.fbgokJ {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.ioHUdX {
+    margin: 0px 0px 8px;
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.kvCMoN {
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.dekoXr {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* modal root */
+
+.fDkXaB {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+.avAvm {
+    position: relative;
+    max-width: 768px;
+    width: 100%;
+    margin: 0px auto;
+}
+button {
+    cursor: pointer;
+}
+.gQlhwK {
+    position: absolute;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    border-radius: 20px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 8px 0px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    bottom: 116px;
+}
+.gQlhwK img {
+    width: 24px;
+}
+
+/* class="PageWrapper-sc-1w87j10-0 bScXKt" 매거진을 모집 목록으로 변경 */
+.bScXKt {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+.ecnmXp {
+    margin: 0px;
+    width: 100%;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding: 20px 0px;
+    color: rgb(51, 51, 51);
+}
+.irErpt {
+    line-height: 14px;
+    padding: 23px 0px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.jZtIEr {
+    display: flex;
+    padding: 0px;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.jZtIEr > * {
+    padding: 30px 0px;
+}
+.hHOLgL {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+.jZtIEr > :first-child {
+    margin-top: -20px;
+}
+.jZtIEr > :last-child {
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+.jZtIEr > * > div:first-child {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    margin-right: 30px;
+    width: 160px;
+}
+.jZtIEr .button-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 20px;
+    gap: 10px;
+    justify-content: center;
+    /* align-items: center; */
+}
+.jZtIEr .button-container button {
+    cursor: pointer;
+    padding: 10px, 20px;
+    background-color: #f8f9fa;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 입체감 있는 그림자 */
+    background-image: linear-gradient(to bottom, #ffffff, #e2e6ea); /* 그라디언트 배경 */
+    transition: background-color 0.3s, box-shadow 0.3s; /* 호버 시 배경 색상 및 그림자 변경 애니메이션 */
+}
+.jZtIEr .button-container button:hover {
+    background-color: #e2e6ea; /* 호버 시 배경 색상 변경 */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* 호버 시 그림자 변경 */
+}
+
+.VUNpu {
+    display: initial;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.kBOcSr {
+    margin-bottom: 14px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.dfnTnv {
+    line-height: 18px;
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+}
+
+/* class="Wrapper__FloatingActionBarWrapper-aopuoy-0 ifNxJR" */
+.ifNxJR {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 12px 20px 24px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px -10px 30px -10px;
+    background-color: white;
+    z-index: 200;
+}
+.dIeHJQ {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px auto;
+    max-width: 768px;
+}
+.dQtonX {
+    padding: 0px;
+    margin-right: 20px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.hxJYoP {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(51, 51, 51);
+    white-space: nowrap;
+    margin-top: -4px;
+}
+.BUemN {
+    width: 100%;
+    height: 56px;
+    line-height: 24px;
+    padding: 16px;
+    background-color: rgb(122, 41, 250);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    margin: 0px;
+    margin-left: 45px;
+}
+
+.eIJDxV {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.eaCxDu {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+
+.dvQeHx {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.jJfiPr {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 327px;
+    height: 56px;
+    border: 1.5px solid rgb(17, 17, 17);
+}
+.dOJyMf {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    transform: rotate(180deg);
+}
+
+/* 구석 구석 */
+/* 구석 구석 */
+.titleType1 {
+    text-align: center;
+    position: relative;
+}
+
+.tit_cont h2,
+.titleType1 h2 {
+    overflow: hidden;
+    font-weight: 800;
+    color: #333;
+    font-size: 36px;
+    letter-spacing: -1px;
+    word-break: keep-all;
+}
+.titleType1 h2 {
+    padding: 19px 0 0;
+    text-align: center;
+    margin: 0;
+}
+.titleType1 .tit h2 {
+    display: block;
+}
+.titleType1 .tit h2 .tit_cos {
+    display: inline-block;
+    width: 65px;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: 5px;
+    margin-right: 10px;
+    background: #ed4956;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+.titleType1 .area_address {
+    display: inline-block;
+    padding-top: 10px;
+}
+.titleType1 .area_address span {
+    float: left;
+    font-size: 16px;
+    color: #666;
+}
+.schedule_info {
+    padding: 40px 150px 40px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+dl,
+ul,
+ol,
+menu,
+li {
+    list-style: none;
+}
+.schedule_info .schedule {
+    overflow: hidden;
+}
+dl,
+ul,
+ol,
+menu,
+li {
+    list-style: none;
+}
+.schedule_info .schedule li {
+    float: left;
+    width: 50%;
+}
+.schedule_info .schedule li .img {
+    float: left;
+}
+.schedule_info .schedule li em {
+    display: block;
+    padding: 15px 0 3px 98px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #777;
+}
+.schedule_info .schedule li strong {
+    display: block;
+    padding: 0 0 0 98px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+}
+.schedule_info .schedule li img {
+    width: 80px;
+    height: 80px;
+}
+.wrap_contView {
+    position: relative;
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.wrap_contView .area_txtView {
+    position: relative;
+    padding-bottom: 0 !important;
+}
+.wrap_contView .area_txtView.top .inr_wrap {
+    overflow: hidden;
+    height: 140px;
+}
+.wrap_contView .area_txtView .inr > p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.7;
+    letter-spacing: -1px;
+}
+.course_detail .area_txtView.top .cont_more {
+    position: relative;
+    height: 33px;
+}
+.wrap_contView .area_txtView .btn_more {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    background-color: #f7f7f7;
+    color: #666;
+    font-size: 13px;
+    line-height: 40px;
+}
+.course_detail .wrap_contView .area_txtView .btn_more {
+    display: block;
+    right: 3px;
+    overflow: hidden;
+    width: auto;
+    font-weight: 700;
+    background: #fff;
+    border: 0;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    color: #333;
+    letter-spacing: -0.5px;
+    font-size: 16px;
+}
+button span {
+    font-family: NotoSansKR, NotoSansJP, "돋움", Dotum, AppleGothic, Sans-serif;
+}
+.area_map {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+}
+.course_detail .area_map {
+    margin-top: 44px;
+}
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+.area_map .spot {
+    float: left;
+    position: relative;
+    bottom: 85px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ddd;
+}
+.area_map .spot:nth-of-type(n) {
+    border: 0;
+    box-shadow: 0px 1px 2px #888;
+}
+.area_map .spot a {
+    overflow: hidden;
+    display: block;
+    border-radius: 6px;
+    background-color: #13294b;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+}
+.area_map .spot:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 14px;
+    height: 8px;
+    margin-left: -7px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/spot_arrow_b.png) 0 0 no-repeat;
+}
+.area_map .spot .title {
+    display: block;
+    background: #fff;
+    margin-right: 35px;
+    padding: 9px 20px;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+}
+.area_map .spot a:before {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    width: 8px;
+    height: 14px;
+    margin-top: -7px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/spot_arrow_b.png) no-repeat 0 0;
+    background-size: 8px 14px;
+}
+.relation_cos .cos_wrap {
+    background: #f3f2f2;
+    padding: 30px 20px 80px;
+    text-align: center;
+    position: relative;
+}
+.course_detail .relation_cos .cos_wrap {
+    position: relative;
+    padding: 0 20px 0;
+    margin-top: 40px;
+}
+.course_detail .relation_cos .cos_wrap:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    background: #f3f2f2;
+    z-index: 10;
+}
+.relation_cos .pc {
+    overflow: hidden;
+    position: relative;
+}
+.relation_cos .pc.js_slider {
+    display: block;
+}
+.relation_cos .pc.js_slider:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 205px;
+    position: absolute;
+    left: -20px;
+    top: 80px;
+    background: #f3f2f2;
+    z-index: 5;
+}
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.relation_cos .swiper-container {
+    position: static;
+}
+/* .relation_cos .js_slider .swiper-container:before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 16px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/bg_cosdetail_box01.gif) 0 0 / 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 293px;
+    z-index: 10;
+} */
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.relation_cos ul {
+    display: inline-block;
+    width: auto;
+}
+.relation_cos .cos_wrap .js_slider ul {
+    display: flex;
+    width: 100%;
+}
+
+.swiper-slide {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+}
+.relation_cos .cos_wrap ul li {
+    position: relative;
+    float: left;
+    width: 200px !important;
+    padding: 85px 0 30px;
+}
+.relation_cos .cos_wrap .pc.js_slider ul li {
+    padding: 72px 0 24px;
+}
+.relation_cos .cos_wrap ul li.on1:before {
+    content: "";
+    display: block;
+    width: 50% !important;
+    height: 4px;
+    background: #ed4956;
+    position: absolute;
+    left: 10px;
+    top: 38px;
+}
+.relation_cos .cos_wrap ul li.on:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #ed4956;
+    position: absolute;
+    left: 10px;
+    top: 38px;
+}
+.relation_cos ul li em {
+    display: inline-block;
+    position: absolute;
+    left: 42%;
+    top: 23px;
+    margin-left: -0px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #bfbfbf;
+    border-radius: 100%;
+    background: #fff;
+    color: #767676;
+}
+.relation_cos .cos_wrap .js_slider ul {
+    padding: 0;
+}
+.relation_cos ul li.on em,
+.relation_cos ul li.on1 em {
+    border: 2px solid #ed4956;
+    color: #ed4956;
+}
+.relation_cos ul li em span {
+    font-size: 0;
+    text-indent: -9999px;
+}
+.relation_cos .cos_wrap ul li a {
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 0 10px;
+    position: relative;
+    border-radius: 10px;
+}
+.relation_cos .cos_wrap ul li:hover a,
+.relation_cos .cos_wrap ul li.on1 a {
+    box-shadow: 2px 2px 10px 0px rgba(150, 149, 149, 1);
+}
+.relation_cos .cos_wrap ul li.on1:after {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 16px;
+    position: absolute;
+    left: 29%;
+    bottom: 0;
+    margin-left: -14px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/bg_cosdetail_arw.png) 0 0 / 100% 100%;
+}
+.relation_cos .cos_wrap .pc.js_slider ul li.on1:after {
+    bottom: -6px;
+}
+.relation_cos ul li .img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.relation_cos ul li .tit {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -30px;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    z-index: 10;
+}
+.relation_cos ul li .tit span {
+    display: block;
+    position: absolute;
+    left: -20px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    letter-spacing: -0.5px;
+    line-height: 23px;
+    display: block;
+    overflow: hidden;
+    display: -webkit-box;
+    max-height: 46px;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.relation_cos .cos_wrap ul li a:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.relation_cos .cos_wrap ul li.on1 a:after,
+.relation_cos .cos_wrap ul li:hover a:after {
+    background: rgba(237, 73, 86, 0.8);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E);
+    left: 10px;
+    right: auto;
+} */
+/* .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    background-image: url('/static/images/map/prev.svg');
+    left: 10px;
+    right: auto;
+} */
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+}
+.relation_cos .cos_wrap .swiper-button-next,
+.relation_cos .cos_wrap .swiper-button-prev {
+    display: none;
+}
+.relation_cos .cos_wrap .pc.js_slider .swiper-button-next,
+.relation_cos .cos_wrap .pc.js_slider .swiper-button-prev {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+.relation_cos .cos_wrap .pc.js_slider .swiper-button-prev {
+    left: 416px;
+    top: auto;
+    bottom: -50px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_cos_prev.png) no-repeat;
+}
+.course_detail .relation_cos .cos_wrap .pc.js_slider .swiper-button-prev {
+    left: -5px;
+    top: 160px;
+    text-indent: -9999px;
+}
+
+.relation_cos .cos_wrap .pc.js_slider .swiper-button-next {
+    right: 416px;
+    top: auto;
+    bottom: -50px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_cos_next.png) no-repeat;
+}
+.course_detail .relation_cos .cos_wrap .pc.js_slider .swiper-button-next {
+    right: -5px;
+    top: 160px;
+    text-indent: -9999px;
+}
+.swiper-container .swiper-notification {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
+}
+/* .relation_cos .js_slider .swiper-container:after {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 16px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/bg_cosdetail_box02.gif) 0 0 / 100% 100%;
+    position: absolute;
+    right: 0;
+    top: 293px;
+    z-index: 10;
+} */
+.course_detail .relation_cos .cos_wrap:after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: auto;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/bg_cos_detail.gif) repeat-x;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 52px;
+}
+.mo {
+    display: none;
+}
+.relation_cos .cos_wrap .mo {
+    display: none;
+}
+.course_detail .cos_cont {
+    display: none;
+    margin-top: -9px;
+    position: relative;
+    padding: 0 15px 30px;
+    background: #f3f2f2;
+}
+.course_detail .cos_cont.active {
+    display: block;
+}
+.course_detail .detail_box {
+    padding: 0 15px 31px;
+    border: 1px solid #ed4956;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 3px 9px 3px rgba(87, 88, 89, 0.25);
+}
+.course_detail .relation_cos .title {
+    margin: 0 0 24px;
+}
+.relation_cos .title {
+    overflow: hidden;
+    text-align: center;
+    margin: 10px 0 0;
+}
+.course_detail .relation_cos .title .tit_wrap {
+    overflow: hidden;
+    padding: 49px 0 3px;
+}
+.relation_cos .title em {
+    display: inline-block;
+    height: 30px;
+    line-height: 28px;
+    color: #fff;
+    width: 30px;
+    background: #ed4956;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.course_detail .cos_cont .title em {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.relation_cos .title strong {
+    padding: 5px 0 2px;
+    display: block;
+    font-weight: 700;
+    font-size: 22px;
+    color: #000;
+    letter-spacing: -1px;
+}
+.course_detail .cos_cont .title strong {
+    display: inline-block;
+    padding: 0;
+    vertical-align: middle;
+}
+.relation_cos .title span {
+    display: inline-block;
+    font-size: 16px;
+    color: #666;
+}
+.relation_cos .title span + span:before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background: #ccc;
+    vertical-align: -1px;
+    margin: 0 10px;
+}
+.course_detail .info_area .wrap > div {
+    float: left;
+    width: calc(33.3% - 20px);
+    height: 260px;
+    margin-left: 20px;
+}
+.course_detail .info_area .wrap > div:first-child {
+    margin: 0;
+}
+.course_detail .info_area .wrap > div a {
+    display: block;
+    height: 100%;
+    border-radius: 10px;
+    font-size: 0;
+    text-indent: -9999px;
+    position: relative;
+}
+.course_detail .info_area.mo {
+    display: none;
+}
+.course_detail .recommend {
+    padding: 0 0 0 280px;
+    margin-top: 37px;
+    height: 165px;
+    background: #fff url(https://korean.visitkorea.or.kr/resources/images/sub/bg_cos_recommend.gif) no-repeat;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+}
+.course_detail .recommend .pc {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.course_detail .recommend .pc .wrap {
+    display: table-cell;
+    vertical-align: middle;
+}
+.course_detail .recommend strong {
+    position: relative;
+    padding: 0 8px 0 12px;
+    float: left;
+    max-width: 380px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 20px;
+    color: #333;
+    letter-spacing: -1.1px;
+}
+.course_detail .recommend strong:before {
+    content: "“";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.course_detail .recommend strong:after {
+    content: "”";
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+.course_detail .recommend em {
+    margin-left: 5px;
+    float: left;
+    font-weight: 700;
+    font-size: 22px;
+    color: #333;
+    letter-spacing: -1.1px;
+}
+.course_detail .recommend .tag_list {
+    overflow: hidden;
+    padding: 3px 0 0;
+    width: 100%;
+    display: block;
+    margin-left: -10px;
+}
+.course_detail .recommend .tag_list li {
+    float: left;
+    margin: 10px 0 0 10px;
+}
+.course_detail .recommend .tag_list li a {
+    display: inline-block;
+    max-width: 187px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 18px;
+    line-height: 38px;
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #666;
+}
+.course_detail .recommend .mo {
+    display: none;
+}
+.swiper-container-free-mode > .swiper-wrapper {
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    margin: 0 auto;
+}
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+    content: none; /* 가상 요소의 콘텐츠를 비활성화 */
+    display: none; /* 가상 요소를 숨기기 */
+}
+.hlWAni .slick-arrow.slick-disabled {
+    display: none !important;
+}
+
+/* 찜관련 부분 */
+.eZGjgL {
+    width: 32px;
+    height: 32px;
+    line-height: normal;
+    padding: 0px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    margin-left: 0px;
+    margin-bottom: 30px;
+}
+.eZGjgL > img {
+    filter: drop-shadow(rgba(0, 0, 0, 0.4) 1px 1px 3px);
+}
+.bpzBFC {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    margin-top: 10px;
+    padding: 14px 16px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 22px;
+    white-space: pre-line;
+    user-select: none;
+    opacity: 0;
+    transition: opacity 100ms;
+    border-radius: 10px;
+    min-height: 45px;
+    background-color: rgb(17, 17, 17);
+    z-index: -9999; /* 최상위로 배치 */
+    position: absolute; /* 부모 요소 기준으로 배치 */
+    bottom: 30px; /* 버튼 위로 위치 조정 */
+    left: 46%;
+    transform: translateX(-50%);
+}
+
+/* 찜관련 부분 */
+
+/* 맴 관련 */
+#mapContainer1, #mapContainer2 {
+    position: relative;
+    width: 100%;
+    height: 30vh; /* 뷰포트 높이의 50%로 설정 */
+}
+#map1, #map2{
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100%;
+}
+#fullMap1, #fullMap2 {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+#mapMessage1, #mapMessage2{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 10px 0px 0px 0px;
+}
+/* 맵 관련 */
+
+#tabCont a {
+    cursor: default;
+}
+
+/* 맴의 거리 표시 관련 */
+
+.dot {
+    overflow: hidden;
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/mini_circle.png");
+}
+.dotOverlay {
+    position: relative;
+    bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ddd;
+    float: left;
+    font-size: 12px;
+    padding: 5px;
+    background: #fff;
+}
+.dotOverlay:nth-of-type(n) {
+    border: 0;
+    box-shadow: 0px 1px 2px #888;
+}
+.number {
+    font-weight: bold;
+    color: #ee6152;
+}
+.dotOverlay:after {
+    content: "";
+    position: absolute;
+    margin-left: -6px;
+    left: 50%;
+    bottom: -8px;
+    width: 11px;
+    height: 8px;
+    background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white_small.png");
+}
+.distanceInfo {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    list-style: none;
+    margin: 0;
+}
+.distanceInfo .label {
+    display: inline-block;
+    width: 50px;
+}
+.distanceInfo:after {
+    content: none;
+}
+
+/* 후기 밑 부분 관련 */
+.bremOa1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.bremOa1 article {
+    flex: 1;
+    border: 2px solid #ccc;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.dbbJUL {
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+.dbbJUL > div {
+    display: flex;
+    margin: 0px 0px 10px;
+}
+.dbbJUL > div > dt {
+    width: 50%;
+    color: rgb(153, 153, 153);
+}
+.dbbJUL > div:last-child {
+    margin: 0px;
+}
+.dbbJUL > div > dd {
+    margin: 0px;
+}
+.bDBbNi {
+    padding: 20px 0px;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: none;
+}
+.bDBbNi > article {
+    margin: 0px 0px 32px;
+}
+.gScFGo {
+    margin: 0px 0px 16px;
+    padding: 0px;
+}
+.iXEvmI, .eMLPLA, .eISlhn {
+    font-size: 18px;
+}
+.iXEvmI {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px;
+}
+.jXxsiv {
+    padding: 6px 11px;
+    color: rgb(0, 69, 24);
+    border: 1px solid rgb(155, 212, 145);
+    border-radius: 20px;
+    background-color: rgb(251, 255, 245);
+}
+.iXEvmI > span {
+    margin: 0px 9px 12px 0px;
+}
+.eMLPLA {
+    padding: 6px 11px;
+    color: rgb(78, 0, 0);
+    border: 1px solid rgb(212, 153, 145);
+    border-radius: 20px;
+    background-color: rgb(255, 249, 247);
+}
+.eISlhn {
+    padding: 6px 11px;
+    color: rgb(102, 102, 102);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+.bsIhrt {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0px 0px 8px;
+    color: rgb(55, 55, 55);
+}
+
+.tit_reply {
+    display: block !important;
+    margin-top: 50px;
+    padding: 15px 0px 15px 50px;
+    font-size: 16px;
+    color: #000;
+    background: #f7f7f7 url(https://korean.visitkorea.or.kr/resources/images/sub/ico_reply.png) 20px 50% no-repeat;
+}
+.replyWrap .tit_reply {
+    padding: 20px 0px 20px 50px;
+    font-weight: 700;
+    font-size: 20px;
+    float: left;
+    margin-top: 0;
+    letter-spacing: -1px;
+}
+.db_cont_detail .replyWrap .tit_reply {
+    float: none;
+    padding: 4px 0px 12px 0;
+    margin: 40px 0 0;
+    font-size: 24px;
+    font-weight: 700;
+    background: none;
+    color: rgb(55, 55, 55);
+}
+/* 댓글 부분 */
+.replyWrap.login .comment {
+    background-color: #ffffff; /* 배경색을 연한 회색으로 설정 */
+    color: #000000; /* 글자색을 검은색으로 설정 */
+}
+.tit_reply span {
+    color: #0a97cd;
+    padding-left: 5px;
+}
+.replyWrap .write {
+    position: relative;
+    margin-top: 30px;
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+}
+.db_cont_detail .replyWrap .write {
+    margin: 0;
+    padding: 14px 0;
+}
+.replyWrap .write .form {
+    float: right;
+    margin: 14px 20px 0 0;
+}
+.db_cont_detail .replyWrap .write .form {
+    float: none;
+    margin: 0 20px;
+}
+p, label {
+    margin: 0px;
+}
+caption, .blind, .hidden, .ir {
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    text-indent: -9999px;
+}
+.db_cont_detail .writeForm {
+    display: block;
+    height: 80px;
+    position: relative;
+}
+
+body, input, textarea, button, select, table {
+    font: 14px / 1.4 NotoSansKR, NotoSansJP, "돋움", Dotum, AppleGothic, Sans-serif;
+    color: #666;
+    -webkit-text-size-adjust: none;
+}
+textarea {
+    color: #535455;
+    padding: 5px;
+    border: 1px solid #bbb;
+    line-height: 1.167;
+    resize: none;
+}
+.replyWrap .write .form textarea {
+    float: left;
+    font-size: 16px;
+    padding: 0 5px;
+    width: 610px;
+    box-sizing: border-box;
+    height: 80px;
+    line-height: 20px;
+    border: 1px solid #e5e5e5;
+    word-break: keep-all;
+}
+.db_cont_detail .replyWrap .write .form textarea {
+    width: 100%;
+    float: none;
+    padding: 15px 20px 15px 20px;
+    max-height: 80px;
+}
+.db_cont_detail .fileRegbtn_wrap {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0 0;
+}
+
+.replyWrap .fileRegbtn {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.db_cont_detail .write .form .fileRegbtn {
+    margin: 0;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.replyWrap .fileRegbtn input[type="file"] {
+    position: absolute;
+    width: 54px;
+    height: 40px;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+    border: none;
+}
+.fileRegbtn input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.db_cont_detail .write .form .fileRegbtn input[type="file"] {
+    width: 54px;
+    height: 40px;
+}
+.replyWrap .fileRegbtn label {
+    display: inline-block;
+    width: 54px;
+    height: 40px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_reply_file.gif) 0 0 / 100% 100% no-repeat;
+    cursor: pointer;
+    text-indent: -9999px;
+    font-size: 0;
+    vertical-align: middle;
+}
+.db_cont_detail .write .form .fileRegbtn label {
+    width: 54px;
+    height: 40px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_reply_file01.gif) 0 0 / 100% 100% no-repeat;
+}
+.replyWrap .btn_apply {
+    position: relative;
+    display: inline-block;
+    background: #13294b;
+    color: #fff;
+    font-size: 15px;
+    width: 73px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+*, ::before, ::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+::before, ::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+.replyWrap .write:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.db_cont_detail .fileRegbtn_wrap::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.replyWrap .reply_tab {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0 0;
+}
+.replyWrap .reply_tab button {
+    padding: 0 10px;
+    margin-left: 5px;
+    font-weight: 300;
+    font-size: 15px;
+    height: 26px;
+    border: 1px solid #666;
+    color: #666;
+    border-radius: 50px;
+}
+.replyWrap .reply_tab button.all {
+    background: #666;
+    color: #fff;
+    font-weight: 400;
+}
+.wrap_reply {
+    position: relative;
+    min-height: 280px;
+}
+.replyWrap .wrap_reply {
+    min-height: auto;
+}
+.wrap_reply .reply_none {
+    width: 640px;
+    padding-top: 128px;
+    font-weight: 400;
+    color: #767676;
+    font-size: 24px;
+    text-align: center;
+}
+.replyWrap .wrap_reply .reply_none {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    padding-top: 0;
+    height: 96px;
+    line-height: 96px;
+    border-bottom: 1px solid #ddd;
+}
+.wrap_reply .list_reply {
+    width: 60%;
+}
+.replyWrap .wrap_reply .list_reply {
+    width: 100%;
+}
+.btn_center {
+    text-align: center;
+}
+.wrap_reply .btn_more {
+    display: inline-block;
+    margin-top: 20px;
+    width: 150px;
+    padding: 10px 10px;
+    border: 1px solid #bababa;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+}
+.db_cont_detail .wrap_reply .btn_more {
+    border: 0;
+    margin-top: 5px;
+}
+.wrap_reply .btn_more:after {
+    content: "+";
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    font-weight: 700;
+    background: none;
+    margin: 0 0 0 5px;
+    color: #333;
+}
+.wrap_reply .list_reply > ul > li {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px;
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+.wrap_reply .list_reply .profile {
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+.wrap_reply .list_reply .profile .photo {
+    width: 50px;
+    height: 50px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/ico_profile.png) 0 0 no-repeat;
+    border-radius: 100%;
+    text-indent: -9999px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wrap_reply .list_reply .profile .ico {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 101;
+    width: 16px;
+    height: 16px;
+}
+.wrap_reply .list_reply .profile .ico img {
+    width: 100%;
+    height: 100%;
+}
+.wrap_reply .list_reply .txt_reply {
+    float: left;
+    width: 486px;
+    padding-left: 20px;
+}
+.replyWrap .wrap_reply .list_reply .txt_reply {
+    width: 830px;
+}
+.wrap_reply .list_reply .txt_reply p {
+    padding-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+    word-break: break-all;
+    padding-right: 23px;
+}
+.wrap_reply .list_reply .txt_reply .date {
+    color: #333;
+    font-size: 14px;
+}
+.wrap_reply .list_reply .txt_reply .name {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 20px;
+    font-weight: 300;
+    padding-right: 10px;
+    margin-right: 7px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/line_tit.png) 100% 6px no-repeat;
+    color: #333;
+}
+.wrap_reply .list_reply .txt_reply span {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 20px;
+    color: #707070;
+    font-weight: 300;
+}
+.replyWrap .replyBtn {
+    display: block;
+    clear: both;
+    padding: 17px 0 0 630px;
+}
+.replyWrap .replyBtn button {
+    width: 69px;
+    height: 28px;
+    line-height: 26px;
+    border: 1px solid #e5e5e5;
+    color: #0a97cd;
+    font-size: 15px;
+    text-align: center;
+    background: #fff;
+}
+.replyWrap .replyBtn button:before {
+    content: "";
+    display: inline-block;
+    vertical-align: -2px;
+}
+.replyWrap .replyBtn button.btn2:before {
+    width: 18px;
+    height: 16px;
+    vertical-align: -4px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_reply_02.png) no-repeat;
+}
+.replyWrap .replyBox {
+    display: none;
+    background: #f7f7f7;
+    width: 720px;
+    margin: 20px 0 -21px 0px;
+    border-top: 1px solid #ddd;
+    height: 150px;
+}
+.replyWrap .replyBox textarea {
+    width: 95%;
+    padding: 20px;
+    height: 75px;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    color: #666;
+    font-size: 16px;
+}
+.replyWrap .replyBox .btn {
+    text-align: right;
+    padding-top: 25px;
+    overflow: hidden;
+    margin-right: 40px;
+    margin-top: -20px;
+}
+.replyForm{
+    margin-top: 2%;
+}
+.db_cont_detail .wrap_reply .fileRegbtn {
+    margin-left: 0;
+}
+.db_cont_detail .wrap_reply .fileRegbtn label {
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_reply_file02.gif) 0 0 / 100% 100% no-repeat;
+}
+.wrap_reply .list_reply > ul > li:after {
+    content: ".";
+    display: block;
+    height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+
+
+@media (max-width: 600px) {  /* browser에서 412까지 안가므로 임시로 */
+    .jAFMyC {
+        padding: 0px 5px 20px;
+    }
+    .schedule_info {
+        padding: 5px 5px 5px;
+    }
+    .list_reply > ul {
+        padding-inline-start:5px;
+    }
+    .replyWrap .wrap_reply .list_reply .txt_reply {
+        width: 100%;
+    }
+    .replyWrap .replyBtn {
+        padding: 17px 0 0 80%;
+    }
+    .replyWrap .replyBox {
+        width: 100%;
+    }
+    .replyWrap .replyBox .btn {
+        margin-right: 15px;
+    }
+    .inputcomment{
+        margin: 0px;
+    }
+    .replyWrap .replyBox textarea {
+        width: 95%;
+    }
+    .replyBox > ul{
+        margin-left: -5%;
+    }
+    .gQlhwK {
+        right: 5%;
+    }
+    .dIeHJQ {
+        max-width: 412px;
+    }
+    .BUemN {
+        width: 50%;
+        margin-left: 22%;
+    }
+    .course_detail .cos_cont {
+        padding: 0 5px 0px;
+    }
+    .schedule{
+        margin-left:-5%;
+    }
+}

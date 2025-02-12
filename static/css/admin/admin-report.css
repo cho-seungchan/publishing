@@ -1,0 +1,888 @@
+.idXWQn {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+.hKZUBk {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 88px;
+    padding: 48px 0px 16px;
+    background-color: rgb(2, 74, 149);
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    z-index: 4000;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: top 100ms linear;
+}
+.bScXKt {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+.koasSX {
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out;
+    display: none;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 1px;
+}
+.hcLOFI {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 65px;
+    position: relative;
+    top: -5px;
+    left: 2%;
+}
+.hcLOFI h3 {
+    font-size: 40px;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+}
+.epfhZu {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0px;
+}
+.ennMMJ {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 14px;
+}
+.jkxdpP {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(170, 170, 170);
+    color: rgb(170, 170, 170);
+    cursor: pointer;
+    font-size: 14px;
+}
+.bSEWFr {
+    padding: 0px;
+    cursor: pointer;
+    vertical-align: super;
+}
+.hgZork {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(244, 244, 244);
+}
+.iFxPyq {
+    margin: 15px 0px 26px;
+}
+.kmqQeB,
+.kmqQeBdetail {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.35px;
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    resize: none;
+    background-color: rgb(237, 239, 242);
+    border-radius: 5px;
+    /* color: rgb(78, 89, 104); */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+.jvAusQ,
+.jvAusQdetail {
+    margin-top: 2px;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    line-height: 18px;
+    color: rgb(153, 153, 153);
+}
+.bmexYY {
+    display: flex;
+    flex-direction: column;
+}
+.gcqwwh {
+    width: 90%;
+    /* color: rgb(153, 153, 153); */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+.kutLeL {
+    border-bottom: 0px;
+}
+.ipbuZD {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    border: 1px solid rgb(208, 216, 226);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.ipbuZD > input {
+    display: none;
+}
+.ipbuZD > span {
+    font-size: 17px;
+    color: rgb(78, 89, 104);
+}
+.hGJMVS {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.jULzvQ {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0px 65px;
+}
+.jwcODp {
+    width: 290px;
+    height: 50px;
+    line-height: normal;
+    padding: 0px 13px;
+    background-color: rgb(51, 151, 255);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+.SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 {
+    white-space: nowrap; /* 텍스트를 한 줄로 유지 */
+    overflow-x: auto; /* 가로 스크롤 허용 */
+    /* overflow: hidden; 넘치는 텍스트를 숨김 */
+    /* text-overflow: ellipsis; 텍스트가 잘릴 경우 ...으로 표시 */
+    height: 40px; /* 원하는 높이 */
+    line-height: 40px; /* height와 동일하게 설정 */
+    padding: 0 10px; /* 좌우 패딩 추가 */
+    font-size: 14px; /* 폰트 크기 조정 */
+    border: 1px solid #ccc; /* 테두리 추가 (선택 사항) */
+    border-radius: 4px; /* 둥근 모서리 (선택 사항) */
+    /* margin-top: 10px; 위쪽 간격 */
+    margin-bottom: 10px; /* 아래쪽 간격 */
+}
+.DurationOfTourContainer,
+.NumberOfPerson,
+.EtcOfTour {
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+}
+.DurationOfTourContainer input {
+    padding: 8px; /* 입력 필드 내부 여백 */
+    font-size: 14px; /* 글씨 크기 */
+    border: 1px solid #ccc; /* 테두리 추가 */
+    border-radius: 4px; /* 모서리 둥글게 */
+}
+
+.DurationOfTourContainer span {
+    font-size: 14px; /* 글씨 크기 */
+    font-weight: bold; /* 글씨 두껍게 */
+    white-space: nowrap; /* 줄 바꿈 방지 */
+}
+.bmexYYinput {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.date,
+.number,
+.etc,
+.bmexYYinput {
+    flex: 1;
+}
+
+/* 태그 생성 부분  ProductDetailPage__SectionContainer-sc-126q1k2-4 bDBbNi */
+.bDBbNi {
+    padding: 10px 0px;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: none;
+}
+.bDBbNi > article {
+    margin: 0px 0px 10px;
+}
+.gScFGo {
+    margin: 0px 0px 10px;
+    padding: 0px;
+}
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+.bZNoYF {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0px;
+}
+
+.iXEvmI {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.jXxsiv {
+    padding: 6px 11px;
+    color: rgb(0, 69, 24);
+    border: 1px solid rgb(155, 212, 145);
+    border-radius: 20px;
+    background-color: rgb(251, 255, 245);
+}
+.iXEvmI > span {
+    margin: 0px 9px 12px 0px;
+}
+.jXxsiv img {
+    width: 20px;
+    cursor: pointer;
+    color: rgb(0, 69, 24);
+}
+
+.eMLPLA {
+    padding: 6px 11px;
+    color: rgb(78, 0, 0);
+    border: 1px solid rgb(212, 153, 145);
+    border-radius: 20px;
+    background-color: rgb(255, 249, 247);
+}
+.eMLPLA > span {
+    margin: 0px 9px 12px 0px;
+}
+.eMLPLA img {
+    width: 20px;
+    cursor: pointer;
+    color: rgb(0, 69, 24);
+}
+.bDBbNi > article:last-child {
+    margin: 0px;
+}
+.eISlhn {
+    padding: 6px 11px;
+    color: rgb(102, 102, 102);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+/* 태그 생성 부분  ProductDetailPage__SectionContainer-sc-126q1k2-4 bDBbNi */
+
+.FvtMb {
+    cursor: pointer;
+    justify-items: flex-end;
+}
+
+.hGJMVS > * {
+    width: calc(25% - 7.5px);
+    height: calc(25% - 7.5px);
+    margin-right: 10px;
+}
+.kZTsQf {
+    position: relative;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.gDuKGF {
+    min-height: 1px;
+}
+.hVNKgp {
+    width: 100%;
+    border-radius: 5px;
+}
+.benIbu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 26px;
+    height: 26px;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+.centered-alert {
+    /* alert div를 생성해서 사용해보기 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* #map {
+    width: 100%;
+    height: 25vh; 
+} */
+#mapContainer {
+    position: relative;
+    width: 100%;
+    height: 25vh; /* 뷰포트 높이의 50%로 설정 */
+}
+#map {
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100%;
+}
+#fullMap {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.hidden {
+    display: none;
+}
+.volunteerBtn{
+    width: 83px;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    top: 1.4777px;
+    position: relative;
+}
+.gcqwwh1 {
+    
+    /* color: rgb(153, 153, 153); */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+.addPathBtn {
+    width: 83px;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    top: 1.4777px;
+    position: relative;
+}
+.deletePathBtn {
+    width: 83px;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    top: 1.4777px;
+    position: relative;
+}
+
+
+
+.noBtnStyle {
+    width: 100%;
+    /* color: rgb(153, 153, 153); */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    cursor: default;
+    font-family: sans-serif;
+    line-height: 1.5;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+    width: 100%;
+    font-size: 14px;
+    color: black;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+*, ::before, ::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+* {
+    outline: none;
+    font-family: inherit;
+}
+
+.bScXKt {
+    display: flex
+;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+
+.cZvMcY {
+    margin: 30px 0px 20px;
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cxqTPR {
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding: 20px 0px;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.changeBlue {
+    color: rgb(51, 151, 255);
+    cursor: pointer;
+}
+
+.cxqTPR > span {
+    margin-right: 20px;
+}
+
+.changeBlack {
+    color: black;
+    cursor: pointer;
+}
+
+.cxqTPR > span:last-child {
+    margin-right: 0px;
+}
+
+.koasSX {
+    width: 72%;
+    height: auto;
+    transition: opacity 200ms ease-in-out;
+    display: none;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 1px;
+}
+
+.iZZkGw {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.ckmAlF {
+    display: flex
+;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-height: 60px;
+    line-height: 24px;
+    padding: 18px 0px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.jEbLXp {
+    margin-left: 0px;
+    margin-right: 21px;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 0px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: red;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+
+.ipMFPV {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+}
+
+.benKgP {
+    margin-left: 0px;
+    margin-right: 21px;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 0px 0px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgb(188 67 46);
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    
+
+    }
+
+.cOBcxv {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    margin-left: 10px;
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+    font-weight: normal;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+ }
+ 
+
+.hBVRcD {
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 30px 0px;
+    background-color: white;
+}
+
+.gIsDDT {
+    display: flex
+;
+    margin-right: 10px;
+ }
+
+ button, input, select, textarea {
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+    font-size: 1em;
+    margin: 0;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+
+button {
+    cursor: pointer;
+}
+
+.iItkLq {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: not-allowed;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+img {
+    border-style: none;
+}
+
+.jVxRns {
+    transform: rotate(180deg);
+}
+
+.RPlDq {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    color: rgb(51, 151, 255);
+    font-size: 18px;
+    font-weight: bold;
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+}
+
+.eNIHag {
+    display: flex
+;
+    margin-left: 10px;
+}
+
+.garfld {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+}
+
+.hiddenList {
+    display: none;
+}
+
+p, label {
+    margin: 0px;
+}
+
+.createComment * {
+    width: 100%;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.createComment {
+    width: 100%;
+    min-height: 84px;
+    padding: 20px;
+    background-color: rgb(239, 247, 255);
+    color: rgb(74, 74, 74);
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.noticeBtn {
+    width: 83px;
+    white-space: nowrap;
+    overflow-x: auto;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+    left: 93.5%;
+}
+
+/* report */
+
+/* 전체 댓글 섹션 스타일 */
+.comment-section {
+    width: 100%;
+    /* max-width: 500px; */
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* 댓글 입력창 스타일 */
+.comment-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* 사용자가 높이를 조정할 수 있도록 */
+    font-size: 14px;
+}
+
+/* 댓글 리스트 스타일 */
+.comment-list {
+    max-height: 300px; /* 💡 최대 높이 설정 (너무 많으면 스크롤) */
+    overflow-y: auto; /* 💡 세로 스크롤 가능하게 설정 */
+    padding-right: 5px; /* 스크롤바와 간격 */
+}
+
+/* 각 댓글 스타일 */
+.comment-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    font-size: 14px;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: pre-wrap; 
+    position: relative;
+    top: 5px;
+}
+
+/* 댓글 텍스트 스타일 */
+.comment-text {
+    flex-grow: 1;
+    margin-right: 10px;
+    word-break: break-word; 
+    max-width: 80%; 
+}
+
+/* 댓글 날짜 스타일 */
+.comment-date {
+    font-size: 12px;
+    color: gray;
+    margin-right: 10px;
+    width: 10%;
+}
+
+/* 수정 & 삭제 버튼 스타일 */
+.edit-comment,
+.delete-comment {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 10%;
+    white-space: nowrap; /* 💡 버튼이 줄바꿈되지 않도록 */
+}
+
+.edit-comment {
+    background-color: #ffc107;
+    color: white;
+}
+
+.edit-comment:hover {
+    background-color: #e0a800;
+}
+
+.delete-comment {
+    background-color: #dc3545;
+    color: white;
+    margin-left: 5px;
+}
+
+.delete-comment:hover {
+    background-color: #c82333;
+}
+
+
+
+/* 댓글 남기기 버튼 스타일 */
+.comment-submit {
+    width: 10%;
+    padding: 8px;
+    margin-top: -2px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+    position: relative;
+    left: 45%;
+}
+
+.comment-submit:hover {
+    background-color: #0056b3;
+}
+.comment-number{
+    width: 10%;
+}

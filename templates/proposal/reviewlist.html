@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../static/css/common/header.css" />
+        <link rel="stylesheet" href="../../static/css/proposal/reviewlist.css" />
+        <link rel="stylesheet" href="../../static/css/common/footer.css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
+            rel="stylesheet"
+        />
+
+        <title>추천 코스 후기 목록</title>
+    </head>
+    <body class="fontLoaded">
+        <div id="app">
+            <div class="App__AppWrapper-nc5ti6-0 idXWQn">
+                <!-- Header will be dynamically inserted here -->
+                <div id="header-placeholder"></div>
+                <script>
+                    // Load header.html and insert it in#header-placeholder
+                    fetch("../all/header.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById("header-placeholder").innerHTML = data;
+                        })
+                        .catch((error) => console.error("Error loading header:", error));
+                </script>
+
+                <div class="PageWrapper-sc-1w87j10-0 bScXKt">
+                    <div class="Fade__Wrapper-sc-1s0ipfq-0 koasSX" style="opacity: 1; display: block">
+                        <header class="ProductReviewPage__Header-mmv016-0 bdKwai">
+                            <div class="ProductReviewPage__Title-mmv016-1 cWpPOd">
+                                <div>후기 <span class="ProductReviewPage__Count-mmv016-2 lPYvt">5</span>개</div>
+                                <div class="FilterReview__Wrapper-t2nsz-0 dYjXLj">
+                                    <button type="button">
+                                        평점 높은순<img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath d='M18 0H0v18h18z'/%3E %3Cpath stroke='%23000' stroke-width='1.5' d='M7 5l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="FilterReview__Caret-t2nsz-1 esTgfk"
+                                            style="transform: rotate(90deg)"
+                                        />
+                                    </button>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="ProductReviewPage__RatingSection-mmv016-4 jWZssw">
+                                <div class="ProductReviewPage__RatingWrapper-mmv016-5 idotft">
+                                    <div class="Readonly__Wrapper-sc-14tcogl-0 jTHKhF">
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                            alt="평점 icon"
+                                        /><img
+                                            src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                            alt="평점 icon"
+                                        /><img
+                                            src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                            alt="평점 icon"
+                                        /><img
+                                            src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                            alt="평점 icon"
+                                        /><img
+                                            src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%23DDDDDD'/%3E %3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='14'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/mask%3E %3Cg mask='url(%23mask0)'%3E %3Cpath d='M0 0H11.2001V14H0V0Z' fill='%237A29FA'/%3E %3C/g%3E %3C/svg%3E"
+                                            alt="평점 icon"
+                                        />
+                                    </div>
+                                    <span class="ProductReviewPage__RatingNumber-mmv016-6 hBZPtu">4.8</span>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="ProductReviewPage__ReviewWrapper-mmv016-7 ylWSP">
+                            <div class="CardReview__Wrapper-f2ssd2-0 gPxoog">
+                                <div class="CardReview__Header-f2ssd2-1 cCFsGh">
+                                    <div class="CardReview__ProfileImageWrapper-f2ssd2-17 gARvBK">
+                                        <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                            <img
+                                                class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                width="48"
+                                                src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_48/ios_image_1307410_20221105221106012_56de93a55028cee4b534c47531b65946996e1c1c47cea3c99ab66d594cf730e3"
+                                            />
+                                            <div
+                                                class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                style="opacity: 1; display: block"
+                                            >
+                                                <div class="Ratio" style="display: block">
+                                                    <div
+                                                        class="Ratio-ratio"
+                                                        style="
+                                                            height: 0px;
+                                                            position: relative;
+                                                            width: 100%;
+                                                            padding-top: 100%;
+                                                        "
+                                                    >
+                                                        <div
+                                                            class="Ratio-content"
+                                                            style="
+                                                                height: 100%;
+                                                                left: 0px;
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                width: 100%;
+                                                            "
+                                                        >
+                                                            <img
+                                                                alt="프로필"
+                                                                class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                width="48"
+                                                                src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_48/ios_image_1307410_20221105221106012_56de93a55028cee4b534c47531b65946996e1c1c47cea3c99ab66d594cf730e3"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="CardReview__MetaData-f2ssd2-2 dkvMyh">
+                                        <div class="CardReview__Title-f2ssd2-4 RFTCR">2쭈임</div>
+                                        <div class="CardReview__Row-f2ssd2-3 llgSwy">
+                                            <div class="Readonly__Wrapper-sc-14tcogl-0 jTHKhF">
+                                                <img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                />
+                                            </div>
+                                            <div class="CardReview__Created-f2ssd2-5 fbQFTO">
+                                                2025년 1월 31일 21:06 작성
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="CardReview__Body-f2ssd2-9 kIUsm">
+                                    눈 실컷보고 행복한 시간이었습니다. 초반에는 업힐만 있어 힘들지만 할만해요. 꼭 다들
+                                    가보셨으면 좋겠어요 ㅋㅋ
+                                </div>
+                                <div class="CardReview__PurchaseInfo-f2ssd2-10 bICa-dX">
+                                    <div class="CardReview__ProductTitle-f2ssd2-16 cWwdpt">
+                                        [1월 25일 OPEN!] 겨울왕국 태백산으로 떠나요 🗻
+                                    </div>
+                                    <div>
+                                        <span>2025년 1월 25일 오전 7:00 참여</span
+                                        ><span><span> | </span>참가비 (1인)</span>
+                                    </div>
+                                </div>
+                                <div class="CardReview__LikeButtonWrapper-f2ssd2-11 kSUxhl">
+                                    <button
+                                        height="auto"
+                                        color="#555555"
+                                        font-size="10px"
+                                        class="Button-bqxlp0-0 CardReview__LikeButton-f2ssd2-12 ga-DZxP"
+                                    >
+                                        <span>도움이 됐어요 0</span
+                                        ><img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='none' d='M0 0h24v24H0z'/%3E %3Cpath fill='%23FFCD00' fill-rule='nonzero' d='M12 3h1v3h-1V3zm5.207 1.086l.707.707-2.121 2.121-.707-.707 2.121-2.121zm-10.121.707l.707-.707 2.121 2.121-.707.707-2.121-2.121z'/%3E %3Cpath fill='%23BBB' stroke='%23BBB' d='M4 22h4v-9H4z'/%3E %3Cpath stroke='%23BBB' d='M17.936 12h-3.958V9.388A1.38 1.38 0 0 0 12.6 8c-.497 0-.965.267-1.212.697L9 13H8v9h9.153a2 2 0 0 0 1.983-1.741l.783-6A2 2 0 0 0 17.936 12z'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="CardReview__LikeIcon-f2ssd2-13 icalCl"
+                                        />
+                                    </button>
+                                </div>
+                                <div class="CardReview__ImageWrapper-f2ssd2-14 dbtIvu">
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_1307410_20250131210600802_bede21e4d05aedcec2488e0189039a8fb2b5c564c55c5aa4d450959298cd36a9"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_1307410_20250131210600802_bede21e4d05aedcec2488e0189039a8fb2b5c564c55c5aa4d450959298cd36a9"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_1307410_20250131210600807_a4ab82b422d390ce88e490a14f016c0db72d46deeccced8c61ef8b261ba5a8fb"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_1307410_20250131210600807_a4ab82b422d390ce88e490a14f016c0db72d46deeccced8c61ef8b261ba5a8fb"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_1307410_20250131210600808_76c26edee59c83297c2a5f01fc73bee17a58e05e919cad70eeefd26bc3f9c2ff"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_1307410_20250131210600808_76c26edee59c83297c2a5f01fc73bee17a58e05e919cad70eeefd26bc3f9c2ff"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="CardReview__Wrapper-f2ssd2-0 gPxoog">
+                                <div class="CardReview__Header-f2ssd2-1 cCFsGh">
+                                    <div class="CardReview__ProfileImageWrapper-f2ssd2-17 gARvBK">
+                                        <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                            <img
+                                                class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                width="48"
+                                                src="https://res.cloudinary.com/frientrip/image/fetch/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_48/https://k.kakaocdn.net/dn/4Lb4M/btsF01epdIx/f3Fe5hkNHLvuzyB3RFLAo0/img_110x110.jpg"
+                                            />
+                                            <div
+                                                class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                style="opacity: 1; display: block"
+                                            >
+                                                <div class="Ratio" style="display: block">
+                                                    <div
+                                                        class="Ratio-ratio"
+                                                        style="
+                                                            height: 0px;
+                                                            position: relative;
+                                                            width: 100%;
+                                                            padding-top: 100%;
+                                                        "
+                                                    >
+                                                        <div
+                                                            class="Ratio-content"
+                                                            style="
+                                                                height: 100%;
+                                                                left: 0px;
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                width: 100%;
+                                                            "
+                                                        >
+                                                            <img
+                                                                alt="프로필"
+                                                                class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                width="48"
+                                                                src="https://res.cloudinary.com/frientrip/image/fetch/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_48/https://k.kakaocdn.net/dn/4Lb4M/btsF01epdIx/f3Fe5hkNHLvuzyB3RFLAo0/img_110x110.jpg"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="CardReview__MetaData-f2ssd2-2 dkvMyh">
+                                        <div class="CardReview__Title-f2ssd2-4 RFTCR">oh</div>
+                                        <div class="CardReview__Row-f2ssd2-3 llgSwy">
+                                            <div class="Readonly__Wrapper-sc-14tcogl-0 jTHKhF">
+                                                <img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                />
+                                            </div>
+                                            <div class="CardReview__Created-f2ssd2-5 fbQFTO">
+                                                2025년 1월 31일 10:33 작성
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="CardReview__Body-f2ssd2-9 kIUsm">
+                                    산행날 눈 소식이 있었고 기온이 많이 낮지 않아서 산행하기 좋았어요~ 적당히 내리는 눈
+                                    덕분에 초입부터 눈 꽃이 정말 예뻐서 정상까지 가는 내내 지루하지 않게 눈호강 제대로
+                                    했네요~ 곰탕이었지만 태백산 상고대 제대로 즐기고 늦은 점심도 맛집에서 맛있게
+                                    먹었어요~ 산군 캡틴님~ 친절하게 잘 챙겨 주시고 인솔 잘 해 주셔서 안전하고 즐겁게
+                                    다녀왔습니다~ 감사합니다~😊👍👍👍
+                                </div>
+                                <div class="CardReview__PurchaseInfo-f2ssd2-10 bICa-dX">
+                                    <div class="CardReview__ProductTitle-f2ssd2-16 cWwdpt">
+                                        [2월 일정 OPEN!] 겨울왕국 태백산으로 떠나요 🗻
+                                    </div>
+                                    <div>
+                                        <span>2025년 1월 25일 오전 7:00 참여</span
+                                        ><span><span> | </span>참가비 (1인)</span>
+                                    </div>
+                                </div>
+                                <div class="CardReview__LikeButtonWrapper-f2ssd2-11 kSUxhl">
+                                    <button
+                                        height="auto"
+                                        color="#555555"
+                                        font-size="10px"
+                                        class="Button-bqxlp0-0 CardReview__LikeButton-f2ssd2-12 ga-DZxP"
+                                    >
+                                        <span>도움이 됐어요 0</span
+                                        ><img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='none' d='M0 0h24v24H0z'/%3E %3Cpath fill='%23FFCD00' fill-rule='nonzero' d='M12 3h1v3h-1V3zm5.207 1.086l.707.707-2.121 2.121-.707-.707 2.121-2.121zm-10.121.707l.707-.707 2.121 2.121-.707.707-2.121-2.121z'/%3E %3Cpath fill='%23BBB' stroke='%23BBB' d='M4 22h4v-9H4z'/%3E %3Cpath stroke='%23BBB' d='M17.936 12h-3.958V9.388A1.38 1.38 0 0 0 12.6 8c-.497 0-.965.267-1.212.697L9 13H8v9h9.153a2 2 0 0 0 1.983-1.741l.783-6A2 2 0 0 0 17.936 12z'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="CardReview__LikeIcon-f2ssd2-13 icalCl"
+                                        />
+                                    </button>
+                                </div>
+                                <div class="CardReview__ImageWrapper-f2ssd2-14 dbtIvu">
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738287199034_c847c46ed6958ddf3d41d10ddad2005fd83746e81b780815049fb1b238485eec"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738287199034_c847c46ed6958ddf3d41d10ddad2005fd83746e81b780815049fb1b238485eec"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738287199324_9dbff51e602dd57b61a4be5d7de9e67520b1bda42b955aaf1e0d2e44c895f90a"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738287199324_9dbff51e602dd57b61a4be5d7de9e67520b1bda42b955aaf1e0d2e44c895f90a"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738287199830_9512448d987334dd949bad380e18ae70945b77f5b9ce79457699ab17721125da"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738287199830_9512448d987334dd949bad380e18ae70945b77f5b9ce79457699ab17721125da"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738287200112_e7aaec2b2dd11f544a1e04649e5722b9d24863e45021f7532979e606271d906e"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738287200112_e7aaec2b2dd11f544a1e04649e5722b9d24863e45021f7532979e606271d906e"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738287200507_db35d81808e0d484ea7e461bf6ee3ed22863c3a539146fe6628d89f2b589d550"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738287200507_db35d81808e0d484ea7e461bf6ee3ed22863c3a539146fe6628d89f2b589d550"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="CardReview__Wrapper-f2ssd2-0 gPxoog">
+                                <div class="CardReview__Header-f2ssd2-1 cCFsGh">
+                                    <div class="CardReview__ProfileImageWrapper-f2ssd2-17 gARvBK">
+                                        <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                            <img
+                                                class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                width="48"
+                                                src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_48/photo_1699756341438_06ce2ffbb3e91394135b13e3857299028ae3ca6d3ad55590446e425bef2491b9"
+                                            />
+                                            <div
+                                                class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                style="opacity: 1; display: block"
+                                            >
+                                                <div class="Ratio" style="display: block">
+                                                    <div
+                                                        class="Ratio-ratio"
+                                                        style="
+                                                            height: 0px;
+                                                            position: relative;
+                                                            width: 100%;
+                                                            padding-top: 100%;
+                                                        "
+                                                    >
+                                                        <div
+                                                            class="Ratio-content"
+                                                            style="
+                                                                height: 100%;
+                                                                left: 0px;
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                width: 100%;
+                                                            "
+                                                        >
+                                                            <img
+                                                                alt="프로필"
+                                                                class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                width="48"
+                                                                src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_48/photo_1699756341438_06ce2ffbb3e91394135b13e3857299028ae3ca6d3ad55590446e425bef2491b9"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="CardReview__MetaData-f2ssd2-2 dkvMyh">
+                                        <div class="CardReview__Title-f2ssd2-4 RFTCR">최성흠</div>
+                                        <div class="CardReview__Row-f2ssd2-3 llgSwy">
+                                            <div class="Readonly__Wrapper-sc-14tcogl-0 jTHKhF">
+                                                <img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                />
+                                            </div>
+                                            <div class="CardReview__Created-f2ssd2-5 fbQFTO">
+                                                2025년 1월 31일 9:52 작성
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="CardReview__Body-f2ssd2-9 kIUsm">
+                                    마지막 설산을 경험하려고 신청했는데 마침 당일 날씨가 눈이 와줘서 더 아름다운 경치를
+                                    볼 수 있었어요 캡틴님이 잘 인솔해주셔서 금방 올라갔다가 하산했고 산 아래서 식사도
+                                    좋았습니다 👍
+                                </div>
+                                <div class="CardReview__PurchaseInfo-f2ssd2-10 bICa-dX">
+                                    <div class="CardReview__ProductTitle-f2ssd2-16 cWwdpt">
+                                        [1월 25일 OPEN!] 겨울왕국 태백산으로 떠나요 🗻
+                                    </div>
+                                    <div>
+                                        <span>2025년 1월 25일 오전 7:00 참여</span
+                                        ><span><span> | </span>참가비 (1인)</span>
+                                    </div>
+                                </div>
+                                <div class="CardReview__LikeButtonWrapper-f2ssd2-11 kSUxhl">
+                                    <button
+                                        height="auto"
+                                        color="#555555"
+                                        font-size="10px"
+                                        class="Button-bqxlp0-0 CardReview__LikeButton-f2ssd2-12 ga-DZxP"
+                                    >
+                                        <span>도움이 됐어요 0</span
+                                        ><img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='none' d='M0 0h24v24H0z'/%3E %3Cpath fill='%23FFCD00' fill-rule='nonzero' d='M12 3h1v3h-1V3zm5.207 1.086l.707.707-2.121 2.121-.707-.707 2.121-2.121zm-10.121.707l.707-.707 2.121 2.121-.707.707-2.121-2.121z'/%3E %3Cpath fill='%23BBB' stroke='%23BBB' d='M4 22h4v-9H4z'/%3E %3Cpath stroke='%23BBB' d='M17.936 12h-3.958V9.388A1.38 1.38 0 0 0 12.6 8c-.497 0-.965.267-1.212.697L9 13H8v9h9.153a2 2 0 0 0 1.983-1.741l.783-6A2 2 0 0 0 17.936 12z'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="CardReview__LikeIcon-f2ssd2-13 icalCl"
+                                        />
+                                    </button>
+                                </div>
+                                <div class="CardReview__ImageWrapper-f2ssd2-14 dbtIvu">
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738284723478_44e0e4a51c638827b6b43e64a54f066e466e3991c664c5aec8628b9ac46cf03e"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738284723478_44e0e4a51c638827b6b43e64a54f066e466e3991c664c5aec8628b9ac46cf03e"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738284723786_e1af6e222c88dde6ad566f9c3226f131c30bdf2eb99355693ba4646d87416a20"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738284723786_e1af6e222c88dde6ad566f9c3226f131c30bdf2eb99355693ba4646d87416a20"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738284724175_ad22aa2dafc41570ab8d06303117ba5df079e3f798b86b21a6d87e415cb1f3f5"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738284724175_ad22aa2dafc41570ab8d06303117ba5df079e3f798b86b21a6d87e415cb1f3f5"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738284724590_acaee213bbc52519e57e7d52bcd0c1c11d507ea036de28dc442f816cd3536846"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738284724590_acaee213bbc52519e57e7d52bcd0c1c11d507ea036de28dc442f816cd3536846"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738284724937_8252ea1131d8b6c219c8fcd4db1dc2a3797f5516fd1bf121ee784ffe6b7b4696"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1738284724937_8252ea1131d8b6c219c8fcd4db1dc2a3797f5516fd1bf121ee784ffe6b7b4696"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="CardReview__Wrapper-f2ssd2-0 gPxoog">
+                                <div class="CardReview__Header-f2ssd2-1 cCFsGh">
+                                    <div class="CardReview__ProfileImageWrapper-f2ssd2-17 gARvBK">
+                                        <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                            <img
+                                                class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                width="48"
+                                                src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_48/ios_image_441092_20240130010514431_0c3ce0b560970dae31d6b3ac690da188b59e231a7a2c83e843294bfbc4c6cade"
+                                            />
+                                            <div
+                                                class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                style="opacity: 1; display: block"
+                                            >
+                                                <div class="Ratio" style="display: block">
+                                                    <div
+                                                        class="Ratio-ratio"
+                                                        style="
+                                                            height: 0px;
+                                                            position: relative;
+                                                            width: 100%;
+                                                            padding-top: 100%;
+                                                        "
+                                                    >
+                                                        <div
+                                                            class="Ratio-content"
+                                                            style="
+                                                                height: 100%;
+                                                                left: 0px;
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                width: 100%;
+                                                            "
+                                                        >
+                                                            <img
+                                                                alt="프로필"
+                                                                class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                width="48"
+                                                                src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_48/ios_image_441092_20240130010514431_0c3ce0b560970dae31d6b3ac690da188b59e231a7a2c83e843294bfbc4c6cade"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="CardReview__MetaData-f2ssd2-2 dkvMyh">
+                                        <div class="CardReview__Title-f2ssd2-4 RFTCR">Mangos</div>
+                                        <div class="CardReview__Row-f2ssd2-3 llgSwy">
+                                            <div class="Readonly__Wrapper-sc-14tcogl-0 jTHKhF">
+                                                <img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                />
+                                            </div>
+                                            <div class="CardReview__Created-f2ssd2-5 fbQFTO">
+                                                2024년 1월 30일 0:53 작성
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="CardReview__Body-f2ssd2-9 kIUsm">
+                                    지난번 선자령 눈꽃산행이 너무 좋았어서 두번째로 신청한 피커스입니다. 결과적으로
+                                    즐거운 산행이었지만 인솔자분들에 대해서 처음부터 끝까지 아쉬운 점을 많이 느꼈습니다
+                                    휴게소에서 인원체크도 없이 출발하려다 한 명 안탄거 알고 급하게 멈춘 점. 등산 전
+                                    화장실 다녀왔는데 그 때도 인원체크 없이 먼저 출발한 점. 결국 처음부터 한 명이
+                                    낙오됐는데 캐치를 못했던 점. 우리가 왜 굳이 인솔자가 있는 프로그램을 선택하는지에
+                                    대해 생각해주셨으면 좋겠습니다. 솔직히 이 부분때문에 산행 시작부터 기분이
+                                    언짢았네요.. 결국 다 정상에서 만나게 돼 있다는 말씀도 솔직히 인솔자로써 그런말을
+                                    하시는게.. 무책임해보였습니다. 정상에서도 낙오된 분 기다려야하는데 그냥 내려갈
+                                    뻔하기도 했구요. 하산 후 식사일정 진행도 좀..정신없었습니다. 비슷한 레벨의 사람들이
+                                    모인 등산동호회였다면 좀 더 이해가 될텐데, 등산 전문가가 인솔해주기 때문에 안전하고
+                                    편리하다는 점을 어필한 일회성 이벤트 성격이 강한 상품인 점을 감안했을 때 캡틴의
+                                    능력치가 아직 부족했다고 생각합니다. 눈이 쌓여있는 겨울의 산행 인솔은 더 주의를
+                                    기울여야한다고 생각해요. 그런 면에서 5~6명은 몰라도 20명 이상의 사람들을 인솔하기엔
+                                    경험도 준비도 많이 부족해보였습니다. 앞으로의 피커스를 위해 건전한 피드백으로
+                                    받아들여주셨으면 좋겠습니다. 아쉬운점을 길게 적었지만..그래도 후회하지는 않고,
+                                    즐거운 산행이었습니다. 감사합니다.
+                                </div>
+                                <div class="CardReview__PurchaseInfo-f2ssd2-10 bICa-dX">
+                                    <div class="CardReview__ProductTitle-f2ssd2-16 cWwdpt">
+                                        [27일 출발✨] 설산 1순위, 한국의 겨울왕국 태백산으로 떠나요 🚌
+                                    </div>
+                                    <div>
+                                        <span>2024년 1월 27일 오전 7:00 참여</span
+                                        ><span><span> | </span>참가비 (1인)</span>
+                                    </div>
+                                </div>
+                                <div class="CardReview__LikeButtonWrapper-f2ssd2-11 kSUxhl">
+                                    <button
+                                        height="auto"
+                                        color="#555555"
+                                        font-size="10px"
+                                        class="Button-bqxlp0-0 CardReview__LikeButton-f2ssd2-12 ga-DZxP"
+                                    >
+                                        <span>도움이 됐어요 19</span
+                                        ><img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='none' d='M0 0h24v24H0z'/%3E %3Cpath fill='%23FFCD00' fill-rule='nonzero' d='M12 3h1v3h-1V3zm5.207 1.086l.707.707-2.121 2.121-.707-.707 2.121-2.121zm-10.121.707l.707-.707 2.121 2.121-.707.707-2.121-2.121z'/%3E %3Cpath fill='%23BBB' stroke='%23BBB' d='M4 22h4v-9H4z'/%3E %3Cpath stroke='%23BBB' d='M17.936 12h-3.958V9.388A1.38 1.38 0 0 0 12.6 8c-.497 0-.965.267-1.212.697L9 13H8v9h9.153a2 2 0 0 0 1.983-1.741l.783-6A2 2 0 0 0 17.936 12z'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="CardReview__LikeIcon-f2ssd2-13 icalCl"
+                                        />
+                                    </button>
+                                </div>
+                                <div class="CardReview__ImageWrapper-f2ssd2-14 dbtIvu">
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_441092_20240130005258180_96fdac4c97a15dfde38c8101116e7807b14d75acc6482d6720c7974bba8d8393"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_441092_20240130005258180_96fdac4c97a15dfde38c8101116e7807b14d75acc6482d6720c7974bba8d8393"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="CardReview__ReplyWrapper-f2ssd2-15 hYzUdW">
+                                    <div class="ReplyEntity__Wrapper-sc-2hf8ms-0 kkZZyy">
+                                        <div class="ReplyEntity__AuthorWrapper-sc-2hf8ms-1 hhuYUe">
+                                            <div class="ReplyEntity__ImageWrapper-sc-2hf8ms-2 ikExHj">
+                                                <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                                    <img
+                                                        class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                        width="36"
+                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_36/Profile_Symbol_1080-1080_f5c8e69e6636fc7c574951db1e8ca6ec28d9a00da28c00ef62fe1d96cdf560f1"
+                                                    />
+                                                    <div
+                                                        class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                        style="opacity: 1; display: block"
+                                                    >
+                                                        <div class="Ratio" style="display: block">
+                                                            <div
+                                                                class="Ratio-ratio"
+                                                                style="
+                                                                    height: 0px;
+                                                                    position: relative;
+                                                                    width: 100%;
+                                                                    padding-top: 100%;
+                                                                "
+                                                            >
+                                                                <div
+                                                                    class="Ratio-content"
+                                                                    style="
+                                                                        height: 100%;
+                                                                        left: 0px;
+                                                                        position: absolute;
+                                                                        top: 0px;
+                                                                        width: 100%;
+                                                                    "
+                                                                >
+                                                                    <img
+                                                                        alt="작성자 프로필"
+                                                                        class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                        width="36"
+                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_36/Profile_Symbol_1080-1080_f5c8e69e6636fc7c574951db1e8ca6ec28d9a00da28c00ef62fe1d96cdf560f1"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="ReplyEntity__Name-sc-2hf8ms-3 fatXLR">FRIP</div>
+                                                <div class="ReplyEntity__Created-sc-2hf8ms-4 gyINxJ">
+                                                    2024-01-30 16:04 작성
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ReplyEntity__Body-sc-2hf8ms-5 bRwRGE">
+                                            안녕하세요 피커스입니다. 먼저 소중한 피드백 너무 감사드립니다. 앞으로의
+                                            산행에 있어서 더 원활하게 진행될 수 있도록 캡틴분께 전달드렸습니다.
+                                            불편하셨겠지만 이렇게 의견을 남겨주셔서 다시 한번 감사드리고, 또 다른 피커스
+                                            산행 때 뵙고 싶습니다. 감사합니다 :)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="CardReview__Wrapper-f2ssd2-0 gPxoog">
+                                <div class="CardReview__Header-f2ssd2-1 cCFsGh">
+                                    <div class="CardReview__ProfileImageWrapper-f2ssd2-17 gARvBK">
+                                        <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                            <img
+                                                class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                width="48"
+                                                src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_48/photo_1690722321708_606f1396057e2d30cd9b30d79296e9c9565bea28c065b29c19a4e6eaf667244d"
+                                            />
+                                            <div
+                                                class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                style="opacity: 1; display: block"
+                                            >
+                                                <div class="Ratio" style="display: block">
+                                                    <div
+                                                        class="Ratio-ratio"
+                                                        style="
+                                                            height: 0px;
+                                                            position: relative;
+                                                            width: 100%;
+                                                            padding-top: 100%;
+                                                        "
+                                                    >
+                                                        <div
+                                                            class="Ratio-content"
+                                                            style="
+                                                                height: 100%;
+                                                                left: 0px;
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                width: 100%;
+                                                            "
+                                                        >
+                                                            <img
+                                                                alt="프로필"
+                                                                class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                width="48"
+                                                                src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_48/photo_1690722321708_606f1396057e2d30cd9b30d79296e9c9565bea28c065b29c19a4e6eaf667244d"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="CardReview__MetaData-f2ssd2-2 dkvMyh">
+                                        <div class="CardReview__Title-f2ssd2-4 RFTCR">버터11</div>
+                                        <div class="CardReview__Row-f2ssd2-3 llgSwy">
+                                            <div class="Readonly__Wrapper-sc-14tcogl-0 jTHKhF">
+                                                <img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                /><img
+                                                    src="data:image/svg+xml,%3Csvg width='16' height='14' viewBox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%23DDDDDD'/%3E %3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='14'%3E %3Cpath d='M12.293 8.6189L15.7442 6.00968C16.2325 5.63914 15.9799 4.9135 15.3402 4.88263L10.8957 4.6356C10.6263 4.62016 10.3906 4.46577 10.2896 4.23418L8.65658 0.405277C8.42088 -0.135092 7.59595 -0.135092 7.36026 0.405277L5.72724 4.21874C5.62623 4.45033 5.39053 4.60472 5.12117 4.62016L0.659819 4.86719C0.0200779 4.89806 -0.232451 5.6237 0.255772 5.99424L3.707 8.58802C3.90903 8.74241 4.01004 9.00487 3.9427 9.23646L2.81473 13.2043C2.66322 13.7601 3.31979 14.2079 3.85852 13.8991L7.61279 11.6913C7.84848 11.5523 8.13468 11.5523 8.35354 11.6913L12.1246 13.8991C12.6634 14.2079 13.3199 13.7601 13.1684 13.2043L12.0405 9.2519C11.99 9.02031 12.0741 8.77329 12.293 8.6189Z' fill='%237A29FA'/%3E %3C/mask%3E %3Cg mask='url(%23mask0)'%3E %3C/g%3E %3C/svg%3E"
+                                                    alt="평점 icon"
+                                                />
+                                            </div>
+                                            <div class="CardReview__Created-f2ssd2-5 fbQFTO">
+                                                2024년 2월 25일 10:32 작성
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="CardReview__Body-f2ssd2-9 kIUsm">
+                                    출발한 날에 눈꽃축제랑 겹쳐서 사람들이 정말 많아 정신없었어요😂 중간에 좀
+                                    흩어지긴했지만 정상부근에서 다시 모여서 같이 하산해서 좋았습니다😊
+                                </div>
+                                <div class="CardReview__PurchaseInfo-f2ssd2-10 bICa-dX">
+                                    <div class="CardReview__ProductTitle-f2ssd2-16 cWwdpt">
+                                        [27일 출발✨] 설산 1순위, 한국의 겨울왕국 태백산으로 떠나요 🚌
+                                    </div>
+                                    <div>
+                                        <span>2024년 1월 27일 오전 7:00 참여</span
+                                        ><span><span> | </span>참가비 (1인)</span>
+                                    </div>
+                                </div>
+                                <div class="CardReview__LikeButtonWrapper-f2ssd2-11 kSUxhl">
+                                    <button
+                                        height="auto"
+                                        color="#555555"
+                                        font-size="10px"
+                                        class="Button-bqxlp0-0 CardReview__LikeButton-f2ssd2-12 ga-DZxP"
+                                    >
+                                        <span>도움이 됐어요 3</span
+                                        ><img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='none' d='M0 0h24v24H0z'/%3E %3Cpath fill='%23FFCD00' fill-rule='nonzero' d='M12 3h1v3h-1V3zm5.207 1.086l.707.707-2.121 2.121-.707-.707 2.121-2.121zm-10.121.707l.707-.707 2.121 2.121-.707.707-2.121-2.121z'/%3E %3Cpath fill='%23BBB' stroke='%23BBB' d='M4 22h4v-9H4z'/%3E %3Cpath stroke='%23BBB' d='M17.936 12h-3.958V9.388A1.38 1.38 0 0 0 12.6 8c-.497 0-.965.267-1.212.697L9 13H8v9h9.153a2 2 0 0 0 1.983-1.741l.783-6A2 2 0 0 0 17.936 12z'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="CardReview__LikeIcon-f2ssd2-13 icalCl"
+                                        />
+                                    </button>
+                                </div>
+                                <div class="CardReview__ImageWrapper-f2ssd2-14 dbtIvu">
+                                    <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                        <img
+                                            class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                            width="100"
+                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1708824806192_b1188633c55dbe10ea7453520216729d09d4ee7db66ee756160eaad089a194bc"
+                                        />
+                                        <div
+                                            class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                            style="opacity: 1; display: block"
+                                        >
+                                            <div class="Ratio" style="display: block">
+                                                <div
+                                                    class="Ratio-ratio"
+                                                    style="
+                                                        height: 0px;
+                                                        position: relative;
+                                                        width: 100%;
+                                                        padding-top: 100%;
+                                                    "
+                                                >
+                                                    <div
+                                                        class="Ratio-content"
+                                                        style="
+                                                            height: 100%;
+                                                            left: 0px;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <img
+                                                            alt="후기 이미지"
+                                                            class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                            width="100"
+                                                            src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1708824806192_b1188633c55dbe10ea7453520216729d09d4ee7db66ee756160eaad089a194bc"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="CardReview__ReplyWrapper-f2ssd2-15 hYzUdW">
+                                    <div class="ReplyEntity__Wrapper-sc-2hf8ms-0 kkZZyy">
+                                        <div class="ReplyEntity__AuthorWrapper-sc-2hf8ms-1 hhuYUe">
+                                            <div class="ReplyEntity__ImageWrapper-sc-2hf8ms-2 ikExHj">
+                                                <div class="Image__Wrapper-v97gyx-0 gDuKGF">
+                                                    <img
+                                                        class="Image__StyledImageLoader-v97gyx-2 bUFcfh"
+                                                        width="36"
+                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_36/Profile_Symbol_1080-1080_f5c8e69e6636fc7c574951db1e8ca6ec28d9a00da28c00ef62fe1d96cdf560f1"
+                                                    />
+                                                    <div
+                                                        class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                                        style="opacity: 1; display: block"
+                                                    >
+                                                        <div class="Ratio" style="display: block">
+                                                            <div
+                                                                class="Ratio-ratio"
+                                                                style="
+                                                                    height: 0px;
+                                                                    position: relative;
+                                                                    width: 100%;
+                                                                    padding-top: 100%;
+                                                                "
+                                                            >
+                                                                <div
+                                                                    class="Ratio-content"
+                                                                    style="
+                                                                        height: 100%;
+                                                                        left: 0px;
+                                                                        position: absolute;
+                                                                        top: 0px;
+                                                                        width: 100%;
+                                                                    "
+                                                                >
+                                                                    <img
+                                                                        alt="작성자 프로필"
+                                                                        class="Image__StyledImage-v97gyx-1 VUNpu"
+                                                                        width="36"
+                                                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_36/Profile_Symbol_1080-1080_f5c8e69e6636fc7c574951db1e8ca6ec28d9a00da28c00ef62fe1d96cdf560f1"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="ReplyEntity__Name-sc-2hf8ms-3 fatXLR">FRIP</div>
+                                                <div class="ReplyEntity__Created-sc-2hf8ms-4 gyINxJ">
+                                                    2024-02-26 13:05 작성
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ReplyEntity__Body-sc-2hf8ms-5 bRwRGE">
+                                            안녕하세요! 즐거운 시간 보내셨다니 다행입니다 :) 다음 피커스 산행 때 또
+                                            뵈어요. 감사합니다.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="Wrapper__PaginationWrapper-fk4uv4-0 hBVRcD">
+                            <div class="PaginationButtonGroup__PrevButtonWrapper-x0iffd-0 gIsDDT">
+                                <button
+                                    width="40px"
+                                    height="40px"
+                                    font-size="18px"
+                                    disabled=""
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 iItkLq"
+                                >
+                                    <img
+                                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='%23FFF' fill-opacity='0' fill-rule='nonzero' d='M0 0h40v40H0z'/%3E %3Cpath stroke='%23DDD' stroke-width='1.5' d='M16 16l4 4-4 4M21 16l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                        class="PaginationButtonGroup__Icon-x0iffd-2 jVxRns"
+                                    /></button
+                                ><button
+                                    width="40px"
+                                    height="40px"
+                                    font-size="18px"
+                                    disabled=""
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 iItkLq"
+                                >
+                                    <img
+                                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='none' d='M0 0h40v40H0z'/%3E %3Cpath stroke='%23DDD' stroke-width='1.5' d='M18 16l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                        class="PaginationButtonGroup__Icon-x0iffd-2 jVxRns"
+                                    />
+                                </button>
+                            </div>
+                            <button
+                                width="40px"
+                                height="40px"
+                                color="#3397ff"
+                                font-size="18px"
+                                font-weight="bold"
+                                class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 RPlDq"
+                            >
+                                1
+                            </button>
+                            <div class="PaginationButtonGroup__NextButtonWrapper-x0iffd-1 eNIHag">
+                                <button
+                                    width="40px"
+                                    height="40px"
+                                    font-size="18px"
+                                    disabled=""
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 iItkLq"
+                                >
+                                    <img
+                                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='none' d='M0 0h40v40H0z'/%3E %3Cpath stroke='%23DDD' stroke-width='1.5' d='M18 16l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                        class="PaginationButtonGroup__Icon-x0iffd-2 dQqQMu"
+                                    /></button
+                                ><button
+                                    width="40px"
+                                    height="40px"
+                                    font-size="18px"
+                                    disabled=""
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 iItkLq"
+                                >
+                                    <img
+                                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='%23FFF' fill-opacity='0' fill-rule='nonzero' d='M0 0h40v40H0z'/%3E %3Cpath stroke='%23DDD' stroke-width='1.5' d='M16 16l4 4-4 4M21 16l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                        class="PaginationButtonGroup__Icon-x0iffd-2 dQqQMu"
+                                    />
+                                </button>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+
+                <!-- Footer will be dynamically inserted here -->
+                <div id="footer-placeholder"></div>
+                <script>
+                    // Load footer.html and insert it into #footer-placeholder
+                    fetch("../all/footer.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById("footer-placeholder").innerHTML = data;
+                        })
+                        .catch((error) => console.error("Error loading footer:", error));
+                </script>
+            </div>
+        </div>
+        <div id="modal-root" style="display: none">
+            <div>
+                <style>
+                    .fade-enter {
+                        opacity: 0.01;
+                    }
+                    .fade-enter.fade-enter-active {
+                        opacity: 1;
+                        transition: opacity 200ms;
+                    }
+                    .fade-leave {
+                        opacity: 1;
+                    }
+                    .fade-leave.fade-leave-active {
+                        opacity: 0.01;
+                        transition: opacity 200ms;
+                    }
+                </style>
+                <div id="lightboxBackdrop" class="container_9tizg4">
+                    <div>
+                        <div class="content_13hv8io" style="margin-bottom: 0px; max-width: 1024px">
+                            <div class="header_1tk9zku">
+                                <span></span
+                                ><button title="Close (Esc)" class="close_1x3s325">
+                                    <span
+                                        ><svg
+                                            fill="white"
+                                            version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            x="0px"
+                                            y="0px"
+                                            width="100%"
+                                            height="100%"
+                                            viewBox="0 0 512 512"
+                                            style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve"
+                                        >
+                                            <path
+                                                d="M443.6,387.1L312.4,255.4l131.5-130c5.4-5.4,5.4-14.2,0-19.6l-37.4-37.6c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4 L256,197.8L124.9,68.3c-2.6-2.6-6.1-4-9.8-4c-3.7,0-7.2,1.5-9.8,4L68,105.9c-5.4,5.4-5.4,14.2,0,19.6l131.5,130L68.4,387.1 c-2.6,2.6-4.1,6.1-4.1,9.8c0,3.7,1.4,7.2,4.1,9.8l37.4,37.6c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1L256,313.1l130.7,131.1 c2.7,2.7,6.2,4.1,9.8,4.1c3.5,0,7.1-1.3,9.8-4.1l37.4-37.6c2.6-2.6,4.1-6.1,4.1-9.8C447.7,393.2,446.2,389.7,443.6,387.1z"
+                                            ></path></svg
+                                    ></span>
+                                </button>
+                            </div>
+                            <figure class="figure_10ki57k">
+                                <img
+                                    class="image_1swebtw-o_O-imageLoaded_zgbg08"
+                                    src=""
+                                    style="cursor: auto; max-height: calc(-90px + 100vh)"
+                                />
+                            </figure>
+                            <div class="spinner_te2qz2">
+                                <div
+                                    title=""
+                                    role="button"
+                                    aria-label="animation"
+                                    tabindex="0"
+                                    style="width: 50px; height: 100%; overflow: hidden; margin: 0px auto; outline: none"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 300 300"
+                                        width="300"
+                                        height="300"
+                                        preserveAspectRatio="xMidYMid meet"
+                                        style="
+                                            width: 100%;
+                                            height: 100%;
+                                            transform: translate3d(0px, 0px, 0px);
+                                            content-visibility: visible;
+                                        "
+                                    >
+                                        <defs>
+                                            <clipPath id="__lottie_element_106">
+                                                <rect width="300" height="300" x="0" y="0"></rect>
+                                            </clipPath>
+                                        </defs>
+                                        <g clip-path="url(#__lottie_element_106)">
+                                            <g
+                                                transform="matrix(1,0,0,1,153.36199951171875,143.44900512695312)"
+                                                opacity="1"
+                                                style="display: block"
+                                            >
+                                                <g
+                                                    opacity="1"
+                                                    transform="matrix(0.5459200143814087,0,0,0.5459200143814087,-3.361999988555908,6.551000118255615)"
+                                                >
+                                                    <path
+                                                        stroke-linecap="butt"
+                                                        stroke-linejoin="miter"
+                                                        fill-opacity="0"
+                                                        stroke-miterlimit="4"
+                                                        stroke="rgb(247,247,247)"
+                                                        stroke-opacity="1"
+                                                        stroke-width="40"
+                                                        d=" M0,-156.81199645996094 C86.54454040527344,-156.81199645996094 156.81199645996094,-86.54454040527344 156.81199645996094,0 C156.81199645996094,86.54454040527344 86.54454040527344,156.81199645996094 0,156.81199645996094 C-86.54454040527344,156.81199645996094 -156.81199645996094,86.54454040527344 -156.81199645996094,0 C-156.81199645996094,-86.54454040527344 -86.54454040527344,-156.81199645996094 0,-156.81199645996094z"
+                                                    ></path>
+                                                </g>
+                                            </g>
+                                            <g
+                                                transform="matrix(1,0,0,1,153.36199951171875,143.44900512695312)"
+                                                opacity="1"
+                                                style="display: block"
+                                            >
+                                                <g
+                                                    opacity="1"
+                                                    transform="matrix(0.5459200143814087,0,0,0.5459200143814087,-3.361999988555908,6.551000118255615)"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="miter"
+                                                        fill-opacity="0"
+                                                        stroke-miterlimit="4"
+                                                        stroke="rgb(7,107,255)"
+                                                        stroke-opacity="1"
+                                                        stroke-width="40"
+                                                        d=" M-90.7979965209961,-127.83000183105469 C-65.16799926757812,-146.07699584960938 -33.82699966430664,-156.81199645996094 0,-156.81199645996094 C0,-156.81199645996094 0,-156.81199645996094 0,-156.81199645996094 C3.874000072479248,-156.81199645996094 7.715000152587891,-156.67100524902344 11.517999649047852,-156.39500427246094"
+                                                    ></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="footer_60scne">
+                                <span></span>
+                                <div class="footerCount_lkhc9u"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dnd-root"></div>
+    </body>
+
+    <script src="../../static/js/proposal/reviewlist.js"></script>
+</html>

@@ -76,7 +76,7 @@ html {
 }
 .fZHPAt > * {
     width: 100%;
-    max-width: 768px; 
+    max-width: 768px;
 }
 
 .slick-slider {
@@ -651,7 +651,7 @@ button {
     text-align: left;
     border-bottom: 1px solid rgb(238, 238, 238);
     padding: 20px 0px;
-    color: black;
+    color: rgb(51, 51, 51);
 }
 .irErpt {
     line-height: 14px;
@@ -704,18 +704,18 @@ a {
     margin-right: 30px;
     width: 160px;
 }
-.jZtIEr .button-container{
+.jZtIEr .button-container {
     display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: 20px;
-    gap:10px;
-    justify-content: center; 
+    gap: 10px;
+    justify-content: center;
     /* align-items: center; */
 }
-.jZtIEr .button-container button{
+.jZtIEr .button-container button {
     cursor: pointer;
-    padding: 10px,20px;
+    padding: 10px, 20px;
     background-color: #f8f9fa;
     color: #000000;
     border: none;
@@ -725,7 +725,6 @@ a {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 입체감 있는 그림자 */
     background-image: linear-gradient(to bottom, #ffffff, #e2e6ea); /* 그라디언트 배경 */
     transition: background-color 0.3s, box-shadow 0.3s; /* 호버 시 배경 색상 및 그림자 변경 애니메이션 */
-
 }
 .jZtIEr .button-container button:hover {
     background-color: #e2e6ea; /* 호버 시 배경 색상 변경 */
@@ -797,6 +796,7 @@ a {
     color: white;
     font-size: 16px;
     margin: 0px;
+    margin-left: 45px;
 }
 
 .eIJDxV {
@@ -844,7 +844,8 @@ a {
     position: relative;
 }
 
-.tit_cont h2, .titleType1 h2 {
+.tit_cont h2,
+.titleType1 h2 {
     overflow: hidden;
     font-weight: 800;
     color: #333;
@@ -887,13 +888,21 @@ a {
     border-top: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
 }
-dl, ul, ol, menu, li {
+dl,
+ul,
+ol,
+menu,
+li {
     list-style: none;
 }
 .schedule_info .schedule {
     overflow: hidden;
 }
-dl, ul, ol, menu, li {
+dl,
+ul,
+ol,
+menu,
+li {
     list-style: none;
 }
 .schedule_info .schedule li {
@@ -925,6 +934,7 @@ dl, ul, ol, menu, li {
     position: relative;
     width: 100%;
     margin-top: 24px;
+    margin-bottom: 24px;
 }
 .wrap_contView .area_txtView {
     position: relative;
@@ -984,7 +994,11 @@ button span {
 .course_detail .area_map {
     margin-top: 44px;
 }
-a:link, a:visited, a:hover, a:focus, a:active {
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
     text-decoration: none;
 }
 .area_map .spot {
@@ -1009,7 +1023,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     text-decoration: none;
 }
 .area_map .spot:after {
-    content: '';
+    content: "";
     position: absolute;
     left: 50%;
     bottom: -8px;
@@ -1028,7 +1042,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     text-align: center;
 }
 .area_map .spot a:before {
-    content: '';
+    content: "";
     position: absolute;
     right: 12px;
     top: 50%;
@@ -1050,7 +1064,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     margin-top: 40px;
 }
 .course_detail .relation_cos .cos_wrap:before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 10px;
     height: 50px;
@@ -1068,7 +1082,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     display: block;
 }
 .relation_cos .pc.js_slider:before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 30px;
     height: 205px;
@@ -1117,7 +1131,8 @@ a:link, a:visited, a:hover, a:focus, a:active {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
 }
-.swiper-container-android .swiper-slide, .swiper-wrapper {
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
@@ -1153,7 +1168,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     padding: 72px 0 24px;
 }
 .relation_cos .cos_wrap ul li.on1:before {
-    content: '';
+    content: "";
     display: block;
     width: 50% !important;
     height: 4px;
@@ -1163,7 +1178,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     top: 38px;
 }
 .relation_cos .cos_wrap ul li.on:before {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 4px;
@@ -1191,7 +1206,8 @@ a:link, a:visited, a:hover, a:focus, a:active {
 .relation_cos .cos_wrap .js_slider ul {
     padding: 0;
 }
-.relation_cos ul li.on em, .relation_cos ul li.on1 em {
+.relation_cos ul li.on em,
+.relation_cos ul li.on1 em {
     border: 2px solid #ed4956;
     color: #ed4956;
 }
@@ -1207,11 +1223,12 @@ a:link, a:visited, a:hover, a:focus, a:active {
     position: relative;
     border-radius: 10px;
 }
-.relation_cos .cos_wrap ul li:hover a, .relation_cos .cos_wrap ul li.on1 a {
+.relation_cos .cos_wrap ul li:hover a,
+.relation_cos .cos_wrap ul li.on1 a {
     box-shadow: 2px 2px 10px 0px rgba(150, 149, 149, 1);
 }
 .relation_cos .cos_wrap ul li.on1:after {
-    content: '';
+    content: "";
     display: inline-block;
     width: 28px;
     height: 16px;
@@ -1266,22 +1283,23 @@ a:link, a:visited, a:hover, a:focus, a:active {
     -webkit-box-orient: vertical;
 }
 .relation_cos .cos_wrap ul li a:after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
     top: 0;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
-.relation_cos .cos_wrap ul li.on1 a:after, .relation_cos .cos_wrap ul li:hover a:after {
-    background: rgba(237, 73, 86, .8);
+.relation_cos .cos_wrap ul li.on1 a:after,
+.relation_cos .cos_wrap ul li:hover a:after {
+    background: rgba(237, 73, 86, 0.8);
 }
 
-
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
     position: absolute;
     top: 50%;
     width: 27px;
@@ -1303,15 +1321,18 @@ a:link, a:visited, a:hover, a:focus, a:active {
     left: 10px;
     right: auto;
 } */
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
-    opacity: .35;
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 0.35;
     cursor: auto;
     pointer-events: none;
 }
-.relation_cos .cos_wrap .swiper-button-next, .relation_cos .cos_wrap .swiper-button-prev {
+.relation_cos .cos_wrap .swiper-button-next,
+.relation_cos .cos_wrap .swiper-button-prev {
     display: none;
 }
-.relation_cos .cos_wrap .pc.js_slider .swiper-button-next, .relation_cos .cos_wrap .pc.js_slider .swiper-button-prev {
+.relation_cos .cos_wrap .pc.js_slider .swiper-button-next,
+.relation_cos .cos_wrap .pc.js_slider .swiper-button-prev {
     display: block;
     width: 30px;
     height: 30px;
@@ -1360,7 +1381,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     z-index: 10;
 } */
 .course_detail .relation_cos .cos_wrap:after {
-    content: '';
+    content: "";
     display: block;
     height: 4px;
     width: auto;
@@ -1391,7 +1412,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     border: 1px solid #ed4956;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 2px 3px 9px 3px rgba(87, 88, 89, .25);
+    box-shadow: 2px 3px 9px 3px rgba(87, 88, 89, 0.25);
 }
 .course_detail .relation_cos .title {
     margin: 0 0 24px;
@@ -1439,7 +1460,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     color: #666;
 }
 .relation_cos .title span + span:before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 1px;
     height: 14px;
@@ -1498,20 +1519,26 @@ a:link, a:visited, a:hover, a:focus, a:active {
     letter-spacing: -1.1px;
 }
 .course_detail .recommend strong:before {
-    content: '“';
+    content: "“";
     display: inline-block;
     position: absolute;
     left: 0;
     top: 0;
 }
 .course_detail .recommend strong:after {
-    content: '”';
+    content: "”";
     display: inline-block;
     position: absolute;
     right: 0;
     top: 0;
 }
-address, caption, cite, code, dfn, em, var {
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
     font-style: normal;
     font-weight: normal;
 }
@@ -1550,16 +1577,154 @@ address, caption, cite, code, dfn, em, var {
 .course_detail .recommend .mo {
     display: none;
 }
-.swiper-container-free-mode>.swiper-wrapper {
+.swiper-container-free-mode > .swiper-wrapper {
     -webkit-transition-timing-function: ease-out;
     -o-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
     margin: 0 auto;
 }
-.slick-prev.slick-disabled, .slick-next.slick-disabled {
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
     content: none; /* 가상 요소의 콘텐츠를 비활성화 */
     display: none; /* 가상 요소를 숨기기 */
 }
 .hlWAni .slick-arrow.slick-disabled {
     display: none !important;
+}
+
+/* 찜관련 부분 */
+.eZGjgL {
+    width: 32px;
+    height: 32px;
+    line-height: normal;
+    padding: 0px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    margin-left: 0px;
+    margin-bottom: 30px;
+}
+.eZGjgL > img {
+    filter: drop-shadow(rgba(0, 0, 0, 0.4) 1px 1px 3px);
+}
+.bpzBFC {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    margin-top: 10px;
+    padding: 14px 16px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 22px;
+    white-space: pre-line;
+    user-select: none;
+    opacity: 0;
+    transition: opacity 100ms;
+    border-radius: 10px;
+    min-height: 45px;
+    background-color: rgb(17, 17, 17);
+    z-index: -9999; /* 최상위로 배치 */
+    position: absolute; /* 부모 요소 기준으로 배치 */
+    bottom: 30px; /* 버튼 위로 위치 조정 */
+    left: 46%;
+    transform: translateX(-50%);
+}
+
+/* 찜관련 부분 */
+
+/* 맴 관련 */
+#mapContainer {
+    position: relative;
+    width: 100%;
+    height: 40vh; /* 뷰포트 높이의 50%로 설정 */
+}
+#map {
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100%;
+}
+#fullMap {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#mapMessage {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 10px 0px 0px 0px;
+}
+/* 맵 관련 */
+
+#tabCont a {
+    cursor: default;
+}
+
+/* 맴의 거리 표시 관련 */
+
+.dot {
+    overflow: hidden;
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/mini_circle.png");
+}
+.dotOverlay {
+    position: relative;
+    bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ddd;
+    float: left;
+    font-size: 12px;
+    padding: 5px;
+    background: #fff;
+}
+.dotOverlay:nth-of-type(n) {
+    border: 0;
+    box-shadow: 0px 1px 2px #888;
+}
+.number {
+    font-weight: bold;
+    color: #ee6152;
+}
+.dotOverlay:after {
+    content: "";
+    position: absolute;
+    margin-left: -6px;
+    left: 50%;
+    bottom: -8px;
+    width: 11px;
+    height: 8px;
+    background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white_small.png");
+}
+.distanceInfo {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    list-style: none;
+    margin: 0;
+}
+.distanceInfo .label {
+    display: inline-block;
+    width: 50px;
+}
+.distanceInfo:after {
+    content: none;
 }

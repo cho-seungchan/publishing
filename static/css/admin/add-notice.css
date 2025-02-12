@@ -1,0 +1,455 @@
+.idXWQn {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+.hKZUBk {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 88px;
+    padding: 48px 0px 16px;
+    background-color: rgb(2, 74, 149);
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    z-index: 4000;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: top 100ms linear;
+}
+.bScXKt {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+.koasSX {
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out;
+    display: none;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 1px;
+}
+.hcLOFI {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 65px;
+    position: relative;
+    /* border-bottom: 1px solid rgb(238, 238, 238); */
+    top: -35px;
+}
+.hcLOFI h3 {
+    font-size: 40px;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+}
+.epfhZu {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0px;
+}
+.ennMMJ {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 14px;
+}
+.jkxdpP {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(170, 170, 170);
+    color: rgb(170, 170, 170);
+    cursor: pointer;
+    font-size: 14px;
+}
+.bSEWFr {
+    padding: 0px;
+    cursor: pointer;
+    vertical-align: super;
+}
+.hgZork {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(244, 244, 244);
+}
+.iFxPyq {
+    margin: 15px 0px 26px;
+}
+.kmqQeB,
+.kmqQeBdetail {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.35px;
+    width: 100%;
+    min-height: 330px;
+    padding: 15px;
+    resize: none;
+    background-color: rgb(237, 239, 242);
+    border-radius: 5px;
+    /* color: rgb(78, 89, 104); */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+.jvAusQ,
+.jvAusQdetail {
+    margin-top: 2px;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    line-height: 18px;
+    color: rgb(153, 153, 153);
+}
+.bmexYY {
+    display: flex;
+    flex-direction: column;
+}
+.gcqwwh {
+    width: 100%;
+    /* color: rgb(153, 153, 153); */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+.kutLeL {
+    border-bottom: 0px;
+}
+.ipbuZD {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    border: 1px solid rgb(208, 216, 226);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.ipbuZD > input {
+    display: none;
+}
+.ipbuZD > span {
+    font-size: 17px;
+    color: rgb(78, 89, 104);
+}
+.hGJMVS {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.jULzvQ {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0px 0px;
+}
+.addNoticeBtn {
+    width: 290px;
+    height: 50px;
+    line-height: normal;
+    padding: 0px 13px;
+    background-color: rgb(51, 151, 255);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+.SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 {
+    white-space: nowrap; /* 텍스트를 한 줄로 유지 */
+    overflow-x: auto; /* 가로 스크롤 허용 */
+    /* overflow: hidden; 넘치는 텍스트를 숨김 */
+    /* text-overflow: ellipsis; 텍스트가 잘릴 경우 ...으로 표시 */
+    height: 40px; /* 원하는 높이 */
+    line-height: 40px; /* height와 동일하게 설정 */
+    padding: 0 10px; /* 좌우 패딩 추가 */
+    font-size: 14px; /* 폰트 크기 조정 */
+    border: 1px solid #ccc; /* 테두리 추가 (선택 사항) */
+    border-radius: 4px; /* 둥근 모서리 (선택 사항) */
+    /* margin-top: 10px; 위쪽 간격 */
+    margin-bottom: 10px; /* 아래쪽 간격 */
+}
+.DurationOfTourContainer,
+.NumberOfPerson,
+.EtcOfTour {
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+}
+.DurationOfTourContainer input {
+    padding: 8px; /* 입력 필드 내부 여백 */
+    font-size: 14px; /* 글씨 크기 */
+    border: 1px solid #ccc; /* 테두리 추가 */
+    border-radius: 4px; /* 모서리 둥글게 */
+}
+
+.DurationOfTourContainer span {
+    font-size: 14px; /* 글씨 크기 */
+    font-weight: bold; /* 글씨 두껍게 */
+    white-space: nowrap; /* 줄 바꿈 방지 */
+}
+.bmexYYinput {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.date,
+.number,
+.etc,
+.bmexYYinput {
+    flex: 1;
+}
+
+/* 태그 생성 부분  ProductDetailPage__SectionContainer-sc-126q1k2-4 bDBbNi */
+.bDBbNi {
+    padding: 10px 0px;
+    border-top: 1px solid rgb(238, 238, 238);
+    border-bottom: none;
+}
+.bDBbNi > article {
+    margin: 0px 0px 10px;
+}
+.gScFGo {
+    margin: 0px 0px 10px;
+    padding: 0px;
+}
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+.bZNoYF {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0px;
+}
+
+.iXEvmI {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.jXxsiv {
+    padding: 6px 11px;
+    color: rgb(0, 69, 24);
+    border: 1px solid rgb(155, 212, 145);
+    border-radius: 20px;
+    background-color: rgb(251, 255, 245);
+}
+.iXEvmI > span {
+    margin: 0px 9px 12px 0px;
+}
+.jXxsiv img {
+    width: 20px;
+    cursor: pointer;
+    color: rgb(0, 69, 24);
+}
+
+.eMLPLA {
+    padding: 6px 11px;
+    color: rgb(78, 0, 0);
+    border: 1px solid rgb(212, 153, 145);
+    border-radius: 20px;
+    background-color: rgb(255, 249, 247);
+}
+.eMLPLA > span {
+    margin: 0px 9px 12px 0px;
+}
+.eMLPLA img {
+    width: 20px;
+    cursor: pointer;
+    color: rgb(0, 69, 24);
+}
+.bDBbNi > article:last-child {
+    margin: 0px;
+}
+.eISlhn {
+    padding: 6px 11px;
+    color: rgb(102, 102, 102);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+/* 태그 생성 부분  ProductDetailPage__SectionContainer-sc-126q1k2-4 bDBbNi */
+
+.FvtMb {
+    cursor: pointer;
+    justify-items: flex-end;
+}
+
+.hGJMVS > * {
+    width: calc(25% - 7.5px);
+    height: calc(25% - 7.5px);
+    margin-right: 10px;
+}
+.kZTsQf {
+    position: relative;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.gDuKGF {
+    min-height: 1px;
+}
+.hVNKgp {
+    width: 100%;
+    border-radius: 5px;
+}
+.benIbu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 26px;
+    height: 26px;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+.centered-alert {
+    /* alert div를 생성해서 사용해보기 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* #map {
+    width: 100%;
+    height: 25vh; 
+} */
+#mapContainer {
+    position: relative;
+    width: 100%;
+    height: 25vh; /* 뷰포트 높이의 50%로 설정 */
+}
+#map {
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100%;
+}
+#fullMap {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.hidden {
+    display: none;
+}
+.volunteerBtn{
+    width: 83px;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    top: 1.4777px;
+    position: relative;
+}
+.gcqwwh1 {
+    
+    /* color: rgb(153, 153, 153); */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+.addPathBtn {
+    width: 83px;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    top: 1.4777px;
+    position: relative;
+}
+.deletePathBtn {
+    width: 83px;
+    white-space: nowrap;
+    overflow-x: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    top: 1.4777px;
+    position: relative;
+}
+
+
+
+.noBtnStyle {
+    width: 100%;
+    /* color: rgb(153, 153, 153); */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}

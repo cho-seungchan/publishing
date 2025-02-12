@@ -9,7 +9,9 @@ let deadline = 0;
 firstDate.addEventListener("change", () => {
     startDate = firstDate.value;
     if (startDate <= today) {
-        alert(`시작일("${startDate}")은 오늘("${today}") 이후만 가능합니다..`);
+        // alert(`시작일("${startDate}")은 오늘("${today}") 이후만 가능합니다.`);
+        let message = `시작일(${startDate})은 오늘(${today}) 이후만 가능합니다.`;
+        showAlertModal(message);
         firstDate.value = "";
         startDate = 0;
     } else if (endDate != 0 && endDate < startDate) {
@@ -26,7 +28,9 @@ firstDate.addEventListener("change", () => {
 secondDate.addEventListener("change", () => {
     endDate = secondDate.value;
     if (endDate <= today) {
-        alert(`종료일("${endDate}")은 오늘("${today}") 이후만 가능합니다.`);
+        // alert(`종료일("${endDate}")은 오늘("${today}") 이후만 가능합니다.`);
+        let message = `종료일(${endDate})은 오늘(${today}) 이후만 가능합니다.`;
+        showAlertModal(message);
         secondDate.value = "";
         endDate = 0;
     } else if (deadline != 0 && deadline > endDate) {
@@ -45,15 +49,21 @@ secondDate.addEventListener("change", () => {
 thirdDate.addEventListener("change", () => {
     deadline = thirdDate.value;
     if (deadline < today) {
-        alert(`마감일("${deadline}")은 오늘("${today}") 부터 가능합니다.`);
+        // alert(`마감일("${deadline}")은 오늘("${today}") 부터 가능합니다.`);
+        let message = `마감일(${deadline})은 오늘(${today}) 부터 가능합니다.`;
+        showAlertModal(message);
         thirdDate.value = "";
         deadline = 0;
     } else if (startDate != 0 && startDate <= deadline) {
-        alert(`마감일("${deadline}")이 시작일("${startDate}") 보다 작아야 합니다.`);
+        // alert(`마감일("${deadline}")이 시작일("${startDate}") 보다 작아야 합니다.`);
+        let message = `마감일(${deadline})이 시작일(${startDate}) 보다 작아야 합니다.`;
+        showAlertModal(message);
         thirdDate.value = "";
         deadline = 0;
     } else if (endDate != 0 && endDate <= deadline) {
-        alert(`마감일("${deadline}")이 종료일("${endDate}") 보다 작아야 합니다.`);
+        // alert(`마감일("${deadline}")이 종료일("${endDate}") 보다 작아야 합니다.`);
+        let message = `마감일(${deadline})이 종료일(${endDate}) 보다 작아야 합니다.`;
+        showAlertModal(message);
         thirdDate.value = "";
         deadline = 0;
     }
@@ -72,7 +82,9 @@ kebabmenu.addEventListener("click", () => {
     }
 
     if (startDate == 0 || endDate == 0 || deadline == 0) {
-        alert(`날짜를 모두 입력하세요`);
+        // alert(`날짜를 모두 입력하세요`);
+        let message = `날짜를 모두 입력하세요`;
+        showAlertModal(message);
         return;
     }
 
@@ -113,7 +125,9 @@ let parentDiv = ``;
 gcqwwhinclude.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
         if (firstTagCount > 9) {
-            alert(`10개 까지만 입력 가능합니다.`);
+            // alert(`10개 까지만 입력 가능합니다.`);
+            let message = `10개 까지만 입력 가능합니다.`;
+            showAlertModal(message);
             return;
         }
         if (firstTagCount === 0) {
@@ -141,7 +155,9 @@ gcqwwhinclude.addEventListener("keyup", (e) => {
 gcqwwhexclude.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
         if (secondTagCount > 9) {
-            alert(`10개 까지만 입력 가능합니다.`);
+            // alert(`10개 까지만 입력 가능합니다.`);
+            let message = `10개 까지만 입력 가능합니다.`;
+            showAlertModal(message);
             return;
         }
         if (secondTagCount === 0) {
@@ -169,7 +185,9 @@ gcqwwhexclude.addEventListener("keyup", (e) => {
 gcqwwhprepare.addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
         if (thirdTagCount > 9) {
-            alert(`10개 까지만 입력 가능합니다.`);
+            // alert(`10개 까지만 입력 가능합니다.`);
+            let message = `10개 까지만 입력 가능합니다.`;
+            showAlertModal(message);
             return;
         }
         if (thirdTagCount === 0) {
@@ -295,8 +313,8 @@ fileParentDiv.addEventListener("click", (e) => {
 // 외부 스크립트 추가. 지도 맵 동적 생성
 document.querySelector(".gcqwwh.gather").addEventListener("keyup", (e) => {
     if (e.key == "Enter") {
-        if (document.querySelector("#map")) {
-            document.querySelector("#map").remove();
+        if (document.querySelector("#mapContainer")) {
+            document.querySelector("#mapContainer").remove();
             document.querySelector(".gcqwwh.gather1").remove();
         }
 
@@ -304,12 +322,40 @@ document.querySelector(".gcqwwh.gather").addEventListener("keyup", (e) => {
         geocoder.addressSearch(document.querySelector(".gcqwwh.gather").value, (result, status) => {
             if (status === kakao.maps.services.Status.OK) {
                 const mapDiv = document.createElement("div");
-                mapDiv.id = "map";
+                mapDiv.id = "mapContainer";
+                mapDiv.innerHTML = `<div id="map"></div>
+                <div id="fullMap">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E %3Cpath stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M17 3h4v4M15 9l6-6M7 21H3v-4M9 15l-6 6M4 11V6c0-1.105.895-2 2-2h5M20 13v5c0 1.105-.895 2-2 2h-6'/%3E %3C/svg%3E" alt="map fullscreen">
+                </div>`;
+                // const mapDiv = document.createElement("div");
+                // mapDiv.id = "map";
                 document.querySelector(".GatheringPlace").appendChild(mapDiv);
+
                 const mapInput = document.createElement("input");
                 mapInput.className = "SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh gather1";
                 mapInput.placeholder = "참가자들이 이해하기 쉽게 설명해주세요";
                 document.querySelector(".GatheringPlace").appendChild(mapInput);
+
+                document.querySelector("#fullMap").addEventListener("click", (e) => {
+                    if (mapContainer.style.position === "fixed") {
+                        mapContainer.style.position = "relative";
+                        mapContainer.style.width = "100%";
+                        mapContainer.style.height = "25vh";
+                        mapContainer.style.zIndex = ""; // 맵이 다른 요소 위에 오도록 설정한거 해제
+                        document.querySelector("#fullMap").style.position = "absolute";
+                    } else {
+                        mapContainer.style.position = "fixed";
+                        mapContainer.style.top = "0";
+                        mapContainer.style.left = "0";
+                        mapContainer.style.width = "100%";
+                        mapContainer.style.height = "100vh";
+                        mapContainer.style.zIndex = "1000"; // 맵이 다른 요소 위에 오도록 설정
+                        document.querySelector("#fullMap").style.position = "fixed";
+                    }
+                    map.relayout();
+                    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                    map.setCenter(coords);
+                });
 
                 let coords = new kakao.maps.LatLng(result[0].y, result[0].x);
                 let mapContainer = document.getElementById("map"), // 지도를 표시할 div
@@ -357,7 +403,33 @@ jULzvQ.addEventListener("click", () => {
     let max = parseInt(document.querySelector(".gcqwwh.max").value, 10);
     let min = parseInt(document.querySelector(".gcqwwh.min").value, 10);
     if (max < min) {
-        alert(`모집 인원("${max}") 이 최소 출발 인원("${min})"보다 적습니다.`);
+        // alert(`모집 인원("${max}") 이 최소 출발 인원("${min})"보다 적습니다.`);
+        let message = `모집 인원(${max} 명) 이 최소 출발 인원(${min} 명)보다 적습니다.`;
+        showAlertModal(message);
         return;
     }
 });
+
+// 모달 열기 함수
+function showAlertModal(message) {
+    // 모달 요소
+    var modal = document.getElementById("alertModal");
+    // 모달 닫기 요소
+    var closeBtn = document.getElementsByClassName("close")[0];
+
+    modal.querySelector("p").textContent = message;
+
+    modal.style.display = "block";
+
+    // 닫기 버튼 클릭 시 모달 닫기
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    // 모달 외부 클릭 시 모달 닫기
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+}
