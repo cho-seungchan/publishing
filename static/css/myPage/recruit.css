@@ -1,0 +1,489 @@
+
+body.fontLoaded {
+    font-family: SUIT, "UI Frip", "Noto Sans KR", Helvetica, Arial, sans-serif;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+
+.jhIEWm {
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.iKjpvd {
+    padding: 20px 20px 20px;
+    margin: 0px auto;
+    max-width: 768px;
+    display: flex
+;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.epAnZX {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    letter-spacing: -0.72px;
+    color: rgb(51, 51, 51);
+}
+
+.bScXKt {
+    display: flex
+;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+
+.hCcmTx {
+    padding: 0px 20px;
+}
+
+button, input, select, textarea {
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+    font-size: 1em;
+    margin: 0;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+
+a, area, button, input, label, select, textarea, [tabindex] {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.fZTFbW {
+    border: 1px solid rgb(221, 221, 221);
+    background: rgb(255, 255, 255);
+    color: rgb(102, 102, 102);
+    display: inline-flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    text-align: center;
+    white-space: nowrap;
+    padding: 9px 17px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.kVYyVO {
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.gjaxFh {
+    display: flex
+;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+
+img {
+    border-style: none;
+}
+
+.dqGjWH {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    letter-spacing: -0.54px;
+    color: rgb(119, 119, 119);
+}
+
+.gSjDbY {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    letter-spacing: -0.42px;
+    color: rgb(119, 119, 119);
+}
+
+.hCwBUo {
+    margin-top: 22px;
+}
+
+.jjvlFY {
+    background: rgb(0, 117, 239);
+    color: rgb(255, 255, 255);
+    display: inline-flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    border-radius: 10px;
+    padding: 13px 18px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.gKYVxm {
+    width: 800px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px 0px, rgba(0, 0, 0, 0.16) 0px 0px 1px 0px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px 0;
+    padding: 24px 24px 16px;
+}
+
+.kcHmyx {
+    height: 28px;
+    display: flex
+;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.kSZYgn {
+    display: inline-block;
+    width: 50%;
+    height: 28px;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+    color: rgb(17, 17, 17);
+}
+
+.kThsCL {
+    text-align: right;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    color: rgb(52, 106, 255);
+    display: inline-flex
+;
+    vertical-align: middle;
+    position: relative;
+    width: auto;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.gSIruC {
+    height: 16px;
+    line-height: 1;
+    margin: auto;
+    font-family: 나눔고딕, nanumgothic, 돋움, dotum, sans-serif;
+}
+
+.elGTUw {
+    border-radius: 8px;
+    border: 1px solid rgb(238, 238, 238);
+    background-color: rgb(255, 255, 255);
+    margin-top: 16px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 100%;
+}
+
+.hUzAOG {
+    height: 100%;
+    padding: 20px;
+    vertical-align: top;
+}
+
+.hmCrGF {
+    margin-top: 4px;
+    margin-bottom: 20px;
+    display: flex
+;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hmCrGF:empty {
+    display: none;
+}
+
+
+
+.oRzGt {
+    position: relative;
+    top: -16px;
+    display: flex
+;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.oRzGt:empty {
+    display: none;
+}
+
+.__next-wrap * {
+    box-sizing: border-box;
+}
+
+.cNiGzR {
+    flex-direction: row;
+}
+
+.eEDOvs {
+    display: flex
+;
+    width: 100%;
+    position: relative;
+    margin-right: 16px;
+}
+
+.gbTJl {
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    border-left: 1px solid rgb(238, 238, 238);
+}
+
+.payComent{
+    font-size: 17px;
+    margin: 5px auto;
+    font-weight: 500;
+}
+
+.listButton{
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    display: inline-flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.insertComent{
+    color : rgb(51, 51, 51);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: 13px;
+    margin: 10px auto;
+}
+
+.NoticePage__NoticeListWrapper {
+    width: 800px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mainUserListDiv, .userListDiv {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mainUserListDiv {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.userListDiv {
+    background-color: #fff;
+}
+
+ .accountDiv, .nameDiv {
+    width: 30%;
+    text-align: center;
+}
+.emailDiv{
+    width: 20%;
+    text-align: center;
+}
+
+.nameDiv{
+    position: relative;
+}
+
+.checkboxall {
+    flex: 0.2;
+}
+.usersCheckbox{
+    flex: 0.2;
+}
+
+
+.userListDiv {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.inputRow {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 0px solid #ccc;
+    margin-top: 10px;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.inputRow input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 17%;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 62px;
+}
+
+.saveBtn1 {
+    background-color: #28a745;
+    color: white;
+}
+
+.cancelBtn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.listContainer{
+    display: flex
+;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto 20px;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+
+.approvalButton {
+    width: 75px;
+    white-space: nowrap;
+    overflow-x: auto;
+    line-height: 36px;
+    padding: 0 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.messageButton{
+    width: 100px;
+    white-space: nowrap;
+    overflow-x: auto;
+    line-height: 36px;
+    padding: 0 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.approvalButtonWrap{
+   width: 20%;
+   position: relative;
+   left: 8%;
+
+}
+
+.messageButtonWrap{
+    width: 30%;
+    position: relative;
+    left: 13%;
+}
+.HeaderaccountDiv{
+    width: 200px;
+    text-align: center;
+}
+
+.HeadernameDiv{
+    width: 214px;
+    text-align: center;
+}
+.HeaderemailDiv{
+    width: 293px;
+    text-align: center;
+}
