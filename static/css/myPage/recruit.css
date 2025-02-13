@@ -1,31 +1,7 @@
-html {
-    box-sizing: border-box;
-    cursor: default;
-    font-family: sans-serif;
-    line-height: 1.5;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+
+body.fontLoaded {
+    font-family: SUIT, "UI Frip", "Noto Sans KR", Helvetica, Arial, sans-serif;
 }
-
-html, body {
-    width: 100%;
-    font-size: 14px;
-    color: black;
-    word-break: normal;
-    overflow-wrap: break-word;
-}
-
-*, ::before, ::after {
-    background-repeat: no-repeat;
-    box-sizing: inherit;
-}
-
-* {
-    outline: none;
-    font-family: inherit;
-}
-
-
 
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
     display: block;
@@ -96,6 +72,7 @@ a, area, button, input, label, select, textarea, [tabindex] {
 
 button {
     cursor: pointer;
+    font-weight: 500;
 }
 
 .fZTFbW {
@@ -326,7 +303,7 @@ table {
     font-weight: 500;
 }
 
-.buttonCancel{
+.listButton{
     border: 1px solid rgb(204, 204, 204);
     background: rgb(255, 255, 255);
     color: rgb(51, 51, 51);
@@ -356,28 +333,157 @@ table {
     margin: 10px auto;
 }
 
-.approvalListContainer {
-    width: 100%;
-    max-width: 808px;
+.NoticePage__NoticeListWrapper {
+    width: 800px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mainUserListDiv, .userListDiv {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mainUserListDiv {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.userListDiv {
+    background-color: #fff;
+}
+
+ .accountDiv, .nameDiv {
+    width: 30%;
+    text-align: center;
+}
+.emailDiv{
+    width: 20%;
     text-align: center;
 }
 
-.brCKKc {
-    width: auto;
-    height: 56px;
-    margin: 0px 20px;
-    padding: 0px;
-    border-bottom: 1px solid rgb(244, 244, 244);
-    background-color: rgb(255, 255, 255);
+.nameDiv{
+    position: relative;
 }
 
-.hPZtca {
+.checkboxall {
+    flex: 0.2;
+}
+.usersCheckbox{
+    flex: 0.2;
+}
+
+
+.userListDiv {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.inputRow {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 0px solid #ccc;
+    margin-top: 10px;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.inputRow input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 17%;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 62px;
+}
+
+.saveBtn1 {
+    background-color: #28a745;
+    color: white;
+}
+
+.cancelBtn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.listContainer{
     display: flex
 ;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    height: 100%;
-    padding: 16px 0px;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto 20px;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+
+.approvalButton {
+    width: 75px;
+    white-space: nowrap;
+    overflow-x: auto;
+    line-height: 36px;
+    padding: 0 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.messageButton{
+    width: 100px;
+    white-space: nowrap;
+    overflow-x: auto;
+    line-height: 36px;
+    padding: 0 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.approvalButtonWrap{
+   width: 20%;
+   position: relative;
+   left: 8%;
+
+}
+
+.messageButtonWrap{
+    width: 30%;
+    position: relative;
+    left: 13%;
+}
+.HeaderaccountDiv{
+    width: 200px;
+    text-align: center;
+}
+
+.HeadernameDiv{
+    width: 214px;
+    text-align: center;
+}
+.HeaderemailDiv{
+    width: 293px;
+    text-align: center;
 }

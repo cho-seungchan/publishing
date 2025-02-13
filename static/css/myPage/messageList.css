@@ -1,0 +1,326 @@
+.jhIEWm {
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.iKjpvd {
+    padding: 20px 20px 20px;
+    margin: 0px auto;
+    max-width: 768px;
+    display: flex
+;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.epAnZX {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    letter-spacing: -0.72px;
+    color: rgb(51, 51, 51);
+}
+
+.listContainer {
+    margin: 20px auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.NoticePage__NoticeListWrapper {
+    width: 800px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mainUserListDiv, .userListDiv {
+    display: flex
+;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mainUserListDiv {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.contentDiv {
+    width: 500px;
+    text-align: center;
+}
+
+.HeadernameDiv {
+    width: 212px;
+    text-align: center;
+}
+
+.postDiv {
+    width: 200px;
+    text-align: center;
+}
+
+.userListDiv {
+    background-color: #fff;
+}
+
+.userListDiv {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex
+;
+    align-items: center;
+    gap: 10px;
+    min-height: 50px;
+}
+
+.accountDiv, .nameDiv {
+    width: 30%;
+    text-align: center;
+}
+
+.messageButtonWrap {
+    width: 30%;
+    position: relative;
+    left: 13%;
+}
+
+.messageButton {
+    width: 100px;
+    white-space: nowrap;
+    overflow-x: auto;
+    line-height: 36px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.contentHidden {
+    width: 500px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contentView {
+    width: 500px;
+}
+
+.comentMessage {
+    width: 212px;
+    text-align: center;
+}
+
+.postList {
+    width: 200px;
+    text-align: center;
+}
+
+.hiddenText{
+    display: inline;
+    
+}
+
+.hBVRcD {
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 30px 0px;
+    background-color: white;
+}
+
+.gIsDDT {
+    display: flex
+;
+    margin-right: 10px;
+}
+
+.iItkLq {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: not-allowed;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+}
+
+.jVxRns {
+    transform: rotate(180deg);
+}
+
+
+
+.eNIHag {
+    display: flex
+;
+    margin-left: 10px;
+}
+
+.emphasis:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+/* 해당 페이지일때 들어갈 클래스스 */
+.thisButton {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    color: rgb(51, 151, 255);
+    font-size: 18px;
+    font-weight: bold;
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+}
+
+/* 해당 페이지가 아닐때 들어갈 클래스 */
+.anotherButton {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    color: black;
+    font-size: 18px;
+    font-weight: normal;
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+}
+
+.showList {
+    position: relative;
+    width: 100%;
+    min-height: 150px;
+    padding: 20px;
+    background-color: rgb(239, 247, 255);
+    color: rgb(74, 74, 74);
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.showList>span {
+    white-space: nowrap;
+}
+
+.showList *{
+    width: 100%;
+}
+
+.appearButton{
+    position: absolute;
+    width: 87px;
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    display: inline-flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 12px;
+    line-height: 16px;
+
+}
+
+.answeraButton{
+    right: 12%;
+    bottom: 10%;
+}
+
+.deleteButton{
+    right: 3%;
+    bottom: 10%;
+}
+
+.cJASPK {
+    padding: 0px 20px;
+    position: relative;
+}
+
+.koasSX {
+    width: auto;
+    height: auto;
+    transition: opacity 200msease-in-out;
+    display: none;
+    opacity: 0;
+    min-width: 0px;
+    min-height: 1px;
+}
+
+.eOsQaF {
+    display: flex
+;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(119, 119, 119);
+    padding: 100px 0px;
+}
+
+b, strong {
+    font-weight: bolder;
+}
+
+.bLfngk {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 24px;
+}
+
+.eFwpFm {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 6px;
+}
+
+.firstBanner{
+    margin-top: 30px;
+}
