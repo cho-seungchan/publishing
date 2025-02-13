@@ -833,3 +833,11 @@ address, em, var {
 }
 
 
+.AppLayout_contents__Nzg1Z.active {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-15%);
+}
+.AppLayout_contents__Nzg1Z {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
+}

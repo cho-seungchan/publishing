@@ -1,4 +1,12 @@
 .mainIntroduce {
     font-size: 25px;
-    
+    text-align: center;
+}
+
+.backgroundImg {
+    background-image: url('../../images/introduce/pickcourseIntro.png');
+    height: 5500px;
+    margin:auto;
+    position: relative;
+    max-width: 860px;
 }

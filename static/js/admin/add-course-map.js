@@ -178,7 +178,7 @@ function addTag(tagText, lat, lng) {
                                         <h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">추가한 경로</h2>
                                     </hgroup>
                                   </header>
-                                  <div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI"></div>`;
+                                  <li class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI"></li>`;
     }
 
     renderTags(); // 태그 UI 갱신 (새 태그가 UI에 반영됨)
@@ -215,21 +215,55 @@ function removeTag(tagId) {
 }
 
 // ------------------- 태그 UI 렌더링 -------------------
+// ---------------- 태그 UI에 "인근 여행지" & "사진 업로드" 기능 추가 ----------------
 function renderTags() {
-    let parentDiv = tagContainer.querySelector(".iXEvmI"); // 태그를 표시할 부모 컨테이너 선택
-    parentDiv.innerHTML = ""; // 기존 태그들을 초기화 (다시 그림)
+    let parentDiv = tagContainer.querySelector(".iXEvmI");
 
-    // tagList 배열에 저장된 모든 태그를 UI에 추가
-    tagList.forEach((tag) => {
-        const tagDiv = document.createElement("div"); // 새 div 요소 생성
-        tagDiv.className = "Tag__RoundTag-sxb61j-1 jXxsiv"; // CSS 스타일 적용
-        tagDiv.innerHTML = `<span>#${tag.id}. ${tag.name}</span>
-                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cpath d='M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172' stroke='%23999' stroke-linecap='square'/%3E %3C/svg%3E" 
-                             alt="delete tag" onclick="removeTag(${tag.id})">`;
-        parentDiv.appendChild(tagDiv); // 부모 요소에 추가
+    if (!parentDiv) {
+        parentDiv = document.createElement("ul");
+        parentDiv.className = "iXEvmI";
+        tagContainer.appendChild(parentDiv);
+    }
+
+    const tagDiv = document.createElement("li");
+    tagDiv.className = "Tag__RoundTag-sxb61j-1 jXxsiv";
+    tagDiv.innerHTML = `
+        <span>#${tagList.length}. ${tagList[tagList.length - 1].name}</span>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E 
+        %3Cpath d='M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172' stroke='%23999' stroke-linecap='square'/%3E %3C/svg%3E" 
+        alt="delete tag" onclick="event.stopPropagation(); removeTag(${
+            tagList[tagList.length - 1].id
+        })">
+    `;
+
+    const detailsDiv = document.createElement("div");
+    detailsDiv.className = "tag-details";
+    detailsDiv.style.display = "none";
+    detailsDiv.innerHTML = `
+        <ul class="nearby-list" id="nearby-list-${tagList.length}"></ul>
+        <input type="text" class="nearby-input" placeholder="인근 여행지를 입력하세요" 
+            onkeydown="if(event.key==='Enter') addNearby(${tagList.length}, this)" onclick="event.stopPropagation();">
+        <div class="upload-container">
+            <input type="file" id="upload-${tagList.length}" accept="image/*" multiple 
+                onchange="uploadImages(${tagList.length}, this)" onclick="event.stopPropagation();">
+            <div id="image-preview-${tagList.length}"></div>
+        </div>
+    `;
+
+    tagDiv.addEventListener("click", (event) => {
+        if (
+            event.target.tagName !== "INPUT" &&
+            event.target.tagName !== "FILE"
+        ) {
+            detailsDiv.style.display =
+                detailsDiv.style.display === "block" ? "none" : "block";
+        }
     });
 
-    // 현재 추가된 태그 개수에 맞춰 입력 필드 placeholder 업데이트
+    tagDiv.appendChild(detailsDiv);
+    parentDiv.appendChild(tagDiv);
+
+    renderNearby(tagList.length);
     inputField.placeholder = `경로를 입력하세요. (${tagList.length}/10)`;
 }
 
@@ -282,4 +316,108 @@ function showDistance(content, position) {
             zIndex: 3, // 오버레이가 지도 위에서 가장 위에 보이도록 설정
         });
     }
+}
+
+// --------------- "인근 여행지" & "사진 업로드" 기능 추가 ---------------
+
+// 인근 여행지 추가 함수
+function addNearby(tagId, input) {
+    const tag = tagList.find((tag) => tag.id === tagId);
+    if (tag.nearby && tag.nearby.length >= 3) {
+        alert("인근 여행지는 최대 3개까지만 추가할 수 있습니다.");
+        return;
+    }
+
+    if (input.value.trim() === "") return;
+
+    // 인근 여행지 데이터 추가
+    if (!tag.nearby) tag.nearby = [];
+    tag.nearby.push(input.value.trim());
+
+    input.value = "";
+    renderNearby(tagId);
+}
+
+// 인근 여행지 UI 렌더링
+function renderNearby(tagId) {
+    const tag = tagList.find((tag) => tag.id === tagId);
+    const nearbyList = document.getElementById(`nearby-list-${tagId}`);
+    if (!nearbyList) return;
+
+    nearbyList.innerHTML = "";
+    tag.nearby.forEach((place, index) => {
+        const li = document.createElement("li");
+        li.className = "nearby-item";
+        li.innerHTML = `${place} <button onclick="removeNearby(${tagId}, ${index})">X</button>`;
+        nearbyList.appendChild(li);
+    });
+}
+
+// 인근 여행지 삭제
+function removeNearby(tagId, index) {
+    const tag = tagList.find((tag) => tag.id === tagId);
+    tag.nearby.splice(index, 1);
+    renderNearby(tagId);
+}
+
+// 이미지 업로드 함수
+function uploadImages(tagId, input) {
+    const tag = tagList.find((tag) => tag.id === tagId);
+    const previewContainer = document.getElementById(`image-preview-${tagId}`);
+
+    if (!previewContainer) return;
+
+    if (!tag.images) tag.images = [];
+
+    if (input.files.length + tag.images.length > 3) {
+        alert("최대 3개의 이미지만 업로드할 수 있습니다.");
+        input.value = "";
+        return;
+    }
+
+    [...input.files].forEach((file) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const imageId = tag.images.length;
+            tag.images.push(e.target.result);
+
+            const imgContainer = document.createElement("div");
+            imgContainer.className = "image-container";
+            imgContainer.innerHTML = `
+                <img src="${e.target.result}" alt="Uploaded Image">
+                <button class="delete-img-btn" onclick="removeImage(${tagId}, ${imageId}, event)">X</button>
+            `;
+            previewContainer.appendChild(imgContainer);
+        };
+        reader.readAsDataURL(file);
+    });
+
+    input.value = "";
+}
+function removeImage(tagId, imageIndex, event) {
+    event.stopPropagation(); // 클릭 이벤트가 부모로 전달되지 않도록 차단
+    const tag = tagList.find((tag) => tag.id === tagId);
+    if (!tag || !tag.images) return;
+
+    tag.images.splice(imageIndex, 1);
+    renderImages(tagId);
+}
+
+function renderImages(tagId) {
+    const tag = tagList.find((tag) => tag.id === tagId);
+    const previewContainer = document.getElementById(`image-preview-${tagId}`);
+
+    if (!previewContainer) return;
+
+    previewContainer.innerHTML = ""; // 기존 이미지 삭제 후 다시 그리기
+
+    tag.images.forEach((imageSrc, index) => {
+        const imgContainer = document.createElement("div");
+        imgContainer.className = "image-container";
+        imgContainer.innerHTML = `
+            <img src="${imageSrc}" alt="Uploaded Image">
+            <button class="delete-img-btn" onclick="removeImage(${tagId}, ${index})">X</button>
+        `;
+        previewContainer.appendChild(imgContainer);
+    });
 }

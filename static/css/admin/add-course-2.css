@@ -271,11 +271,11 @@ h2 {
     justify-content: flex-start;
 }
 .jXxsiv {
-    padding: 6px 11px;
-    color: rgb(0, 69, 24);
-    border: 1px solid rgb(155, 212, 145);
-    border-radius: 20px;
-    background-color: rgb(251, 255, 245);
+        padding: 6px 11px;
+        color: rgb(34, 78, 0);
+        border: 1px solid rgb(30, 106, 2);
+        border-radius: 20px;
+        background-color: rgb(233, 255, 233);
 }
 .iXEvmI > span {
     margin: 0px 9px 12px 0px;
@@ -452,4 +452,115 @@ h2 {
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-family: Arial, sans-serif;
+}
+
+/* ===================== */
+
+/* 태그 스타일 */
+
+
+.jXxsiv:hover {
+    background-color: rgb(240, 255, 240);
+}
+
+
+
+.jXxsiv img:hover {
+    opacity: 1;
+}
+
+/* 상세 정보(인근 여행지, 업로드) 스타일 */
+.tag-details {
+    padding: 10px;
+    border: 1px solid rgb(155, 212, 145);
+    border-radius: 10px;
+    background-color: rgb(240, 255, 240);
+    margin-top: 5px;
+    display: none;
+}
+
+/* 인근 여행지 리스트 */
+.nearby-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.nearby-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.nearby-item button {
+    background: #ff6961;
+    border: none;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nearby-item button:hover {
+    background: #d65a50;
+}
+
+/* 입력 필드 스타일 */
+.nearby-input {
+    width: calc(100% - 20px);
+    padding: 5px;
+    border: 1px solid rgb(155, 212, 145);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* 파일 업로드 버튼 */
+.upload-container {
+    margin-top: 10px;
+}
+
+.upload-container input {
+    border: none;
+    background-color: rgb(255, 250, 250);
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* 이미지 미리보기 */
+#image-preview img {
+    width: 50px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+}
+
+.image-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.delete-img-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.delete-img-btn:hover {
+    background: #d63333;
 }

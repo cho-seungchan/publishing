@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../static/css/common/header.css" />
+        <link rel="stylesheet" href="" />
+        <link rel="stylesheet" href="../../static/css/common/footer.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700"
+            rel="stylesheet"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin=""
+        />
+        <link
+            rel="stylesheet"
+            href="../../static/css/introduce/introduce.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="shortcut icon"
+            href="../../static/images/common/favicon1.ico"
+            type="image/x-icon"
+        />
+
+        <title>픽커스(Pick+Course) 사이트 소개</title>
+    </head>
+    <body class="fontLoaded">
+        <div id="app">
+            <div class="App__AppWrapper-nc5ti6-0 idXWQn">
+                <!-- Header will be dynamically inserted here -->
+                <div id="header-placeholder"></div>
+                <script>
+                    // Load header.html and insert it in#header-placeholder
+                    fetch("../all/header.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById(
+                                "header-placeholder"
+                            ).innerHTML = data;
+                        })
+                        .catch((error) =>
+                            console.error("Error loading header:", error)
+                        );
+                </script>
+                <div class="backgroundImg"></div>
+                <!-- Footer will be dynamically inserted here -->
+                <div id="footer-placeholder"></div>
+                <script>
+                    // Load footer.html and insert it into #footer-placeholder
+                    fetch("../all/footer.html")
+                        .then((response) => response.text())
+                        .then((data) => {
+                            document.getElementById(
+                                "footer-placeholder"
+                            ).innerHTML = data;
+                        })
+                        .catch((error) =>
+                            console.error("Error loading footer:", error)
+                        );
+                </script>
+            </div>
+        </div>
+        <div id="modal-root"></div>
+        <div id="dnd-root"></div>
+    </body>
+</html>

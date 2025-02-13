@@ -1,0 +1,31 @@
+.deleteCourseBtn{
+    width: 118px;
+    height: 35px;
+    line-height: normal;
+    padding: 0px 13px;
+    background-color: rgb(51, 151, 255);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-size: 21px;
+    position: relative;
+    left: 71%;
+    top: -2px;
+}
+
+.editCourseBtn {
+    width: 118px;
+    height: 35px;
+    line-height: normal;
+    padding: 0px 13px;
+    background-color: rgb(51, 151, 255);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-size: 21px;
+    position: relative;
+    left: 71%;
+    top: -2px;
+}
