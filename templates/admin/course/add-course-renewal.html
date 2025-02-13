@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>픽커스 관리자 추천 코스 추가</title>
+        <style>
+            @font-face {
+                font-family: "pickers";
+                src: url(../../static/css/admin/NotoSansKR-VariableFont_wght.ttf)
+                    format("ttf");
+            }
+        </style>
+        <link
+            rel="shortcut icon"
+            href="../../../static/images/common/favicon1.ico"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="../../../static/css/admin/add-course.css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../../static/css/admin/add-course-renewal.css"
+        />
+    </head>
+    <body>
+        <div id="root">
+            <div id="AppLayout_Container" class="AppLayout_container__YWFhM">
+                <div
+                    class="AppGNBbar_container__ZWFlZ"
+                    id="AppLayout_AppGNBbar"
+                >
+                    <div class="AppGNBbar_flex__ZGYyN">
+                        <div class="StudioLogo_container__YzY5M">
+                            <button
+                                class="StudioLogo_logo__MTE4Z"
+                                type="button"
+                                aria-label="로고 버튼"
+                            ></button>
+                        </div>
+                        <div class="StudioStatus_stateBox__ZmEwN">
+                            <span
+                                class="Badge_container__M2E2N Badge_visible__NjUyZ"
+                            ></span>
+                        </div>
+                    </div>
+                    <div
+                        class="AppGNBbar_flex__ZGYyN AppGNBbar_rightBox__NmRjN"
+                    >
+                        <div
+                            class="AnnouncementButton_container__YzUzY"
+                            role="button"
+                        >
+                            <img
+                                class="AnnouncementButton_icon__Y2U1N"
+                                src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20width='24px'%20height='24px'%20viewBox='0%200%2024%2024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3ctitle%3eGroup%2020%3c/title%3e%3cdefs%3e%3cpolygon%20id='path-1'%20points='0%200%2020%200%2020%2017.9953708%200%2017.9953708'%3e%3c/polygon%3e%3c/defs%3e%3cg%20id='Page-1'%20stroke='none'%20stroke-width='1'%20fill='none'%20fill-rule='evenodd'%3e%3cg%20id='Group-20'%3e%3crect%20id='Rectangle'%20fill-opacity='0'%20fill='%23FFFFFF'%20x='0'%20y='0'%20width='24'%20height='24'%3e%3c/rect%3e%3cg%20id='Group'%3e%3crect%20id='Rectangle'%20fill='%23FFFFFF'%20opacity='0'%20x='0'%20y='0'%20width='24'%20height='24'%3e%3c/rect%3e%3cg%20id='Group-6'%20transform='translate(2.000000,%203.000000)'%3e%3cg%20id='Group-3'%3e%3cmask%20id='mask-2'%20fill='white'%3e%3cuse%20xlink:href='%23path-1'%3e%3c/use%3e%3c/mask%3e%3cg%20id='Clip-2'%3e%3c/g%3e%3cpath%20d='M1.26810993,13.3807221%20L7.86036937,13.3807221%20C9.56087376,13.3807221%2011.2379633,13.6592429%2012.8467595,14.2094435%20L18.7307193,16.219679%20L18.7307193,1.7756918%20L12.8467595,3.78690464%20C11.2369877,4.33612797%209.55989815,4.6146487%207.86036937,4.6146487%20L1.26810993,4.6146487%20L1.26810993,13.3807221%20Z%20M20,17.9953708%20L12.4369994,15.4114803%20C10.9608874,14.9072112%209.42038459,14.6521448%207.86036937,14.6521448%20L-0.000195123855,14.6521448%20L-0.000195123855,3.34420327%20L7.86036937,3.34420327%20C9.41940897,3.34420327%2010.9599118,3.08913692%2012.4369994,2.58389055%20L20,0%20L20,17.9953708%20Z'%20id='Fill-1'%20fill='%23495057'%20mask='url(%23mask-2)'%3e%3c/path%3e%3c/g%3e%3cpath%20d='M7.16709431,19%20C4.8226812,19%203.05388345,16.9995371%203.05388345,14.3472379%20C3.05388345,14.2143298%203.06168841,14.0892398%203.0714446,13.9709906%20L4.33584718,14.0667627%20C4.32901784,14.1537393%204.32218851,14.2485341%204.32218851,14.3472379%20C4.32218851,16.2753832%205.54561508,17.7285773%207.16709431,17.7285773%20C9.26662699,17.7285773%2010.0120001,15.9079313%2010.0120001,14.3472379%20L11.2803052,14.2856702%20L11.2803052,14.3472379%20C11.2803052,17.1304907%209.6266305,19%207.16709431,19'%20id='Fill-4'%20fill='%23495057'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e"
+                                alt=""
+                                aria-hidden="true"
+                            /><span
+                                class="Badge_container__M2E2N Badge_visible__NjUyZ AnnouncementButton_badge__MDIyN"
+                                ><span
+                                    class="Badge_badge__YWQ1N Badge_dot__NGVmY Badge_md__YTgxN"
+                                ></span
+                            ></span>
+                        </div>
+                        <div class="PreviewExitButtons_container__YTEzZ">
+                            <button
+                                class="Button_button__NTMwZ PreviewExitButtons_button__OGEyM"
+                                type="button"
+                            >
+                                <span
+                                    ><span class="Button_children__NDY1Y2"
+                                        >미리보기</span
+                                    ></span
+                                ></button
+                            ><button
+                                class="Button_button__NTMwZ PreviewExitButtons_button__OGEyM"
+                                type="button"
+                            >
+                                <span
+                                    ><span class="Button_children__NDY1Y2"
+                                        >나가기</span
+                                    ></span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="AppLayout_main__NDI4Y">
+                    <nav
+                        id="AppNavbarLayout_Nav"
+                        class="AppNavbarLayout_container__NmY5O AppNavbarLayout_expand__NGFhZ AppNavbarLayout_scroll__MGM0N"
+                    >
+                        <div class="AppNavbarLayout_content__ZGYyN">
+                            <div
+                                class="ProjectInfo_container__ODExZ AppNavbar_projectInfoPC__M2FmZ ProjectInfo_dropDownContainer__MTIzN"
+                            >
+                                <button
+                                    type="button"
+                                    id="project-info-box"
+                                    class="ProjectInfo_infoButton__YjZmY"
+                                    aria-controls="project-info-box"
+                                    aria-expanded="false"
+                                >
+                                    관리자
+                                    <span class="ProjectInfo_emphasis__YWQwM"
+                                        >박정근님</span
+                                    >
+                                    <span class="ProjectInfo_text__MWIyM"
+                                        >환영 합니다.</span
+                                    ><svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        focusable="false"
+                                        role="presentation"
+                                        class="withIcon_icon__M2ZhN"
+                                        aria-hidden="true"
+                                        style="width: 12px; height: 12px"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M2.576 7.924l.848-.848L12 15.652l8.576-8.576.848.848L12 17.35 2.576 7.924z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="AppNavbar_menu__YmEzM">
+                                <div
+                                    id="AppNavbar_LinkMenu"
+                                    class="AppNavbar_linkMenu__ZWM3O"
+                                    style="overflow: auto"
+                                >
+                                    <div class="MenuItems_section__YTZhM">
+                                        <a
+                                            aria-current="page"
+                                            class="MenuItems_menu__NTNmZ MenuItems_hasSubmenu__NGQxM MenuItems_active__ZDlmN"
+                                            href="/studio/reward/337882/funding"
+                                            ><span
+                                                class="MenuItems_label__YjUxM"
+                                                ><svg
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M9.40039 12C9.40039 11.6686 9.66902 11.4 10.0004 11.4H14.0004C14.3318 11.4 14.6004 11.6686 14.6004 12C14.6004 12.3313 14.3318 12.6 14.0004 12.6H10.0004C9.66902 12.6 9.40039 12.3313 9.40039 12Z"
+                                                        fill="#212529"
+                                                    ></path>
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M7.57523 2.40002C6.94799 2.40002 6.3419 2.62677 5.86868 3.03847L2.29286 6.14943C1.72528 6.64323 1.39941 7.35867 1.39941 8.11099V19C1.39941 20.436 2.56347 21.6 3.99941 21.6H19.9994C21.4354 21.6 22.5994 20.436 22.5994 19V8.01974C22.5994 7.33688 22.3308 6.68144 21.8515 6.195L18.8764 3.17528C18.3878 2.67929 17.7206 2.40002 17.0243 2.40002H7.57523ZM6.65632 3.9438C6.91113 3.72212 7.23749 3.60002 7.57523 3.60002H17.0243C17.3992 3.60002 17.7585 3.7504 18.0216 4.01747L20.8615 6.89999H3.2584L6.65632 3.9438ZM2.59946 8.09999C2.59943 8.10366 2.59941 8.10732 2.59941 8.11099V19C2.59941 19.7732 3.22622 20.4 3.99941 20.4H19.9994C20.7726 20.4 21.3994 19.7732 21.3994 19V8.09999H2.59946Z"
+                                                        fill="#212529"
+                                                    ></path></svg
+                                                >회원 관리</span
+                                            ></a
+                                        >
+                                        <div
+                                            class="MenuItems_submenuContainer__ZDZlO MenuItems_show__ZmI3M Menulist1"
+                                        >
+                                            <a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href=""
+                                                >회원 목록</a
+                                            ><a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href="/studio/reward/337882/funding/screening"
+                                                >신고 목록</a
+                                            >
+                                        </div>
+                                        <a
+                                            aria-current="page"
+                                            class="MenuItems_menu__NTNmZ MenuItems_hasSubmenu__NGQxM MenuItems_active__ZDlmN"
+                                            href="/studio/reward/337882/funding"
+                                            ><span
+                                                class="MenuItems_label__YjUxM"
+                                                ><svg
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M9.40039 12C9.40039 11.6686 9.66902 11.4 10.0004 11.4H14.0004C14.3318 11.4 14.6004 11.6686 14.6004 12C14.6004 12.3313 14.3318 12.6 14.0004 12.6H10.0004C9.66902 12.6 9.40039 12.3313 9.40039 12Z"
+                                                        fill="#212529"
+                                                    ></path>
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M7.57523 2.40002C6.94799 2.40002 6.3419 2.62677 5.86868 3.03847L2.29286 6.14943C1.72528 6.64323 1.39941 7.35867 1.39941 8.11099V19C1.39941 20.436 2.56347 21.6 3.99941 21.6H19.9994C21.4354 21.6 22.5994 20.436 22.5994 19V8.01974C22.5994 7.33688 22.3308 6.68144 21.8515 6.195L18.8764 3.17528C18.3878 2.67929 17.7206 2.40002 17.0243 2.40002H7.57523ZM6.65632 3.9438C6.91113 3.72212 7.23749 3.60002 7.57523 3.60002H17.0243C17.3992 3.60002 17.7585 3.7504 18.0216 4.01747L20.8615 6.89999H3.2584L6.65632 3.9438ZM2.59946 8.09999C2.59943 8.10366 2.59941 8.10732 2.59941 8.11099V19C2.59941 19.7732 3.22622 20.4 3.99941 20.4H19.9994C20.7726 20.4 21.3994 19.7732 21.3994 19V8.09999H2.59946Z"
+                                                        fill="#212529"
+                                                    ></path></svg
+                                                >공지</span
+                                            ></a
+                                        >
+                                        <div
+                                            class="MenuItems_submenuContainer__ZDZlO MenuItems_show__ZmI3M Menulist2"
+                                        >
+                                            <a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href="/studio/reward/337882/funding/plan"
+                                                >공지 사항</a
+                                            >
+                                        </div>
+                                        <a
+                                            aria-current="page"
+                                            class="MenuItems_menu__NTNmZ MenuItems_hasSubmenu__NGQxM MenuItems_active__ZDlmN"
+                                            href="/studio/reward/337882/funding"
+                                            ><span
+                                                class="MenuItems_label__YjUxM"
+                                                ><svg
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M9.40039 12C9.40039 11.6686 9.66902 11.4 10.0004 11.4H14.0004C14.3318 11.4 14.6004 11.6686 14.6004 12C14.6004 12.3313 14.3318 12.6 14.0004 12.6H10.0004C9.66902 12.6 9.40039 12.3313 9.40039 12Z"
+                                                        fill="#212529"
+                                                    ></path>
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M7.57523 2.40002C6.94799 2.40002 6.3419 2.62677 5.86868 3.03847L2.29286 6.14943C1.72528 6.64323 1.39941 7.35867 1.39941 8.11099V19C1.39941 20.436 2.56347 21.6 3.99941 21.6H19.9994C21.4354 21.6 22.5994 20.436 22.5994 19V8.01974C22.5994 7.33688 22.3308 6.68144 21.8515 6.195L18.8764 3.17528C18.3878 2.67929 17.7206 2.40002 17.0243 2.40002H7.57523ZM6.65632 3.9438C6.91113 3.72212 7.23749 3.60002 7.57523 3.60002H17.0243C17.3992 3.60002 17.7585 3.7504 18.0216 4.01747L20.8615 6.89999H3.2584L6.65632 3.9438ZM2.59946 8.09999C2.59943 8.10366 2.59941 8.10732 2.59941 8.11099V19C2.59941 19.7732 3.22622 20.4 3.99941 20.4H19.9994C20.7726 20.4 21.3994 19.7732 21.3994 19V8.09999H2.59946Z"
+                                                        fill="#212529"
+                                                    ></path></svg
+                                                >코스</span
+                                            ></a
+                                        >
+                                        <div
+                                            class="MenuItems_submenuContainer__ZDZlO MenuItems_show__ZmI3M Menulist2"
+                                        >
+                                            <a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href="/studio/reward/337882/funding/plan"
+                                                >A 코스</a
+                                            >
+                                            <a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href="/studio/reward/337882/funding/plan"
+                                                >B 코스</a
+                                            >
+                                            <a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href="/studio/reward/337882/funding/plan"
+                                                >C 코스</a
+                                            >
+                                            <a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href="/studio/reward/337882/funding/plan"
+                                                >D 코스</a
+                                            >
+                                            <a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href="/studio/reward/337882/funding/screening"
+                                                >봉사 코스</a
+                                            >
+                                        </div>
+                                        <a
+                                            aria-current="page"
+                                            class="MenuItems_menu__NTNmZ MenuItems_hasSubmenu__NGQxM MenuItems_active__ZDlmN"
+                                            href="/studio/reward/337882/funding"
+                                            ><span
+                                                class="MenuItems_label__YjUxM"
+                                                ><svg
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M9.40039 12C9.40039 11.6686 9.66902 11.4 10.0004 11.4H14.0004C14.3318 11.4 14.6004 11.6686 14.6004 12C14.6004 12.3313 14.3318 12.6 14.0004 12.6H10.0004C9.66902 12.6 9.40039 12.3313 9.40039 12Z"
+                                                        fill="#212529"
+                                                    ></path>
+                                                    <path
+                                                        fill-rule="evenodd"
+                                                        clip-rule="evenodd"
+                                                        d="M7.57523 2.40002C6.94799 2.40002 6.3419 2.62677 5.86868 3.03847L2.29286 6.14943C1.72528 6.64323 1.39941 7.35867 1.39941 8.11099V19C1.39941 20.436 2.56347 21.6 3.99941 21.6H19.9994C21.4354 21.6 22.5994 20.436 22.5994 19V8.01974C22.5994 7.33688 22.3308 6.68144 21.8515 6.195L18.8764 3.17528C18.3878 2.67929 17.7206 2.40002 17.0243 2.40002H7.57523ZM6.65632 3.9438C6.91113 3.72212 7.23749 3.60002 7.57523 3.60002H17.0243C17.3992 3.60002 17.7585 3.7504 18.0216 4.01747L20.8615 6.89999H3.2584L6.65632 3.9438ZM2.59946 8.09999C2.59943 8.10366 2.59941 8.10732 2.59941 8.11099V19C2.59941 19.7732 3.22622 20.4 3.99941 20.4H19.9994C20.7726 20.4 21.3994 19.7732 21.3994 19V8.09999H2.59946Z"
+                                                        fill="#212529"
+                                                    ></path></svg
+                                                >관리자</span
+                                            ></a
+                                        >
+                                        <div
+                                            class="MenuItems_submenuContainer__ZDZlO MenuItems_show__ZmI3M Menulist3"
+                                        >
+                                            <a
+                                                class="MenuItems_submenu__YTg3N"
+                                                href="/studio/reward/337882/funding/plan"
+                                                >관리자 목록</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div
+                        id="AppLayout_Contents"
+                        class="AppLayout_contents__Nzg1Z"
+                    >
+                        <main class="FundingPage_container__MDczO">
+                            <div
+                                id="FundingPage_Content"
+                                class="FundingPage_box__YzU3M FundingPage_footer__NTYyM"
+                            >
+                                <section>
+                                    <div
+                                        class="FundingPage_headBanner__YzIxM"
+                                    ></div>
+                                </section>
+                                <section
+                                    class="FundingPage_presentation__OGJjZ"
+                                >
+                                    <span class="BlindText_textHidden__Y2JmY"
+                                        >사이트 이동 경로</span
+                                    >
+                                    <ol
+                                        class="Breadcrumb_container__MTlmM"
+                                    ></ol>
+                                    <h2 class="FundingPage_title__YTViN">
+                                        추천 코스 작성
+                                    </h2>
+                                    <div class="FundingPage_description__NDA1Z">
+                                        추천 코스를 소개해 주세요.
+                                    </div>
+                                    <div class="FundingPage_content__OTYzY">
+                                        <section
+                                            class="Section_container__NzdhM spacing-9"
+                                            style="max-width: 1024px"
+                                        >
+                                            <div class="Section_content__Mzc4M">
+                                                <input
+                                                    type="hidden"
+                                                    name="registered"
+                                                    value="2025-02-12 15:51:48.0"
+                                                />
+                                            </div>
+                                        </section>
+                                        <div class="">
+                                            <section
+                                                class="Section_container__NzdhM spacing-9"
+                                            >
+                                                <div style="max-width: 1024px">
+                                                    <div
+                                                        class="Section_header__NDYxN spacing-4"
+                                                    >
+                                                        <h3
+                                                            class="Section_title__ODQyN Section_isRequired__MzViM"
+                                                        >
+                                                            코스 제목<span
+                                                                class="BlindText_textHidden__Y2JmY"
+                                                                >필수</span
+                                                            >
+                                                            <label
+                                                                for="volunteerBox"
+                                                                class="volunteerLabel"
+                                                            >
+                                                                <input
+                                                                    type="checkbox"
+                                                                    id="volunteerBox"
+                                                                    class="volunteerBox"
+                                                                />
+                                                                봉사 코스
+                                                            </label>
+
+                                                            <div>
+                                                                <button
+                                                                    type="button"
+                                                                    class="Tooltip_button__OGZkY Tooltip_withLabel__M2Q1O Section_tooltip__Njk1N"
+                                                                    aria-describedby="Tooltip_1"
+                                                                >
+                                                                    <span
+                                                                        class="Tooltip_label__MjJkZ"
+                                                                        >코스
+                                                                        제목
+                                                                        정보</span
+                                                                    ><span
+                                                                        class="Tooltip_helpIconWrap__MDliY"
+                                                                    ></span>
+                                                                </button>
+                                                            </div>
+                                                        </h3>
+                                                        <div
+                                                            class="Section_guide__NmJhM"
+                                                        >
+                                                            <div
+                                                                class="Section_helperMessage__ZGVjO"
+                                                            ></div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="Section_content__Mzc4M"
+                                                    >
+                                                        <div
+                                                            class="TextField_textField__ZmYzN TextField_lg__NGQ5N"
+                                                        >
+                                                            <label></label>
+                                                            <div
+                                                                class="TextField_field__YTJkY"
+                                                            >
+                                                                <input
+                                                                    placeholder="제목을 입력해 주세요"
+                                                                    maxlength="40"
+                                                                    type="text"
+                                                                    class="Input_input__M2Q3Y Input_lg__MDE4M"
+                                                                    aria-invalid="false"
+                                                                    value=""
+                                                                />
+                                                            </div>
+                                                            <em
+                                                                class="HelperMessage_helperMessage__ZTRkO"
+                                                            ></em>
+                                                            <div
+                                                                class="DurationOfTourContainer hidden"
+                                                            >
+                                                                <input
+                                                                    type="date"
+                                                                    placeholder="시작일"
+                                                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh startdate"
+                                                                    value=""
+                                                                /><span>~</span
+                                                                ><input
+                                                                    type="date"
+                                                                    placeholder="종료일"
+                                                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh enddate"
+                                                                    value=""
+                                                                /><span
+                                                                    >마감일</span
+                                                                ><input
+                                                                    type="date"
+                                                                    placeholder="모집 마감일"
+                                                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh deadline"
+                                                                    value=""
+                                                                /><button
+                                                                    type="button"
+                                                                    class="CurrentProfile__MoreButton-sc-1u92qay-6 FvtMb"
+                                                                >
+                                                                    <img
+                                                                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='17' viewBox='0 0 4 17'%3E %3Cpath fill='%23999' fill-rule='evenodd' d='M1.57 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/%3E %3C/svg%3E"
+                                                                        alt="더보기"
+                                                                    />
+                                                                </button>
+                                                            </div>
+                                                            <div
+                                                                class="DurationOfTourContainer1 hidden SocialRecruiteTagsContainer__SocialRecruiteTagsWrapper-sc-2762su-0 bmexYY second"
+                                                            >
+                                                                <div
+                                                                    class="bmexYYinput"
+                                                                >
+                                                                    <input
+                                                                        placeholder="포함 사항 (0/10)"
+                                                                        class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh include"
+                                                                        value=""
+                                                                    />
+                                                                    <input
+                                                                        placeholder="불포함 사항 (0/10)"
+                                                                        class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh exclude"
+                                                                        value=""
+                                                                    />
+                                                                    <input
+                                                                        placeholder="준비물 (0/10)"
+                                                                        class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh prepare"
+                                                                        value=""
+                                                                    />
+                                                                </div>
+                                                                <p
+                                                                    class="Textarea__Count-sc-1b9phu6-2 jvAusQ"
+                                                                >
+                                                                    입력 후
+                                                                    엔터를
+                                                                    누르면
+                                                                    태그가
+                                                                    생성되요
+                                                                </p>
+                                                                <section
+                                                                    class="ProductDetailPage__SectionContainer-sc-126q1k2-4 bDBbNi"
+                                                                >
+                                                                    <article
+                                                                        class="bDBbNifirst"
+                                                                    ></article>
+                                                                    <article
+                                                                        class="bDBbNisecond"
+                                                                    ></article>
+                                                                    <article
+                                                                        class="bDBbNithird"
+                                                                    ></article>
+                                                                </section>
+                                                            </div>
+
+                                                            <div
+                                                                class="NumberOfPerson"
+                                                            >
+                                                                <input
+                                                                    placeholder="총 거리"
+                                                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh max"
+                                                                    value=""
+                                                                    readonly=""
+                                                                />
+                                                                <input
+                                                                    placeholder="일정"
+                                                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh min"
+                                                                    value=""
+                                                                /><input
+                                                                    placeholder="테마"
+                                                                    class="SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh cost"
+                                                                    value=""
+                                                                />
+                                                            </div>
+                                                            <!-- <div
+                                                                class="GatheringPlace"
+                                                            >
+                                                                <input
+                                                                    placeholder="주소를 입력하세요"
+                                                                    class="noBtnStyle SocialRecruiteTagsContainer__SocialRecruiteTagsInput-sc-2762su-1 gcqwwh include1 gather"
+                                                                    value=""
+                                                                />
+                                                                <div
+                                                                    id="map"
+                                                                    style="
+                                                                        width: 100%;
+                                                                        height: 400px;
+                                                                        position: relative;
+                                                                        overflow: hidden;
+                                                                        background: url('http://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png');
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        style="
+                                                                            position: absolute;
+                                                                            left: 0px;
+                                                                            top: 0px;
+                                                                            width: 100%;
+                                                                            height: 100%;
+                                                                            touch-action: none;
+                                                                            cursor: url('http://t1.daumcdn.net/mapjsapi/images/2x/cursor/openhand.cur.ico')
+                                                                                    7
+                                                                                    5,
+                                                                                url('http://t1.daumcdn.net/mapjsapi/images/2x/cursor/openhand.cur.ico'),
+                                                                                default;
+                                                                        "
+                                                                    >
+                                                                        <div
+                                                                            style="
+                                                                                position: absolute;
+                                                                            "
+                                                                        >
+                                                                            <div
+                                                                                style="
+                                                                                    position: absolute;
+                                                                                    z-index: 0;
+                                                                                "
+                                                                            ></div>
+                                                                            <div
+                                                                                style="
+                                                                                    position: absolute;
+                                                                                    z-index: 1;
+                                                                                    left: 0px;
+                                                                                    top: 0px;
+                                                                                "
+                                                                            >
+                                                                                <img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/30/12.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: -48px;
+                                                                                        top: 262px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/30/13.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: 208px;
+                                                                                        top: 262px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/30/14.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: 464px;
+                                                                                        top: 262px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/30/15.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: 720px;
+                                                                                        top: 262px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/30/16.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: 976px;
+                                                                                        top: 262px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/31/12.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: -48px;
+                                                                                        top: 6px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/31/13.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: 208px;
+                                                                                        top: 6px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/31/14.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: 464px;
+                                                                                        top: 6px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/31/15.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: 720px;
+                                                                                        top: 6px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/31/16.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: 976px;
+                                                                                        top: 6px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/32/12.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: -48px;
+                                                                                        top: -250px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/32/13.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: 208px;
+                                                                                        top: -250px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/32/14.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: 464px;
+                                                                                        top: -250px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/32/15.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: 720px;
+                                                                                        top: -250px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                /><img
+                                                                                    src="http://mts.daumcdn.net/api/v1/tile/PNG02/v05_5ho1k/latest/9/32/16.png"
+                                                                                    alt=""
+                                                                                    draggable="false"
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        user-select: none;
+                                                                                        -webkit-user-drag: none;
+                                                                                        min-width: 0px;
+                                                                                        min-height: 0px;
+                                                                                        max-width: none;
+                                                                                        max-height: none;
+                                                                                        left: 976px;
+                                                                                        top: -250px;
+                                                                                        opacity: 1;
+                                                                                        transition-property: opacity;
+                                                                                        transition-duration: 0.2s;
+                                                                                        transition-timing-function: ease;
+                                                                                        width: 256px;
+                                                                                        height: 256px;
+                                                                                    "
+                                                                                />
+                                                                            </div>
+                                                                            <div
+                                                                                style="
+                                                                                    position: absolute;
+                                                                                    z-index: 1;
+                                                                                "
+                                                                            ></div>
+                                                                            <div
+                                                                                style="
+                                                                                    width: 885px;
+                                                                                    height: 400px;
+                                                                                    position: absolute;
+                                                                                    z-index: 1;
+                                                                                "
+                                                                            ></div>
+                                                                            <div
+                                                                                style="
+                                                                                    position: absolute;
+                                                                                    z-index: 1;
+                                                                                "
+                                                                            >
+                                                                                <svg
+                                                                                    version="1.1"
+                                                                                    style="
+                                                                                        stroke: none;
+                                                                                        stroke-dashoffset: 0.5;
+                                                                                        stroke-linejoin: round;
+                                                                                        fill: none;
+                                                                                        transform: translateZ(
+                                                                                            0px
+                                                                                        );
+                                                                                        position: absolute;
+                                                                                        width: 4425px;
+                                                                                        height: 2000px;
+                                                                                        left: -1770px;
+                                                                                        top: -800px;
+                                                                                    "
+                                                                                    viewBox="0 0 4425 2000"
+                                                                                >
+                                                                                    <defs></defs>
+                                                                                    <path
+                                                                                        id="daum-maps-shape-0"
+                                                                                        style="
+                                                                                            stroke: rgb(
+                                                                                                255,
+                                                                                                0,
+                                                                                                0
+                                                                                            );
+                                                                                            stroke-opacity: 0.7;
+                                                                                            stroke-width: 5px;
+                                                                                            color: rgb(
+                                                                                                255,
+                                                                                                0,
+                                                                                                0
+                                                                                            );
+                                                                                            stroke-linecap: round;
+                                                                                            display: none;
+                                                                                        "
+                                                                                    ></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                            <div
+                                                                                style="
+                                                                                    position: absolute;
+                                                                                    z-index: 1;
+                                                                                    width: 100%;
+                                                                                    height: 0px;
+                                                                                    transform: translateZ(
+                                                                                        0px
+                                                                                    );
+                                                                                "
+                                                                            ></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        style="
+                                                                            position: absolute;
+                                                                            cursor: default;
+                                                                            z-index: 1;
+                                                                            margin: 0px
+                                                                                6px;
+                                                                            height: 19px;
+                                                                            line-height: 14px;
+                                                                            left: 0px;
+                                                                            bottom: 0px;
+                                                                            color: rgb(
+                                                                                0,
+                                                                                0,
+                                                                                0
+                                                                            );
+                                                                        "
+                                                                    >
+                                                                        <div
+                                                                            style="
+                                                                                color: rgb(
+                                                                                    0,
+                                                                                    0,
+                                                                                    0
+                                                                                );
+                                                                                text-align: center;
+                                                                                font-size: 10px;
+                                                                                float: left;
+                                                                            "
+                                                                        >
+                                                                            <div
+                                                                                style="
+                                                                                    float: left;
+                                                                                    margin: 2px
+                                                                                        3px
+                                                                                        0px
+                                                                                        4px;
+                                                                                    height: 6px;
+                                                                                    transition: width
+                                                                                        0.1s;
+                                                                                    border-top: none
+                                                                                        rgb(
+                                                                                            0,
+                                                                                            0,
+                                                                                            0
+                                                                                        );
+                                                                                    border-right: 2px
+                                                                                        solid
+                                                                                        rgb(
+                                                                                            0,
+                                                                                            0,
+                                                                                            0
+                                                                                        );
+                                                                                    border-bottom: 2px
+                                                                                        solid
+                                                                                        rgb(
+                                                                                            0,
+                                                                                            0,
+                                                                                            0
+                                                                                        );
+                                                                                    border-left: 2px
+                                                                                        solid
+                                                                                        rgb(
+                                                                                            0,
+                                                                                            0,
+                                                                                            0
+                                                                                        );
+                                                                                    border-image: initial;
+                                                                                    width: 58px;
+                                                                                "
+                                                                            ></div>
+                                                                            <div
+                                                                                style="
+                                                                                    float: left;
+                                                                                    margin: 0px
+                                                                                        4px
+                                                                                        0px
+                                                                                        0px;
+                                                                                    font-family: AppleSDGothicNeo-Regular,
+                                                                                        돋움,
+                                                                                        dotum,
+                                                                                        sans-serif;
+                                                                                    font-weight: bold;
+                                                                                    color: rgb(
+                                                                                        0,
+                                                                                        0,
+                                                                                        0
+                                                                                    );
+                                                                                "
+                                                                            >
+                                                                                4km
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            style="
+                                                                                margin: 0px
+                                                                                    4px;
+                                                                                float: left;
+                                                                            "
+                                                                        >
+                                                                            <a
+                                                                                target="_blank"
+                                                                                href="http://map.kakao.com/"
+                                                                                style="
+                                                                                    float: left;
+                                                                                    width: 32px;
+                                                                                    height: 10px;
+                                                                                "
+                                                                                ><img
+                                                                                    src="http://t1.daumcdn.net/mapjsapi/images/2x/m_bi_b.png"
+                                                                                    alt="Kakao 맵으로 이동(새창열림)"
+                                                                                    style="
+                                                                                        float: left;
+                                                                                        width: 32px;
+                                                                                        height: 10px;
+                                                                                        border: none;
+                                                                                    "
+                                                                            /></a>
+                                                                            <div
+                                                                                style="
+                                                                                    font: 11px /
+                                                                                            11px
+                                                                                            Arial,
+                                                                                        Tahoma,
+                                                                                        Dotum,
+                                                                                        sans-serif;
+                                                                                    float: left;
+                                                                                "
+                                                                            ></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        style="
+                                                                            cursor: auto;
+                                                                            position: absolute;
+                                                                            z-index: 2;
+                                                                            left: 0px;
+                                                                            top: 0px;
+                                                                        "
+                                                                    ></div>
+                                                                </div>
+                                                            </div> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section
+                                                class="Section_container__NzdhM spacing-9"
+                                            >
+                                                <div style="max-width: 1024px">
+                                                    <div
+                                                        class="Section_header__NDYxN"
+                                                    >
+                                                        <h3
+                                                            class="Section_title__ODQyN Section_isRequired__MzViM"
+                                                        >
+                                                            대표 이미지<span
+                                                                class="BlindText_textHidden__Y2JmY"
+                                                                >필수</span
+                                                            >
+                                                            <div>
+                                                                <button
+                                                                    type="button"
+                                                                    class="Tooltip_button__OGZkY Tooltip_withLabel__M2Q1O Section_tooltip__Njk1N"
+                                                                    aria-describedby="Tooltip_2"
+                                                                >
+                                                                    <span
+                                                                        class="Tooltip_label__MjJkZ"
+                                                                        >대표
+                                                                        이미지
+                                                                        정보</span
+                                                                    ><span
+                                                                        class="Tooltip_helpIconWrap__MDliY"
+                                                                    ></span>
+                                                                </button>
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                    <div
+                                                        class="Section_description__NmFmM"
+                                                    >
+                                                        <p class="spacing-4">
+                                                            픽커스 및 포털 검색
+                                                            결과, SNS 타겟 광고
+                                                            등에 노출할 대표
+                                                            이미지를 등록해
+                                                            주세요.
+                                                        </p>
+                                                        <div
+                                                            color="primary"
+                                                            class="MessageBox_messageBox__YzFiZ MessageBox_primary__YmZmM MessageBox_vertical__NGM3N"
+                                                        >
+                                                            <svg
+                                                                viewBox="0 0 40 40"
+                                                                focusable="false"
+                                                                role="presentation"
+                                                                class="withIcon_icon__MjYzN MessageBox_icon__NzQ3M"
+                                                                aria-hidden="true"
+                                                            >
+                                                                <path
+                                                                    fill="none"
+                                                                    d="M0 0h40v40H0z"
+                                                                ></path>
+                                                                <path
+                                                                    d="M20 1a19 19 0 1 0 19 19A19.06 19.06 0 0 0 20 1zm1 28.6h-2v-13h2zm-1-15.84A1.8 1.8 0 1 1 21.8 12a1.8 1.8 0 0 1-1.8 1.76z"
+                                                                ></path>
+                                                            </svg>
+                                                            <div
+                                                                class="MessageBox_content__MTc0Z"
+                                                            >
+                                                                <p
+                                                                    class="MessageBox_title__MjlmY"
+                                                                >
+                                                                    대표 이미지
+                                                                    등록 가이드
+                                                                </p>
+                                                                <div
+                                                                    class="MessageBox_description__OGVjN"
+                                                                >
+                                                                    <ul>
+                                                                        <li>
+                                                                            10MB
+                                                                            이하의
+                                                                            JPG,
+                                                                            JPEG,
+                                                                            PNG
+                                                                            파일
+                                                                        </li>
+                                                                        <li>
+                                                                            해상도
+                                                                            1200x675
+                                                                            픽셀
+                                                                            이상
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="ImageUploadSection__Wrapper-sc-12o1z5n-0 kutLeL"
+                                                    >
+                                                        <div>
+                                                            <label
+                                                                class="InputImageReview__Wrapper-sc-1oapt4s-0 ipbuZD"
+                                                            >
+                                                                <input
+                                                                    type="file"
+                                                                    accept=".jpg, .jpeg, .png"
+                                                                    multiple=""
+                                                                />
+                                                                <span>
+                                                                    사진
+                                                                    첨부하기</span
+                                                                >
+                                                            </label>
+                                                            <div
+                                                                class="ImageList-sc-9v1mt2-0 hGJMVS"
+                                                            ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <!-- <section
+                                                class="Section_container__NzdhM"
+                                            >
+                                                <div style="max-width: 1024px">
+                                                    <div
+                                                        class="Section_header__NDYxN"
+                                                    >
+                                                        <h3
+                                                            class="Section_title__ODQyN Section_isRequired__MzViM"
+                                                        >
+                                                            코스 주변
+                                                            관광지<span
+                                                                class="BlindText_textHidden__Y2JmY"
+                                                                >필수</span
+                                                            >
+                                                            <div>
+                                                                <button
+                                                                    type="button"
+                                                                    class="Tooltip_button__OGZkY Tooltip_withLabel__M2Q1O Section_tooltip__Njk1N"
+                                                                    aria-describedby="Tooltip_4"
+                                                                >
+                                                                    <span
+                                                                        class="Tooltip_label__MjJkZ"
+                                                                        >코스
+                                                                        주변
+                                                                        관광지
+                                                                        정보</span
+                                                                    ><span
+                                                                        class="Tooltip_helpIconWrap__MDliY"
+                                                                    ></span>
+                                                                </button>
+                                                            </div>
+                                                        </h3>
+                                                    </div>
+                                                    <div
+                                                        class="Section_description__NmFmM"
+                                                    >
+                                                        <p>
+                                                            프로젝트 상세페이지
+                                                            최상단에 노출할 영상
+                                                            또는 사진을 등록해
+                                                            주세요.
+                                                        </p>
+                                                    </div>
+                                                    <div
+                                                        class="Section_content__Mzc4M"
+                                                    >
+                                                        <div
+                                                            class="StoryVideoOrImageField_container__NTc3N"
+                                                        >
+                                                            <div
+                                                                class="StoryVideoOrImageField_buttonWrapper__NTk3N"
+                                                                role="tablist"
+                                                            >
+                                                                <button
+                                                                    role="tab"
+                                                                    aria-selected="false"
+                                                                    aria-controls="story-panel-video"
+                                                                    id="story-tab-video"
+                                                                    class="Button_button__YmRmM Button_secondary__MTExN Button_block__ODA2N"
+                                                                    type="button"
+                                                                >
+                                                                    <span
+                                                                        ><span
+                                                                            class="Button_children__NzZlO"
+                                                                            >소개
+                                                                            영상</span
+                                                                        ></span
+                                                                    ></button
+                                                                ><button
+                                                                    role="tab"
+                                                                    aria-selected="true"
+                                                                    aria-controls="story-panel-image"
+                                                                    id="story-tab-image"
+                                                                    class="Button_button__YmRmM Button_primary__YjdmO Button_block__ODA2N"
+                                                                    type="button"
+                                                                >
+                                                                    <span
+                                                                        ><span
+                                                                            class="Button_children__NzZlO"
+                                                                            >소개
+                                                                            사진</span
+                                                                        ></span
+                                                                    >
+                                                                </button>
+                                                            </div>
+                                                            <div
+                                                                id="story-panel-image"
+                                                                role="tabpanel"
+                                                                tabindex="0"
+                                                                aria-labelledby="story-tab-image"
+                                                            >
+                                                                <div
+                                                                    color="primary"
+                                                                    class="MessageBox_messageBox__YzFiZ MessageBox_primary__YmZmM MessageBox_vertical__NGM3N StoryVideoOrImageField_messageBox__ZWY2Y"
+                                                                >
+                                                                    <svg
+                                                                        viewBox="0 0 40 40"
+                                                                        focusable="false"
+                                                                        role="presentation"
+                                                                        class="withIcon_icon__MjYzN MessageBox_icon__NzQ3M"
+                                                                        aria-hidden="true"
+                                                                    >
+                                                                        <path
+                                                                            fill="none"
+                                                                            d="M0 0h40v40H0z"
+                                                                        ></path>
+                                                                        <path
+                                                                            d="M20 1a19 19 0 1 0 19 19A19.06 19.06 0 0 0 20 1zm1 28.6h-2v-13h2zm-1-15.84A1.8 1.8 0 1 1 21.8 12a1.8 1.8 0 0 1-1.8 1.76z"
+                                                                        ></path>
+                                                                    </svg>
+                                                                    <div
+                                                                        class="MessageBox_content__MTc0Z"
+                                                                    >
+                                                                        <p
+                                                                            class="MessageBox_title__MjlmY"
+                                                                        >
+                                                                            추천
+                                                                            코스
+                                                                            주변
+                                                                            관광지
+                                                                        </p>
+                                                                        <div
+                                                                            class="MessageBox_description__OGVjN"
+                                                                        >
+                                                                            <div>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        이미지
+                                                                                        용량
+                                                                                        제한
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <ul
+                                                                                    style="
+                                                                                        margin-left: 15px;
+                                                                                    "
+                                                                                >
+                                                                                    <li>
+                                                                                        GIF:
+                                                                                        2MB
+                                                                                        이하,
+                                                                                        해상도
+                                                                                        760x480
+                                                                                        픽셀
+                                                                                        이상
+                                                                                        ~
+                                                                                        1440x864
+                                                                                        픽셀
+                                                                                        이하
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        JPG,
+                                                                                        JPEG,
+                                                                                        PNG:
+                                                                                        10MB
+                                                                                        이하,
+                                                                                        해상도
+                                                                                        760x480
+                                                                                        픽셀
+                                                                                        이상
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        최대
+                                                                                        3장까지
+                                                                                        등록
+                                                                                        가능
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="StoryImageField_container__ZDBlZ"
+                                                                >
+                                                                    <div
+                                                                        class="ImageUploader_container__N2E2N StoryImageField_imageUploader__NWJhZ"
+                                                                    >
+                                                                        <div
+                                                                            class="ImageUploadButton_container__NzAxM"
+                                                                        >
+                                                                            <div
+                                                                                class="ImageUploadButton_imageUploadContent__OWNlM"
+                                                                            >
+                                                                                <svg
+                                                                                    viewBox="0 0 32 32"
+                                                                                    focusable="false"
+                                                                                    role="presentation"
+                                                                                    class="withIcon_icon__MjYzN ImageUploadButton_cameraIcon__N2JiO"
+                                                                                    aria-hidden="true"
+                                                                                    style="
+                                                                                        width: 24px;
+                                                                                        height: 24px;
+                                                                                    "
+                                                                                >
+                                                                                    <path
+                                                                                        d="M20.8 16.8a4.8 4.8 0 1 1-9.6 0 4.8 4.8 0 0 1 9.6 0z"
+                                                                                    ></path>
+                                                                                    <path
+                                                                                        d="M22.4 6.4L20 3.2h-8L9.6 6.4h-8v20.8h28.8V6.4zM16 23.2c-3.535 0-6.4-2.865-6.4-6.4s2.865-6.4 6.4-6.4 6.4 2.865 6.4 6.4-2.865 6.4-6.4 6.4z"
+                                                                                    ></path>
+                                                                                </svg>
+                                                                                <div
+                                                                                    class="ImageUploadButton_count__ZDRiM"
+                                                                                >
+                                                                                    <dl>
+                                                                                        <dt
+                                                                                            class="ImageUploadButton_blindText__MzQwM"
+                                                                                        >
+                                                                                            업로드
+                                                                                            된
+                                                                                            이미지
+                                                                                            수
+                                                                                        </dt>
+                                                                                        <dd>
+                                                                                            0
+                                                                                        </dd>
+                                                                                    </dl>
+                                                                                    /
+                                                                                    <dl>
+                                                                                        <dt
+                                                                                            class="ImageUploadButton_blindText__MzQwM"
+                                                                                        >
+                                                                                            업로드
+                                                                                            가능한
+                                                                                            최대
+                                                                                            이미지
+                                                                                            수
+                                                                                        </dt>
+                                                                                        <dd>
+                                                                                            10
+                                                                                        </dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <label
+                                                                                class="ImageUploadButton_uploadLabel__NTU5N"
+                                                                                for="story-image-upload"
+                                                                                ><span
+                                                                                    class="ImageUploadButton_blindText__MzQwM"
+                                                                                    >이미지
+                                                                                    업로드하기</span
+                                                                                ></label
+                                                                            ><input
+                                                                                type="file"
+                                                                                hidden=""
+                                                                                id="story-image-upload"
+                                                                                multiple=""
+                                                                                accept="image/jpeg, image/jpg, image/png, image/gif"
+                                                                            />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <input
+                                                            type="hidden"
+                                                            name="isVideoChecked"
+                                                            value="false"
+                                                        /><input
+                                                            type="hidden"
+                                                            name="videoEmbedUrl"
+                                                            value=""
+                                                        /><input
+                                                            type="hidden"
+                                                            name="videoUrl"
+                                                            value=""
+                                                        /><input
+                                                            type="hidden"
+                                                            name="images"
+                                                            value=""
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </section> -->
+                                            <section
+                                                class="Section_container__NzdhM"
+                                            ></section>
+                                            <section
+                                                class="Section_container__NzdhM StoryEditorWrapperItem_container__MmJiN"
+                                                style="max-width: 1024px"
+                                            ></section>
+                                            <section
+                                                class="Section_container__NzdhM StoryEditorWrapperComingItem_container__OTU5Y"
+                                                style="max-width: 1024px"
+                                            ></section>
+                                            <input
+                                                type="hidden"
+                                                name="isComingSoonApply"
+                                                value="true"
+                                            /><input
+                                                type="hidden"
+                                                name="isAppliedComingSoon"
+                                                value="true"
+                                            /><input
+                                                type="hidden"
+                                                name="comingStory.story"
+                                                value=""
+                                            />
+                                            <section
+                                                class="Section_container__NzdhM TagsField_container__MTFkM spacing-9"
+                                            ></section>
+                                        </div>
+                                        <div
+                                            class="SaveButtonFooter_footer__YTA1M SaveButtonFooter_expand__Y2ZkM"
+                                        >
+                                            <div
+                                                class="SaveButtonFooter_btnWrapper__ZTk3Z"
+                                            >
+                                                <button
+                                                    class="Button_button__YmRmM Button_primary__YjdmO Button_md__NTc2Y StoryFormPage_submitBtn__MzE2M StoryFormPage_desktop__YmRkN"
+                                                    type="button"
+                                                >
+                                                    <span
+                                                        ><span
+                                                            class="Button_children__NzZlO"
+                                                            >임시저장</span
+                                                        ></span
+                                                    >
+                                                </button>
+                                                <div
+                                                    class="StoryFormPage_saveButtonWrapper__Y2FmO"
+                                                >
+                                                    <button
+                                                        class="Button_button__YmRmM Button_primary__YjdmO Button_contained__NjMyO Button_md__NTc2Y StoryFormPage_submitBtn__MzE2M StoryFormPage_desktop__YmRkN"
+                                                        type="button"
+                                                    >
+                                                        <span
+                                                            ><span
+                                                                class="Button_children__NzZlO"
+                                                                >저장</span
+                                                            ></span
+                                                        >
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </main>
+                    </div>
+                    <button
+                        type="button"
+                        class="AppLayout_expandNavButton__NTEwM AppLayout_expand__MmRhM"
+                    >
+                        <i class="AppLayout_icon__MTIxN"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=44cd4db2e4673dc5f65a029d5a647839&libraries=services"></script>
+    <script
+        type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=44cd4db2e4673dc5f65a029d5a647839&libraries=services"
+    ></script>
+
+    <!-- <script src="../../../static/js/admin/admin.js"></script> -->
+    <script src="../../../static/js/admin/add-course-renewal.js"></script>
+    <!-- <script src="../../../static/js/admin/add-course-map.js"></script> -->
+</html>

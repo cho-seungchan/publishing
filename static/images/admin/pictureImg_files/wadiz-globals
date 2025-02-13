@@ -1,0 +1,28 @@
+
+
+
+wadiz = {};
+wadiz.sessionUser = '14097733218';
+wadiz.globals = (function() {
+    var ua = navigator ? navigator.userAgent : '';
+    var isIos = /iP(hone|ad|od)/.test(ua);
+    var isAndroid = /;\sAndroid/.test(ua);
+    var isWadizIosApp = isIos && /ioswadiz(\/([0-9.]+))?$/i.test(ua);
+    var isWadizAndroidApp = isAndroid && /androidwadiz(\/([0-9.]+))?$/i.test(ua);
+
+    return {
+        isWadizApp: isWadizIosApp || isWadizAndroidApp,
+        isWadizIosApp: isWadizIosApp,
+        isWadizAndroidApp: isWadizAndroidApp,
+        isLogged: JSON.parse('true'),
+        userId: '7832074',
+        encUserId: '14097733218',
+        hashedUserName: '372a269f21c608d79f2d6dbbbc5ff041452be117',
+        staticHost: 'https://static.wadiz.kr',
+        publicApiHost: 'https://public-api.wadiz.kr',
+        embedApiHost: 'https://embed-api.wadiz.kr',
+        serviceApiHost: 'https://service.wadiz.kr',
+        analyticsHost: 'https://analytics.wadiz.kr',
+        platformApiHost: 'https://platform.wadiz.kr'
+    };
+})()

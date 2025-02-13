@@ -1,0 +1,28 @@
+
+    if(!window['__baclient__']) window.__baclient__ = {};
+    __baclient__.success = false;
+    __baclient__.message = 'not found apply';
+    try {
+            
+      var a = window.location.search.substr(1).split('&');
+      var b = {};
+      if( a !== '') {
+        for (var i = 0; i < a.length; ++i) {
+          var p = a[i].split('=', 2);
+          if (p.length == 1)
+              b[p[0]] = "";
+          else
+              b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+        }
+      }
+      
+      if (b._beusable_type && b._beusable_type == '_beusable_code_check') {
+        if(!window["__beusablerumclient__"]) window.__beusablerumclient__ = {};
+        __beusablerumclient__.code_check = {version:"1", lang: b._beusable_lang, html_url : "//script.beusable.net/code.check.v1.0.0.html"};
+        setTimeout(function(){
+          __baclient__.load('//script.beusable.net/code.check.v1.0.0.js');
+        }, 500);
+      }
+    } catch(e) {
+    }
+  
