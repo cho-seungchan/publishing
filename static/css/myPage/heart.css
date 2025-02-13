@@ -31,10 +31,31 @@ html, body {
     flex-flow: column;
     align-content: flex-start;
     margin: 0px auto;
-    max-width: 808px;
     width: 100%;
     padding: 0px;
     min-height: 1px;
+}
+
+.jhIEWm {
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.iKjpvd {
+    padding: 20px 20px 20px;
+    margin: 0px auto;
+    max-width: 768px;
+    display: flex
+;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.epAnZX {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    letter-spacing: -0.72px;
+    color: rgb(51, 51, 51);
 }
 
 .dqLSTf {
@@ -324,4 +345,8 @@ b, strong {
     font-size: 14px;
     line-height: 20px;
     margin-top: 6px;
+}
+
+.firstBanner{
+    margin-top: 30px;
 }

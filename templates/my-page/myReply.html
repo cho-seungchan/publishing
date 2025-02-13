@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../static/css/common/header.css" />
+        <link rel="stylesheet" href="../../static/css/common/footer.css" />
+        <link rel="stylesheet" href="../../static/css/myPage/myReply.css" />
+        <link
+            rel="shortcut icon"
+            href="../../static/images/common/favicon1.ico"
+            type="image/x-icon"
+        />
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/common/header.css"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/common/footer.css"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700"
+                    rel="stylesheet"
+                />
+                <link
+                    rel="preconnect"
+                    href="https://fonts.gstatic.com"
+                    crossorigin=""
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
+                    rel="stylesheet"
+                />
+
+                <title>내 댓글 목록</title>
+            </head>
+            <body class="fontLoaded">
+                <div id="app">
+                    <div class="App__AppWrapper-nc5ti6-0 idXWQn">
+                        <!-- Header will be dynamically inserted here -->
+                        <div id="header-placeholder"></div>
+                        <script>
+                            // Load header.html and insert it in#header-placeholder
+                            fetch("../all/header.html")
+                                .then((response) => response.text())
+                                .then((data) => {
+                                    document.getElementById(
+                                        "header-placeholder"
+                                    ).innerHTML = data;
+                                })
+                                .catch((error) =>
+                                    console.error(
+                                        "Error loading header:",
+                                        error
+                                    )
+                                );
+                        </script>
+                        <div class="mainContainer" style="min-height: 50vh">
+                            <div
+                                class="MyPurchases__PcTopWrapper-ag7quq-1 kTezqN"
+                            >
+                                <header
+                                    class="PcTop__Wrapper-sc-1mni0hl-0 jhIEWm"
+                                >
+                                    <div
+                                        class="PcTop__Content-sc-1mni0hl-1 iKjpvd"
+                                    >
+                                        <div
+                                            class="PcTop__Title-sc-1mni0hl-2 epAnZX"
+                                        >
+                                            나의 댓글 목록
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                            <div class="listContainer">
+                                <div class="listContainer">
+                                    <div class="listWrap showDiv" id="div1">
+                                        <ul
+                                            class="NoticePage__NoticeListWrapper"
+                                        >
+                                            <div class="mainUserListDiv">
+                                                <div class="postDiv">
+                                                    피드작성자
+                                                </div>
+                                                <div class="contentDiv">
+                                                    제목
+                                                </div>
+                                                <div class="HeadernameDiv">
+                                                    작성날짜
+                                                </div>
+                                            </div>
+                                            <li>
+                                                <div class="userListDiv">
+                                                    <div class="postList">
+                                                        <a href="">
+                                                            <span>
+                                                                정도영
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="contentHidden">
+                                                        <span
+                                                            style="
+                                                                cursor: pointer;
+                                                            "
+                                                            class="hiddenText"
+                                                            >불멍하는 발바닥
+                                                            따수와
+                                                            보이네요ㅋㅋㅋ 저도
+                                                            꼭 테스트해봐서
+                                                            ...이 찍혔으면
+                                                            좋겠어요
+                                                        </span>
+                                                    </div>
+                                                    <div class="comentMessage">
+                                                        <span>
+                                                            2025.01.22
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="userListDiv">
+                                                    <div class="postList">
+                                                        <a href="">
+                                                            <span>
+                                                                조승찬
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="contentHidden">
+                                                        <span
+                                                            style="
+                                                                cursor: pointer;
+                                                            "
+                                                            class="hiddenText"
+                                                            >오늘 한명이
+                                                            가버렸는데 아쉽네요
+                                                            :(
+                                                        </span>
+                                                    </div>
+                                                    <div class="comentMessage">
+                                                        <span>
+                                                            2025.02.13
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="listContainer">
+                                    <div
+                                        id="div2"
+                                        class="listWrap hiddenDiv"
+                                        style="display: none"
+                                    >
+                                        <ul
+                                            class="NoticePage__NoticeListWrapper"
+                                        >
+                                            <div class="mainUserListDiv">
+                                                <div class="postDiv">
+                                                    보낸사람
+                                                </div>
+                                                <div class="contentDiv">
+                                                    제목
+                                                </div>
+                                                <div class="HeadernameDiv">
+                                                    작성날짜
+                                                </div>
+                                            </div>
+                                            <li>
+                                                <div class="userListDiv">
+                                                    <div class="postList">
+                                                        <a href="">
+                                                            <span>
+                                                                정도영 바낌1
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="contentHidden">
+                                                        <span
+                                                            style="
+                                                                cursor: pointer;
+                                                            "
+                                                            class="hiddenText"
+                                                            >불멍하는 발바닥
+                                                            따수와
+                                                            보이네요ㅋㅋㅋ 저도
+                                                            꼭 테스트해봐서
+                                                            ...이 찍혔으면
+                                                            좋겠어요
+                                                        </span>
+                                                    </div>
+                                                    <div class="comentMessage">
+                                                        <span>
+                                                            2025.01.22
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="userListDiv">
+                                                    <div class="postList">
+                                                        <a href="">
+                                                            <span>
+                                                                조승찬
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="contentHidden">
+                                                        <span
+                                                            style="
+                                                                cursor: pointer;
+                                                            "
+                                                            class="hiddenText"
+                                                            >오늘 한명이
+                                                            가버렸는데 아쉽네요
+                                                            :(
+                                                        </span>
+                                                    </div>
+                                                    <div class="comentMessage">
+                                                        <span>
+                                                            2025.02.13
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="listContainer">
+                                    <div
+                                        id="div3"
+                                        class="listWrap hiddenDiv"
+                                        style="display: none"
+                                    >
+                                        <ul
+                                            class="NoticePage__NoticeListWrapper"
+                                        >
+                                            <div class="mainUserListDiv">
+                                                <div class="postDiv">
+                                                    보낸사람
+                                                </div>
+                                                <div class="contentDiv">
+                                                    제목
+                                                </div>
+                                                <div class="HeadernameDiv">
+                                                    작성날짜
+                                                </div>
+                                            </div>
+                                            <li>
+                                                <div class="userListDiv">
+                                                    <div class="postList">
+                                                        <a href="">
+                                                            <span>
+                                                                정도영 바낌2
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="contentHidden">
+                                                        <span
+                                                            style="
+                                                                cursor: pointer;
+                                                            "
+                                                            class="hiddenText"
+                                                            >불멍하는 발바닥
+                                                            따수와
+                                                            보이네요ㅋㅋㅋ 저도
+                                                            꼭 테스트해봐서
+                                                            ...이 찍혔으면
+                                                            좋겠어요
+                                                        </span>
+                                                    </div>
+                                                    <div class="comentMessage">
+                                                        <span>
+                                                            2025.01.22
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="userListDiv">
+                                                    <div class="postList">
+                                                        <a href="">
+                                                            <span>
+                                                                조승찬
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="contentHidden">
+                                                        <span
+                                                            style="
+                                                                cursor: pointer;
+                                                            "
+                                                            class="hiddenText"
+                                                            >오늘 한명이
+                                                            가버렸는데 아쉽네요
+                                                            :(
+                                                        </span>
+                                                    </div>
+                                                    <div class="comentMessage">
+                                                        <span>
+                                                            2025.02.13
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer
+                                class="Wrapper__PaginationWrapper-fk4uv4-0 hBVRcD"
+                            >
+                                <div
+                                    class="PaginationButtonGroup__PrevButtonWrapper-x0iffd-0 gIsDDT"
+                                >
+                                    <button
+                                        width="40px"
+                                        height="40px"
+                                        font-size="18px"
+                                        disabled=""
+                                        class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 iItkLq"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='%23FFF' fill-opacity='0' fill-rule='nonzero' d='M0 0h40v40H0z'/%3E %3Cpath stroke='%23DDD' stroke-width='1.5' d='M16 16l4 4-4 4M21 16l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="PaginationButtonGroup__Icon-x0iffd-2 jVxRns"
+                                        /></button
+                                    ><button
+                                        width="40px"
+                                        height="40px"
+                                        font-size="18px"
+                                        disabled=""
+                                        class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 iItkLq"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='none' d='M0 0h40v40H0z'/%3E %3Cpath stroke='%23DDD' stroke-width='1.5' d='M18 16l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="PaginationButtonGroup__Icon-x0iffd-2 jVxRns"
+                                        />
+                                    </button>
+                                </div>
+                                <button
+                                    data-target="div1"
+                                    ;
+                                    width="40px"
+                                    height="40px"
+                                    color="#3397ff"
+                                    font-size="18px"
+                                    font-weight="bold"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 emphasis buttonAll thisButton"
+                                >
+                                    1
+                                </button>
+                                <!-- 게시글이 화면에 나오게 하는 게시글보다 많아지면 추가할 button태그 -->
+                                <button
+                                    data-target="div2"
+                                    ;
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 emphasis buttonAll anotherButton"
+                                >
+                                    2
+                                </button>
+                                <button
+                                    data-target="div3"
+                                    ;
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 emphasis buttonAll anotherButton"
+                                >
+                                    3
+                                </button>
+                                <div
+                                    class="PaginationButtonGroup__NextButtonWrapper-x0iffd-1 eNIHag"
+                                >
+                                    <button
+                                        width="40px"
+                                        height="40px"
+                                        font-size="18px"
+                                        class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 iItkLq"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='none' d='M0 0h40v40H0z'/%3E %3Cpath stroke='%23DDD' stroke-width='1.5' d='M18 16l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="PaginationButtonGroup__Icon-x0iffd-2 dQqQMu"
+                                        /></button
+                                    ><button
+                                        width="40px"
+                                        height="40px"
+                                        font-size="18px"
+                                        class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 iItkLq"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='%23FFF' fill-opacity='0' fill-rule='nonzero' d='M0 0h40v40H0z'/%3E %3Cpath stroke='%23DDD' stroke-width='1.5' d='M16 16l4 4-4 4M21 16l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="PaginationButtonGroup__Icon-x0iffd-2 dQqQMu"
+                                        />
+                                    </button>
+                                </div>
+                            </footer>
+                        </div>
+
+                        <!-- Footer will be dynamically inserted here -->
+                        <div id="footer-placeholder"></div>
+                        <script>
+                            // Load footer.html and insert it into #footer-placeholder
+                            fetch("../all/footer.html")
+                                .then((response) => response.text())
+                                .then((data) => {
+                                    document.getElementById(
+                                        "footer-placeholder"
+                                    ).innerHTML = data;
+                                })
+                                .catch((error) =>
+                                    console.error(
+                                        "Error loading footer:",
+                                        error
+                                    )
+                                );
+                        </script>
+                    </div>
+                </div>
+                <div id="modal-root"></div>
+                <div id="dnd-root"></div>
+            </body>
+            <script src="../../static/js/myPage/myReply.js"></script>
+        </html>
+    </head>
+</html>

@@ -42,6 +42,18 @@
                 />
 
                 <title>회원가입-본인인증</title>
+                <style>
+                    /* 모든 브라우저에서 기본 스타일 제거 */
+                    input[type="number"]::-webkit-outer-spin-button,
+                    input[type="number"]::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+
+                    input[type="number"] {
+                        -moz-appearance: textfield; /* Firefox에서 기본 스타일 제거 */
+                    }
+                </style>
             </head>
             <body class="fontLoaded">
                 <div id="app">
@@ -96,7 +108,7 @@
                                                 type="tel"
                                                 name="mobileNumber"
                                                 placeholder="휴대폰 번호 ( - 없이 입력)"
-                                                class="Form__Input-sc-1quypp7-1 iRBMai"
+                                                class="Form__Input-sc-1quypp7-1 iRBMai phoneInput"
                                             />
                                             <!-- 휴대폰 번호 검사에 실패했을때 나올 메세지 -->
                                             <!-- <p class="errorMessage">올바른 휴대폰 번호 형식이 아닙니다.</p> -->
@@ -108,7 +120,7 @@
                                             height="50px"
                                             color="#aaa"
                                             font-size="14px"
-                                            class="Button-bqxlp0-0 gsRKCU"
+                                            class="Button-bqxlp0-0 gsRKCU numberSend"
                                         >
                                             인증번호 전송
                                         </button>

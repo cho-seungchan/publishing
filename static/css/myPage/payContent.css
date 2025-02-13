@@ -280,9 +280,7 @@ table {
     display: none;
 }
 
-.kCcQTc:first-child {
-    margin-top: 20px;
-}
+
 
 .oRzGt {
     position: relative;
@@ -310,7 +308,7 @@ table {
 .eEDOvs {
     display: flex
 ;
-    width: 64px;
+    width: 100%;
     position: relative;
     margin-right: 16px;
 }
@@ -320,4 +318,40 @@ table {
     height: 100%;
     text-align: center;
     border-left: 1px solid rgb(238, 238, 238);
+}
+
+.payComent{
+    font-size: 17px;
+    margin: 5px auto;
+    font-weight: 500;
+}
+
+.buttonCancel{
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    display: inline-flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.insertComent{
+    color : rgb(51, 51, 51);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: 13px;
+    margin: 10px auto;
 }
