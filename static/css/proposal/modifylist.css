@@ -643,15 +643,9 @@ button {
     min-height: 1px;
 }
 .ecnmXp {
-    margin: 0px;
     width: 100%;
-    line-height: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: left;
     border-bottom: 1px solid rgb(238, 238, 238);
-    padding: 10px 0px;
-    color: rgb(51, 51, 51);
+    margin-bottom: 0px;
 }
 .irErpt {
     line-height: 14px;
@@ -662,6 +656,8 @@ button {
 .jZtIEr {
     display: flex;
     padding: 0px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    margin-bottom: 0px;
 }
 
 a {
@@ -695,42 +691,19 @@ a {
 .jZtIEr > :first-child {
     margin-top: -20px;
 }
-.jZtIEr > :last-child {
+/* .jZtIEr > :last-child {
     border-bottom: 1px solid rgb(238, 238, 238);
-}
+} */
 .jZtIEr > * > div:first-child {
     -webkit-box-flex: 0;
     flex: 0 0 auto;
     margin-right: 30px;
     width: 160px;
+    margin-bottom: -20px;
 }
 .jZtIEr .button-container {
-    display: flex;
-    flex-direction: column;
     margin-left: auto;
-    margin-right: 20px;
-    gap: 10px;
-    justify-content: center;
-    /* align-items: center; */
 }
-.jZtIEr .button-container button {
-    cursor: pointer;
-    padding: 10px, 20px;
-    background-color: #f8f9fa;
-    color: #000000;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 입체감 있는 그림자 */
-    background-image: linear-gradient(to bottom, #ffffff, #e2e6ea); /* 그라디언트 배경 */
-    transition: background-color 0.3s, box-shadow 0.3s; /* 호버 시 배경 색상 및 그림자 변경 애니메이션 */
-}
-.jZtIEr .button-container button:hover {
-    background-color: #e2e6ea; /* 호버 시 배경 색상 변경 */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* 호버 시 그림자 변경 */
-}
-
 .VUNpu {
     display: initial;
     border-radius: 5px;
@@ -1727,4 +1700,97 @@ var {
 }
 .distanceInfo:after {
     content: none;
+}
+
+/* 수정 삭제 버튼과 모달 */
+.FvtMb {
+    cursor: pointer;
+    justify-items: flex-end;
+}
+
+모달창 .jgFMVr {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3000;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    touch-action: none;
+}
+
+.cyEVkt {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px auto -100px;
+    padding-bottom: 100px;
+    z-index: 3001;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    animation: 0.3s ease 0s 1 normal none running gDIGGC;
+}
+.dNCiPY {
+    position: relative;
+    height: 40px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.dNCiPY::before {
+    content: "";
+    position: absolute;
+    width: 37px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: rgb(221, 221, 221);
+    top: 18px;
+    left: auto;
+    right: auto;
+}
+::before,
+::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+*,
+::before,
+::after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+.bBEXIV {
+    padding: 0px 20px 10px;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(78, 89, 104);
+}
+.cUlkXY {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+.cUlkXY {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+.cUlkXY:last-child {
+    border-bottom: initial;
+}
+.eCzJv {
+    position: absolute;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    animation: 0.3s ease 0s 1 normal none running jBcSpD;
 }
