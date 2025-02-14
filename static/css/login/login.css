@@ -216,3 +216,8 @@ img {
     font-size: 16px;
     margin: 33px 0px 0px;
 }
+
+input[type=text]:hover,input[type=password]:hover {
+    border: 1px solid rgb(0, 117, 239);
+}
+

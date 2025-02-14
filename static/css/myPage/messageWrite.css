@@ -161,14 +161,14 @@ align-items: center;
     flex-wrap: wrap;
 }
 .hGJMVS > * {
-    width: calc(25% - 7.5px);
+    width: calc(24% - 7.5px);
     height: calc(25% - 7.5px);
     margin-right: 10px;
 }
 
 .kZTsQf {
     position: relative;
-    margin-top: 20px;
+    margin-top: 0px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -180,6 +180,7 @@ align-items: center;
 .hVNKgp {
     width: 100%;
     border-radius: 5px;
+    height: 123px;
 }
 
 .benIbu {

@@ -580,3 +580,74 @@ hr {
     filter: drop-shadow(rgba(0, 0, 0, 0.4) 1px 1px 3px);
 
 }
+
+.cpLLyp {
+    display: flex
+;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.jVywpa {
+    margin-bottom: 15px;
+}
+
+.dIHOdO {
+    display: flex
+;
+}
+
+.iLrRBL {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+}
+
+.gDuKGF {
+    min-height: 1px;
+}
+
+.bUFcfh {
+    display: none !important;
+}
+
+.hPRDQO {
+    display: initial;
+    border-radius: 36px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cGynaN {
+    display: flex
+;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.jNvEmy {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    color: rgb(78, 89, 104);
+    margin: 0px;
+}
+
+.bICbxa {
+    font-size: 12px;
+    line-height: 12px;
+    color: rgb(142, 151, 163);
+}
+
+.userWrap {
+    display: flex;
+}
+
+.kdhHMh {
+    font-size: 16px;
+    color: rgb(78, 89, 104);
+    white-space: pre-line;
+}
+
+

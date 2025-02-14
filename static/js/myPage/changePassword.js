@@ -5,15 +5,11 @@ const p = document.createElement("p");
 p.classList.add("changeComment");
 
 check.addEventListener("keyup", () => {
+    console.log(check.value);
     if (check.value === newPassword.value && check.value !== "") {
         button.classList.add("changeButton");
         button.classList.remove("chSrfn");
         button.removeAttribute("disabled");
-        check.classList.remove("errorInput");
-        check.classList.add("iRBMai");
-        check.nextElementSibling.remove();
-        return;
-    } else if (check.value === "") {
         check.classList.remove("errorInput");
         check.classList.add("iRBMai");
         check.nextElementSibling.remove();
