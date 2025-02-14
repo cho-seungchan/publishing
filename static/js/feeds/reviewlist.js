@@ -141,3 +141,15 @@ document.querySelector(".close_1x3s325").addEventListener("click", () => {
         document.querySelector("#modal-root").style.display = "none";
     }
 });
+
+// 수정 삭제 모달창 처리
+
+document.querySelectorAll(".FvtMb").forEach((kebab) => {
+    kebab.addEventListener("click", (e) => {
+        document.querySelector("#modal-button").style.display = "flex";
+
+        document.querySelector(".eCzJv").addEventListener("click", () => {
+            document.querySelector("#modal-button").style.display = "none";
+        });
+    });
+});
