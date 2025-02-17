@@ -25,7 +25,7 @@ button.addEventListener("change", (event) => {
                             </div>
                         </div>
                     </div>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='nonzero'%3E %3Cpath fill='%23FFF' fill-opacity='0' d='M0 0h18v18H0z'/%3E %3Cg stroke='%23FFF' stroke-linecap='square'%3E %3Cpath d='M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E" class="ImageList__IconDelete-sc-9v1mt2-2 benIbu" />
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='nonzero'%3E %3Cpath fill='%23FFF' fill-opacity='0' d='M0 0h18v18H0z'/%3E %3Cg stroke='%23FFF' stroke-linecap='square'%3E %3Cpath d='M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E" class="ImageList__IconDelete-sc-9v1mt2-2 benIbu cancelButton" />
                 </div>
             `;
 
@@ -49,5 +49,12 @@ sendButton.addEventListener("click", () => {
     console.log(textContent.value.length);
     if (textContent.value.length === 0) {
         alert("내용을 입력해주세요!");
+    }
+});
+
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("cancelButton")) {
+        console.log(e.target.parentElement);
+        e.target.parentElement.remove();
     }
 });
