@@ -1,8 +1,6 @@
 const clickList = document.querySelectorAll("ul>li");
 const div = document.createElement("div");
 
-console.log(clickList);
-
 clickList.forEach((list) => {
     list.addEventListener("click", () => {
         list.append(div);
