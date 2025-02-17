@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     if (!volunteerBox || !durationContainer || !durationContainer1) {
-        console.error("요소를 찾을 수 없습니다. 클래스명을 확인하세요.");
+        console.error("❌ 요소를 찾을 수 없습니다. 클래스명을 확인하세요.");
         return;
     }
 
@@ -278,11 +278,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (this.checked) {
             durationContainer.classList.remove("hidden");
             durationContainer1.classList.remove("hidden");
-            console.log("컨테이너 표시됨");
+            console.log(" 컨테이너 표시됨");
         } else {
             durationContainer.classList.add("hidden");
             durationContainer1.classList.add("hidden");
-            console.log("컨테이너 숨겨짐");
+            console.log("❌ 컨테이너 숨겨짐");
         }
     });
 });
@@ -323,188 +323,276 @@ fileParentDiv.addEventListener("click", (e) => {
 });
 // 선택파일의 이미지(x)를 눌렀을 때 전체 dev 삭제 :: 동적으로 생성된 요소일 때는 부모 요소에 위임
 
-// 지도 초기 설정
-var mapContainer = document.getElementById("map"),
+// 지도 보여주기
+var mapContainer = document.getElementById("map"), // 지도를 표시할 div
     mapOption = {
-        center: new kakao.maps.LatLng(35.409476, 127.396059), // 지도 중심 좌표
-        level: 9, // 확대 레벨
+        center: new kakao.maps.LatLng(35.409476, 127.396059), // 지도의 중심좌표
+        level: 9, // 지도의 확대 레벨
     };
-var map = new kakao.maps.Map(mapContainer, mapOption);
 let initialCenter = new kakao.maps.LatLng(35.409476, 127.396059);
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-let tourSpots = []; // 사용자가 입력한 목적지 리스트
-let geocoder = new kakao.maps.services.Geocoder(); // 주소 변환기
-let clickLine; // 경로를 표시할 폴리라인
-let dotOverlays = []; // 지도에 표시되는 동그라미 저장 배열
-let textOverlays = []; // 지도 위에 표시되는 말풍선(목적지 태그) 저장 배열
-let totalDistanceOverlay; // 총 거리 표시 오버레이
+let tourSpots = [
+    { name: "1. 허브마을 채마루", address: "남원시 원천로 37" },
+    { name: "2. 광한루원", address: "남원시 요천로 1447" },
+    { name: "3. 김병종미술관", address: "남원시 함파우길 65-14" },
+    { name: "4. 지리산 허브밸리", address: "남원시 바래봉길 24" },
+    { name: "5. 구서도역", address: "남원시 서도길 32" },
+    { name: "6. 혼불문학관", address: "남원시 노봉안길52" },
+];
 
-//  총 거리 표시할 input 창 가져오기
-const totalDistanceInput = document.querySelector(".max");
-
-//  HTML 요소 가져오기
-const searchInput = document.querySelector(".noBtnStyle");
-const destinationList = document.getElementById("destinationList");
-const fullMapButton = document.querySelector("#fullMap");
-
-//  엔터 키 이벤트로 목적지 추가
-searchInput.addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-        event.preventDefault(); // 기본 엔터 동작 방지
-        addDestination();
-    }
-});
-
-//  목적지 추가 함수
-function addDestination() {
-    let inputAddress = searchInput.value.trim();
-    if (!inputAddress) return alert(" 주소를 입력하세요!");
-
-    let spotNumber = tourSpots.length + 1;
-    let spotName = `${spotNumber}. ${inputAddress}`;
-
-    // 주소 -> 좌표 변환
-    geocoder.addressSearch(inputAddress, (result, status) => {
+let positions = [];
+let geocoder = new kakao.maps.services.Geocoder();
+let remains = tourSpots.length;
+tourSpots.forEach((spot) => {
+    geocoder.addressSearch(spot.address, (result, status) => {
         if (status === kakao.maps.services.Status.OK) {
-            let newLatLng = new kakao.maps.LatLng(result[0].y, result[0].x);
-
-            // 목적지 리스트에 추가
-            let newSpot = {
-                name: spotName,
-                address: inputAddress,
-                latlng: newLatLng,
-            };
-            tourSpots.push(newSpot);
-
-            // 지도에 동그라미 추가
-            let dotOverlay = new kakao.maps.CustomOverlay({
-                content: `<span class="dot"></span>`,
-                position: newLatLng,
-                zIndex: 1,
+            positions.push({
+                content: "<div>" + spot.name + "</div>",
+                latlng: new kakao.maps.LatLng(
+                    Math.floor(result[0].y * 1000000) / 1000000,
+                    Math.floor(result[0].x * 1000000) / 1000000
+                ),
             });
-            dotOverlay.setMap(map);
-            dotOverlays.push(dotOverlay);
-
-            // 지도에 말풍선(목적지 태그) 추가
-            let textOverlay = new kakao.maps.CustomOverlay({
-                content: createOverlayContent(newSpot),
-                position: newLatLng,
-                yAnchor: 1.2,
-                zIndex: 2,
+        }
+        // console.log(positions);
+        remains--;
+        if (remains < 1) {
+            createMarkers();
+            // position의 순서가 원래 입력된 순서가 아니기 때문에 원래
+            positions.forEach((e) => {
+                console.log(e.latlng);
+                for (let i = 0; i < tourSpots.length; i++) {
+                    if (
+                        e.content.substring(5, e.content.length - 6) ==
+                        tourSpots[i].name
+                    ) {
+                        tourSpots[i].latlng = e.latlng;
+                    }
+                }
             });
-            textOverlay.setMap(map);
-            textOverlays.push(textOverlay);
-
-            // 목적지 UI에 추가
-            addDestinationToList(newSpot);
-
-            // 지도 중심 이동
-            map.setCenter(newLatLng);
-
-            // 경로 업데이트
-            updateRoute();
-        } else {
-            alert("🚫 주소를 찾을 수 없습니다. 다시 입력해주세요.");
+            drawLine();
         }
     });
+});
 
-    // 입력창 초기화
-    searchInput.value = "";
-}
+function createMarkers() {
+    for (var i = 0; i < positions.length; i++) {
+        // 마커의 정보가 항상 나타나게
+        var iwContent = `<div style="padding:5px;">${positions[i].content}</div>`, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+            iwPosition = positions[i].latlng, //인포윈도우 표시 위치입니다
+            iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
 
-//  지도에 표시할 말풍선(목적지 태그) 생성 함수 (X 버튼 이미지 적용)
-function createOverlayContent(spot) {
-    return `<div class="dotOverlay addedDestination">
-                ${spot.name} 
-                <img src="http://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif" 
-                     class="closeBtn" 
-                     style="cursor:pointer; vertical-align: middle; margin-left: 5px; margin-bottom: 2px; width: 14px; height: 14px;" 
-                     onclick="removeDestination('${spot.name}')">
-            </div>`;
-}
+        // 인포윈도우를 생성하고 지도에 표시합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            map: map, // 인포윈도우가 표시될 지도
+            position: iwPosition,
+            content: iwContent,
+            removable: iwRemoveable,
+        });
 
-//  목적지 리스트 UI에 추가하는 함수 (X 버튼 이미지 적용)
-function addDestinationToList(spot) {
-    let listItem = document.createElement("li");
-    listItem.style.display = "flex";
-    listItem.style.justifyContent = "space-between";
-    listItem.style.padding = "5px";
-    listItem.style.borderBottom = "1px solid #ddd";
+        // // 마우스가 위치하면 나타났다가, 마우스가 없어지면 없어짐.
+        // // 마커를 생성합니다
+        // var marker = new kakao.maps.Marker({
+        //     map: map, // 마커를 표시할 지도
+        //     position: positions[i].latlng, // 마커의 위치
+        // });
+        // console.log(marker.getPosition().toString());
 
-    // 목적지 이름
-    let spotText = document.createElement("span");
-    spotText.innerText = spot.name;
-    spotText.style.cursor = "pointer";
+        // // 마커에 표시할 인포윈도우를 생성합니다
+        // var infowindow = new kakao.maps.InfoWindow({
+        //     content: positions[i].content, // 인포윈도우에 표시할 내용
+        // });
+        // // console.log(infowindow.getContent());
 
-    // 클릭하면 지도 이동
-    spotText.addEventListener("click", () => map.setCenter(spot.latlng));
-
-    // 삭제 버튼 (X 이미지 적용 및 크기 조정)
-    let deleteBtn = document.createElement("img");
-    deleteBtn.src =
-        "http://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif";
-    deleteBtn.style.cursor = "pointer";
-    deleteBtn.style.marginLeft = "5px";
-    deleteBtn.style.marginbottom = "2px";
-    deleteBtn.style.width = "14px"; // X 버튼 크기 조정
-    deleteBtn.style.height = "14px"; // X 버튼 크기 조정
-    deleteBtn.onclick = () => removeDestination(spot.name);
-
-    listItem.appendChild(spotText);
-    listItem.appendChild(deleteBtn);
-    destinationList.appendChild(listItem);
-}
-
-//목적지 삭제 함수
-function removeDestination(name) {
-    let index = tourSpots.findIndex((spot) => spot.name === name);
-    if (index !== -1) {
-        tourSpots.splice(index, 1);
-
-        // 동그라미 삭제
-        dotOverlays[index].setMap(null);
-        dotOverlays.splice(index, 1);
-
-        // 말풍선(목적지 태그) 삭제
-        textOverlays[index].setMap(null);
-        textOverlays.splice(index, 1);
-
-        // UI 목록에서도 삭제
-        let listItems = document.querySelectorAll("#destinationList li");
-        listItems[index].remove();
-
-        // 경로 업데이트
-        updateRoute();
+        // // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+        // // 이벤트 리스너로는 클로저를 만들어 등록합니다
+        // // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+        // kakao.maps.event.addListener(marker, "mouseover", makeOverListener(map, marker, infowindow));
+        // kakao.maps.event.addListener(marker, "mouseout", makeOutListener(infowindow));
     }
 }
 
-//지도 경로 업데이트 (총 거리만 유지)
-function updateRoute() {
-    if (clickLine) clickLine.setMap(null); // 기존 경로 삭제
-    if (totalDistanceOverlay) totalDistanceOverlay.setMap(null); // 기존 총 거리 삭제
+// 인포윈도우를 표시하는 클로저를 만드는 함수입니다
+function makeOverListener(map, marker, infowindow) {
+    return function () {
+        infowindow.open(map, marker);
+    };
+}
 
-    let linePath = tourSpots.map((spot) => spot.latlng);
+// 인포윈도우를 닫는 클로저를 만드는 함수입니다
+function makeOutListener(infowindow) {
+    return function () {
+        infowindow.close();
+    };
+}
+// 지도 보여주기
 
-    // 모든 목적지가 삭제되었을 경우 총 거리 초기화
-    if (tourSpots.length === 0) {
-        totalDistanceInput.value = ""; // 총 거리 input 창 비우기
-        return;
-    }
+// 선을 그릴 위치 배열
+let clickLine; // 마우스로 클릭한 좌표로 그려질 선 객체입니다
+let distanceOverlay; // 선의 거리정보를 표시할 커스텀오버레이 입니다
+let dots = []; // 선이 그려지고 있을때 클릭할 때마다 클릭 지점과 거리를 표시하는 커스텀 오버레이 배열입니다.
+var linePath = []; // 경로를 1개 ~ 끝까지 차례로 받을 배열
+function drawLine() {
+    tourSpots.forEach((tourSpot) => {
+        linePath.push(tourSpot.latlng);
 
-    clickLine = new kakao.maps.Polyline({
-        map: map,
-        path: linePath,
-        strokeWeight: 3,
-        strokeColor: "#db4040",
-        strokeOpacity: 1,
-        strokeStyle: "solid",
+        // 클릭한 위치를 기준으로 선을 생성하고 지도위에 표시합니다
+        clickLine = new kakao.maps.Polyline({
+            map: map, // 선을 표시할 지도입니다
+            path: linePath, // 선을 구성하는 좌표 배열입니다 클릭한 위치를 넣어줍니다
+            strokeWeight: 3, // 선의 두께입니다
+            strokeColor: "#db4040", // 선의 색깔입니다
+            strokeOpacity: 1, // 선의 불투명도입니다 0에서 1 사이값이며 0에 가까울수록 투명합니다
+            strokeStyle: "solid", // 선의 스타일입니다
+        });
+
+        // 클릭한 지점에 대한 정보를 지도에 표시합니다
+        displayCircleDot(tourSpot.latlng, 0);
+        let distance = (Math.round(clickLine.getLength()) / 1000).toFixed(1);
+        let path = clickLine.getPath();
+        displayCircleDot(tourSpot.latlng, distance);
+
+        content = getTimeHTML(distance); // 커스텀오버레이에 추가될 내용입니다
+
+        // 그려진 선의 거리정보를 지도에 표시합니다
+        showDistance(content, path[path.length - 1]);
+    });
+}
+
+// 지점에 대한 정보 (동그라미와 다음 지점까지의 총거리)를 표출하는 함수입니다
+function displayCircleDot(position, distance) {
+    // 클릭 지점을 표시할 빨간 동그라미 커스텀오버레이를 생성합니다
+    let circleOverlay = new kakao.maps.CustomOverlay({
+        content: '<span class="dot"></span>',
+        position: position,
+        zIndex: 1,
     });
 
-    let totalDistance = (clickLine.getLength() / 1000).toFixed(1);
+    // 지도에 표시합니다
+    circleOverlay.setMap(map);
+    if (distance > 0) {
+        // 클릭한 지점까지의 그려진 선의 총 거리를 표시할 커스텀 오버레이를 생성합니다
+        let distanceOverlay = new kakao.maps.CustomOverlay({
+            content:
+                '<div class="dotOverlay">거리 <span class="number">' +
+                distance +
+                "</span>Km</div>",
+            position: position,
+            yAnchor: 2.2,
+            zIndex: 2,
+        });
 
-    // 총 거리 표시 (input 창에 자동 입력)
-    totalDistanceInput.value = `${totalDistance} km`;
+        // 지도에 표시합니다
+        distanceOverlay.setMap(map);
+    }
+
+    // 배열에 추가합니다
+    dots.push({
+        circle: circleOverlay,
+        distance: distanceOverlay,
+    });
 }
+
+// 선 그리기가 종료됐을 때 호출하여
+// 그려진 선의 총거리 정보와 거리에 대한 도보, 자전거 시간을 계산하여
+// HTML Content를 만들어 리턴하는 함수입니다
+function getTimeHTML(distance) {
+    // 도보의 시속은 평균 4km/h 이고 도보의 분속은 67m/min입니다
+    let walkkTime = (distance / 0.067) | 0;
+    let walkHour = "",
+        walkMin = "";
+
+    // 계산한 도보 시간이 60분 보다 크면 시간으로 표시합니다
+    if (walkkTime > 60) {
+        walkHour =
+            '<span class="number">' +
+            Math.floor(walkkTime / 60) +
+            "</span>시간 ";
+    }
+    walkMin = '<span class="number">' + (walkkTime % 60) + "</span>분";
+
+    // 자전거의 평균 시속은 16km/h 이고 이것을 기준으로 자전거의 분속은 267m/min입니다
+    let bycicleTime = (distance / 0.227) | 0;
+    let bycicleHour = "",
+        bycicleMin = "";
+
+    // 계산한 자전거 시간이 60분 보다 크면 시간으로 표출합니다
+    if (bycicleTime > 60) {
+        bycicleHour =
+            '<span class="number">' +
+            Math.floor(bycicleTime / 60) +
+            "</span>시간 ";
+    }
+    bycicleMin = '<span class="number">' + (bycicleTime % 60) + "</span>분";
+
+    // 거리와 도보 시간, 자전거 시간을 가지고 HTML Content를 만들어 리턴합니다
+    let content = '<ul class="dotOverlay distanceInfo">';
+    content += "    <li>";
+    content +=
+        '        <span class="label">총거리</span><span class="number">' +
+        distance +
+        "</span>Km";
+    content += "    </li>";
+    content += "    <li>";
+    content += '        <span class="label">도보</span>' + walkHour + walkMin;
+    content += "    </li>";
+    content += "    <li>";
+    content +=
+        '        <span class="label">자전거</span>' + bycicleHour + bycicleMin;
+    content += "    </li>";
+    content += "</ul>";
+
+    return content;
+}
+
+function showDistance(content, position) {
+    if (distanceOverlay) {
+        // 커스텀오버레이가 생성된 상태이면
+
+        // 커스텀 오버레이의 위치와 표시할 내용을 설정합니다
+        distanceOverlay.setPosition(position);
+        distanceOverlay.setContent(content);
+    } else {
+        // 커스텀 오버레이가 생성되지 않은 상태이면
+
+        // 커스텀 오버레이를 생성하고 지도에 표시합니다
+        distanceOverlay = new kakao.maps.CustomOverlay({
+            map: map, // 커스텀오버레이를 표시할 지도입니다
+            content: content, // 커스텀오버레이에 표시할 내용입니다
+            position: position, // 커스텀오버레이를 표시할 위치입니다.
+            xAnchor: 0,
+            yAnchor: -1,
+            zIndex: 3,
+        });
+    }
+}
+
+// 화면 확장 축소
+document.querySelector("#fullMap").addEventListener("click", (e) => {
+    if (mapContainer.style.position === "fixed") {
+        mapContainer.style.position = "relative";
+        mapContainer.style.width = "100%";
+        mapContainer.style.height = "40vh";
+        mapContainer.style.zIndex = ""; // 맵이 다른 요소 위에 오도록 설정한거 해제
+        document.querySelector("#fullMap").style.position = "absolute";
+        // 지도의 중심을 새로운 좌표로 설정
+        map.relayout();
+        map.setCenter(initialCenter);
+    } else {
+        mapContainer.style.position = "fixed";
+        mapContainer.style.top = "0";
+        mapContainer.style.left = "0";
+        mapContainer.style.width = "100%";
+        mapContainer.style.height = "100vh";
+        mapContainer.style.zIndex = "1000"; // 맵이 다른 요소 위에 오도록 설정
+        document.querySelector("#fullMap").style.position = "fixed";
+        // 지도의 중심을 새로운 좌표로 설정
+        map.relayout();
+        map.setCenter(initialCenter);
+    }
+});
+// 화면 확장 축소
 
 //================================================================================
 //================================================================================
@@ -549,20 +637,20 @@ const dateInputs = document.querySelectorAll(
 // 모든 입력 필드 가져오기 (비활성화/활성화 시 사용)
 const allInputs = document.querySelectorAll("input, textarea, select");
 
-// "저장" 버튼 클릭 이벤트
+//  "저장" 버튼 클릭 이벤트
 saveButton.removeEventListener("click", handleSaveClick);
 saveButton.addEventListener("click", handleSaveClick);
 
-// "저장" 버튼 클릭 시 실행될 함수
+//  "저장" 버튼 클릭 시 실행될 함수
 function handleSaveClick() {
     if (saveButton.textContent.trim() === "저장") {
         let missingFields = [];
         if (saveButton.textContent.trim() === "저장") {
-            // "더보기 버튼" 비활성화 (봉사 코스 관련)
+            //  "더보기 버튼" 비활성화 (봉사 코스 관련)
             moreButton.style.pointerEvents = "none";
             moreButton.style.opacity = "0.5";
         } else {
-            // "수정" 버튼 클릭 시 "더보기 버튼" 다시 활성화
+            //  "수정" 버튼 클릭 시 "더보기 버튼" 다시 활성화
             moreButton.style.pointerEvents = "auto";
             moreButton.style.opacity = "1";
         }
@@ -602,7 +690,7 @@ function handleSaveClick() {
             return;
         }
 
-        console.log("모든 필수 입력 완료");
+        console.log(" 모든 필수 입력 완료");
 
         // 모든 입력창 비활성화 (저장 시)
         allInputs.forEach((input) => {
@@ -614,17 +702,17 @@ function handleSaveClick() {
         // 삭제 버튼 비활성화 (주소 태그 삭제 방지)
         disableDeleteButtons(true);
 
-        // "추천 코스 작성" → "추천 코스 조회"로 변경
+        //  "추천 코스 작성" → "추천 코스 조회"로 변경
         courseTitle.textContent = "추천 코스 조회";
 
-        // "추천 코스를 소개해 주세요." 문구 제거
+        //  "추천 코스를 소개해 주세요." 문구 제거
         courseDescription.style.display = "none";
 
         // "수정" 모드로 변경
         saveButton.querySelector(".Button_children__NzZlO").textContent =
             "수정";
 
-        // "임시 저장" 버튼 숨기기
+        //  "임시 저장" 버튼 숨기기
         tempSaveButton.style.display = "none";
     } else {
         // "수정" 버튼 클릭 시 모든 입력 필드 활성화
@@ -637,22 +725,22 @@ function handleSaveClick() {
         // 삭제 버튼 활성화 (주소 태그 삭제 가능)
         disableDeleteButtons(false);
 
-        // "추천 코스 수정"으로 변경
+        //  "추천 코스 수정"으로 변경
         courseTitle.textContent = "추천 코스 수정";
 
-        // "추천 코스를 소개해 주세요." 문구 다시 표시
+        //  "추천 코스를 소개해 주세요." 문구 다시 표시
         courseDescription.style.display = "block";
 
         // 버튼을 다시 "저장"으로 변경
         saveButton.querySelector(".Button_children__NzZlO").textContent =
             "저장";
 
-        // "임시 저장" 버튼 다시 표시
+        //  "임시 저장" 버튼 다시 표시
         tempSaveButton.style.display = "block";
     }
 }
 
-// "삭제 버튼" 비활성화/활성화 함수
+//  "삭제 버튼" 비활성화/활성화 함수
 function disableDeleteButtons(disable) {
     document.querySelectorAll(".destination-tag .delete-btn").forEach((btn) => {
         if (disable) {
@@ -667,20 +755,20 @@ function disableDeleteButtons(disable) {
     });
 }
 
-// 페이지 로드 시 초기 상태 설정
+//  페이지 로드 시 초기 상태 설정
 disableDeleteButtons(false);
 
-// 삭제되었어도 수정 버튼이 항상 눌릴 수 있도록 보장
+//  삭제되었어도 수정 버튼이 항상 눌릴 수 있도록 보장
 saveButton.disabled = false;
 saveButton.style.opacity = "1";
 saveButton.style.cursor = "pointer";
 
-// "임시 저장" 버튼 클릭 이벤트 함수
+//  "임시 저장" 버튼 클릭 이벤트 함수
 function handleTempSaveClick() {
-    console.log("현재 버튼 상태:", tempSaveButton.textContent.trim());
+    console.log(" 현재 버튼 상태:", tempSaveButton.textContent.trim());
 
     if (tempSaveButton.textContent.trim() === "임시 저장") {
-        console.log("임시 저장 실행");
+        console.log(" 임시 저장 실행");
 
         // 모든 입력 필드를 비활성화 (임시 저장 시)
         allInputs.forEach((input) => {
