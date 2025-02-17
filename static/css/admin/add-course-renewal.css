@@ -60,11 +60,11 @@ address, article, aside, b, body, a, button, canvas, caption, dl, dt, dd, div, h
         line-height: 1.35;
     }
 }
-.FundingPage_container__MDczO .FundingPage_title__YTViN {
+/* .FundingPage_container__MDczO .FundingPage_title__YTViN {
     font-size: 18px;
     font-weight: 700;
     line-height: 1.5;
-}
+} */
 @media screen and (min-width: 1096px) {
     .FundingPage_container__MDczO .FundingPage_description__NDA1Z {
         font-size: 16px;
@@ -94,7 +94,7 @@ address, article, aside, b, body, a, button, canvas, caption, dl, dt, dd, div, h
     margin-bottom: 120px;
 }
 .spacing-9 {
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 .Section_container__NzdhM {
     position: relative;
@@ -647,6 +647,7 @@ ul, ol, li {
     margin-left: auto;
     position: relative;
     left: 515%;
+    color: #757575;
 }
 
 .Section_header__NDYxN.spacing-4 {
@@ -815,7 +816,8 @@ ul, ol, li {
 }
 .jvAusQ,
 .jvAusQdetail {
-    margin-top: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 14px;
     letter-spacing: -0.3px;
     line-height: 18px;
@@ -828,8 +830,8 @@ ul, ol, li {
 .gcqwwh {
     width: 90%;
     /* color: rgb(153, 153, 153); */
-    color: rgb(0, 0, 0);
-    font-weight: bold;
+    color: #757575;
+    /* font-weight: bold; */
     font-family: Arial, sans-serif;
 }
 .kutLeL {
@@ -845,7 +847,7 @@ ul, ol, li {
     align-items: center;
     width: 100%;
     height: 56px;
-    border: 1px solid rgb(208, 216, 226);
+    border: 1px solid #dde2e6;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -892,10 +894,8 @@ ul, ol, li {
     line-height: 40px; /* height와 동일하게 설정 */
     padding: 0 10px; /* 좌우 패딩 추가 */
     font-size: 14px; /* 폰트 크기 조정 */
-    border: 1px solid #ccc; /* 테두리 추가 (선택 사항) */
+    border: 1px solid #dde2e6; /* 테두리 추가 (선택 사항) */
     border-radius: 4px; /* 둥근 모서리 (선택 사항) */
-    /* margin-top: 10px; 위쪽 간격 */
-    margin-bottom: 10px; /* 아래쪽 간격 */
 }
 .DurationOfTourContainer,
 .NumberOfPerson,
@@ -903,18 +903,23 @@ ul, ol, li {
     display: flex;
     gap: 20px;
     align-items: baseline;
+    margin-top: 5px;
+    margin-bottom: 11px;
 }
 .DurationOfTourContainer input {
     padding: 8px; /* 입력 필드 내부 여백 */
     font-size: 14px; /* 글씨 크기 */
-    border: 1px solid #ccc; /* 테두리 추가 */
+    border: 1px solid #dde2e6; /* 테두리 추가 */
     border-radius: 4px; /* 모서리 둥글게 */
 }
 
 .DurationOfTourContainer span {
-    font-size: 14px; /* 글씨 크기 */
-    font-weight: bold; /* 글씨 두껍게 */
-    white-space: nowrap; /* 줄 바꿈 방지 */
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #757575;
+    margin-right: 14px;
+    margin-left: 11.5px;
 }
 .bmexYYinput {
     display: flex;
@@ -1042,8 +1047,9 @@ h2 {
 } */
 #mapContainer {
     position: relative;
-    width: 100%;
-    height: 25vh; /* 뷰포트 높이의 50%로 설정 */
+    width: 76%;
+    height: 49vh;
+    margin-top: 30px;
 }
 #map {
     border-radius: 5px;
@@ -1087,8 +1093,8 @@ h2 {
 .gcqwwh1 {
     
     /* color: rgb(153, 153, 153); */
-    color: rgb(0, 0, 0);
-    font-weight: bold;
+    color: #757575;
+    /* font-weight: bold; */
     font-family: Arial, sans-serif;
 }
 .addPathBtn {
@@ -1126,10 +1132,11 @@ h2 {
 
 .noBtnStyle {
     width: 100%;
-    /* color: rgb(153, 153, 153); */
-    color: rgb(0, 0, 0);
+    color: rgb(153, 153, 153);
+    /* color: rgb(0, 0, 0); */
     font-weight: bold;
     font-family: Arial, sans-serif;
+    margin-top: 1px;
 }
 
 /* ===================== */
@@ -1242,15 +1249,111 @@ h2 {
 .delete-img-btn:hover {
     background: #d63333;
 }
+.StorySummaryField_container__MWQ0N {
+    margin-bottom: 30px;
+    width: 100%;
+}
+.Textarea_textarea__MWJjO {
+    display: block;
+    transition-property: border-color, background-color, color;
+    transition-duration: .15s;
+    outline: none;
+    border: 1px solid #dde2e6;
+    border-radius: 4px;
+    background: #fff;
+    padding: 10px 16px;
+    resize: none;
+    width: 100%;
+    height: 118px;
+    color: #212529;
+    -webkit-appearance: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.HelperMessage_helperMessage__ZTRkO {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    display: block;
+    margin-top: 4px;
+    color: #868e96;
+    font-style: normal;
+    position: relative;
+    left: 2px;
+}
+.StorySummaryField_container__MWQ0N .StorySummaryField_text__ZTEzY {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 4px;
+    color: #868e96;
+}
 
 
+/* 맵 관련 */
 
+#tabCont a {
+    cursor: default;
+}
 
+/* 맴의 거리 표시 관련 */
 
+.dot {
+    overflow: hidden;
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/mini_circle.png");
+}
+.dotOverlay {
+    position: relative;
+    bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ddd;
+    float: left;
+    font-size: 12px;
+    padding: 5px;
+    background: #fff;
+}
+.dotOverlay:nth-of-type(n) {
+    border: 1;
+    box-shadow: 0px 1px 2px #888;
+}
+.number {
+    font-weight: bold;
+    color: #ee6152;
+}
+.dotOverlay:after {
+    content: "";
+    position: absolute;
+    margin-left: -6px;
+    left: 50%;
+    bottom: -8px;
+    width: 11px;
+    height: 8px;
+    background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white_small.png");
+}
+.distanceInfo {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    list-style: none;
+    margin: 0;
+}
+.distanceInfo .label {
+    display: inline-block;
+    width: 50px;
+}
+.distanceInfo:after {
+    content: none;
+}
 
-
-
-
+.addedDestination{
+    position: relative;
+    left: 5%;
+}
 
 
 

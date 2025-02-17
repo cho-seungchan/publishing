@@ -5,7 +5,7 @@ menuBtn.addEventListener("click", function () {
     nav.classList.toggle("active");
 });
 
-let div = document.querySelector(".AppLayout_contents__YmI3N");
+let div = document.querySelector(".AppLayout_contents__Nzg1Z");
 menuBtn.addEventListener("click", function () {
     div.classList.toggle("active");
 });
@@ -14,8 +14,316 @@ menuBtn.addEventListener("click", function () {
     menuBtn.classList.toggle("active");
 });
 
-// ================================================================================
+// 시작일자가 오늘 날짜보다 작은지 확인. 종료일자가 시작일자보다 적은지 확인. 모집 마감일자가 종료일자보다 적은지 확인
+const firstDate = document.querySelector(".gcqwwh.startdate");
+const secondDate = document.querySelector(".gcqwwh.enddate");
+const thirdDate = document.querySelector(".gcqwwh.deadline");
+const today = new Date().toISOString().split("T")[0];
+let startDate = 0;
+let endDate = 0;
+let deadline = 0;
+firstDate.addEventListener("change", () => {
+    startDate = firstDate.value;
+    if (startDate <= today) {
+        alert(`시작일("${startDate}")은 오늘("${today}") 이후만 가능합니다..`);
+        firstDate.value = "";
+        startDate = 0;
+    } else if (endDate != 0 && endDate < startDate) {
+        // alert(`시작 날짜("${startDate}")가 종료 날짜("${endDate}") 보다 큽니다.`);
+        secondDate.value = "";
+        endDate = 0;
+    } else if (deadline != 0 && deadline > startDate) {
+        // alert(`시작 날짜("${startDate}")가 마감 날짜("${deadline}") 보다 작습니다.`);
+        thirdDate.value = "";
+        deadline = 0;
+    }
+});
 
+secondDate.addEventListener("change", () => {
+    endDate = secondDate.value;
+    if (endDate <= today) {
+        alert(`종료일("${endDate}")은 오늘("${today}") 이후만 가능합니다.`);
+        secondDate.value = "";
+        endDate = 0;
+    } else if (deadline != 0 && deadline > endDate) {
+        // alert(`종료 날짜("${endDate}")가 마감 날짜("${deadline}") 보다 작습니다.`);
+        firstDate.value = "";
+        thirdDate.value = "";
+        startDate = 0;
+        deadline = 0;
+    } else if (startDate != 0 && startDate > endDate) {
+        // alert(`종료 날짜("${endDate}")가 시작 날짜("${startDate}") 보다 작습니다.`);
+        firstDate.value = "";
+        startDate = 0;
+    }
+});
+
+thirdDate.addEventListener("change", () => {
+    deadline = thirdDate.value;
+    if (deadline < today) {
+        alert(`마감일("${deadline}")은 오늘("${today}") 부터 가능합니다.`);
+        thirdDate.value = "";
+        deadline = 0;
+    } else if (startDate != 0 && startDate <= deadline) {
+        alert(
+            `마감일("${deadline}")이 시작일("${startDate}") 보다 작아야 합니다.`
+        );
+        thirdDate.value = "";
+        deadline = 0;
+    } else if (endDate != 0 && endDate <= deadline) {
+        alert(
+            `마감일("${deadline}")이 종료일("${endDate}") 보다 작아야 합니다.`
+        );
+        thirdDate.value = "";
+        deadline = 0;
+    }
+});
+
+// 케밥버튼을 눌러서 시작일 부터 종료일까지 상세 일정 입력
+const kebabmenu = document.querySelector(".FvtMb");
+const numberOfPerson = document.querySelector(".NumberOfPerson");
+const detailOfDateContainer = document.createElement("div");
+detailOfDateContainer.className = "DetailOfDateContainer";
+
+kebabmenu.addEventListener("click", () => {
+    if (document.querySelector(".DetailOfDateContainer")) {
+        document.querySelector(".DetailOfDateContainer").remove();
+        return;
+    }
+
+    if (startDate == 0 || endDate == 0 || deadline == 0) {
+        alert(`날짜를 모두 입력하세요`);
+        return;
+    }
+
+    detailOfDateContainer.innerHTML = `<p>계획서를 저장하시려면 입력창을 열어놓고 등록하세요.</p>`;
+    const startDateConv = new Date(startDate); // 날짜 객체로 변환해야 계산이 가능함.
+    const endDateConv = new Date(endDate);
+    const days =
+        Math.floor((endDateConv - startDateConv) / (1000 * 60 * 60 * 24)) + 1;
+    for (let i = 0; i < days; i++) {
+        detailOfDateContainer.innerHTML += ` <p>${i + 1}일차 계획서</p>
+            <textarea data-index=${i} placeholder="상세 일정을 적어보세요 (아래 사진첨부로 대체 가능)"
+            maxlength="1200"  class="Textarea__StyledTextarea-sc-1b9phu6-1 kmqQeBdetail"></textarea>
+            <p class="Textarea__Count-sc-1b9phu6-2 jvAusQdetail">0 / 1200</p>`;
+    }
+    numberOfPerson.parentNode.insertBefore(
+        detailOfDateContainer,
+        numberOfPerson
+    );
+
+    // textarea에 글자 입력시 입력된 글자 수 보여주기
+    document
+        .querySelector(".DetailOfDateContainer")
+        .addEventListener("input", (e) => {
+            if (e.target.classList.contains("kmqQeBdetail")) {
+                e.target.nextElementSibling.textContent = `${e.target.value.length} / 1200 (추천 글자수: 30자 이내)`;
+            }
+        });
+    // textarea에 글자 입력시 입력된 글자 수 보여주기
+});
+// 케밥버튼을 눌러서  시작일 부터 종료일까지 상세 일정 입력
+
+// 포함 사항 불포함 사항 준비물 입력시 태그 생성
+const gcqwwhinclude = document.querySelector(".gcqwwh.include"); // 포함 사항
+const gcqwwhexclude = document.querySelector(".gcqwwh.exclude"); // 불포함 사항
+const gcqwwhprepare = document.querySelector(".gcqwwh.prepare"); // 준비물
+const bDBbNifirst = document.querySelector(".bDBbNifirst");
+const bDBbNisecond = document.querySelector(".bDBbNisecond");
+const bDBbNithird = document.querySelector(".bDBbNithird");
+
+let firstTagCount = 0;
+let secondTagCount = 0;
+let thirdTagCount = 0;
+let parentDiv = ``;
+gcqwwhinclude.addEventListener("keyup", (e) => {
+    if (e.key == "Enter") {
+        if (firstTagCount > 9) {
+            alert(`10개 까지만 입력 가능합니다.`);
+            return;
+        }
+        if (firstTagCount === 0) {
+            bDBbNifirst.innerHTML = `<header class="Article__Header-sc-1mmkltm-0 gScFGo">
+                                        <hgroup>
+                                            <h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">포함 사항</h2>
+                                        </hgroup>
+                                      </header>
+                                      <div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI"></div>`;
+        }
+
+        parentDiv = bDBbNifirst.querySelector(".iXEvmI");
+        const firstchildDiv = document.createElement("div");
+        firstchildDiv.className = "Tag__RoundTag-sxb61j-1 jXxsiv";
+        firstchildDiv.innerHTML = `<span>#${gcqwwhinclude.value}</span>
+                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='nonzero' stroke='%23999' stroke-linecap='square'%3E %3Cpath d='M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172'/%3E %3C/g%3E %3C/svg%3E" alt="delete tags item">`;
+        parentDiv.appendChild(firstchildDiv);
+        gcqwwhinclude.value = "";
+
+        firstTagCount += 1;
+        gcqwwhinclude.placeholder = `포함 사항 (${firstTagCount}/10)`;
+    }
+});
+
+gcqwwhexclude.addEventListener("keyup", (e) => {
+    if (e.key == "Enter") {
+        if (secondTagCount > 9) {
+            alert(`10개 까지만 입력 가능합니다.`);
+            return;
+        }
+        if (secondTagCount === 0) {
+            bDBbNisecond.innerHTML = `<header class="Article__Header-sc-1mmkltm-0 gScFGo">
+                                        <hgroup>
+                                            <h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">불포함 사항</h2>
+                                        </hgroup>
+                                      </header>
+                                      <div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI"></div>`;
+        }
+
+        parentDiv = bDBbNisecond.querySelector(".iXEvmI");
+        const secondchildDiv = document.createElement("div");
+        secondchildDiv.className = "Tag__RoundTag-sxb61j-1 eMLPLA";
+        secondchildDiv.innerHTML = `<span>#${gcqwwhexclude.value}</span>
+                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='nonzero' stroke='%23999' stroke-linecap='square'%3E %3Cpath d='M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172'/%3E %3C/g%3E %3C/svg%3E" alt="delete tags item">`;
+        parentDiv.appendChild(secondchildDiv);
+        gcqwwhexclude.value = "";
+
+        secondTagCount += 1;
+        gcqwwhexclude.placeholder = `불포함 사항 (${secondTagCount}/10)`;
+    }
+});
+
+gcqwwhprepare.addEventListener("keyup", (e) => {
+    if (e.key == "Enter") {
+        if (thirdTagCount > 9) {
+            alert(`10개 까지만 입력 가능합니다.`);
+            return;
+        }
+        if (thirdTagCount === 0) {
+            bDBbNithird.innerHTML = `<header class="Article__Header-sc-1mmkltm-0 gScFGo">
+                                        <hgroup>
+                                            <h2 class="Article__Title-sc-1mmkltm-1 bZNoYF">준비물</h2>
+                                        </hgroup>
+                                      </header>
+                                      <div class="Stuff__StuffContainer-sc-8zlrc8-0 iXEvmI"></div>`;
+        }
+
+        parentDiv = bDBbNithird.querySelector(".iXEvmI");
+        const thirdchildDiv = document.createElement("div");
+        thirdchildDiv.className = "Tag__RoundTag-sxb61j-1 eISlhn";
+        thirdchildDiv.innerHTML = `<span>#${gcqwwhprepare.value}</span>
+                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='nonzero' stroke='%23999' stroke-linecap='square'%3E %3Cpath d='M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172'/%3E %3C/g%3E %3C/svg%3E" alt="delete tags item">`;
+        parentDiv.appendChild(thirdchildDiv);
+        gcqwwhprepare.value = "";
+
+        thirdTagCount += 1;
+        gcqwwhprepare.placeholder = `준비물 (${thirdTagCount}/10)`;
+    }
+});
+
+// 태그의 이미지(x)를 눌렀을 때 div 삭제 :: 동적으로 생성된 요소일 때는 부모 요소에 위임
+bDBbNifirst.addEventListener("click", (e) => {
+    if (e.target.tagName == "IMG") {
+        e.target.closest(".jXxsiv").remove();
+
+        firstTagCount -= 1;
+        if (firstTagCount === 0) {
+            bDBbNifirst.innerHTML = ``;
+        }
+        gcqwwhinclude.placeholder = `포함 사항 (${firstTagCount}/10)`;
+    }
+});
+
+bDBbNisecond.addEventListener("click", (e) => {
+    if (e.target.tagName == "IMG") {
+        e.target.closest(".eMLPLA").remove();
+
+        secondTagCount -= 1;
+        if (secondTagCount === 0) {
+            bDBbNisecond.innerHTML = ``;
+        }
+        gcqwwhexclude.placeholder = `불포함 사항 (${secondTagCount}/10)`;
+    }
+});
+
+bDBbNithird.addEventListener("click", (e) => {
+    if (e.target.tagName == "IMG") {
+        e.target.closest(".eISlhn").remove();
+
+        thirdTagCount -= 1;
+        if (thirdTagCount === 0) {
+            bDBbNithird.innerHTML = ``;
+        }
+        gcqwwhprepare.placeholder = `준비물 (${thirdTagCount}/10)`;
+    }
+});
+// 태그의 이미지(x)를 눌렀을 때 div 삭제 :: 동적으로 생성된 요소일 때는 부모 요소에 위임
+
+document.addEventListener("DOMContentLoaded", function () {
+    const volunteerBox = document.querySelector(".volunteerBox");
+    const durationContainer = document.querySelector(
+        ".DurationOfTourContainer"
+    );
+    const durationContainer1 = document.querySelector(
+        ".DurationOfTourContainer1"
+    );
+
+    if (!volunteerBox || !durationContainer || !durationContainer1) {
+        console.error("❌ 요소를 찾을 수 없습니다. 클래스명을 확인하세요.");
+        return;
+    }
+
+    volunteerBox.addEventListener("change", function () {
+        console.log("체크박스 상태:", this.checked); // 콘솔에서 체크 상태 확인
+
+        if (this.checked) {
+            durationContainer.classList.remove("hidden");
+            durationContainer1.classList.remove("hidden");
+            console.log(" 컨테이너 표시됨");
+        } else {
+            durationContainer.classList.add("hidden");
+            durationContainer1.classList.add("hidden");
+            console.log("❌ 컨테이너 숨겨짐");
+        }
+    });
+});
+
+// 서버에 올리지 않고 화면에 보이도록 처리
+const fileParentDiv = document.querySelector(".ImageList-sc-9v1mt2-0.hGJMVS");
+const fileInput = document.querySelector(
+    ".InputImageReview__Wrapper-sc-1oapt4s-0.ipbuZD input"
+);
+
+fileInput.addEventListener("change", (e) => {
+    const files = e.target.files;
+
+    Array.from(files).forEach((file) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const fileDiv = document.createElement("div");
+            fileDiv.className = "ImageList__ImageWrapper-sc-9v1mt2-1 kZTsQf";
+            fileDiv.innerHTML = `<div class="Image__Wrapper-v97gyx-0 gDuKGF"><div class="Ratio " style="display: block;">
+                    <div class="Ratio-ratio " style="height: 0px; position: relative; width: 100%; padding-top: 100%;">
+                    <div class="Ratio-content " style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;">
+                    <img src="${e.target.result}" alt="후기 이미지" class="Image__DefaultImage-v97gyx-3 hVNKgp"></div></div></div></div>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='nonzero'%3E %3Cpath fill='%23FFF' fill-opacity='0' d='M0 0h18v18H0z'/%3E %3Cg stroke='%23FFF' stroke-linecap='square'%3E %3Cpath d='M11.828 6.172l-5.656 5.656M11.828 11.828L6.172 6.172'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E" class="ImageList__IconDelete-sc-9v1mt2-2 benIbu">`;
+
+            fileParentDiv.appendChild(fileDiv);
+        };
+        // 파일 읽기 시작 (중요)
+        reader.readAsDataURL(file);
+    });
+});
+// 서버에 올리지 않고 화면에 보이도록 처리
+
+// 선택파일의 이미지(x)를 눌렀을 때 전체 dev 삭제 :: 동적으로 생성된 요소일 때는 부모 요소에 위임
+fileParentDiv.addEventListener("click", (e) => {
+    if (e.target.classList.contains("ImageList__IconDelete-sc-9v1mt2-2")) {
+        e.target.closest(".ImageList__ImageWrapper-sc-9v1mt2-1").remove();
+    }
+});
+// 선택파일의 이미지(x)를 눌렀을 때 전체 dev 삭제 :: 동적으로 생성된 요소일 때는 부모 요소에 위임
+
+// 지도 초기 설정
 // 지도 보여주기
 var mapContainer = document.getElementById("map"), // 지도를 표시할 div
     mapOption = {
@@ -287,107 +595,171 @@ document.querySelector("#fullMap").addEventListener("click", (e) => {
 });
 // 화면 확장 축소
 
-// ========================================================================
+//================================================================================
+//================================================================================
+//================================================================================
+// 저장/수정 버튼 요소 가져오기
+const saveButton = document.querySelector(
+    ".StoryFormPage_saveButtonWrapper__Y2FmO .Button_button__YmRmM"
+);
 
-// 이미지가 <a> 태그 안에 포함되어 있을 경우, 클릭 시 해당 링크의 기본 동작이 페이지를 맨 위로 스크롤할 수 있습니다.
-// 이를 방지하기 위해 다음과 같은 방법을 사용
-document.querySelectorAll("a").forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-    });
-});
+// "더보기 버튼" 요소 가져오기
+const moreButton = document.querySelector(".FvtMb");
 
-// 화면이 눌릴 때 위에 빨간줄 이동하고, 아래쪽 관광지 상세 사진 보이기
-const cosList = document.querySelector(".pc.js_slider .cosList");
-const swiperslides = cosList.querySelectorAll(".swiper-slide");
-const swiperslidesLength = swiperslides.length;
+// 임시저장 버튼 요소 가져오기
+const tempSaveButton = document.querySelector(
+    ".SaveButtonFooter_btnWrapper__ZTk3Z .Button_button__YmRmM"
+);
 
-swiperslides.forEach((swiperslide) => {
-    swiperslide.addEventListener("click", (e) => {
-        // console.log(e.target.closest("li").outerHTML);
-        // console.log(e.target.closest("li").querySelector("em").outerHTML);
-        const emValue = parseInt(
-            e.target.closest("li").querySelector("em").textContent
-        );
+// "추천 코스 작성" 제목 요소 가져오기
+const courseTitle = document.querySelector(".FundingPage_title__YTViN");
 
-        swiperslides.forEach((e) => {
-            e.classList.remove("on", "on1");
-            e.querySelector("a").removeAttribute("title");
+// "추천 코스를 소개해 주세요." 문구 요소 가져오기
+const courseDescription = document.querySelector(
+    ".FundingPage_description__NDA1Z"
+);
 
-            if (parseInt(e.textContent) < emValue) {
-                e.classList.add("on");
+// "봉사 코스" 체크박스 요소 가져오기
+const volunteerCheckbox = document.querySelector("#volunteerBox");
+
+// 필수 입력 필드 가져오기 (주소 제외)
+const requiredInputs = document.querySelectorAll(
+    "input:not([type='date']):not(.include):not(.exclude):not(.prepare):not(.noBtnStyle), textarea"
+);
+
+// "주소를 입력하세요" 필드 및 태그 컨테이너 가져오기
+const addressTagContainer = document.getElementById("destinationList");
+
+// 봉사 코스가 체크된 경우 필수 입력될 날짜 필드 가져오기
+const dateInputs = document.querySelectorAll(
+    ".DurationOfTourContainer input[type='date']"
+);
+
+// 모든 입력 필드 가져오기 (비활성화/활성화 시 사용)
+const allInputs = document.querySelectorAll("input, textarea, select");
+
+//  "저장" 버튼 클릭 이벤트
+saveButton.removeEventListener("click", handleSaveClick);
+saveButton.addEventListener("click", handleSaveClick);
+
+//  "저장" 버튼 클릭 시 실행될 함수
+function handleSaveClick() {
+    if (saveButton.textContent.trim() === "저장") {
+        let missingFields = [];
+        if (saveButton.textContent.trim() === "저장") {
+            //  "더보기 버튼" 비활성화 (봉사 코스 관련)
+            moreButton.style.pointerEvents = "none";
+            moreButton.style.opacity = "0.5";
+        } else {
+            //  "수정" 버튼 클릭 시 "더보기 버튼" 다시 활성화
+            moreButton.style.pointerEvents = "auto";
+            moreButton.style.opacity = "1";
+        }
+
+        // 필수 입력 체크
+        requiredInputs.forEach((input) => {
+            if (input.type === "hidden" || input.type === "file") {
+                return; // hidden 또는 file input은 필수 입력 체크에서 제외
+            }
+
+            if (input.value.trim() === "") {
+                let fieldName =
+                    input.placeholder || input.className || "입력 항목";
+                missingFields.push(fieldName.replace(/_/g, " "));
             }
         });
 
-        e.target.closest("li").classList.add("on1");
-        e.target
-            .closest("li")
-            .querySelector("a")
-            .setAttribute("title", "선택됨");
+        // "주소를 입력하세요" 필드에서 최소한 하나의 태그(목적지)가 추가되었는지 확인
+        if (addressTagContainer.children.length === 0) {
+            missingFields.push("주소를 입력하세요 (목적지를 추가해주세요)");
+        }
 
-        // 아래쪽 관광지 상세 사진 보여주기
+        // "봉사 코스"가 체크된 경우, 날짜 필드도 필수 입력 체크
+        if (volunteerCheckbox.checked) {
+            dateInputs.forEach((input) => {
+                if (input.value.trim() === "") {
+                    missingFields.push(input.placeholder || "날짜 항목");
+                }
+            });
+        }
 
-        const idValue = emValue < 10 ? "cosTab0" + emValue : "cosTab" + emValue;
-        document.querySelectorAll(".cos_cont").forEach((e) => {
-            console.log(e.className);
-            e.classList.remove("active");
-            if (e.id == idValue) {
-                e.classList.add("active");
-            }
+        if (missingFields.length > 0) {
+            alert(
+                "다음 항목을 입력해야 합니다:\n\n- " +
+                    missingFields.join("\n- ")
+            );
+            return;
+        }
+
+        console.log(" 모든 필수 입력 완료");
+
+        // 모든 입력창 비활성화 (저장 시)
+        allInputs.forEach((input) => {
+            input.disabled = true;
+            input.style.backgroundColor = "rgba(211, 211, 211, 0.5)";
+            input.style.cursor = "not-allowed";
         });
+
+        // 삭제 버튼 비활성화 (주소 태그 삭제 방지)
+        disableDeleteButtons(true);
+
+        //  "추천 코스 작성" → "추천 코스 조회"로 변경
+        courseTitle.textContent = "추천 코스 조회";
+
+        //  "추천 코스를 소개해 주세요." 문구 제거
+        courseDescription.style.display = "none";
+
+        // "수정" 모드로 변경
+        saveButton.querySelector(".Button_children__NzZlO").textContent =
+            "수정";
+
+        //  "임시 저장" 버튼 숨기기
+        tempSaveButton.style.display = "none";
+    } else {
+        // "수정" 버튼 클릭 시 모든 입력 필드 활성화
+        allInputs.forEach((input) => {
+            input.disabled = false;
+            input.style.backgroundColor = "";
+            input.style.cursor = "text";
+        });
+
+        // 삭제 버튼 활성화 (주소 태그 삭제 가능)
+        disableDeleteButtons(false);
+
+        //  "추천 코스 수정"으로 변경
+        courseTitle.textContent = "추천 코스 수정";
+
+        //  "추천 코스를 소개해 주세요." 문구 다시 표시
+        courseDescription.style.display = "block";
+
+        // 버튼을 다시 "저장"으로 변경
+        saveButton.querySelector(".Button_children__NzZlO").textContent =
+            "저장";
+
+        //  "임시 저장" 버튼 다시 표시
+        tempSaveButton.style.display = "block";
+    }
+}
+
+//  "삭제 버튼" 비활성화/활성화 함수
+function disableDeleteButtons(disable) {
+    document.querySelectorAll(".destination-tag .delete-btn").forEach((btn) => {
+        if (disable) {
+            btn.style.pointerEvents = "none"; // 삭제 버튼 클릭 불가능하게 설정
+            btn.style.opacity = "0.5"; // 버튼이 흐리게 보이도록 조정
+            btn.style.cursor = "not-allowed";
+        } else {
+            btn.style.pointerEvents = "auto"; // 삭제 버튼 클릭 가능하게 설정
+            btn.style.opacity = "1";
+            btn.style.cursor = "pointer";
+        }
     });
-});
+}
 
-// 연관 관광지 버튼 클릭시 이미지 3개씩 이동 600px, 디스플레이 720px
-let leftEnd = 0; // 화면 왼쪽 끝
-let rightEnd = 800;
-let maxRightEnd = swiperslidesLength * 200;
+//  페이지 로드 시 초기 상태 설정
+disableDeleteButtons(false);
 
-document.querySelector(".swiper-button-next").addEventListener("click", (e) => {
-    rightEnd += 600;
-    leftEnd += 600;
-    if (rightEnd > maxRightEnd) {
-        // maxRightEnd 보다 오른쪽으로 못 가도록 막음
-        leftEnd -= rightEnd - maxRightEnd;
-        rightEnd = maxRightEnd;
-
-        document
-            .querySelector(".swiper-button-next")
-            .classList.add("swiper-button-disabled");
-        document
-            .querySelector(".swiper-button-next")
-            .setAttribute("aria-disabled", "true");
-    }
-    cosList.style.transform = `translate3d(${720 - rightEnd}px, 0, 0)`;
-    document
-        .querySelector(".swiper-button-prev")
-        .classList.remove("swiper-button-disabled");
-    document
-        .querySelector(".swiper-button-prev")
-        .setAttribute("aria-disabled", "false");
-});
-
-document.querySelector(".swiper-button-prev").addEventListener("click", (e) => {
-    leftEnd -= 600;
-    rightEnd -= 600;
-    if (leftEnd < 0) {
-        // 0 보다 오른쪽으로 못 가도록 막음
-        rightEnd -= leftEnd;
-        leftEnd = 0;
-
-        document
-            .querySelector(".swiper-button-prev")
-            .classList.add("swiper-button-disabled");
-        document
-            .querySelector(".swiper-button-prev")
-            .setAttribute("aria-disabled", "true");
-    }
-    cosList.style.transform = `translate3d(${-leftEnd}px, 0, 0)`;
-    document
-        .querySelector(".swiper-button-next")
-        .classList.remove("swiper-button-disabled");
-    document
-        .querySelector(".swiper-button-next")
-        .setAttribute("aria-disabled", "flase");
-});
-// 연관 관광지  버튼 클릭시 작동 3개씩 이동 600px, 디스플레이 720px
+//  삭제되었어도 수정 버튼이 항상 눌릴 수 있도록 보장
+saveButton.disabled = false;
+saveButton.style.opacity = "1";
+saveButton.style.cursor = "pointer";
