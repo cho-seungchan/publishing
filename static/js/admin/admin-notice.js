@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (
                 event.target.tagName.toLowerCase() === "textarea" ||
                 event.target.classList.contains("editBtn") ||
-                event.target.classList.contains("saveBtn")
+                event.target.classList.contains("saveBtn") ||
+                event.target.classList.contains("deletBtn")
             ) {
                 return;
             }
@@ -52,12 +53,24 @@ document.addEventListener("DOMContentLoaded", () => {
             editBtn.textContent = "공지 수정"; // 버튼 텍스트 설정
             editBtn.classList.add("editBtn"); // 스타일 적용을 위한 클래스 추가
 
+            // "공지 삭제" 버튼 생성
+            const deletBtn = document.createElement("button");
+            deletBtn.textContent = "공지 삭제"; // 버튼 텍스트 설정
+            deletBtn.classList.add("deletBtn"); // 스타일 적용을 위한 클래스 추가
+
             // 공지 내용과 버튼을 공지 컨테이너 div2에 추가
             div2.appendChild(contentDiv);
             div2.appendChild(editBtn);
+            div2.appendChild(deletBtn);
 
             // 해당 리스트 항목(li) 안에 공지 div 추가 (공지 열기)
             list.appendChild(div2);
+
+            // "공지 삭제" 버튼 클릭 시 해당 li 삭제
+            deletBtn.addEventListener("click", (event) => {
+                event.stopPropagation(); // li 클릭 이벤트 방지
+                list.remove(); // 해당 li 삭제
+            });
 
             // "공지 수정" 버튼 클릭 시 textarea를 추가하여 편집할 수 있도록 설정
             editBtn.addEventListener("click", () => {
@@ -73,14 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 textArea.style.height = "200px";
                 textArea.style.border = "1px solid blue"; // 파란색 테두리 추가 (확인용)
                 textArea.value = contentDiv.innerHTML.replace(/<br>/g, "\n"); // 기존 공지 내용을 textarea에 넣기
-
-                // textarea의 읽기 전용 속성 제거 (수정 가능하도록)
-                textArea.removeAttribute("disabled");
-                textArea.removeAttribute("readonly");
-                textArea.style.pointerEvents = "auto";
-                textArea.style.opacity = "1";
-                textArea.style.background = "white";
-                textArea.style.color = "black";
 
                 // "공지 저장" 버튼 생성
                 const saveBtn = document.createElement("button");
@@ -115,11 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 // textarea와 저장 버튼을 공지 컨테이너 div2에 추가
                 commentBox.appendChild(textArea);
                 commentBox.appendChild(saveBtn);
-
-                // textarea에서 입력 중일 때는 닫히지 않도록 설정
-                textArea.addEventListener("input", () => {
-                    closeAttempt = false;
-                });
             });
         });
     });
@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
             event.target.tagName.toLowerCase() === "textarea" ||
             event.target.classList.contains("editBtn") ||
             event.target.classList.contains("saveBtn") ||
+            event.target.classList.contains("deletBtn") ||
             event.target.closest("ul > li")
         ) {
             closeAttempt = false; // 닫기 방지
