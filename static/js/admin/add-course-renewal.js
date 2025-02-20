@@ -323,171 +323,220 @@ fileParentDiv.addEventListener("click", (e) => {
 });
 // 선택파일의 이미지(x)를 눌렀을 때 전체 dev 삭제 :: 동적으로 생성된 요소일 때는 부모 요소에 위임
 
-// 지도 초기 설정
+// ✅ 1. 카카오 지도 설정
 var mapContainer = document.getElementById("map"),
     mapOption = {
-        center: new kakao.maps.LatLng(35.409476, 127.396059), // 지도 중심 좌표
-        level: 9, // 확대 레벨
+        center: new kakao.maps.LatLng(35.409476, 127.396059),
+        level: 9,
     };
 var map = new kakao.maps.Map(mapContainer, mapOption);
-let initialCenter = new kakao.maps.LatLng(35.409476, 127.396059);
 
-let tourSpots = []; // 사용자가 입력한 목적지 리스트
-let geocoder = new kakao.maps.services.Geocoder(); // 주소 변환기
-let clickLine; // 경로를 표시할 폴리라인
-let dotOverlays = []; // 지도에 표시되는 동그라미 저장 배열
-let textOverlays = []; // 지도 위에 표시되는 말풍선(목적지 태그) 저장 배열
-let totalDistanceOverlay; // 총 거리 표시 오버레이
+let tourSpots = [];
+let geocoder = new kakao.maps.services.Geocoder();
+let clickLine;
+let dotOverlays = [];
+let textOverlays = [];
+let totalDistanceOverlay;
 
-//  총 거리 표시할 input 창 가져오기
+// ✅ 총 거리 입력창 가져오기
 const totalDistanceInput = document.querySelector(".max");
 
-//  HTML 요소 가져오기
+// ✅ HTML 요소 가져오기
 const searchInput = document.querySelector(".noBtnStyle");
 const destinationList = document.getElementById("destinationList");
-const fullMapButton = document.querySelector("#fullMap");
 
-//  엔터 키 이벤트로 목적지 추가
-searchInput.addEventListener("keypress", function (event) {
+// ✅ 주소 입력 이벤트 리스너 (중복 실행 방지)
+function handleAddressEnter(event) {
     if (event.key === "Enter") {
-        event.preventDefault(); // 기본 엔터 동작 방지
+        event.preventDefault();
         addDestination();
+    }
+}
+
+// ✅ X 버튼 이벤트 위임 (삭제 기능)
+document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("closeBtn")) {
+        let index = event.target.dataset.index;
+        removeDestination(index);
     }
 });
 
-//  목적지 추가 함수
-function addDestination() {
-    let inputAddress = searchInput.value.trim();
-    if (!inputAddress) return alert(" 주소를 입력하세요!");
-
-    let spotNumber = tourSpots.length + 1;
-    let spotName = `${spotNumber}. ${inputAddress}`;
-
-    // 주소 -> 좌표 변환
-    geocoder.addressSearch(inputAddress, (result, status) => {
-        if (status === kakao.maps.services.Status.OK) {
-            let newLatLng = new kakao.maps.LatLng(result[0].y, result[0].x);
-
-            // 목적지 리스트에 추가
-            let newSpot = {
-                name: spotName,
-                address: inputAddress,
-                latlng: newLatLng,
-            };
-            tourSpots.push(newSpot);
-
-            // 지도에 동그라미 추가
-            let dotOverlay = new kakao.maps.CustomOverlay({
-                content: `<span class="dot"></span>`,
-                position: newLatLng,
-                zIndex: 1,
-            });
-            dotOverlay.setMap(map);
-            dotOverlays.push(dotOverlay);
-
-            // 지도에 말풍선(목적지 태그) 추가
-            let textOverlay = new kakao.maps.CustomOverlay({
-                content: createOverlayContent(newSpot),
-                position: newLatLng,
-                yAnchor: 1.2,
-                zIndex: 2,
-            });
-            textOverlay.setMap(map);
-            textOverlays.push(textOverlay);
-
-            // 목적지 UI에 추가
-            addDestinationToList(newSpot);
-
-            // 지도 중심 이동
-            map.setCenter(newLatLng);
-
-            // 경로 업데이트
-            updateRoute();
-        } else {
-            alert("🚫 주소를 찾을 수 없습니다. 다시 입력해주세요.");
-        }
-    });
-
-    // 입력창 초기화
-    searchInput.value = "";
-}
-
-//  지도에 표시할 말풍선(목적지 태그) 생성 함수 (X 버튼 이미지 적용)
-function createOverlayContent(spot) {
+// ✅ 지도에 표시할 말풍선(목적지 태그) 생성 함수
+function createOverlayContent(spot, index) {
     return `<div class="dotOverlay addedDestination">
-                ${spot.name} 
+                <b>${spot.number}. ${spot.title}</b><br>
+                ${spot.address}
                 <img src="http://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif" 
                      class="closeBtn" 
-                     style="cursor:pointer; vertical-align: middle; margin-left: 5px; margin-bottom: 2px; width: 14px; height: 14px;" 
-                     onclick="removeDestination('${spot.name}')">
+                     data-index="${index}" 
+                     style="cursor:pointer; vertical-align: middle; margin-left: 5px; margin-bottom: 2px; width: 14px; height: 14px;">
             </div>`;
 }
 
-//  목적지 리스트 UI에 추가하는 함수 (X 버튼 이미지 적용)
-function addDestinationToList(spot) {
+// ✅ 목적지 리스트 UI에 추가하는 함수
+function addDestinationToList(spot, index) {
     let listItem = document.createElement("li");
     listItem.style.display = "flex";
     listItem.style.justifyContent = "space-between";
     listItem.style.padding = "5px";
     listItem.style.borderBottom = "1px solid #ddd";
 
-    // 목적지 이름
     let spotText = document.createElement("span");
-    spotText.innerText = spot.name;
+    spotText.innerHTML = `<b>${spot.number}. ${spot.title}</b><br>${spot.address}`;
     spotText.style.cursor = "pointer";
 
-    // 클릭하면 지도 이동
     spotText.addEventListener("click", () => map.setCenter(spot.latlng));
 
-    // 삭제 버튼 (X 이미지 적용 및 크기 조정)
     let deleteBtn = document.createElement("img");
     deleteBtn.src =
         "http://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif";
+    deleteBtn.classList.add("closeBtn");
+    deleteBtn.dataset.index = index;
     deleteBtn.style.cursor = "pointer";
     deleteBtn.style.marginLeft = "5px";
-    deleteBtn.style.marginbottom = "2px";
-    deleteBtn.style.width = "14px"; // X 버튼 크기 조정
-    deleteBtn.style.height = "14px"; // X 버튼 크기 조정
-    deleteBtn.onclick = () => removeDestination(spot.name);
+    deleteBtn.style.marginBottom = "2px";
+    deleteBtn.style.width = "14px";
+    deleteBtn.style.height = "14px";
 
     listItem.appendChild(spotText);
     listItem.appendChild(deleteBtn);
     destinationList.appendChild(listItem);
 }
 
-//목적지 삭제 함수
-function removeDestination(name) {
-    let index = tourSpots.findIndex((spot) => spot.name === name);
-    if (index !== -1) {
-        tourSpots.splice(index, 1);
+// ✅ 목적지 삭제 함수 (마지막 항목도 삭제 가능 & 번호 재정렬)
+function removeDestination(index) {
+    index = parseInt(index);
 
-        // 동그라미 삭제
+    if (index >= 0 && index < tourSpots.length) {
+        // 지도에서 오버레이 및 라인 제거
         dotOverlays[index].setMap(null);
-        dotOverlays.splice(index, 1);
-
-        // 말풍선(목적지 태그) 삭제
         textOverlays[index].setMap(null);
+
+        // 배열에서도 삭제
+        tourSpots.splice(index, 1);
+        dotOverlays.splice(index, 1);
         textOverlays.splice(index, 1);
 
         // UI 목록에서도 삭제
         let listItems = document.querySelectorAll("#destinationList li");
         listItems[index].remove();
 
+        // 📌 ✅ 삭제 후 번호 다시 정렬
+        tourSpots.forEach((spot, i) => {
+            spot.number = i + 1;
+        });
+
+        // 전체 UI 다시 렌더링 (정확한 번호 정렬 보장)
+        refreshDestinationList();
+
         // 경로 업데이트
         updateRoute();
     }
 }
 
-//지도 경로 업데이트 (총 거리만 유지)
+// ✅ 목적지 목록 UI 새로고침 (번호 재정렬)
+function refreshDestinationList() {
+    destinationList.innerHTML = "";
+    tourSpots.forEach((spot, index) => {
+        addDestinationToList(spot, index);
+    });
+}
+
+// ✅ 목적지 추가 함수
+function addDestination() {
+    if (tourSpots.length >= 10) {
+        alert("목적지는 최대 10개까지만 추가할 수 있습니다! 🚫");
+        return;
+    }
+
+    let inputAddress = searchInput.value.trim();
+    if (!inputAddress) {
+        alert("주소를 입력하세요!");
+        return;
+    }
+
+    let tempAddress = inputAddress;
+    searchInput.value = "";
+    searchInput.placeholder = "제목을 입력하세요.";
+
+    searchInput.removeEventListener("keypress", handleAddressEnter);
+    searchInput.addEventListener("keypress", handleTitleEnter);
+
+    setTimeout(() => {
+        searchInput.focus();
+    }, 10);
+
+    function handleTitleEnter(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            let inputTitle = searchInput.value.trim();
+            if (!inputTitle) {
+                alert("제목을 입력하세요!");
+                return;
+            }
+
+            searchInput.value = "";
+            searchInput.placeholder = "주소를 입력하세요.";
+            searchInput.removeEventListener("keypress", handleTitleEnter);
+            searchInput.addEventListener("keypress", handleAddressEnter);
+
+            geocoder.addressSearch(tempAddress, (result, status) => {
+                if (status === kakao.maps.services.Status.OK) {
+                    let newLatLng = new kakao.maps.LatLng(
+                        result[0].y,
+                        result[0].x
+                    );
+                    let spotNumber = tourSpots.length + 1;
+
+                    let newSpot = {
+                        number: spotNumber,
+                        title: inputTitle,
+                        address: tempAddress,
+                        latlng: newLatLng,
+                    };
+
+                    let index = tourSpots.length;
+                    tourSpots.push(newSpot);
+
+                    let dotOverlay = new kakao.maps.CustomOverlay({
+                        content: `<span class="dot"></span>`,
+                        position: newLatLng,
+                        zIndex: 1,
+                    });
+                    dotOverlay.setMap(map);
+                    dotOverlays.push(dotOverlay);
+
+                    let textOverlay = new kakao.maps.CustomOverlay({
+                        content: createOverlayContent(newSpot, index),
+                        position: newLatLng,
+                        yAnchor: 1.2,
+                        zIndex: 2,
+                    });
+                    textOverlay.setMap(map);
+                    textOverlays.push(textOverlay);
+
+                    addDestinationToList(newSpot, index);
+                    map.setCenter(newLatLng);
+                    updateRoute();
+                } else {
+                    alert("🚫 주소를 찾을 수 없습니다. 다시 입력해주세요.");
+                }
+            });
+
+            searchInput.value = "";
+        }
+    }
+}
+
+// ✅ 지도 경로 업데이트 (총 거리 정상 표시)
 function updateRoute() {
-    if (clickLine) clickLine.setMap(null); // 기존 경로 삭제
-    if (totalDistanceOverlay) totalDistanceOverlay.setMap(null); // 기존 총 거리 삭제
+    if (clickLine) clickLine.setMap(null);
+    if (totalDistanceOverlay) totalDistanceOverlay.setMap(null);
 
     let linePath = tourSpots.map((spot) => spot.latlng);
 
-    // 모든 목적지가 삭제되었을 경우 총 거리 초기화
     if (tourSpots.length === 0) {
-        totalDistanceInput.value = ""; // 총 거리 input 창 비우기
+        totalDistanceInput.value = "";
         return;
     }
 
@@ -502,9 +551,12 @@ function updateRoute() {
 
     let totalDistance = (clickLine.getLength() / 1000).toFixed(1);
 
-    // 총 거리 표시 (input 창에 자동 입력)
     totalDistanceInput.value = `${totalDistance} km`;
 }
+
+// ✅ 중복 리스너 제거 후 다시 등록
+searchInput.removeEventListener("keypress", handleAddressEnter);
+searchInput.addEventListener("keypress", handleAddressEnter);
 
 //================================================================================
 //================================================================================

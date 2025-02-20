@@ -418,7 +418,7 @@ p, label {
     background-color: #fff;
 }
 
-.courseIdDiv, .courseNameDiv, .courseAddressDiv, .courseTypeDiv {
+.courseIdDiv, .adminNameDiv, .courseNameDiv, .courseAddressDiv, .courseTypeDiv {
     flex: 1;
     text-align: center;
 }
@@ -487,6 +487,7 @@ p, label {
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 .hidden {
