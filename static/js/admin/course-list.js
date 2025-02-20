@@ -115,6 +115,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 .querySelector(".courseIdDiv")
                 .textContent.trim()
                 .toLowerCase();
+            const adminName = item
+                .querySelector(".adminNameDiv")
+                .textContent.trim()
+                .toLowerCase();
             const courseName = item
                 .querySelector(".courseNameDiv")
                 .textContent.trim()
@@ -131,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // 입력된 검색어가 포함된 요소만 보이도록 설정
             if (
                 courseId.includes(searchText) ||
+                adminName.includes(searchText) ||
                 courseName.includes(searchText) ||
                 courseAddress.includes(searchText) ||
                 courseType.includes(searchText)
