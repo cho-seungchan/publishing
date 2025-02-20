@@ -4,11 +4,8 @@ const saveButton = document.querySelector(".saveButton");
 saveButton.addEventListener("click", () => {
     if (inputName.value.length < 1 || inputName.value.length > 20) {
         alert("최소1자/최대20자 까지 입력해주세요.");
-        return;
-    }
-    if (inputName.value.trim() === "") {
+    } else if (/\s/.test(inputName.value)) {
         alert("닉네임에 공백문자는 사용할 수 없습니다.");
-        return;
     }
 });
 

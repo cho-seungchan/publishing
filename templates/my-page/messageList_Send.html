@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../static/css/common/header.css" />
+        <link rel="stylesheet" href="../../static/css/common/footer.css" />
+        <link rel="stylesheet" href="../../static/css/myPage/messageList.css" />
+        <link
+            rel="shortcut icon"
+            href="../../static/images/common/favicon1.ico"
+            type="image/x-icon"
+        />
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/common/header.css"
+                />
+                <link
+                    rel="stylesheet"
+                    href="../../static/css/common/footer.css"
+                />
+                <link
+                    href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700"
+                    rel="stylesheet"
+                />
+                <link
+                    rel="preconnect"
+                    href="https://fonts.gstatic.com"
+                    crossorigin=""
+                />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&amp;family=Nanum+Gothic&amp;family=Nanum+Gothic+Coding&amp;family=Nanum+Myeongjo&amp;family=Nanum+Pen+Script&amp;family=Noto+Serif+KR&amp;display=swap"
+                    rel="stylesheet"
+                />
+
+                <title>보낸 쪽지함</title>
+            </head>
+            <body class="fontLoaded">
+                <div id="app">
+                    <div class="App__AppWrapper-nc5ti6-0 idXWQn">
+                        <!-- Header will be dynamically inserted here -->
+                        <div id="header-placeholder"></div>
+                        <script>
+                            // Load header.html and insert it in#header-placeholder
+                            fetch("../all/header.html")
+                                .then((response) => response.text())
+                                .then((data) => {
+                                    document.getElementById(
+                                        "header-placeholder"
+                                    ).innerHTML = data;
+                                })
+                                .catch((error) =>
+                                    console.error(
+                                        "Error loading header:",
+                                        error
+                                    )
+                                );
+                        </script>
+                        <div class="mainContainer" style="min-height: 50vh">
+                            <div
+                                class="MyPurchases__PcTopWrapper-ag7quq-1 kTezqN"
+                            >
+                                <header
+                                    class="PcTop__Wrapper-sc-1mni0hl-0 jhIEWm"
+                                >
+                                    <div
+                                        class="PcTop__Content-sc-1mni0hl-1 iKjpvd"
+                                    >
+                                        <div
+                                            class="PcTop__Title-sc-1mni0hl-2 epAnZX"
+                                        >
+                                            보낸 쪽지함
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                            <!-- 페이지가 바뀌면 변경될 div -->
+                            <div class="listContainer">
+                                <div class="listWrap showDiv" id="div1">
+                                    <ul class="NoticePage__NoticeListWrapper">
+                                        <div class="mainUserListDiv">
+                                            <div class="postDiv">받은사람</div>
+                                            <div class="contentDiv">내용</div>
+                                            <div class="HeadernameDiv">
+                                                보낸날짜
+                                            </div>
+                                        </div>
+                                        <li>
+                                            <div class="userListDiv">
+                                                <div class="postList">
+                                                    <a href="">
+                                                        <span> 정도영 </span>
+                                                    </a>
+                                                </div>
+                                                <div class="contentHidden">
+                                                    <span
+                                                        style="cursor: pointer"
+                                                        class="hiddenText"
+                                                        >불멍하는 발바닥 따수와
+                                                        보이네요ㅋㅋㅋ 저도 꼭
+                                                        테스트해봐서 ...이
+                                                        찍혔으면 좋겠어요
+                                                    </span>
+                                                </div>
+
+                                                <div class="comentMessage">
+                                                    <span> 2025.01.22 </span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                font-size="14px"
+                                                class="NoticeEntity__Content-sc-1x9h6uc-5 kOSXdV showList"
+                                                style="display: none"
+                                            >
+                                                <span></span>
+                                                <button
+                                                    class="answeraButton appearButton"
+                                                >
+                                                    답장
+                                                </button>
+                                                <button
+                                                    class="deleteButton appearButton"
+                                                >
+                                                    삭제
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <!-- 읽었을때 readMessage클래스 추가 -->
+                                            <div
+                                                class="userListDiv readMessage"
+                                            >
+                                                <div class="postList">
+                                                    <a href="">
+                                                        <span> 조승찬 </span>
+                                                    </a>
+                                                </div>
+                                                <div class="contentHidden">
+                                                    <span
+                                                        style="cursor: pointer"
+                                                        class="hiddenText readMessage"
+                                                        >오늘 한명이 가버렸는데
+                                                        아쉽네요 :(
+                                                    </span>
+                                                </div>
+                                                <div class="comentMessage">
+                                                    <span> 2025.02.13 </span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                font-size="14px"
+                                                class="NoticeEntity__Content-sc-1x9h6uc-5 kOSXdV showList"
+                                                style="display: none"
+                                            >
+                                                <span></span>
+                                                <button
+                                                    class="answeraButton appearButton"
+                                                >
+                                                    답장
+                                                </button>
+                                                <button
+                                                    class="deleteButton appearButton"
+                                                >
+                                                    삭제
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="listContainer">
+                                <div
+                                    id="div2"
+                                    class="listWrap hiddenDiv"
+                                    style="display: none"
+                                >
+                                    <ul class="NoticePage__NoticeListWrapper">
+                                        <div class="mainUserListDiv">
+                                            <div class="postDiv">받은사람</div>
+                                            <div class="contentDiv">내용</div>
+                                            <div class="HeadernameDiv">
+                                                보낸날짜
+                                            </div>
+                                        </div>
+                                        <li>
+                                            <div class="userListDiv">
+                                                <div class="postList">
+                                                    <a href="">
+                                                        <span>
+                                                            정도영 바낌1
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="contentHidden">
+                                                    <span
+                                                        style="cursor: pointer"
+                                                        class="hiddenText"
+                                                        >불멍하는 발바닥 따수와
+                                                        보이네요ㅋㅋㅋ 저도 꼭
+                                                        테스트해봐서 ...이
+                                                        찍혔으면 좋겠어요
+                                                    </span>
+                                                </div>
+                                                <div class="comentMessage">
+                                                    <span> 2025.01.22 </span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                font-size="14px"
+                                                class="NoticeEntity__Content-sc-1x9h6uc-5 kOSXdV showList"
+                                                style="display: none"
+                                            >
+                                                <span></span>
+                                                <button
+                                                    class="answeraButton appearButton"
+                                                >
+                                                    답장
+                                                </button>
+                                                <button
+                                                    class="deleteButton appearButton"
+                                                >
+                                                    삭제
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="userListDiv readMessage"
+                                            >
+                                                <div class="postList">
+                                                    <a href="">
+                                                        <span> 조승찬 </span>
+                                                    </a>
+                                                </div>
+                                                <div class="contentHidden">
+                                                    <span
+                                                        style="cursor: pointer"
+                                                        class="hiddenText readMessage"
+                                                        >오늘 한명이 가버렸는데
+                                                        아쉽네요 :(
+                                                    </span>
+                                                </div>
+                                                <div class="comentMessage">
+                                                    <span> 2025.02.13 </span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                font-size="14px"
+                                                class="NoticeEntity__Content-sc-1x9h6uc-5 kOSXdV showList"
+                                                style="display: none"
+                                            >
+                                                <span></span>
+                                                <button
+                                                    class="answeraButton appearButton"
+                                                >
+                                                    답장
+                                                </button>
+                                                <button
+                                                    class="deleteButton appearButton"
+                                                >
+                                                    삭제
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="listContainer">
+                                <div
+                                    id="div3"
+                                    class="listWrap hiddenDiv"
+                                    style="display: none"
+                                >
+                                    <ul class="NoticePage__NoticeListWrapper">
+                                        <div class="mainUserListDiv">
+                                            <div class="postDiv">받은사람</div>
+                                            <div class="contentDiv">내용</div>
+                                            <div class="HeadernameDiv">
+                                                보낸날짜
+                                            </div>
+                                        </div>
+                                        <li>
+                                            <div class="userListDiv">
+                                                <div class="postList">
+                                                    <a href="">
+                                                        <span>
+                                                            정도영 바낌2
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="contentHidden">
+                                                    <span
+                                                        style="cursor: pointer"
+                                                        class="hiddenText"
+                                                        >불멍하는 발바닥 따수와
+                                                        보이네요ㅋㅋㅋ 저도 꼭
+                                                        테스트해봐서 ...이
+                                                        찍혔으면 좋겠어요
+                                                    </span>
+                                                </div>
+
+                                                <div class="comentMessage">
+                                                    <span> 2025.01.22 </span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                font-size="14px"
+                                                class="NoticeEntity__Content-sc-1x9h6uc-5 kOSXdV showList"
+                                                style="display: none"
+                                            >
+                                                <span></span>
+                                                <button
+                                                    class="answeraButton appearButton"
+                                                >
+                                                    답장
+                                                </button>
+                                                <button
+                                                    class="deleteButton appearButton"
+                                                >
+                                                    삭제
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="userListDiv readMessage"
+                                            >
+                                                <div class="postList">
+                                                    <a href="">
+                                                        <span> 조승찬 </span>
+                                                    </a>
+                                                </div>
+                                                <div class="contentHidden">
+                                                    <span
+                                                        style="cursor: pointer"
+                                                        class="hiddenText readMessage"
+                                                        >나와라요
+                                                    </span>
+                                                </div>
+                                                <div class="comentMessage">
+                                                    <span> 2025.02.13 </span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                font-size="14px"
+                                                class="NoticeEntity__Content-sc-1x9h6uc-5 kOSXdV showList"
+                                                style="display: none"
+                                            >
+                                                <span></span>
+                                                <button
+                                                    class="answeraButton appearButton"
+                                                >
+                                                    답장
+                                                </button>
+                                                <button
+                                                    class="deleteButton appearButton"
+                                                >
+                                                    삭제
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <footer
+                                class="Wrapper__PaginationWrapper-fk4uv4-0 hBVRcD"
+                            >
+                                <div
+                                    class="PaginationButtonGroup__PrevButtonWrapper-x0iffd-0 gIsDDT"
+                                >
+                                    <button
+                                        width="40px"
+                                        height="40px"
+                                        font-size="18px"
+                                        disabled=""
+                                        class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 iItkLq"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='%23FFF' fill-opacity='0' fill-rule='nonzero' d='M0 0h40v40H0z'/%3E %3Cpath stroke='%23DDD' stroke-width='1.5' d='M16 16l4 4-4 4M21 16l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="PaginationButtonGroup__Icon-x0iffd-2 jVxRns"
+                                        /></button
+                                    ><button
+                                        width="40px"
+                                        height="40px"
+                                        font-size="18px"
+                                        disabled=""
+                                        class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 iItkLq"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='none' d='M0 0h40v40H0z'/%3E %3Cpath stroke='%23DDD' stroke-width='1.5' d='M18 16l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="PaginationButtonGroup__Icon-x0iffd-2 jVxRns"
+                                        />
+                                    </button>
+                                </div>
+                                <button
+                                    data-target="div1"
+                                    ;
+                                    width="40px"
+                                    height="40px"
+                                    color="#3397ff"
+                                    font-size="18px"
+                                    font-weight="bold"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 emphasis buttonAll thisButton"
+                                >
+                                    1
+                                </button>
+                                <!-- 게시글이 화면에 나오게 하는 게시글보다 많아지면 추가할 button태그-->
+                                <button
+                                    data-target="div2"
+                                    ;
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 emphasis buttonAll anotherButton"
+                                >
+                                    2
+                                </button>
+                                <button
+                                    data-target="div3"
+                                    ;
+                                    width="40px"
+                                    height="40px"
+                                    color="black"
+                                    font-size="18px"
+                                    font-weight="normal"
+                                    class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 emphasis buttonAll anotherButton"
+                                >
+                                    3
+                                </button>
+                                <div
+                                    class="PaginationButtonGroup__NextButtonWrapper-x0iffd-1 eNIHag"
+                                >
+                                    <button
+                                        width="40px"
+                                        height="40px"
+                                        font-size="18px"
+                                        class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 garfld"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath d='M18 0H0v18h18z'/%3E %3Cpath stroke='%23000' stroke-width='1.5' d='M7 5l4 4-4 4'/%3E %3C/g%3E %3C/svg%3E"
+                                            class="PaginationButtonGroup__Icon-x0iffd-2 dQqQMu"
+                                        /></button
+                                    ><button
+                                        width="40px"
+                                        height="40px"
+                                        font-size="18px"
+                                        class="Button-bqxlp0-0 ButtonPage__StyledButton-k07u44-0 garfld"
+                                    >
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Crect width='40' height='40' fill='%23FFF' fill-opacity='0' fill-rule='nonzero' rx='20'/%3E %3Cg stroke='%23000' stroke-width='1.5'%3E %3Cpath d='M16 16l4 4-4 4M21 16l4 4-4 4'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E"
+                                            class="PaginationButtonGroup__Icon-x0iffd-2 dQqQMu"
+                                        />
+                                    </button>
+                                </div>
+                            </footer>
+                            <!-- 쪽지가 없을때 나올 화면 -->
+                            <!-- <div
+                                class="Padded-sc-1mbfr4n-0 frip__Wrapper-sc-1th48wc-0 cJASPK"
+                            >
+                                <div
+                                    class="Fade__Wrapper-sc-1s0ipfq-0 koasSX"
+                                    style="opacity: 1; display: block"
+                                >
+                                    <div class="Base__Wrapper-cxjyd-0 eOsQaF">
+                                        <img
+                                            src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cg clip-path='url(%23clip0_2519_500)'%3E %3Cmask id='mask0_2519_500' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='40'%3E %3Cpath d='M40 0H0V40H40V0Z' fill='white'/%3E %3C/mask%3E %3Cg mask='url(%23mask0_2519_500)'%3E %3Cmask id='mask1_2519_500' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='40'%3E %3Cpath d='M40 0H0V40H40V0Z' fill='white'/%3E %3C/mask%3E %3Cg mask='url(%23mask1_2519_500)'%3E %3Cpath d='M35 15.0002C35 20.2363 31.2226 24.7397 27.5788 27.8811C25.3224 29.8089 22.8728 31.4985 20.2692 32.9229C20.2534 32.9303 20.2372 32.9383 20.2218 32.9465C20.1532 32.9829 20.0766 33.0019 19.9988 33.0021C19.9252 33.0021 19.8525 32.9853 19.7866 32.9527L19.7618 32.9391L19.7299 32.9225C18.9618 32.5043 18.2074 32.0615 17.4679 31.5945C15.6983 30.4811 14.0108 29.2395 12.4213 27.8813C8.77918 24.7395 5.00004 20.2361 5 15.0002C5.00018 13.346 5.51318 11.7323 6.46836 10.3817C7.42356 9.03106 8.77398 8.00974 10.3337 7.45838C11.8934 6.90702 13.5857 6.85274 15.1775 7.30302C16.7693 7.7533 18.1824 8.68598 19.2222 9.97266C19.4121 10.2076 19.6979 10.3441 20 10.3441C20.302 10.3441 20.588 10.2076 20.7778 9.97266C21.8176 8.68598 23.2306 7.7533 24.8224 7.30302C26.4144 6.85274 28.1066 6.90702 29.6664 7.45838C31.226 8.00974 32.5764 9.03106 33.5316 10.3817C34.4868 11.7323 34.9998 13.346 35 15.0002Z' stroke='%23333333' stroke-width='1.75' stroke-linejoin='round'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3Cdefs%3E %3CclipPath id='clip0_2519_500'%3E %3Crect width='40' height='40' fill='white'/%3E %3C/clipPath%3E %3C/defs%3E %3C/svg%3E"
+                                            alt="아직 받은 쪽지가 없어요."
+                                        /><strong
+                                            class="Base__Header-cxjyd-1 bLfngk"
+                                            >아직 받은 쪽지가 없어요.</strong
+                                        >
+                                        <div
+                                            class="Base__Description-cxjyd-2 eFwpFm"
+                                        >
+                                            관심있는 모집에 쪽지를 보내보세요!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- Footer will be dynamically inserted here -->
+                        <div id="footer-placeholder"></div>
+                        <script>
+                            // Load footer.html and insert it into #footer-placeholder
+                            fetch("../all/footer.html")
+                                .then((response) => response.text())
+                                .then((data) => {
+                                    document.getElementById(
+                                        "footer-placeholder"
+                                    ).innerHTML = data;
+                                })
+                                .catch((error) =>
+                                    console.error(
+                                        "Error loading footer:",
+                                        error
+                                    )
+                                );
+                        </script>
+                    </div>
+                </div>
+                <div id="modal-root"></div>
+                <div id="dnd-root"></div>
+            </body>
+            <script src="../../static/js/myPage/messageList.js"></script>
+        </html>
+    </head>
+</html>

@@ -342,3 +342,7 @@ p, label {
 .emphasis:hover {
     background-color: rgb(238, 238, 238);
 }
+
+.eNIHag>button:hover, .gIsDDT>button:hover {
+    background-color: rgb(238, 238, 238);
+}

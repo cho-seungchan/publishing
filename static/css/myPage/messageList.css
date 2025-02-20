@@ -324,3 +324,31 @@ b, strong {
 .firstBanner{
     margin-top: 30px;
 }
+
+.readMessage{
+    color: rgb(170, 170, 170);
+}
+
+.garfld {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+    color: black;
+}
+
+.eNIHag>button:hover, .gIsDDT>button:hover {
+    background-color: rgb(238, 238, 238);
+}
