@@ -37,6 +37,7 @@ button.addEventListener("change", (event) => {
 
 const textContent = document.querySelector(".textContent");
 const characters = document.querySelector(".characters");
+const receiver = document.querySelector(".inputBox");
 
 textContent.addEventListener("input", () => {
     const text = textContent.value;
@@ -46,15 +47,21 @@ textContent.addEventListener("input", () => {
 const sendButton = document.querySelector(".sendButton");
 
 sendButton.addEventListener("click", () => {
-    console.log(textContent.value.length);
-    if (textContent.value.length === 0) {
+    if (receiver.value.length === 0) {
+        alert("받는 사람을 입력해주세요!");
+    } else if (textContent.value.length === 0) {
         alert("내용을 입력해주세요!");
     }
 });
 
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("cancelButton")) {
-        console.log(e.target.parentElement);
-        e.target.parentElement.remove();
+        const parentElement = e.target.parentElement;
+        console.log(parentElement.parentElement.classList);
+        if (parentElement.parentElement.classList.contains("imageWrap")) {
+            parentElement.parentElement.remove();
+        } else {
+            parentElement.remove();
+        }
     }
 });
