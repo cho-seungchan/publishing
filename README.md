@@ -35,7 +35,9 @@ pickCourse
 
 
 5. 담당 업무
+   
 5-1 프론트엔드
+   
 ![image](https://github.com/user-attachments/assets/8479aff2-a5b1-4161-927e-efa9f5bc6e12)
 ![image](https://github.com/user-attachments/assets/40f0ab23-f6d3-485b-8d5b-6b518a1449ba)
 
