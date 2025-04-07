@@ -46,6 +46,7 @@ pickCourse
 5-2 백엔드
 
 ![image](https://github.com/user-attachments/assets/fcae5c63-a7ae-48c4-ba42-f62d855a454a)
+![image](https://github.com/user-attachments/assets/c1ef0d00-e7fe-4740-a4c0-1ee876fecf96)
 
 
 
